@@ -20,6 +20,10 @@
 - Créer une plateforme de lancement
 - Créer un service de location de Jetpack.
 
+#### Pieuvre
+![[Pasted image 20260114171617.png]]
+
+
 
 # Entreprise - Totally Safe
 
