@@ -10,7 +10,7 @@
 - Supprimer l’instabilité
 - Prévoir un fail-safe
 - Prévoir un système d'extinction du feu
-- 
+- Optimiser la durée d’utilisation pour un plein de carburant
 
 
 # F.A.S.T
