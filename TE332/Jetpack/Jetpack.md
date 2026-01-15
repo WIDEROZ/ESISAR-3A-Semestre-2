@@ -30,7 +30,15 @@
 
 
 # F.A.S.T
-#### Fonction principale
+1. Piloter la trajectoire 
+	- Stabiliser le jetpack  → Gyroscopes / accéléromètre
+	- Orienter la poussée → Orientation des moteurs
 
+2. Sécuriser le passager
+	- Protéger en cas de chute  → Parachute à ouverture rapide
+	- Protéger des brûlures → Isolation / Coque pare chaleur
 
-#### Fonction Service
+3. S’affranchir de la gravité
+	- Créer une poussée verticale → Turbines 
+	- Doser la puissance → Contrôleur électronique
+![[Pasted image 20260115093148.png]]
