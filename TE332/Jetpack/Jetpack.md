@@ -42,3 +42,7 @@
 	- Créer une poussée verticale → Turbines 
 	- Doser la puissance → Contrôleur électronique
 ![[Pasted image 20260115093148.png]]
+
+
+SADT : 
+![[Pasted image 20260119191216.png]]
