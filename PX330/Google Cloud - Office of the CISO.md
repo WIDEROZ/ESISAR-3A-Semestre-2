@@ -6,3 +6,10 @@
 - Garder le contrôle des chaines d’approvisionnement
 - Être prêt en cas d'incident
 
+#### Résilience
+Capable de fournir des services en cas de crise
+
+#### Différenciation des menaces cyber
+- APT43
+- APT44
+(Par pays)
