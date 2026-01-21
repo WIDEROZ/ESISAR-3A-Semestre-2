@@ -16,3 +16,14 @@ Défini par :
 - Son environnement
 - Sa fonction
 
+
+# Rôle de l'ingénieur système
+## Cycle en V
+- Spécifier
+- Réaliser
+- Vérifier / Valider
+
+### Exemple : Amplificateur RF
+#### Spécification
+Analyse fonctionnelle du besoin
+Spécifications techniques
