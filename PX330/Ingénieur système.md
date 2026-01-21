@@ -6,5 +6,13 @@
 - Capteurs
 - Anti-Brouilleurs
 - Capteurs GNSS (GPS / Gallileo)
-- Flight managment
-- 
+- Flight management
+- Industrielle (Fabrication)
+
+# Qu'est ce qu'un système
+Défini par : 
+- La complexité
+- Les relation entre ses éléments
+- Son environnement
+- Sa fonction
+
