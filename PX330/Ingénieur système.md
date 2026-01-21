@@ -24,6 +24,19 @@ Défini par :
 - Vérifier / Valider
 
 ### Exemple : Amplificateur RF
+Chef d'orchestre
 #### Spécification
 Analyse fonctionnelle du besoin
 Spécifications techniques
+
+#### Réalisation
+Répond aux questions des différentes parties du projet
+
+#### Intégration
+C'est l'assemblage des différentes parties du projet
+
+#### Vérification / Validation
+Vérifier que le banc correspond bien aux spécifications
+Valider le bon fonctionnement du banc
+
+#### Les problèmes
