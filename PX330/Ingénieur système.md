@@ -23,7 +23,7 @@ Défini par :
 - Réaliser
 - Vérifier / Valider
 
-### Exemple : Amplificateur RF
+### Exemple : Banc de test - Amplificateur RF
 Chef d'orchestre
 #### Spécification
 Analyse fonctionnelle du besoin
@@ -40,3 +40,4 @@ Vérifier que le banc correspond bien aux spécifications
 Valider le bon fonctionnement du banc
 
 #### Les problèmes
+Coordonner la recherche de la cause source et la solution
