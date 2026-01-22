@@ -1,5 +1,5 @@
 # Un projet, une équipe
-Production d'aluminium décarboné
+Production d'aluminium dé-carboné
 
 # Test logiciel
 
