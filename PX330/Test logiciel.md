@@ -1,2 +1,5 @@
 # Un projet, une équipe
-Production d'alumini
+Production d'aluminium décarboné
+
+# Test logiciel
+
