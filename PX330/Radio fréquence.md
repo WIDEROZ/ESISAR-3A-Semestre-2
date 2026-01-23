@@ -7,3 +7,5 @@ Thèse en RFID $60 \, GHz$
 - Pilotage de recherche RF
 
 # Architecte électronique
+Antenne GNSS
+Au moins $4$ satelites ($3$ pour le temps)
