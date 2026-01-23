@@ -8,4 +8,7 @@ Thèse en RFID $60 \, GHz$
 
 # Architecte électronique
 Antenne GNSS
-Au moins $4$ satelites ($3$ pour le temps)
+Au moins $4$ satellites ($3$ pour le temps)
+
+
+Ampli RF
