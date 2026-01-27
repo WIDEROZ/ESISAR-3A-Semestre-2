@@ -50,3 +50,9 @@ $$\boxed{T(p) = \frac{T_{0}}{1+2m  \frac{p}{\omega_{0}} + \left( \frac{p}{\omega
 $p=ju = j \frac{\omega}{\omega_{0}}$ et $T_{0}=1$ : 
 $$\boxed{T(p) = \frac{1}{1+2mp+p^{2}}}$$
 
+Plusieurs cas : 
+$$\begin{cases}
+m \leq \frac{\sqrt{2}}{2} \\
+\frac{\sqrt{2}}{2} \leq m \leq 1 \\
+m \geq 1
+\end{cases}$$
