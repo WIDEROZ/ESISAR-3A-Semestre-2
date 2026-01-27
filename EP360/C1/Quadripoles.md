@@ -12,4 +12,13 @@ $$\mathcal{P}_{sortie} > \mathcal{P}_{entrée}$$
 #### Fonction de transfert
 $$\underline{H}(j\omega) = \frac{\underline{V_{s}}}{\underline{{V_{e}}}} = H e^{ j\varphi }$$
 
-#### Temps de propagation de g
+#### Temps de propagation de groupe
+$$\boxed{\tau = -\frac{d \varphi(\omega)}{d \omega} }$$
+
+#### Retard de phase
+$$\boxed{t_{0} = - \frac{\varphi(\omega)}{\omega}}$$
+
+#### Filtre parfait
+- $H(\omega)$ : constant par morceaux
+- $\varphi(\omega)$ : Linéaire en $f(\omega) = -t_{0}\omega$
+
