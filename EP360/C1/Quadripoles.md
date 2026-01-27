@@ -30,3 +30,11 @@ Fréquence atténuée : $f_{a}$
 fréquence passante : $f_{p}$
 Bande de transition : $f_{a} - f_{p}$
 
+Schema
+
+#### Calcul de pente
+Soit la fonction de transfert suivante : 
+$$H(j\omega) = \frac{H_{0}}{1+j \frac{\omega}{\omega_{0}}}$$
+On veut le nombre de décibels par décade : 
+On pose alors, $\omega_{2}=10\omega_{1}$
+$$G_{dB}(\omega_{2}) = 20 \log_{10}(\left| H(j\omega_{2})\right|) = 20 \log_{10}(H_{0}) - 20\log\left(  \right) $$
