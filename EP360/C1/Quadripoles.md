@@ -22,3 +22,11 @@ $$\boxed{t_{0} = - \frac{\varphi(\omega)}{\omega}}$$
 - $H(\omega)$ : constant par morceaux
 - $\varphi(\omega)$ : Linéaire en $f(\omega) = -t_{0}\omega$
 
+## 2. Bode réel
+Ondulation dans la bande passante : 
+$$20\log_{10}\left( \frac{H_{0}}{H_{1}} \right)$$
+Fréquence de coupure à $-3dB$ ($-6dB$)
+Fréquence atténuée : $f_{a}$
+fréquence passante : $f_{p}$
+Bande de transition : $f_{a} - f_{p}$
+
