@@ -1,8 +1,13 @@
+package Welcome;
+
 public class Greet {
-    private String str;
-    public Greet(String str){
-        this.str = str;
-    }
+    /* Fields */
+    private String str = "";
+    
+    /* Constructor */
+    public Greet(){};
+
+    /* Methods */
     public void set_str(String str){
         this.str = str;
     }
@@ -17,16 +22,3 @@ public class Greet {
 }
 
 
-
-
-public class Main{
-
-    
-    public static void main(String[] args) {
-
-        Obj = new Greet();
-        
-
-    }
-
-}
