@@ -12,7 +12,7 @@ public class Greet {
     public String get_str(){
         return str;
     }
-    public void print(){S
+    public void print(){
         System.out.println("Hello, " + str + "!");
     }
     
