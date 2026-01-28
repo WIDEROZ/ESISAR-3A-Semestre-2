@@ -1,5 +1,3 @@
-package Welcome;
-
 public class Greet {
     /* Fields */
     private String str = "";
@@ -19,6 +17,13 @@ public class Greet {
     }
     
 
+    public static void main(String[] args) {
+
+        Greet greet = new Greet();
+        greet.set_str("feur");
+        greet.print();
+        
+
+    }
+
 }
-
-
