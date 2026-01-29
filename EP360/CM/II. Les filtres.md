@@ -34,13 +34,6 @@ Bande de transition : $f_{a} - f_{p}$
 
 
 
-$$H(j \omega) \sim \frac{H_{0}}{\frac{j\omega}{\omega_{0}}} = \frac{\omega_{0}H_{0}}{j\omega} $$
-Alors,
-$$\left| H(j\omega) \right| = \frac{\omega_{0}H_{0}}{\omega} \Leftrightarrow G_{dB}(\omega) = 20\log\left( \frac{\omega_{0}H_{0}}{\omega} \right)$$
-La fréquence par décade : $\omega_{2} = 10\omega_{1}$ : 
-$$20\log\left( \frac{\omega_{0}H_{0}}{\omega_{2}}  \right) = 20\log\left( \frac{\omega_{0}H_{0}}{\omega_{1}} \right) - 20\log(10) = G_{dB}(\omega_{1}) - 20$$
-
-
 #### Calcul de pente
 Soit la fonction de transfert suivante : 
 $$H(j\omega) = \frac{H_{0}}{1+j \frac{\omega}{\omega_{0}}} \underset{\omega \to + \infty}{\sim} \frac{H_{0}}{j\frac{\omega}{\omega_{0}}}$$
@@ -65,4 +58,5 @@ m \leq \frac{\sqrt{2}}{2} \\
 \frac{\sqrt{2}}{2} \leq m \leq 1 \\
 m \geq 1
 \end{cases}$$
+
 
