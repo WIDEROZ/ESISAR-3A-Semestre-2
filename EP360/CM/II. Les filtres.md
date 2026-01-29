@@ -32,6 +32,15 @@ Bande de transition : $f_{a} - f_{p}$
 
 ![[Pasted image 20260127095857.png]]
 
+
+
+$$H(j \omega) \sim \frac{H_{0}}{\frac{j\omega}{\omega_{0}}} = \frac{\omega_{0}H_{0}}{j\omega} $$
+Alors,
+$$\left| H(j\omega) \right| = \frac{\omega_{0}H_{0}}{\omega} \Leftrightarrow G_{dB}(\omega) = 20\log\left( \frac{\omega_{0}H_{0}}{\omega} \right)$$
+La fréquence par décade : $\omega_{2} = 10\omega_{1}$ : 
+$$20\log\left( \frac{\omega_{0}H_{0}}{\omega_{2}}  \right) = 20\log\left( \frac{\omega_{0}H_{0}}{\omega_{1}} \right) - 20\log(10) = G_{dB}(\omega_{1}) - 20$$
+
+
 #### Calcul de pente
 Soit la fonction de transfert suivante : 
 $$H(j\omega) = \frac{H_{0}}{1+j \frac{\omega}{\omega_{0}}} \underset{\omega \to + \infty}{\sim} \frac{H_{0}}{j\frac{\omega}{\omega_{0}}}$$
@@ -40,7 +49,7 @@ On pose alors, $\omega_{2}=10\omega_{1}$
 $$G_{dB}(\omega_{2}) = 20 \log_{10}(\left| H(j\omega_{2})\right|) = 20 \log_{10}(H_{0}) - 20\log\left( \frac{\omega_{0}}{10\omega_{1}} \right) $$
 Ainsi, 
 $$\boxed{G_{dB}(\omega_{2}) = G_{dB}(\omega_{1}) - 20}$$
-i.e. ce filtre à une pente de $\boxed{-22\text{dB/Dec}}$
+i.e. ce filtre à une pente de $\boxed{-20\text{dB/Dec}}$
 
 ## IV. Filtre d'ordre 2
 ### 1. Filtre passe bas
