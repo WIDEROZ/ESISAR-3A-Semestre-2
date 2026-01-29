@@ -48,7 +48,7 @@ endmodule
 
 ## 3. Puissance
 ![[Pasted image 20260129120829.png]]
-Puissance dynamique : 
-$$P_d = CV_{DD}F$$
-Puissance du courant de fuite : 
+Puissance de charge / décharge du condensateur (Puissance dynamique) : 
+$$P_d = CV_{DD}^{2}F$$
+Puissance du courant de fuite (Puissance statique): 
 $$P_{s} = V_{DD}I_{leak}$$
