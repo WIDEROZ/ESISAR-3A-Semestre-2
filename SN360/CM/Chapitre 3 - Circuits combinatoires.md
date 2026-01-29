@@ -1,6 +1,6 @@
 Interdiction de boucler des circuits combinatoires
 # I. Opérateurs logiques
-#### Opérateurs logiques
+## 1. Opérateurs logiques
 ```VHDL
 
 s<=not(a);
@@ -25,7 +25,7 @@ assign s5 = a ^ b; // a xor b
 assign s6 = a ~^ b; // a xnor b
 ```
 
-#### Portes logiques
+## 2. Portes logiques
 
 ```VHDL
 entity INV is
@@ -45,3 +45,10 @@ output wire s );
 assign s = ~e;
 endmodule
 ```
+
+## 3. Puissance
+![[Pasted image 20260129120829.png]]
+Puissance dynamique : 
+$$P_d = CV_{DD}F$$
+Puissance du courant de fuite : 
+$$P_{s} = V_{DD}I_{leak}$$
