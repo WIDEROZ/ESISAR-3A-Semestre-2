@@ -18,11 +18,20 @@
 - eFPGA : embedded FPGA
 
 ## 2. Architecture des FPGA SRAM
+#### FPGA
 ![[Pasted image 20260129092624.png]]
-
 Interconnection entre les cellules : Route bleue
 IOB : Input Output Block
 CLB : Configurable Logic Block
 $1$ Bloc $=$ $1$ Bit
 
-Pour chaque : interconnection / IOB / CLB 
+
+#### SRAM
+![[Pasted image 20260129093305.png]]
+Pour chaque : interconnection / IOB / CLB Il existe un bloc de SRAM qui contient le code de configuration binaire.
+
+#### Look up table (LUT)
+Faire toutes les fonction possibles avec $4$ bits d'entrée : 
+![[Pasted image 20260129093813.png]]
+
+#### Flot de conception
