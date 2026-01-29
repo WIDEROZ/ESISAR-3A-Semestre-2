@@ -75,10 +75,13 @@ s2<=std_logic_vector(to_unsigned(s1, 16));
 
 s1<=to_integer(unsigned(s2));
 
-
 ```
 
-
+```Verilog
+wire [15:0] s1 s2;
+assign s2=16'd7562
+assign s1=s2
+```
 
 
 
