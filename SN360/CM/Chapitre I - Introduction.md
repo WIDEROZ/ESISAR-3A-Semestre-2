@@ -1,6 +1,5 @@
 # Download : AMD Vivado Design Suite: Standard Edition
 
-# I. Introduction
 ## 1. Pourquoi utiliser des composants reconfigurables
 #### Réduction du time to market (TTM)
 #### Conception a l'aide de composants reconfigurables
@@ -35,3 +34,4 @@ Faire toutes les fonction possibles avec $4$ bits d'entrée :
 ![[Pasted image 20260129093813.png]]
 
 #### Flot de conception
+![[Pasted image 20260129095445.png]]
