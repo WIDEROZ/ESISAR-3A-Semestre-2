@@ -37,9 +37,3 @@ Faire toutes les fonction possibles avec $4$ bits d'entrée :
 ![[Pasted image 20260129095445.png]]
 
 
-
-```VHDL
-signal s1 s2 : bit_vector(3 downto 0);
-S
-
-```
