@@ -23,11 +23,20 @@ v:="0101";
 
 #### Entiers non signés
 ```VHDL
+-- Trpe de std_logic par défaut à U
 library IEEE;
 use IEEE.std_logic1164.all;
-signal s : std_logic_vector(5 downto  0);
-s <= ""
+signal s : std_logic_vector(5 downto 0);
+s <= "U01XZ-";
 ```
+Il y a $9$ valeurs différentes possibles pour std_logic
+
+#### Hexadécimal
+```VHDL
+variable v : bit_vector(15 downto 0);
+v:=x"1D9A";
+```
+
 
 ### Verilog
 ```Verilog
@@ -37,6 +46,10 @@ wire w1 w2 w3;
 assign w1=1'b0;
 assign w2=1'b1;
 assign w3=1'bX; // Inconnu
+
+// En
+wire [3:0] v1;
+assign v1=4'bX01Z;
 ```
 1'b0 : $1$ bit qui vaut 0
 1'b1 : $1$ bit qui vaut 1
