@@ -83,6 +83,28 @@ assign s2=16'd7562
 assign s1=s2
 ```
 
+#### Complément à $2$
+```VHDL
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+signal s1: unsigned(3 downto 0);
+signal s2: signed(3 downto 0);
+
+s1<=to_unsigned(15,4);
+s2<=to_signed(-8,4);
+```
+
+```Verilog
+wire [3:0] s1;
+wire signed [3:0] s2;
+
+assign s1=4'b1000; // 8
+assign s2=4'b1000; //-8
+
+```
+Par défaut les wire sont non signés il suffit d'ajouter signed pour qu'ils le deviennent. 
 
 
 ```VHDL
