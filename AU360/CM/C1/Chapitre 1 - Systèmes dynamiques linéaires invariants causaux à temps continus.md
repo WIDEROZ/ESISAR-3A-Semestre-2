@@ -1,4 +1,11 @@
+
 $$\begin{cases}
 \frac{\partial x}{\partial t} = Ax(t) + Bu(t) \\
 y(t) = Cx(t) + Du(t)
 \end{cases}$$
+
+#### Théorème de la valeur initiale / finale
+Soit $x$ une fonction définie en $0$, ($x(t)\underset{n \to +\infty}{\longrightarrow} l \in \mathbb{R}$)
+Si $X$ (Transformée de Laplace de $x$) a une abscisse de convergence finie alors, 
+$$\lim_{ t \to 0^{+} } x(t) = \lim_{ p \to +\infty } pX(p)$$
+$$\lim_{ t \to +\infty } x(t) = \lim_{ p \to 0^{+} } pX(p)  $$
