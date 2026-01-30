@@ -20,4 +20,5 @@ On appelle Régime Statique d’un système linéaire invariant causal et stable
 
 
 # ATTENTION
-Ne pas faire de diagramme de bode avec une phase carré. 
+Ne pas faire de diagramme de bode avec une phase de merde. 
+$-5$pts aux partiels. 
