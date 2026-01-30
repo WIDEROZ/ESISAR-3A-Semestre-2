@@ -16,6 +16,7 @@
 - Toutes les stations peuvent émettre en même temps sur l'ensemble du media (fréquence)
 - Utilisation de code (chipping sequence), ils doivent être orthogonaux entre eux et être reconnus par le récepteur. 
 - Les envois en donnés doivent être synchronisés
+
 ###### Exemple
 Code des machines : 
 $$\begin{cases}
@@ -42,7 +43,9 @@ $$A * B = \sum_{i \in [\![1, 4]\!]}(a_{i} - b_{i})a_{i} = \begin{cases}
 ## 2. Méthode d'allocation dynamique
 Diapo 19-27
 
-### b. CSMA - Carrier sense
+### b. CSMA - Carrier Sense Multiple Access
 #### CSMA $p$-persistant
-- On vérifie si le canal est libre si oui la machine émet avec une probabilité de $p$
-- 
+On vérifie si le canal est libre si oui la machine émet avec une probabilité de $p$, si elle n'a pas décidé d'émettre alors on attend un slot de temps et on vérifie si le canal est occupé.
+![[Pasted image 20260130121036.png]]
+
+
