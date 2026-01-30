@@ -1,5 +1,8 @@
 # I. Couche physique
-- Couche Physique : **Bit**
-- Couche **Trame** : communiquer des donnés
+- Couche **Physique** : comment est encodé le signal
+- Couche **Liaison de Donnés** : communiquer des **Trames**
 - Couche **Réseau** : communiquer des adresses
-- Couche **Transmission** : 
+- Couche **Transport** : TCP / UDP
+- Couche **Session** 
+- Couche **Présentation** (pas important)
+- Couche **Application** : 
