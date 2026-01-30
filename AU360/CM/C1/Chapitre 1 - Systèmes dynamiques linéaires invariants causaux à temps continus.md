@@ -17,3 +17,7 @@ $$\int_{0}^{+ \infty} \left| h(t)\right| \, dt \in \mathbb{R} \Leftrightarrow \m
 
 #### Régime statique
 On appelle Régime Statique d’un système linéaire invariant causal et stable, l’état, de durée indéfinie, du système dans lequel toutes ses dérivées nulles.
+
+
+# ATTENTION
+Ne pas 
