@@ -3,6 +3,7 @@
 - Couche **Liaison de Donnés** : communiquer des **Trames**
 - Couche **Réseau** : communiquer des adresses
 - Couche **Transport** : TCP / UDP
-- Couche **Session** 
+- Couche **Session**
 - Couche **Présentation** (pas important)
-- Couche **Application** : 
+- Couche **Application**
+
