@@ -20,4 +20,4 @@ On appelle Régime Statique d’un système linéaire invariant causal et stable
 
 
 # ATTENTION
-Ne pas 
+Ne pas faire de diagramme de bode avec une phase carré. 
