@@ -1,4 +1,3 @@
-# I. Couche physique
 - Couche **Physique** : comment est encodé le signal
 - Couche **Liaison de Donnés** : communiquer des **Trames**
 - Couche **Réseau** : communiquer des adresses
