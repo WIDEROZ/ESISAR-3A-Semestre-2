@@ -14,7 +14,7 @@
 
 ### c. CDMA - Code Division Multiple Access
 - Toutes les stations peuvent émettre en même temps sur l'ensemble du media (fréquence)
-- Utilisation de code (chipping sequence), leur somme deux à deux doit être nulle et être reconnus par le récepteur. 
+- Utilisation de code (chipping sequence), ils doivent être orthogonaux entre eux et être reconnus par le récepteur. 
 - Les envois en donnés doivent être synchronisés
 ###### Exemple
 Code des machines : 
@@ -27,17 +27,17 @@ C = \{ 1, 1, -1, -1 \}
 Si $A$ veut envoyer :
 - bit $1$ : alors il envoie son code
 - bit $0$ : il envoie l'opposé de son code
-- rien : il envoie $0$
+- rien : il envoie $\{ 0, 0, 0, 0 \}$
 
 De même pour $B$ et $C$.
 Pour retrouver si $A$ envoie $0$ $1$ ou rien on fait un produit de convolution avec un autre signal :
-$$A * B = \sum_{i \in [\![1, 4]\!]}(a_{i} - b_{i})a_{i}$$
-
-
-
-
-
+$$A * B = \sum_{i \in [\![1, 4]\!]}(a_{i} - b_{i})a_{i} = \begin{cases}
+0 & \text{si il n'y a pas de signal envoyé} \\
+\geq 0& \text{si A à envoyé 1} \\
+\leq 0& \text{si A à envoyé 0}
+\end{cases}$$
 
 
 
 ## 2. Méthode d'allocation dynamique
+Diapo 19-
