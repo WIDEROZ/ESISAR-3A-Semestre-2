@@ -19,6 +19,15 @@ $$\int_{0}^{+ \infty} \left| h(t)\right| \, dt \in \mathbb{R} \Leftrightarrow \m
 On appelle Régime Statique d’un système linéaire invariant causal et stable, l’état, de durée indéfinie, du système dans lequel toutes ses dérivées nulles.
 
 
+
+
+### Réduction de modèle
+![[Pasted image 20260130164923.png]]
+
+
+
+
+
 # ATTENTION
 Ne pas faire de diagramme de bode avec une phase de merde. 
 $-5$pts aux partiels. 
