@@ -9,3 +9,7 @@ Soit $x$ une fonction définie en $0$, ($x(t)\underset{n \to +\infty}{\longright
 Si $X$ (Transformée de Laplace de $x$) a une abscisse de convergence finie alors, 
 $$\lim_{ t \to 0^{+} } x(t) = \lim_{ p \to +\infty } pX(p)$$
 $$\lim_{ t \to +\infty } x(t) = \lim_{ p \to 0^{+} } pX(p)  $$
+
+#### Théorème
+Un système linéaire entrée bornée sortie bornée est stable ssi : 
+$$\int_{0}^{+ \infty} \left| h(t)\right| \, dt \in \mathbb{R} \Leftrightarrow \mathrm{Re}(\mathrm{pôles}(H(p))) < 0$$
