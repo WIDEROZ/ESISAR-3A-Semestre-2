@@ -40,4 +40,9 @@ $$A * B = \sum_{i \in [\![1, 4]\!]}(a_{i} - b_{i})a_{i} = \begin{cases}
 
 
 ## 2. Méthode d'allocation dynamique
-Diapo 19-
+Diapo 19-27
+
+### b. CSMA - Carrier sense
+#### CSMA $p$-persistant
+- On vérifie si le canal est libre si oui la machine émet avec une probabilité de $p$
+- 
