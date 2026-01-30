@@ -14,3 +14,9 @@ LAN : Local Area Network
 MAN : Metropolitan Area Network (Ville)
 WAN : Wide Area Network
 
+## 2. Interconnection de plusieurs types de réseaux
+#### Architecture composée de réseau de
+- Desserte 
+- Collecte
+- Transport
+
