@@ -21,4 +21,6 @@ Philo qui dit qu'il n'y a qu'une seule forme de travail et qu'il faut forcer les
 - Qualité du processus de production
 - Principe d'amélioration continue
 
-### 4.
+## L'effet Hawthorne
+Les gens réagissent positivement au fait que l'on s'occupe d'eux pour améliorer leur situation, surtout s'ils sont dans une faible position dans l'entreprise. 
+
