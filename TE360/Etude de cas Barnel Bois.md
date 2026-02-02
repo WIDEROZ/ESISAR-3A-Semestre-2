@@ -1,3 +1,4 @@
+
 | Bien                                         | Pas Bien                               |
 | -------------------------------------------- | -------------------------------------- |
 | Communication avec les différents directeurs | Moyen de communication (Philo de com.) |
