@@ -53,4 +53,21 @@ $$\begin{array}{l}
 
 
 # II - Exemple d'amplificateurs
-## 1. Qua
+## 1. Quadripôle amplificateur 
+![[Pasted image 20260203111523.png]]
+Soit $A_{v} = \frac{V_{s}}{V_{e}}$ (pour $i_{s} = 0$)
+#### Gain en charge
+$$\boxed{A_{vc} = \left. \frac{V_{s}}{V_{e}} \right|_{Z_{u}} = \frac{Z_{u}}{Z_{s} + Z_{u}} A_{v}}$$
+
+#### Gain Composite
+$$\boxed{A_{vc} = \left. \frac{V_{s}}{e_{g}}\right|_{i_{s} = 0} = \frac{Z_{e}}{Z_{e} + R_{g}} A_{v}}$$
+
+## 2. Transistor Bipolaire
+![[Pasted image 20260203112213.png]]
+
+
+## 3. Transistor à effet de champ canal $N$
+![[Pasted image 20260203111957.png]]
+#### Courant au Drain
+$$\boxed{I_{D} = I_{Dss}(V_{p} + V_{GS})^{2}}$$
+
