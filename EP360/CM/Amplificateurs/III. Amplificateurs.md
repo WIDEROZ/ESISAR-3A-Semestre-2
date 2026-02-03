@@ -1,4 +1,4 @@
-#### Angle de conduction
+### 1. Angle de conduction
 $$\theta_{c} = \omega T_{c}$$ 
 #### Distortion Harmonique
 Soit $S_{k}$ n'amplitude de l'harmonique $k$
@@ -8,20 +8,21 @@ Taux de distortion harmonique
 
 Pour un ampli parfait : $\mathrm{THD} = 0$
 
-### Puissance
+### 2. Puissance
 ![[Pasted image 20260203105951.png]]
 #### Rendement
 $$\boxed{\eta = \frac{P_{u}}{P_{tot}}}$$
 
 
-# Classe d'amplificateurs
+# I - Classe d'amplificateurs
 #### Classe $A$
 $$\begin{array}{l}
 \theta_{c} = 2\pi \\
 \eta : \text{à chier} \\
 \mathrm{THD} : \text{ très bon} \\
 \text{Grande linéarité} \\
-\text{Faible puissance} (\ll 50 W)
+\text{Faible puissance} \,(< 50 W) \\
+\text{HI-FI}
 \end{array}$$
 
 #### Classe $B$ et $AB$
@@ -29,6 +30,27 @@ $$\begin{array}{l}
 \theta_{c} = \pi - \varepsilon \\
 \text{Compromis : }\eta \nearrow \text{ et } \mathrm{THD} \searrow \\
 \text{Linéarité} \\
-\text{Faible puissance} \\
-\text{}
+\text{Puissance} < 500W \\
+\text{HI-FI} 
 \end{array}$$
+
+#### Classe $C$
+$$\begin{array}{l}
+\theta_{c} \ll \pi \\
+n\nearrow \nearrow  \text{ et } \mathrm{THD}\searrow\searrow \\
+\text{Haute fréquencce de forte pusisance} \sim KW \\
+\text{TV / Radio}
+\end{array}$$
+
+
+#### Classe $D$
+$$\begin{array}{l}
+\theta_{c} \approx 0 \\
+\eta : \text{INCROYABLE} \\
+\mathrm{THD} : \text{à chier} \\
+\text{Autoradio} / \text{Téléphone}
+\end{array}$$
+
+
+# II - Exemple d'amplificateurs
+## 1. Qua
