@@ -92,3 +92,7 @@ $V_{th}$ : Tension de seuil
 #### Schema équivalent
 ![[Pasted image 20260203112857.png]]
 
+# III - Étude d'un amplificateur de Classe $A$
+## 1. Montage
+![[Pasted image 20260203113734.png]]
+
