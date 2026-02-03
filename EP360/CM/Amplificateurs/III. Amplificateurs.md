@@ -8,5 +8,27 @@ Taux de distortion harmonique
 
 Pour un ampli parfait : $\mathrm{THD} = 0$
 
+### Puissance
+![[Pasted image 20260203105951.png]]
 #### Rendement
 $$\boxed{\eta = \frac{P_{u}}{P_{tot}}}$$
+
+
+# Classe d'amplificateurs
+#### Classe $A$
+$$\begin{array}{l}
+\theta_{c} = 2\pi \\
+\eta : \text{à chier} \\
+\mathrm{THD} : \text{ très bon} \\
+\text{Grande linéarité} \\
+\text{Faible puissance} (\ll 50 W)
+\end{array}$$
+
+#### Classe $B$ et $AB$
+$$\begin{array}{l}
+\theta_{c} = \pi - \varepsilon \\
+\text{Compromis : }\eta \nearrow \text{ et } \mathrm{THD} \searrow \\
+\text{Linéarité} \\
+\text{Faible puissance} \\
+\text{}
+\end{array}$$
