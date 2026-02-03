@@ -70,4 +70,25 @@ $$\boxed{A_{vc} = \left. \frac{V_{s}}{e_{g}}\right|_{i_{s} = 0} = \frac{Z_{e}}{Z
 ![[Pasted image 20260203111957.png]]
 #### Courant au Drain
 $$\boxed{I_{D} = I_{Dss}(V_{p} + V_{GS})^{2}}$$
+#### Caractéristique du transistor
+![[Pasted image 20260203112351.png]]
+$V_{p}$ : Tension de pincement
+
+#### Schema équivalent
+![[Pasted image 20260203112608.png]]
+
+## 4. Transisor MOSFET
+
+![[Pasted image 20260203112637.png]]
+
+#### Caractéristique du transistor
+![[Pasted image 20260203112717.png]]
+$V_{th}$ : Tension de seuil
+
+#### Schema équivalent
+![[Pasted image 20260203112608.png]]
+
+## 5. AOP
+#### Schema équivalent
+![[Pasted image 20260203112857.png]]
 
