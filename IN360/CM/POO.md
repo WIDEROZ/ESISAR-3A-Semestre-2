@@ -1,3 +1,21 @@
 ```java
 import java.util.ArrayList;
 ```
+
+#### for
+```java
+for(Type element : collection){
+	// Action
+}
+```
+
+#### while
+```java
+while (i <= n){
+	// Action
+}
+```
+
+#### Comparateurs
+`==` : même endroit en mémoire
+`equals` : Compare une chaîne de char
