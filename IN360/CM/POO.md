@@ -19,3 +19,8 @@ while (i <= n){
 #### Comparateurs
 `==` : même endroit en mémoire
 `equals` : Compare une chaîne de char
+
+```java
+input.equals("Feur");
+```
+
