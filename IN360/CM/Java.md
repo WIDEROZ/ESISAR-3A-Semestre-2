@@ -28,5 +28,6 @@ input.equals("Feur");
 ```java
 Iterator <Type> it = obj.iterator();
 boolean it.hasNext();
-
+Type it.next();
+void it.remove();
 ```
