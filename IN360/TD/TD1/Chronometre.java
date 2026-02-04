@@ -78,15 +78,14 @@ public class Chronometre {
 
 
     /* Main */
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
         Chronometre chrono = new Chronometre();
 
         String heure = "00";
         String minute = "00";
         String seconde = "00";
 
-        chrono.setHeures(1);
-        chrono.setMinutes(30);
+        chrono.setMinutes(40);
 
         int heures = chrono.getHeures();
         int minutes = chrono.getMinutes();
