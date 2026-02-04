@@ -4,14 +4,18 @@ Soit :
 $$f : \begin{cases}
 I \subset \mathbb{R} \to \mathbb{R} \\
 x \mapsto f(x)
-\end{cases} \text{ telle que : } f(I) \subset I$$
-Soit :
+\end{cases} \text{ continue telle que : } f(I) \subset I$$
+et
 $$(x_{k})_{k \in \mathbb{N}} \text{ défini par : }\begin{cases}
 x_{k+1} = f(x_{k}) \\
 x_{0} \in I
 \end{cases}$$
 Alors, 
 $$x_{k} \underset{k \to +\infty}{\longrightarrow} l \in \mathbb{R} \Rightarrow f(l) = l$$
+
+Démonstration :
+Supposons que : $x_{k} \underset{k \to +\infty}{\longrightarrow} l$ alors, comme : 
+$$\forall \varepsilon \in \mathbb{R}_{+}^{*},\exists \alpha \in \mathbb{R}_{+}^{*}, \forall x, y \in I, \left| y-x\right| \leq \alpha \Rightarrow \left| f(y) - f(x) \right| \leq \varepsilon $$
 
 
 #### Fonction contractante
