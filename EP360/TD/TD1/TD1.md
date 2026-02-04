@@ -41,5 +41,13 @@ $$G_{db, ass}(\omega_{n}) = \sqrt{10^{2}+(9\omega_{n})^{2}\, }\omega_{n}+C$$
 # Exercice 2
 EXCAL 3
 ## 1.
-$$Z_{AM} = $$
-$$$$
+$$V_{5} = V_{AM} = Z_{5} i_{2} = Z_{AM} i_{e}$$
+$$Z_{AM} = Z_{5} \frac{i_{2}}{i_{e}} = Z_{5} \frac{i_{4} + i_{1}}{i_{e}} = Z_{5} \frac{i_{4}+i_{e}+i_{3}}{i_{e}} = Z_{5} \left( 1+\frac{i_{4}}{i_{e}} + \frac{i_{3}}{i_{e}} \right)$$
+$$0 = Z_{3}i_{1} + Z_{4}i_{2} \text{ et } 0 = Z_{1}i_{e} + Z_{2} i_{1}$$
+Alors, 
+$$i_{e}=\frac{Z_{4}Z_{2}}{Z_{1}Z_{3}}i_{2}$$
+Ainsi, 
+$$\boxed{Z_{AM} = \frac{Z_{1}Z_{3}Z_{5}}{Z_{2}Z_{4}}}$$
+
+## 2.
+On pose $Z_{2} = Z_{3} = R$, Trouver les autres résistancecs 
