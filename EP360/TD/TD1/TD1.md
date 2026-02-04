@@ -39,5 +39,5 @@ $$G_{db, ass}(\omega_{n}) = \sqrt{10^{2}+(9\omega_{n})^{2}\, }\omega_{n}+C$$
 
 
 # Exercice 2
-EXCAL 
+EXCAL 3
 ## 1.
