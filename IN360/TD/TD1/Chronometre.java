@@ -28,14 +28,27 @@ public class Chronometre {
     public void setHeures(int heure){
         if(heure >= 24 || heure < 0){
             System.out.println("Mauvais format pour l'heure");
+        }
+        else{
             heures = heure;
         }
     }
     public void setMinutes(int minute){
-        minutes = minute;
+        if(minute >= 60 || minute < 0){
+            System.out.println("Mauvais format pour les minutes");
+        }
+        else{
+            minutes = minute;
+        }
+        
     }
     public void setSecondes(int seconde){
-        secondes = seconde;
+        if(seconde >= 60 || seconde < 0){
+            System.out.println("Mauvais format pour les minutes");
+        }
+        else{
+            secondes = seconde;
+        }
     }
 
     /* Rebours */
@@ -62,8 +75,13 @@ public class Chronometre {
     /* Main */
     public static void main(String[] args){
         int i = 0;
-        while (i ) {
-            
+
+        Chronometre chrono = new Chronometre();
+
+        while (i <= 1000){
+            System.out.println("Chrono : " + toString());
+
+            i++;
         }
     }
 
