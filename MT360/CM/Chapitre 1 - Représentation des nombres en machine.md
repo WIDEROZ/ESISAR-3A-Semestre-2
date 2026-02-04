@@ -47,3 +47,5 @@ $$\forall (x, x^{*}) \in \mathcal{D}(f) \times \mathcal{D}(f^{*}), x^{*} \in V(x
 #### Précision machine
 $\beta$ la base et $t$ le nombre de digits
 $$h = \beta^{1-t}$$
+
+
