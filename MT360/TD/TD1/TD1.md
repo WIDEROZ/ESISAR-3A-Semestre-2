@@ -36,7 +36,7 @@ $$f : \begin{cases}
 \end{cases}$$
 
 ## 1.
-$$l(f(p, q)) = \frac{p \frac{\partial f}{\partial p}(p, q)}{f(p, q)} \rho(p) + \frac{q \frac{\partial f}{\partial q}(p, q)}{f(p, q)} \rho(q) $$
+$$\rho(f(p, q)) = \frac{p \frac{\partial f}{\partial p}(p, q)}{f(p, q)} \rho(p) + \frac{q \frac{\partial f}{\partial q}(p, q)}{f(p, q)} \rho(q) $$
 $$= \frac{-p}{\sqrt{p^{2}+q}} \rho (p) + \frac{p+\sqrt{p^{2}+q}}{2\sqrt{p^{2}+q}}\rho(q)$$
 
 ## 2.
