@@ -50,4 +50,8 @@ Ainsi,
 $$\boxed{Z_{AM} = \frac{Z_{1}Z_{3}Z_{5}}{Z_{2}Z_{4}}}$$
 
 ## 2.
-On pose $Z_{2} = Z_{3} = R$, Trouver les autres résistancecs 
+On pose $Z_{2} = Z_{3} = R$, Trouver les autres impédances avec uniquement $R$ et $C$. 
+$$Z_{AM} = \frac{Z_{1}Z_{5}}{Z_{4}} = j\omega L$$
+$$Z_{4} = \frac{Z_{1}Z_{5}}{j\omega L}$$
+
+$$Z$$
