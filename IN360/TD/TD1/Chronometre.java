@@ -26,7 +26,10 @@ public class Chronometre {
     /* Setters */
 
     public void setHeures(int heure){
-        heures = heure;
+        if(heure >= 24 || heure < 0){
+            System.out.println("Mauvais format pour l'heure");
+            heures = heure;
+        }
     }
     public void setMinutes(int minute){
         minutes = minute;
@@ -40,14 +43,27 @@ public class Chronometre {
     public void rebours(){
         if (secondes == 0) {
             if (minutes == 0) {
-                
+                if (heures == 0) {
+                    heures=23;
+                }
+                else{
+                    heures--;
+                }
+                minutes=59;
             }
-            else{
-                
-            }
+            secondes = 59;
         }
         else{
             secondes--;
+        }
+    }
+
+
+    /* Main */
+    public static void main(String[] args){
+        int i = 0;
+        while (i ) {
+            
         }
     }
 
