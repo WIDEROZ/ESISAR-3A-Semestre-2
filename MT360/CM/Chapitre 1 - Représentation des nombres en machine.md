@@ -31,3 +31,10 @@ x' = x(1+\rho) \\
 x = x'(1+\rho')
 \end{cases}$$
 
+
+
+# Vu en TD
+#### Stabilité
+Soit $f : \mathbb{R}^{N} \to \mathbb{R}^{M}$ un jeu de donnés
+On dit que l'algorithme $f^{*}$ est numériquement stable en $x$ ssi : 
+$$\forall x \in \mathcal{D}(f),\exists x^{*} \in V(x), $$
