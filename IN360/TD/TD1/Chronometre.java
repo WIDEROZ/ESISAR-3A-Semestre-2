@@ -78,12 +78,34 @@ public class Chronometre {
 
         Chronometre chrono = new Chronometre();
 
-        while (i <= 1000){
-            System.out.println("Chrono : " + toString());
+        String heure = "00";
+        String minute = "00";
+        String seconde = "00";
 
+        
+
+        int heures = chrono.getHeures();
+        int minutes = chrono.getMinutes();
+        int secondes = chrono.getSecondes();
+
+        while (i <= 1000){
+
+            heure = String.format("%02d", heures);
+            minute = String.format("%02d", minutes);
+            seconde = String.format("%02d", secondes);
+
+
+            System.out.println("Chrono : " + );
+
+
+            heures = chrono.getHeures();
+            minutes = chrono.getMinutes();
+            secondes = chrono.getSecondes();
             i++;
         }
     }
 
 
 }
+
+
