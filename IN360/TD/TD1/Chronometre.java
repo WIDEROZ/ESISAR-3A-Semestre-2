@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 public class Chronometre {
     private int heures;
     private int minutes;
@@ -64,6 +66,9 @@ public class Chronometre {
                 }
                 minutes=59;
             }
+            else{
+                minutes --;
+            }
             secondes = 59;
         }
         else{
@@ -74,35 +79,35 @@ public class Chronometre {
 
     /* Main */
     public static void main(String[] args){
-        int i = 0;
-
         Chronometre chrono = new Chronometre();
 
         String heure = "00";
         String minute = "00";
         String seconde = "00";
 
-        
+        chrono.setHeures(1);
+        chrono.setMinutes(30);
 
         int heures = chrono.getHeures();
         int minutes = chrono.getMinutes();
         int secondes = chrono.getSecondes();
 
-        while (i <= 1000){
+        while (heures + minutes + secondes != 0){
 
             heure = String.format("%02d", heures);
             minute = String.format("%02d", minutes);
             seconde = String.format("%02d", secondes);
 
 
-            System.out.println("Chrono : " + );
+            System.out.println("Chrono : " + heure + ':' + minute + ':' + seconde);
+            TimeUnit.SECONDS.sleep(1);
 
-
+            chrono.rebours();
             heures = chrono.getHeures();
             minutes = chrono.getMinutes();
             secondes = chrono.getSecondes();
-            i++;
         }
+        System.out.println("Fin du cours!");
     }
 
 
