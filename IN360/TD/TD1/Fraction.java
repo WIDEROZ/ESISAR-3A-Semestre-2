@@ -18,7 +18,7 @@ public class Fraction {
     }
 
     public void add(int x){
-        pgcd()
+        pgcd()  
     }
 
 
