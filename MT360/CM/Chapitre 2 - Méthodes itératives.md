@@ -26,20 +26,41 @@ $f$ est contractante si elle est $k$-lipschitzienne avec $k <1$
 Soit $f : I \subset \mathbb{R} \to \mathbb{R}$ continue avec $f(I) \subset I$ et $I$ fermé borné
 Si $f$ est lipschitzienne et contractante
 Alors, 
-$$\begin{cases}
+$$\boxed{\begin{cases}
 \exists ! s \in I, f(s) = s \\
 \forall x_{0} \in I, x_{n} \underset{n \to +\infty}{\longrightarrow} s \\
 \left| x_{k} -s\right| \leq \frac{L^{k}}{1-L}\left| x_{1}-x_0\right| \\
 \left| x_{k} -s\right| \leq \frac{L}{1-L}\left| x_{k+1}-x_k\right|
-\end{cases}$$
+\end{cases}}$$
 
 De même pour les vecteurs. 
 
 #### Théorème semi-local du théorème de Banach
 Soit $I = \mathcal{\overline{B}}(x_{0}, r)$
+Soit $f : \mathbb{R}^{N} \to \mathbb{R}^{N}$, $L$-lipschitzienne contractante
+On définit : 
+$$S = \left\{  x \in \mathbb{R}^{N} \left| \left|\left| x -x_{1} \right|\right|\leq \frac{L}{1-L} \left|\left| x_{1}-x_{0} \right|\right|  \right.  \right\}$$
 Si pour $x_{1} = f(x_{0})$ : 
 $$\left| x_{1}-x_{0}\right| \leq r(1-L)$$
-Soit : 
-$$S = \left\{  x \in \mathbb{R}^{N} | \left|\left| x -x_{1} \right|\right|\leq \frac{L}{1-L} \left|\left| x_{1}-x_{0} \right|\right|    \right\}$$
+Alors, 
+$$\boxed{\begin{cases}
+S \subset I \\
+f(S) \subset S \\
 
-# 
+\end{cases}}$$
+
+
+
+
+# III - Vitesse ordre et acceleration de convergence
+#### Définitions
+Soient 
+$$\begin{cases}
+x_{n} \underset{n \to +\infty}{\longrightarrow}s \\
+e_{k} = x_{k} - s \\
+\rho_{k} = \frac{e_{k}}{s}&\text{avec } \rho_{k} = \beta^{1-c_{k}} \\
+c_{k} = 1-\log_{\beta}(\rho_{k})
+\end{cases}$$
+
+#### Vitesse de convergence
+$$\boxed{v_{k} = \frac{\Delta c_{k}}{\Delta k}}$$
