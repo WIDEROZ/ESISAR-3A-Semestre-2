@@ -14,7 +14,7 @@ Ainsi,
 $$T(p) = \frac{R_{1}+R_{2}+\frac{1}{C p}}{R_{2} + \frac{1}{C p}} = \frac{Cp(R_{1}+R_{2})+1}{1+R_{2}Cp}$$
 Avec $p=j\omega$.
 Forme canonique : 
-On pose : $\omega_{d}=  \frac{1}{R_{2}C}$ et $\omega_{n} = \frac{1}{(R_{1}+R_{2})C}$ alors, 
+On pose : $\omega_{d}=  \frac{1}{R_{2}C}$ et $\omega_{n} = \frac{1}{(R_{1}+R_{2})C} = \frac{\omega_{d}}{10}$ alors, 
 $$\boxed{T(p) =  \frac{\frac{p}{\omega_{n}}+1}{1+\frac{p}{\omega_{d}}}}$$
 
 
@@ -23,4 +23,8 @@ $$T(0) = 1 \text{ et } T(p) \underset{p \to + \infty}{\sim} \frac{R_{1}+R_{2}}{R
 
 #### 3. Diagramme de Bode
 EXCAL 2 : Diagramme asymptotique
-$$G_{dB} = 20 \log(\left| T(p)\right|) = 20\log\left( 1+ \frac{p}{\omega_{n}} \right)  - 20 \log\left( 1+ \frac{p}{\omega_{d}} \right)$$
+$$G_{dB} = 20 \log(\left| T(p)\right|) = 20\log\left( \left| 1+ \frac{p}{\omega_{n}}\right| \right)  - 20 \log\left( \left| 1+ \frac{p}{\omega_{d}}\right| \right)$$
+$$\varphi(\omega) = \arg\left( \frac{p}{\omega_{n}}+1 \right) - \arg\left( \frac{p}{\omega_{d}}+1 \right) = \arctan\left( \frac{\omega}{\omega_{n}} \right) - \arctan\left( \frac{\omega}{\omega_{d}} \right)$$
+
+#### 4. 
+$$G_{db}\left( \frac{\omega_{d}+\omega_{n}}{2} \right) = 10\log(\sqrt{1+})$$
