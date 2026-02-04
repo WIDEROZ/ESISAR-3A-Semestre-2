@@ -4,18 +4,19 @@ Soit :
 $$f : \begin{cases}
 I \subset \mathbb{R} \to \mathbb{R} \\
 x \mapsto f(x)
-\end{cases} \text{ continue telle que : } f(I) \subset I$$
+\end{cases} \text{ continue telle que : } f(I) \subset I \text{ et fermé bronée}$$
 et
 $$(x_{k})_{k \in \mathbb{N}} \text{ défini par : }\begin{cases}
 x_{k+1} = f(x_{k}) \\
 x_{0} \in I
 \end{cases}$$
 Alors, 
-$$x_{k} \underset{k \to +\infty}{\longrightarrow} l \in \mathbb{R} \Rightarrow f(l) = l$$
+$$x_{k} \underset{k \to +\infty}{\longrightarrow} l \Rightarrow f(l) = l$$
 
 Démonstration :
-Supposons que : $x_{k} \underset{k \to +\infty}{\longrightarrow} l$ alors, comme : 
-$$\forall \varepsilon \in \mathbb{R}_{+}^{*},\exists \alpha \in \mathbb{R}_{+}^{*}, \forall x, y \in I, \left| y-x\right| \leq \alpha \Rightarrow \left| f(y) - f(x) \right| \leq \varepsilon $$
+Supposons que : $x_{k} \underset{k \to +\infty}{\longrightarrow} l$ alors, comme $I$ est un fermé $l \in I$ 
+Ainsi comme $f$ est continue en $l$ :
+$$x_{k} = f(x_{k+1}) \underset{k \to +\infty}{\longrightarrow} f(l) = l$$
 
 
 #### Fonction contractante
@@ -33,3 +34,5 @@ $$\begin{cases}
 \end{cases}$$
 
 De même pour les vecteurs. 
+
+#### 
