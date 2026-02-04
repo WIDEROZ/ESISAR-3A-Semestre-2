@@ -34,7 +34,12 @@ x = x'(1+\rho')
 
 
 # Vu en TD
+Soit $f : \mathbb{R}^{N} \to \mathbb{R}^{M}$ un jeu de donnés (un problème)
+et $f^{*}$ son algorithme associé. 
 #### Stabilité
-Soit $f : \mathbb{R}^{N} \to \mathbb{R}^{M}$ un jeu de donnés
 On dit que l'algorithme $f^{*}$ est numériquement stable en $x$ ssi : 
-$$\forall x \in \mathcal{D}(f),\exists x^{*} \in V(x), $$
+$$\forall x \in \mathcal{D}(f),\exists x^{*} \in V(x), f(x^{*}) \in V(f^{*}(x)) $$
+
+#### Bon conditionnement
+On dit que le problème $f$ est bien conditionné ssi : 
+$$\forall (x, x^{*}) \in \mathcal{D}(f) \times \mathcal{D}(f^{*}), x^{*} \in V(x) \Rightarrow f(x^{*}) \in V(f(x))$$
