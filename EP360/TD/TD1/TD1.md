@@ -1,5 +1,6 @@
 # Filtres Actifs
 ## Exercice 1
+EXCAL 1
 ### I - Bode
 #### 1. Fonction de transfert
 On a une rétroaction négative alors $\varepsilon=0$ donc : 
@@ -13,8 +14,13 @@ Ainsi,
 $$T(p) = \frac{R_{1}+R_{2}+\frac{1}{C p}}{R_{2} + \frac{1}{C p}} = \frac{Cp(R_{1}+R_{2})+1}{1+R_{2}Cp}$$
 Avec $p=j\omega$.
 Forme canonique : 
-On pose : $\omega_{d}=  \frac{1}{R_{2}C}$ alors, 
-$$T(p) =  \frac{+1}{}$$
+On pose : $\omega_{d}=  \frac{1}{R_{2}C}$ et $\omega_{n} = \frac{1}{(R_{1}+R_{2})C}$ alors, 
+$$\boxed{T(p) =  \frac{\frac{p}{\omega_{n}}+1}{1+\frac{p}{\omega_{d}}}}$$
+
 
 #### 2. Conditions limites
 $$T(0) = 1 \text{ et } T(p) \underset{p \to + \infty}{\sim} \frac{R_{1}+R_{2}}{R_{2}}$$
+
+#### 3. Diagramme de Bode
+EXCAL 2 : Diagramme asymptotique
+$$G_{dB} = 20 \log(\left| T(p)\right|) = 20\log\left( 1+ \frac{p}{\omega_{n}} \right)  - 20 \log\left( 1+ \frac{p}{\omega_{d}} \right)$$
