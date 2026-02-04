@@ -45,10 +45,8 @@ $$\left| x_{1}-x_{0}\right| \leq r(1-L)$$
 Alors, 
 $$\boxed{\begin{cases}
 S \subset I \\
-f(S) \subset S \\
-
+f(S) \subset S
 \end{cases}}$$
-
 
 
 
@@ -63,4 +61,6 @@ c_{k} = 1-\log_{\beta}(\rho_{k})
 \end{cases}$$
 
 #### Vitesse de convergence
-$$\boxed{v_{k} = \frac{\Delta c_{k}}{\Delta k}}$$
+$$\boxed{v_{k} = \frac{\Delta c_{k}}{\Delta k} = c_{k+1}-c_{k}}$$
+Par le théorème de Banach (dans le cas général) on a : 
+$$\boxed{v_{k} \underset{k \to + \infty}{\sim} v = -\log \left| f'(s)\right|}$$
