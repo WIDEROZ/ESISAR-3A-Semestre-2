@@ -27,4 +27,17 @@ $$G_{dB} = 20 \log(\left| T(p)\right|) = 20\log\left( \left| 1+ \frac{p}{\omega_
 $$\varphi(\omega) = \arg\left( \frac{p}{\omega_{n}}+1 \right) - \arg\left( \frac{p}{\omega_{d}}+1 \right) = \arctan\left( \frac{\omega}{\omega_{n}} \right) - \arctan\left( \frac{\omega}{\omega_{d}} \right)$$
 
 #### 4. 
-$$G_{db}\left( \frac{\omega_{d}+\omega_{n}}{2} \right) = 10\log(\sqrt{1+})$$
+$$G_{db}\left( \frac{\omega_{d}+\omega_{n}}{2} \right) = 10\log\left( \frac{{1+\left( \frac{\omega_{d}}{2\omega_{n}} + \frac{1}{2} \right)^{2}}}{{1+ \left( \frac{\omega_{n}}{2\omega_{d}} + \frac{1}{2} \right)^{2}}} \right)$$
+Ainsi, 
+$$G_{db}\left( \frac{\omega_{d}+\omega_{n}}{2} \right) = 10\log\left( \frac{1+(5.5)^{2}}{1+\left( \frac{11}{20} \right)^{2}} \right)$$
+or : 
+$$T(p) \underset{p \to + \infty}{\sim} \frac{R_{1}+R_{2}}{R_{2}} = 10 \text{ et } \omega_{d} - \omega_{n} = 9\omega_{n}$$
+Alors, la pente est de : 
+$$\sqrt{10^{2}+(9\omega_{n})^{2}}$$
+Donc, comme $G_{dB}(\omega_{n}) = 0$ on a l'expression du bode asymptotique entre $\omega_{n}$ et $\omega_{d}$ : etc ...
+$$G_{db, ass}(\omega_{n}) = \sqrt{10^{2}+(9\omega_{n})^{2}\, }\omega_{n}+C$$
+
+
+# Exercice 2
+EXCAL 
+## 1.
