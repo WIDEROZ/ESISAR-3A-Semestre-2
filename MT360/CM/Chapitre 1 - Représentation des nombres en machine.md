@@ -43,3 +43,7 @@ $$\forall x \in \mathcal{D}(f),\exists x^{*} \in V(x), f(x^{*}) \in V(f^{*}(x)) 
 #### Bon conditionnement
 On dit que le problème $f$ est bien conditionné ssi : 
 $$\forall (x, x^{*}) \in \mathcal{D}(f) \times \mathcal{D}(f^{*}), x^{*} \in V(x) \Rightarrow f(x^{*}) \in V(f(x))$$
+
+#### Précision machine
+$\beta$ la base et $t$ le nombre de digits
+$$h = \beta^{1-t}$$
