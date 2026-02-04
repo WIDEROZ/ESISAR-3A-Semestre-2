@@ -49,7 +49,6 @@ f(S) \subset S
 \end{cases}}$$
 
 
-
 # III - Vitesse ordre et acceleration de convergence
 #### Définitions
 Soient 
