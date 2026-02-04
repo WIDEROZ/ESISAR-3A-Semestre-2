@@ -35,4 +35,11 @@ $$\begin{cases}
 
 De même pour les vecteurs. 
 
-#### 
+#### Théorème semi-local du théorème de Banach
+Soit $I = \mathcal{\overline{B}}(x_{0}, r)$
+Si pour $x_{1} = f(x_{0})$ : 
+$$\left| x_{1}-x_{0}\right| \leq r(1-L)$$
+Soit : 
+$$S = \left\{  x \in \mathbb{R}^{N} | \left|\left| x -x_{1} \right|\right|\leq \frac{L}{1-L} \left|\left| x_{1}-x_{0} \right|\right|    \right\}$$
+
+# 
