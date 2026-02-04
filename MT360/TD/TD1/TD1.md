@@ -28,3 +28,15 @@ $$\beta^{e-t} = 7^{e-5}$$
 $$(.40000) \times 7^{0} = \frac{4}{7} $$
 
 # Exercice 2
+$$x^{2} + 2px-q = 0$$
+On souhaite alors évaluer : 
+$$f : \begin{cases}
+\mathbb{R}\times \mathbb{R}_{+} \to \mathbb{R} \\
+(p, q) \mapsto f(p, q) = -p+\sqrt{p^{2}+q}
+\end{cases}$$
+
+## 1.
+$$l(f(p, q)) = \frac{p \frac{\partial f}{\partial p}(p, q)}{f(p, q)} \rho(p) + \frac{q \frac{\partial f}{\partial q}(p, q)}{f(p, q)} \rho(q) $$
+$$= \frac{-p}{\sqrt{p^{2}+q}} \rho (p) + \frac{p+\sqrt{p^{2}+q}}{2\sqrt{p^{2}+q}}\rho(q)$$
+
+## 2.
