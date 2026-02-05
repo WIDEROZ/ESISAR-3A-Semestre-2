@@ -52,5 +52,43 @@ Puissance de charge / décharge du condensateur (Puissance dynamique) :
 $$P_d = CV_{DD}^{2}F$$
 Puissance du courant de fuite (Puissance statique): 
 $$P_{s} = V_{DD}I_{leak}$$
-## 4. Temps
-$$$$
+## 4. Temps de propagation
+Le temp de charge et de décharge des capacités parasites est :
+$$T_{\text{propagation}} \alpha RC$$
+
+#### Process
+Warn du synthétiseur :
+```VHDL
+s <= not(a) after 10 ns;
+```
+Sythétisable :
+```VHDL
+process(a)
+begin
+wait for 10 ns;
+s <= not(a);
+end process;
+```
+Les process font les instructions de manière séquentiels (while infini tant que $a$ change)
+
+## 5. Entité et architecture
+L'entité décrit le 
+```VHDL
+entity Fonction is
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+```VHDL
+
+```
