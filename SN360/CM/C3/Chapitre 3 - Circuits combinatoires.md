@@ -222,8 +222,7 @@ Attention avec les signés.
 `VHDL s1*s2`
 
 ## 14. Division
-
-
+Division par autre chose que $2$ possible mais GOURMAND en ressources.
 
 
 
