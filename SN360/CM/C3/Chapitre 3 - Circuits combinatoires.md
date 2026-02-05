@@ -72,14 +72,43 @@ end process;
 Les process font les instructions de manière séquentiels (while infini tant que $a$ change)
 
 ## 5. Entité et architecture
-L'entité décrit le 
+L'entité décrit le nom du composant, ses entrés et ses sorties (vue externe)
+L'architecture décrit le comportement que l'entité doit avoir (vue interne)
 ```VHDL
+-- Entitée
 entity Fonction is
+port(a, b, c : in bit;
+	 F       : out bit);
+end Fonction;
 
+-- Architecture
+architecture comb of Fonction is
+begin
+F <= (a and b) or c;
+end comb;
 ```
 
+## 6. Description structurelle
+```VHDL
+component And_Gate
+port(a, b : in bit; s : out bit);
+end component;
 
+component Or_Gate
+port(a, b : in bit; s : out bit);
+end component;
 
+signal interne : bit;
+begin
+
+And1:And_Gate -- And1 : Nom de l'instance
+port map(a=>a,b=>b,s=>interne); -- Instanciation par dénomination
+
+Or1:Or_Gate -- Or1 : Nom de l'instance
+port map(interne,c,F); -- Instanciation par position
+```
+
+## 7. 
 
 
 
