@@ -108,7 +108,8 @@ Or1:Or_Gate -- Or1 : Nom de l'instance
 port map(interne,c,F); -- Instanciation par position
 ```
 
-## 7. 
+## 7. Tableau de Karnaugh
+
 
 
 
