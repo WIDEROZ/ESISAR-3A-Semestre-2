@@ -197,7 +197,36 @@ a\=b
 ```
 
 
-## 
+## 11. Additionneur
+```VHDL
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+signal s1: signed(3 downto 0);
+signal s2: signed(3 downto 0);
+signal s3 : signed(4 downto 0);
+
+s3 <= s1(3)&s1 + s2;
+-- n bit + k bit crée max(n, k) (longeur finale de s3)
+-- & = opérateur de concaténation
+```
+On ajoute le bit de poids fort car c'est un signé. 
+
+
+## 12. Soustracteur
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
