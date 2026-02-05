@@ -54,7 +54,9 @@ On vérifie si le canal est libre si oui la machine émet avec une probabilité 
 - Détecte les collision
 - Le média doit écouter en même temps d'émettre
 Principe d'Ethernet : IEEE $802.3$
-
+![[Pasted image 20260205110531.png]]
+###### Backoff (Binary Exponential Backoff ou truncated BEB)
+- Tire un numéro $N$ entre $0$ et $2^{k-1}$ avec $k$ le nombre de transmissions échoués puis au bout $N$ intervalles de temps la machine émet.
 
 #### CSMA/CA (Collision Avoidance)
 - $p$-persistant
