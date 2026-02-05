@@ -140,9 +140,64 @@ end;
 ## 8. Démultiplexeur
 ![[Pasted image 20260205093233.png]]
 
+```VHDL
+process(e, s)
+begin
+f1<='0'; f2<='0'; f3<='0'; f4<='0';
+case s is
+	when "00" => f1<=e;
+	when "01" => f2<=e;
+	when "10" => f3<=e;
+	when "11" => f4<=e;
+	when others =>
+end case;
+end process;
+```
 
 
+## 9. Décodeur
+![[Pasted image 20260205093612.png]]
 
+```VHDL
+process(i, d)
+begin
+d<="0000";
+case i is
+	when "00" => d(0)<='1';
+	when "01" => d(1)<='1';
+	when "10" => d(2)<='1';
+	when "11" => d(3)<='1';
+	when others =>
+end case;
+end process;
+```
+
+
+## 10. Comparateurs
+![[Pasted image 20260205093856.png]]
+```VHDL
+process(a,b)
+begin
+if a=b then
+	s<='1';
+else
+	s<='0';
+end if;
+end process;
+```
+(le if fonctionne seulement à l’intérieur des processus)
+
+
+#### Conditions
+```VHDL
+-- égalité
+a=b
+-- différent de :
+a\=b
+```
+
+
+## 
 
 
 
