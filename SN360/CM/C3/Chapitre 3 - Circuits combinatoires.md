@@ -111,12 +111,34 @@ port map(interne,c,F); -- Instanciation par position
 ## 7. Tableau de Karnaugh
 ...
 ## 8. Multiplexeur
-- $2$ vers $1$
-- $4$ vers $1$
+- $2$ vers $1$ : $f(a, b, s) = as + bs'$
+- $4$ vers $1$ : $f(a, b, c, d, s_{1}, s_{2}) = as_{1}s_{2} + bs_{1}s_{2}' + cs_{1}'s_{2}+ ds_{1}'s_{2}'$
+(Voir comme la relation $=$)
+![[Pasted image 20260205092444.png]]
+![[Pasted image 20260205092452.png]]
+
+```VHDL
+-- avec un processus
+process(a, b, s)
+begin
+case s is
+	when '0' => f<=a;
+	when '1' => f<=b;
+	when others => f<=a;
+end case;
+end process;
+
+-- sans processus
+with s select
+	f<=a when '0';
+	f<=b when '1';
+	f<=a when others;
+end;
+```
 
 
-
-
+## 8. Démultiplexeur
+![[Pasted image 20260205093233.png]]
 
 
 

@@ -30,6 +30,7 @@ signal s : std_logic_vector(5 downto 0);
 s <= "U01XZ-";
 ```
 Il y a $9$ valeurs différentes possibles pour std_logic
+Par défaut on assigne $U$ à un std_logic
 
 #### Hexadécimal
 ```VHDL
@@ -105,12 +106,3 @@ assign s2=4'b1000; //-8
 
 ```
 Par défaut les wire sont non signés il suffit d'ajouter signed pour qu'ils le deviennent. 
-
-
-```VHDL
-
-```
-
-```Verilog
-
-```
