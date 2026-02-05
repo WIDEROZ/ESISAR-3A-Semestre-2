@@ -65,3 +65,9 @@ Principe d'Ethernet : IEEE $802.3$
   + si il est occupé, la station attend jusqu’à ce que le media soit libre pendant un temps (IFS) et passe ensuite en Binary Exponential Backoff 
 - Les trames sont acquittés explicitement (i.e. la station qui renvoie le message envoie un message a la station qui a émis pour lui dire que la trame est bien reçue)
 
+#### CSMA/CR (Collision Resolution)
+
+#### CSMA/BA
+![[Pasted image 20260205121207.png]]
+
+#### Anneau à jeton (token ring)
