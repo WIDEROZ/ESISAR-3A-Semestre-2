@@ -62,5 +62,6 @@ Principe d'Ethernet : IEEE $802.3$
 - $p$-persistant
 - Une station écoute le média
   + si il est libre sur un temps défini (IFS) alors, elle émet.
-  + si il est occupé, la station attend jusqu’à ce que le media soit libre pendant un temps (IFS) et passe directement en Binary Exponential Backoff  
-- 
+  + si il est occupé, la station attend jusqu’à ce que le media soit libre pendant un temps (IFS) et passe ensuite en Binary Exponential Backoff 
+- Les trames sont acquittés explicitement (i.e. la station qui renvoie le message envoie un message a la station qui a émis pour lui dire que la trame est bien reçue)
+
