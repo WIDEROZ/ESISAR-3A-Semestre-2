@@ -215,9 +215,10 @@ On ajoute le bit de poids fort car c'est un signé.
 
 
 ## 12. Soustracteur
+$A+(-B)$
 
-
-
+## 13. Multiplicateur
+Attention avec les si
 
 
 
