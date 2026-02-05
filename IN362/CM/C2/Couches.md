@@ -3,6 +3,5 @@
 - Couche **Réseau** : communiquer des adresses
 - Couche **Transport** : TCP / UDP
 - Couche **Session**
-- Couche **Présentation** (pas important)
 - Couche **Application**
-
+- Couche **Présentation** (pas important)

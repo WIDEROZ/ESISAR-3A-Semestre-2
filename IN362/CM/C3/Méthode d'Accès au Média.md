@@ -49,3 +49,8 @@ On vérifie si le canal est libre si oui la machine émet avec une probabilité 
 ![[Pasted image 20260130121036.png]]
 
 
+#### CSMA/CD (Colision detection )
+
+
+
+#### CSMA/CA
