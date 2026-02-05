@@ -218,7 +218,11 @@ On ajoute le bit de poids fort car c'est un signé.
 $A+(-B)$
 
 ## 13. Multiplicateur
-Attention avec les si
+Attention avec les signés.
+`VHDL s1*s2`
+
+## 14. Division
+
 
 
 
