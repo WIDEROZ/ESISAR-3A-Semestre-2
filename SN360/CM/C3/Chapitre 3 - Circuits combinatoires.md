@@ -109,6 +109,11 @@ port map(interne,c,F); -- Instanciation par position
 ```
 
 ## 7. Tableau de Karnaugh
+...
+## 8. Multiplexeur
+- $2$ vers $1$
+- $4$ vers $1$
+
 
 
 
