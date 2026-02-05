@@ -55,9 +55,12 @@ On vérifie si le canal est libre si oui la machine émet avec une probabilité 
 - Le média doit écouter en même temps d'émettre
 Principe d'Ethernet : IEEE $802.3$
 ![[Pasted image 20260205110531.png]]
-###### Backoff (Binary Exponential Backoff ou truncated BEB)
+###### Binary Exponential Backoff ou truncated BEB
 - Tire un numéro $N$ entre $0$ et $2^{k-1}$ avec $k$ le nombre de transmissions échoués puis au bout $N$ intervalles de temps la machine émet.
 
 #### CSMA/CA (Collision Avoidance)
 - $p$-persistant
-- $p = \frac{1}{n-1}$ 
+- Une station écoute le média
+  + si il est libre sur un temps défini (IFS) alors, elle émet.
+  + si il est occupé, la station attend jusqu’à ce que le media soit libre pendant un temps (IFS) et passe directement en Binary Exponential Backoff  
+- 
