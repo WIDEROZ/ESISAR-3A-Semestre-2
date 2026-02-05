@@ -49,8 +49,13 @@ On vérifie si le canal est libre si oui la machine émet avec une probabilité 
 ![[Pasted image 20260130121036.png]]
 
 
-#### CSMA/CD (Colision detection )
+#### CSMA/CD (Collision detection)
+- $1$-persistant
+- Détecte les collision
+- Le média doit écouter en même temps d'émettre
+Principe d'Ethernet : IEEE $802.3$
 
 
-
-#### CSMA/CA
+#### CSMA/CA (Collision Avoidance)
+- $p$-persistant
+- $p = \frac{1}{n-1}$ 
