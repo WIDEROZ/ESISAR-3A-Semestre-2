@@ -52,3 +52,5 @@ Puissance de charge / décharge du condensateur (Puissance dynamique) :
 $$P_d = CV_{DD}^{2}F$$
 Puissance du courant de fuite (Puissance statique): 
 $$P_{s} = V_{DD}I_{leak}$$
+## 4. Temps
+$$$$
