@@ -29,19 +29,20 @@ y_{balle} \\
 V_{capteur}
 \end{pmatrix}$$
 Ainsi,  la sortie du système est : 
-$$Y = CX + DU = \begin{pmatrix}
+$$Y = CX + DU = V_{capteur} \text{ Donc } C = \begin{pmatrix}
 0&0&0&1
-\end{pmatrix} X + \begin{pmatrix}
-0&0&0&0
-\end{pmatrix} U$$
+\end{pmatrix}$$
 
-Alors,on souhaite résoudre l'équation : 
-$$X' = AX + BU$$
-$$\frac{d}{dt} X = \begin{pmatrix}
+Alors,on souhaite résoudre les équations : 
+$$\begin{cases}
+X' = AX + BU \\
+Y = CX
+\end{cases}$$
+$$ X' = \begin{pmatrix}
 -\frac{3}{T_{turb}}&0&0&0 \\
 \frac{1}{M}& - \frac{\lambda_{v}}{M}& 0 & 0 \\
 0 & 1 & 0 & 0 \\
-0 & 0 & 3G_{capt}  & -\frac{3}{T_{capt}}
+0 & 0 & \frac{3G_{capt}}{T_{capt}}  & -\frac{3}{T_{capt}}
 \end{pmatrix} X + \begin{pmatrix}
 \frac{3G_{turb}}{T_{turb}} & 0 \\
 0 & \frac{1}{M} \\
@@ -49,3 +50,10 @@ $$\frac{d}{dt} X = \begin{pmatrix}
 0 & 0
 \end{pmatrix} U$$
 
+Donc pour résoudre ce système, on applique la transformée de Laplace :
+$$\begin{cases}
+pX(p) = AX(p) + BU(p) \\
+Y(p) = CX(p) + DU(p)
+\end{cases}$$
+$$ \Leftrightarrow  (pI_{n}-A)X(p) = BU(p) $$
+$$\Leftrightarrow X(p) = (pI_{n} - A)^{-1} B\,U(p)$$
