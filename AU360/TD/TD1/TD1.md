@@ -21,12 +21,31 @@ $$U = \begin{pmatrix}
 U_{turb} \\
 F_{pert} - Mg
 \end{pmatrix}$$
-On 
+On regarde maintenant les états variables du système : 
 $$X = \begin{pmatrix}
 F_{turb} \\
 v_{balle} \\
 y_{balle} \\
 V_{capteur}
 \end{pmatrix}$$
-Alors,
+Ainsi,  la sortie du système est : 
+$$Y = CX + DU = \begin{pmatrix}
+0&0&0&1
+\end{pmatrix} X + \begin{pmatrix}
+0&0&0&0
+\end{pmatrix} U$$
+
+Alors,on souhaite résoudre l'équation : 
 $$X' = AX + BU$$
+$$\frac{d}{dt} X = \begin{pmatrix}
+-\frac{3}{T_{turb}}&0&0&0 \\
+\frac{1}{M}& - \frac{\lambda_{v}}{M}& 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 3G_{capt}  & -\frac{3}{T_{capt}}
+\end{pmatrix} X + \begin{pmatrix}
+\frac{3G_{turb}}{T_{turb}} & 0 \\
+0 & \frac{1}{M} \\
+0 & 0 \\
+0 & 0
+\end{pmatrix} U$$
+
