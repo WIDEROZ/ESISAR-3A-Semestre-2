@@ -17,6 +17,8 @@ Les routeurs stockent et relayent les paquets.
 
 ## 6.
 EXCAL 2
-Le Routeur numéro $2$ va avoir du mal à envoyer les fichiers avec le même débit que le réseau d'avant
+$R_{2}$ reçoit $1000$ paquets en $0.1$s
+Ce qui fait un débit de $1 \times 10^{6}$ paquets par secondes, or le réseau suivant ne supporte pas ce débit aussi grand. 
+
 
 Stocker le paquet ou le jeter.
