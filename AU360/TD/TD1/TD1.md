@@ -12,3 +12,21 @@ $$\begin{cases}
 ## Modélisation de la balle
 On applique le PFD à la balle : 
 $$M \ddot{y} = F_{turb} - Mg - \lambda_{v} \dot{y} - \lambda_{a} \mathrm{sgn}(\dot{y}) \dot{y}^{2} + F_{pert}$$
+
+EXCAL
+
+## 2.
+On regarde le nombre d'entrée du système alors on pose : 
+$$U = \begin{pmatrix}
+U_{turb} \\
+F_{pert} - Mg
+\end{pmatrix}$$
+On 
+$$X = \begin{pmatrix}
+F_{turb} \\
+v_{balle} \\
+y_{balle} \\
+V_{capteur}
+\end{pmatrix}$$
+Alors,
+$$X' = AX + BU$$
