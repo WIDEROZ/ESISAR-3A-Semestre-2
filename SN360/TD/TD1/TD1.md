@@ -18,12 +18,44 @@ $$-42 = 0b1111010110 = \begin{cases}
 ```VHDL
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.
+use IEEE.numeric_std.all;
 
-n : std_logic_vector(19 downto 0);
+n : signal std_logic_vector(19 downto 0);
 i : variable integer;
 i:=293900;
 
-v = ;
+v<=std_logic_vector(to_signed(i, v'length));
 
 ```
+
+```Verilog
+wire [18:0] s;
+assign s=293900;
+```
+
+## 7.
+```Verilog
+wire signed [18:0] s;
+assign s=-293900;
+```
+
+
+# Exercice 2
+## 8.
+$$\begin{array}{|c|c|}\hline
+e&s \\ \hline
+00&1 \\\hline
+01&1 \\\hline
+10&1 \\\hline
+11&0  \\\hline
+\end{array}$$
+## 9.
+$$\begin{array}{|c|c|}\hline
+a&b&a \oplus b&\overline{a}.b+a.\overline{b} \\ \hline
+0&0&1&1 \\\hline
+0&1&1&1 \\\hline
+1&0&1&1 \\\hline
+1&1&0&0  \\\hline
+\end{array}$$
+
+## 10.
