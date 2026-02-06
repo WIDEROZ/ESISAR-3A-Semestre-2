@@ -24,11 +24,21 @@ $$H_{c}(p) = \frac{1}{1+\tau p} \underset{T_{e}+\text{BOZ}}{\longrightarrow} H_{
 Ainsi, 
 $$\boxed{\Delta _{\mathrm{imp}} = \frac{\partial z}{\partial p_{0}}  = \left| \frac{\delta p_{0}}{p_{0}}\right|p_{0}T_{0}}$$
 #### A voir
-![[Pasted image 20260206092803.png]]
-
 #### Choix de  $T_{e}$ à partir du temps continu
-Dépend du contexte mais on peut utiliser la Fréquence de Nyquist, car le spectre peut être réduit par le FAR
-
+Dépend du contexte mais on peut utiliser la Fréquence de Nyquist, car le spectre peut être réduit par le FAR. 
+$$f_{\max} = \frac{f_{e}}{2} \Leftrightarrow \omega = \frac{\pi}{T_{e}}$$
+#### Choix de  $T_{e}$ à partir de la fonction de transfert
 ##### Gain pour un passe bas
 Au delà d'un certain $\omega_{1}$, le gain de la fonction de transfert est inférieur à un $G_{\min}$ choisi. Souvent $G_{\min} = \frac{1}{10\,000}$ tous les signaux au dessus de ce $\omega_{0}$ ne sont plus considérés.
+$$\omega_{1} \leq \omega_{\max} = \frac{\pi}{T_{e}}$$
+
+Calcul de $\omega_{1}$ : 
+$$\left| H(j\omega) \right| = \frac{G}{\sqrt{1+(\tau \omega)^{2}}} \underset{\omega \gg \frac{1}{\tau}}{\longrightarrow} \frac{G}{\tau \omega}$$
+Ainsi, 
+$$G_{\min} = \left| H(j\omega_{1})\right| =\frac{G}{\tau \omega_{1}} \Leftrightarrow \omega_{1}=\frac{G}{\tau G_{\min}}$$
+
+##### Phase
+$$\omega_{\max} \geq 10^{N_{decades}}\left| \text{Pôle du zero le plus rapide du système}\right|$$
+On prend $N_{décade} = 2$ idéalement sinon $1$
+$$T_{e} \leq \frac{\pi}{10^{N_{decades}}\left| \text{Pôle du zero le plus rapide du système}\right|}$$
 
