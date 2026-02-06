@@ -42,3 +42,8 @@ $$\omega_{\max} \geq 10^{N_{decades}}\left| \text{Pôle du zero le plus rapide d
 On prend $N_{décade} = 2$ idéalement sinon $1$
 $$T_{e} \leq \frac{\pi}{10^{N_{decades}}\left| \text{Pôle du zero le plus rapide du système}\right|}$$
 
+
+
+
+
+# IMPORTANT
