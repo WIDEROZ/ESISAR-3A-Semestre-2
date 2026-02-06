@@ -22,3 +22,9 @@ Ce qui fait un débit de $1 \times 10^{6}$ paquets par secondes, or le réseau s
 
 
 Stocker le paquet ou le jeter.
+
+## 7.
+Au niveau du routeur. 
+
+## 9.
+$$$$
