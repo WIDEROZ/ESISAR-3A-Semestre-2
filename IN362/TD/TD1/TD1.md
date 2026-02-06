@@ -6,10 +6,17 @@ Les éléments $R_{1}$ et $R_{2}$ sont des routeurs, ils sont au maximum dans la
 EXCAL 1
 
 ## 3.
-$R_{1}$ et $R_{2}$ doivent connaître l'IP globale de $B$ () pour pouvoir assurer le transport. 
+$R_{1}$ et $R_{2}$ doivent connaître l'IP globale de $B$ (grâce à la table de routage) pour pouvoir assurer le transport. 
 
 ## 4.
 $$2^{32}-1 = 4\,294\,967\,295$$
 Il recherche dans sa table de routage et redirige les paquets vers d'autres routeurs. 
 
 ## 5.
+Les routeurs stockent et relayent les paquets. 
+
+## 6.
+EXCAL 2
+Le Routeur numéro $2$ va avoir du mal à envoyer les fichiers avec le même débit que le réseau d'avant
+
+Stocker le paquet ou le jeter.
