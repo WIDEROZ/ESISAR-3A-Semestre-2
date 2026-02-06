@@ -68,5 +68,29 @@ a&b&a \text{ xnor } b& ab + \overline{a}\overline{b} \\ \hline
 1&1&0&0 \\\hline
 \end{array}$$
 
-## 11.
-$$$$
+
+
+# Exercice 3
+## 2.
+```VHDL
+entity Eq1 is
+port(a, b : in bit
+	 s    : out bit);
+end Eq1;
+
+entity Eq2 is
+port(a, b, c : in bit
+	 s    : out bit);
+end Eq2;
+
+architecture A of Eq1 is
+begin
+	s <= (a and b) or (a nor b);
+end eq1;
+
+architecture B of Eq2 is
+begin
+	s <= (a nand b) or c;
+end eq2;
+
+```
