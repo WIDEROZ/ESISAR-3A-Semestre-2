@@ -68,9 +68,14 @@ X(p) = (pI_{n} - A)^{-1} B\,U(p) \\
 $$\frac{V_{capt}}{U_{turb}} = H(p) = \frac{G_{turb}}{\frac{T_{turb}}{3}p + 1} \times \frac{1}{Mp + \lambda_{v}}\times \frac{1}{p}\times \frac{G_{capt}}{\frac{T_{capt}}{3} p+ 1}$$
 
 $$\begin{array}{rl}
-20\log(\left| H(p)\right|) &= 20&\log&\left( \frac{G_{turb}G_{capt}}{\lambda_{v}p} \right)  \\
-&- 10&\log&\left( \left( 1+\left( \frac{T_{turb}}{3}p \right)^{2} \right.\right)&\text{ffff} \\
+G_{dB}(p) = 20\log(\left| H(p)\right|) &= 20&\log&\left( \frac{G_{turb}G_{capt}}{\lambda_{v}p} \right)  \\
+&- 10&\log&\left( \left( 1+\left( \frac{T_{turb}}{3}p \right)^{2} \right.\right)& \\
 &&&\left( 1 + \left( \frac{M}{\lambda_{v}}p \right)^{2} \right) \\
 &&&\left.\left( \frac{T_{capt}}{3}p +1\right)\right)
 \end{array}$$
+On pose :
+- $\omega_{turb} = \frac{3}{T_{turb}} = 300 \, \text{rad.s}^{-1}$
+- $\omega_{balle} = \frac{\lambda_{v}}{M} = 2.75 \, \text{rad.s}^{-1}$
+- $\omega_{capt} = \frac{3}{T_{capt}} = 60 \, \text{rad.s}^{-1}$
 
+$$G_{db}(\omega) = $$
