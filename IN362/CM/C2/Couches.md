@@ -1,7 +1,7 @@
-- Couche **Physique** : comment est encodé le signal
-- Couche **Liaison de Donnés** : communiquer des **Trames**
-- Couche **Réseau** : communiquer des adresses
-- Couche **Transport** : TCP / UDP
+- Couche **Physique** : comment est encodé le signal (**bit**)
+- Couche **Liaison de Donnés** : communiquer des (**Trame**)
+- Couche **Réseau** : communiquer des adresses (**Paquet**)
+- Couche **Transport** : TCP (**Segment**) / UDP (**Datagramme**)
 - Couche **Session**
+- Couche **Présentation**
 - Couche **Application**
-- Couche **Présentation** (pas important)
