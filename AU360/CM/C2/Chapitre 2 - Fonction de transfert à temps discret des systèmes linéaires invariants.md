@@ -45,5 +45,4 @@ $$T_{e} \leq \frac{\pi}{10^{N_{decades}}\left| \text{Pôle du zero le plus rapid
 
 
 
-
-# IMPORTANT
+# DIAPO 38
