@@ -52,10 +52,21 @@ e&s \\ \hline
 ## 9.
 $$\begin{array}{|c|c|}\hline
 a&b&a \oplus b&\overline{a}.b+a.\overline{b} \\ \hline
-0&0&1&1 \\\hline
+0&0&0&0 \\\hline
 0&1&1&1 \\\hline
 1&0&1&1 \\\hline
 1&1&0&0  \\\hline
 \end{array}$$
 
 ## 10.
+On veut : 
+$$\begin{array}{|c|c|} \hline
+a&b&a \text{ xnor } b& ab + \overline{a}\overline{b} \\ \hline
+0&0&1&1 \\\hline
+0&1&0&0 \\\hline
+1&0&0&0 \\\hline
+1&1&0&0 \\\hline
+\end{array}$$
+
+## 11.
+$$$$
