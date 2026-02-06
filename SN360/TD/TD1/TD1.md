@@ -96,9 +96,30 @@ begin
 end b;
 
 ```
-Si on voulait des variables intermédiaires 
+Si on voulait des variables intermédiaires, on l'aurait mis avant le begin.
 
 ## 3.
 ```VHDL
-
+architecture B of Eq2 is
+	component NAND is
+		port(e1, e2 : in std_logic;
+			 s1    : out std_logic);
+	end component;
+	component OR is
+		port(e1, e2 : in std_logic;
+			 s2    : out std_logic);
+	end component;
+	
+	signal interne : std_logic;
+	
+	begin
+	
+	NAND1:NAND
+	port map(a=>a, b=>b, s1=>interne);
+	
+	OR1:OR
+	port map(a=>interne, b=>c, s1);
+	
+	
+	
 ```
