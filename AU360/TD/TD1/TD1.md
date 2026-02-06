@@ -55,5 +55,14 @@ $$\begin{cases}
 pX(p) = AX(p) + BU(p) \\
 Y(p) = CX(p) + DU(p)
 \end{cases}$$
-$$ \Leftrightarrow  (pI_{n}-A)X(p) = BU(p) $$
-$$\Leftrightarrow X(p) = (pI_{n} - A)^{-1} B\,U(p)$$
+$$ \Leftrightarrow  \begin{cases}
+(pI_{n}-A)X(p) = BU(p) \\
+\dots
+\end{cases} $$
+$$\Leftrightarrow \begin{cases}
+X(p) = (pI_{n} - A)^{-1} B\,U(p) \\
+\dots 
+\end{cases}$$
+
+
+$$\frac{V_{capt}}{U_{turb}} = H(p) = \frac{G_{turb}}{\frac{T_{turb}}{3}p + 1} \times \frac{1}{Mp + \lambda_{v}}\times \frac{1}{p}\times \frac{G_{capt}}{\frac{T_{capt}}{3} p+ 1}$$
