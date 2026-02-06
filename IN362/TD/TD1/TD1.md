@@ -27,4 +27,6 @@ Stocker le paquet ou le jeter.
 Au niveau du routeur. 
 
 ## 9.
-$$$$
+$$2\times10^{-2}+4\times10^{-3}$$
+
+## 10.
