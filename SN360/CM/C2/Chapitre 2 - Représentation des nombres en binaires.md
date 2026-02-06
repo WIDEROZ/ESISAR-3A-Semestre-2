@@ -63,6 +63,8 @@ assign v1=16h'1D9A
 1'bZ : $1$ bit qui n'est pas initialisé
 
 # II. Conversion de types
+![[Pasted image 20260206110708.png]]
+
 #### std_logic_vector $\Leftrightarrow$ integer
 ```VHDL
 library IEEE;

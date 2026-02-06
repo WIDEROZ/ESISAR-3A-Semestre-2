@@ -15,4 +15,15 @@ $$-42 = 0b1111010110 = \begin{cases}
 \end{cases}$$
 
 ## 5.
-$$$$
+```VHDL
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.
+
+n : std_logic_vector(19 downto 0);
+i : variable integer;
+i:=293900;
+
+v = ;
+
+```
