@@ -74,23 +74,31 @@ a&b&a \text{ xnor } b& ab + \overline{a}\overline{b} \\ \hline
 ## 2.
 ```VHDL
 entity Eq1 is
-port(a, b : in bit
-	 s    : out bit);
+port(a, b : in std_logic;
+	 s    : out std_logic);
 end Eq1;
 
 entity Eq2 is
-port(a, b, c : in bit
-	 s    : out bit);
+port(a, b, c : in std_logic;
+	 s       : out std_logic);
 end Eq2;
+
+
 
 architecture A of Eq1 is
 begin
-	s <= (a and b) or (a nor b);
-end eq1;
+	s <= (a and b) or (not(a) and not(b));
+end A;
 
 architecture B of Eq2 is
 begin
 	s <= (a nand b) or c;
-end eq2;
+end b;
+
+```
+Si on voulait des variables intermédiaires 
+
+## 3.
+```VHDL
 
 ```
