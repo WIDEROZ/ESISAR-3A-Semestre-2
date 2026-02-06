@@ -6,9 +6,9 @@ $$\boxed{\frac{T_{capt}}{3} \frac{dV_{capt}}{dt} + V_{capt}(t) =  G_{capt}(D_{1}
 La micro-turbine est pilotée par la tension $U$ la poussée débute à $U_{\min}$ : 
 $$\begin{cases}
 \frac{T_{turb}}{3} \frac{d F_{turb}}{dt} + F_{turb}=0&\text{si } 0 \leq U \leq U_{\min} \\
-\frac{T_{turb}}{3} \frac{d F_{turb}}{dt} + F_{turb}=G_{turb}(U-U_{\min})&\text{si } U_{\min} \leq U 
+\boxed{\frac{T_{turb}}{3} \frac{d F_{turb}}{dt} + F_{turb}=G_{turb}(U-U_{\min})}&\text{si } U_{\min} \leq U 
 \end{cases}$$
 
 ## Modélisation de la balle
-on applique le PFD à la balle : 
-$$M \ddot{y} = F_{turb} - Mg - \lambda_{v} $$
+On applique le PFD à la balle : 
+$$M \ddot{y} = F_{turb} - Mg - \lambda_{v} \dot{y} - \lambda_{a} \mathrm{sgn}(\dot{y}) \dot{y}^{2} + F_{pert}$$
