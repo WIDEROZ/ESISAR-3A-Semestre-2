@@ -39,7 +39,7 @@ et $f^{*}$ son algorithme associé.
 #### Stabilité
 On dit que l'algorithme $f^{*}$ est numériquement stable en $x$ ssi : 
 $$\forall x \in \mathcal{D}(f),\exists x^{*} \in V(x), f(x^{*}) \in V(f^{*}(x)) $$
-
+EXCAL 1
 
 #### Bon conditionnement
 On dit que le problème $f$ est bien conditionné ssi : 

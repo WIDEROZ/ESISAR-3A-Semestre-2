@@ -1,6 +1,6 @@
 # Exercice 1
-$4$ bits pour l'exposant et $5$ digits pour $t$ 
-$$x=[ e | t] = [0000 | 00000]$$
+$4$ bits pour l'exposant et $5$ digits pour $t$
+$$x=[ e | t] = [0000 | 00000]$$
 $e = 1111$ est réservé pour $x=\pm \infty$ ou NAN
 $e = 0000$ est réservé pour $x=0$
 L'exposant est toujours représenté en base $2$
