@@ -60,7 +60,15 @@ $$\rho' = \frac{\left| x-x_{0}\right|}{\left| x_{0}\right|} \leq \beta^{1-t}$$
 Ainsi, 
 $$\sup\left| \rho'\right| = \beta^{1-t}$$
 
-#### A
+#### Théorème
+Soit $Fl(\beta, t, cl, q \geq 1)$ une arithmétique, 
+$cl$ : chopping level (digit auquel on veut chopper)
+$q$ : mode d'arrondi
+($q=0$ : chopping)
+Soit $*$ une opération arithmétique, 
+Soient, $a, b \in \mathbb{F}$, 
+Alors, 
+$$f^{*}(a * b) = (a*b)(1+\rho) \text{ et } \left| \rho\right| \leq \beta^{1-t}$$
 
 
 
