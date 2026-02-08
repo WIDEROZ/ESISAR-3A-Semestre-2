@@ -7,7 +7,7 @@
 | Double   | 2       | 64   | 52       | 11   | $-1022$-$1023$   |
 | Extended | 2       | 80   | 63       | 15   | $-16382$-$16383$ |
 
-## Approximations
+# II. Approximations
 Soit $x$ un nombre en base $\beta$ avec $t$ digit et $e$ comme exposant, alors : 
 ![[Pasted image 20260208212609.png]]
 #### Précision
@@ -20,7 +20,7 @@ $$x_{c} = sgn(x) trunc(\left| x\right| \beta^{t-e} ) \beta^{e-t}$$
 #### Rounding
 $$x_{r} = sgn(x) trunc\left( \left| x\right| \beta^{t-e} +\frac{1}{2} \right) \beta^{e-t}$$
 
-## Erreurs
+# III. Erreurs
 Soit $x'$ la valeur approchée de $x$
 #### Erreur absolue
 À priori :
@@ -60,26 +60,24 @@ $$\rho' = \frac{\left| x-x_{0}\right|}{\left| x_{0}\right|} \leq \beta^{1-t}$$
 Ainsi, 
 $$\sup\left| \rho'\right| = \beta^{1-t}$$
 
+# IV. Propagation d'erreurs
 #### Théorème
 Soit $Fl(\beta, t, cl, q \geq 1)$ une arithmétique, 
 $cl$ : chopping level (digit auquel on veut chopper)
-$q$ : mode d'arrondi
-($q=0$ : chopping)
+$q$ : mode d'arrondi :
+$q=0$ : chopping (on ne peut pas garantir que $\left| \rho\right| \leq \sup\left| \rho'\right| = \beta^{1-t}$)
+$q=1$ : rounding
+$q>1$ : $+ \infty, - \infty, 0$
+
 Soit $*$ une opération arithmétique, 
 Soient, $a, b \in \mathbb{F}$, 
 Alors, 
 $$f^{*}(a * b) = (a*b)(1+\rho) \text{ et } \left| \rho\right| \leq \beta^{1-t}$$
 
-
-
-
-# Vu en TD
-Soit $f : \mathbb{R}^{N} \to \mathbb{R}^{M}$ un jeu de donnés (un problème)
-et $f^{*}$ son algorithme associé. 
 #### Stabilité
 On dit que l'algorithme $f^{*}$ est numériquement stable en $x$ ssi : 
 $$\forall x \in \mathcal{D}(f),\exists x^{*} \in V(x), f(x^{*}) \in V(f^{*}(x)) $$
-EXCAL 1
+![[Pasted image 20260208215913.png]]
 
 #### Bon conditionnement
 On dit que le problème $f$ est bien conditionné ssi : 
