@@ -72,7 +72,7 @@ $q>1$ : $+ \infty, - \infty, 0$
 Soit $*$ une opération arithmétique, 
 Soient, $a, b \in \mathbb{F}$, 
 Alors, 
-$$f^{*}(a * b) = (a*b)(1+\rho) \text{ et } \left| \rho\right| \leq \beta^{1-t}$$
+$$\boxed{f^{*}(a * b) = (a*b)(1+\rho) \text{ et } \left| \rho\right| \leq \beta^{1-t}}$$
 
 #### Stabilité
 On dit que l'algorithme $f^{*}$ est numériquement stable en $x$ ssi : 
