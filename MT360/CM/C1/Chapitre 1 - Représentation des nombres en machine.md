@@ -8,7 +8,8 @@
 | Extended | 2       | 80   | 63       | 15   | $-16382$-$16383$ |
 
 ## Approximations
-Soit $x$ un nombre en base $\beta$ avec $t$ digit et $e$ comme exposant, alors : E
+Soit $x$ un nombre en base $\beta$ avec $t$ digit et $e$ comme exposant, alors : EXAL 2
+
 
 #### Chopping
 $$x_{c} = sgn(x) trunc(\left| x\right| \beta^{t-e} ) \beta^{e-t}$$
