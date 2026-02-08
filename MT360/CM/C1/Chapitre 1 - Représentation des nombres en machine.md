@@ -7,6 +7,12 @@
 | Double   | 2       | 64   | 52       | 11   | $-1022$-$1023$   |
 | Extended | 2       | 80   | 63       | 15   | $-16382$-$16383$ |
 
+## Approximations
+Soit $x$ un nombre en base $\beta$ avec $t$ digit et $e$ comme exposant, alors : E
+
+#### Chopping
+$$x_{c} = sgn(x) trunc(\left| x\right| \beta^{t-e} ) \beta^{e-t}$$
+
 ## Erreurs
 Soit $x'$ la valeur approchée de $x$
 #### Erreur absolue
@@ -52,3 +58,5 @@ $$h = \beta^{1-t}$$
 
 #### Erreur inévitable
 $$\boxed{\rho(f(p, q)) = \frac{p \frac{\partial f}{\partial p}(p, q)}{f(p, q)} \rho(p) + \frac{q \frac{\partial f}{\partial q}(p, q)}{f(p, q)} \rho(q) }$$
+
+

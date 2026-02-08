@@ -14,6 +14,7 @@ Pour un ampli parfait : $\mathrm{THD} = 0$
 $$\boxed{\eta = \frac{P_{u}}{P_{tot}}}$$
 
 
+
 # I - Classe d'amplificateurs
 #### Classe $A$
 $$\begin{array}{l}
