@@ -18,7 +18,8 @@ public class Fraction {
     }
 
     public void add(int x){
-        pgcd()  
+        num = ;
+        den = x * den;
     }
 
 
