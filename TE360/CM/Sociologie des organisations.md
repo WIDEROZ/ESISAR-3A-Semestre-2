@@ -24,3 +24,6 @@ Philo qui dit qu'il n'y a qu'une seule forme de travail et qu'il faut forcer les
 ## L'effet Hawthorne
 Les gens réagissent positivement au fait que l'on s'occupe d'eux pour améliorer leur situation, surtout s'ils sont dans une faible position dans l'entreprise. 
 
+# Innovation / Invention
+
+C'est la diffusion d'une invention
