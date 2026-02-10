@@ -16,7 +16,11 @@ public class Fraction {
     }
 
     public int pgcd(int a, int b){
-        return 1;
+        int x = 0;
+
+        
+
+        return x;
     }
 
     public void add(int x){
