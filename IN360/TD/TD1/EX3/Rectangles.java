@@ -62,7 +62,7 @@ public class Rectangles {
             else if(R.P1.getY() <= y_min){
                 y_min=R.P1.getY();
             }
-
+            
         }
 
     return ;
