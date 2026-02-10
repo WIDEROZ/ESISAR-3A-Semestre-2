@@ -1,6 +1,5 @@
 package EX3;
 
-import java.util.zip.ZipEntry;
 
 public class Rectangles {
 
@@ -30,9 +29,16 @@ public class Rectangles {
 
 
     public double surface(){
-        return (P2.getX() - P1.getX())*(P2.getY() - P1.getY());
+        return abs(P2.getX() - P1.getX())*abs(P2.getY() - P1.getY());
     }
 
-    
+    public boolean contains(Point P){
+        return (P1.getX()<= P.getX() <= P2.getX() || P2.getX()<= P.getX() <= P1.getX()
+             && P1.getY()<= P.getY() <= P2.getY() || P2.getY()<= P.getY() <= P1.getY());
+    }
+
+    public boolean contains(Rectangles R){
+        return ();
+    }
 
 }
