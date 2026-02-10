@@ -81,7 +81,7 @@ Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow}s$,
 $$\boxed{(x_{n})_{n \in \mathbb{N}}\text{ est convergente d'ordre } p \Leftrightarrow \exists \lambda > 0 , \frac{\left| e_{n+1}\right|}{\left| e_{n} \right|} \underset{n \to + \infty}{\sim} \lambda}$$
 
 
-#### Acceleration d'Aitken / $\Delta^{2}$ process
+#### Acceleration d'Aitken / $\Delta^{2}$-process
 Soit $(x_{n})_{n \in \mathbb{N}}$ tel que : $x_{n} \underset{n \to +\infty}{\longrightarrow} s$ converge à l'ordre $1$ ie : 
 $$e_{n+1} \underset{n \to + \infty}{\sim} \lambda e_{n}$$
 Alors, 
@@ -115,5 +115,12 @@ s&\text{si }\xi  = s
 On a alors, 
 $$\begin{cases}
 g(s) = s \\
-
+f'(s) \neq 0 \Rightarrow g'(s) = 0 & x_{n} \text{ CV à un ordre} \geq 2\\
+f'(s) = 0 \Rightarrow g'(s) = g''(s) = 0 & x_{n} \text{ CV à un ordre} \geq 3
 \end{cases}$$
+
+## 4.
+Méthodes itératives pour trouver $F(x) = 0$  :
+On pose : 
+$$f(x) = x-F(x)$$
+Et on cherche 
