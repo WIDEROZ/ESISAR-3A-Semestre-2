@@ -98,3 +98,22 @@ ie :
 $$\lambda_{n} = \frac{x_{n+2} - x_{n+1}}{x_{n+1}-x_{n}}$$
 Ainsi, 
 $$\boxed{x_{n}' = x_{n} - \frac{(x{_{n+1}-x_{n}})^{2}}{x_{n+2} - 2x_{n+1} + x_{n}}}$$
+
+#### Méthode d'Aitken-Steffensen
+Soit $x_{n} \underset{n \to +\infty}{\longrightarrow} s$ avec $x_{n+1} =f(x_{n})$,
+soit $x_{0}$, son acceleration est : 
+$$x_{0}' = x_{0} - \frac{(f(x_{0}) - x_{0})^{2}}{f(f(x_{0})) - 2f(x_{0}) +x_{0}}$$
+On prend l'acceleration de $x_{0}'$ : 
+$$x_{0}'' = x_{0}' - \frac{(f(x_{0}') - x_{0}')^{2}}{f(f(x_{0}')) - 2f(x_{0}') +x_{0}'}$$
+On pose : 
+$$y_{0} = x_{0} \text{ et } y_{n+1} = g(y_{n}) $$
+Avec, 
+$$g(\xi) = \begin{cases}
+\xi - \frac{(f(\xi) - \xi)^{2}}{f(f(\xi)) - 2f(\xi) + \xi} & \text{ si }\xi \neq s \\
+s&\text{si }\xi  = s
+\end{cases}$$
+On a alors, 
+$$\begin{cases}
+g(s) = s \\
+
+\end{cases}$$
