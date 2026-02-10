@@ -23,6 +23,28 @@ public class Fraction {
 
     public void sub(int x){
         add(x);
+        if (num == 0) {
+            den = 0;
+        }
+    }
+
+    public void mult(int x){
+        num *= x;
+        if (num == 0){
+            den = 0;
+        }
+    }
+
+    public void réduire(){
+        int x = pgcd(num, den);
+        num /= x;
+        den /= x;
+    }
+
+    public void addFraction(Fraction f){
+        num = ;
+        den = ;
+        
     }
 
 
