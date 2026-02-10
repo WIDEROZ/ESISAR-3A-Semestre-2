@@ -1,21 +1,24 @@
 package EX3;
 
+import java.util.ArrayList;
 
 public class Rectangles {
 
     private Point P1 = new Point();
     private Point P2 = new Point();
+    public static nbr = 0;
 
     public Rectangles(double l1, double l2, double l3, double l4){
         P1.setX(0);
         P1.setY(0);
-
+        nbr++;
 
     }
 
     public Rectangles(Point a, Point b){
         P1.setPoint(a);
         P2.setPoint(b);
+        nbr++;
 
     }
 
@@ -25,6 +28,7 @@ public class Rectangles {
         P1.setPoint(a);
         P2.setX(P1.getX() + x);
         P2.setY(P1.getY() + y);
+        nbr++;
     }
 
 
@@ -38,7 +42,11 @@ public class Rectangles {
     }
 
     public boolean contains(Rectangles R){
-        return ();
+        return (contains(R.P1) && contains(R.P2));
+    }
+
+    public boolean sameAs(Rectangles R){
+        
     }
 
 }
