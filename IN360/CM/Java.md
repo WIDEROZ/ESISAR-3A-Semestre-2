@@ -31,3 +31,11 @@ boolean it.hasNext();
 Type it.next();
 void it.remove();
 ```
+
+#### static
+On peut appeler une variable/méthode statique a partir du nom de la classe : `Math.pi`
+
+#### final
+```java
+final int 
+```
