@@ -50,13 +50,22 @@ public class Rectangles {
     }
 
     public Rectangles hull(ArrayList<Rectangles> R_list){
-        double x_min = ;
-        double y_min;
-        double x_max;
-        double y_max;
+        double x_min = 0;
+        double y_min = 0;
+        double x_max = 0;
+        double y_max = 0;
 
         for (Rectangles R : R_list) {
-            if 
+            if(R.P1.getX() <= x_min){
+                x_min=R.P1.getX();
+            }
+            else if(R.P1.getY() <= y_min){
+                y_min=R.P1.getY();
+            }
+            else if(R.P1.getY() <= y_min){
+                y_min=R.P1.getY();
+            }
+
         }
 
     return ;
