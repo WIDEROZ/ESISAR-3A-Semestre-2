@@ -142,3 +142,11 @@ $$\forall k \in \mathbb{N}, x_{k+1} = x_{k} - \frac{F(x_{k})}{\frac{F(x_{n}) - F
 $$\mu_{n} = \frac{F(x_{n}) - F(x_{n-1})}{x_{n}-x_{n-1}}$$
 Alors, 
 $$e_{n+1} = e_{n-1}- \frac{F(x_{n})(e_{n}-e_{n-1})}{F(x_{n})-F(x_{n-1})} $$
+Donc, 
+$$\frac{\left| e_{n+1}\right|}{\left| e_{n}\right|^{\frac{1+\sqrt{5}}{2}}} \underset{n \to + \infty}{\sim} 1$$
+ie $(x_{n})$ CV d'ordre $\frac{1+\sqrt{5}}{2}$ 
+
+## 3. Méthode de Newton Raphson
+$$x_{n+1} = x_{n} - \frac{F(x_{n})}{F'(x_{n})} = f(x_{n}) \text{ avec }\mu=F'(x_{n})$$
+$$f'(x) = \frac{F(x)F''(x)}{F'(x)^{2}}$$
+
