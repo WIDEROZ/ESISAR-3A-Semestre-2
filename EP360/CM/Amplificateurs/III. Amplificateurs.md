@@ -78,8 +78,7 @@ $V_{p}$ : Tension de pincement
 #### Schema équivalent
 ![[Pasted image 20260203112608.png]]
 
-## 4. Transisor MOSFET
-
+## 4. Transistor MOSFET
 ![[Pasted image 20260203112637.png]]
 
 #### Caractéristique du transistor
