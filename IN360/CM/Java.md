@@ -33,9 +33,18 @@ void it.remove();
 ```
 
 #### static
-On peut appeler une variable/méthode statique a partir du nom de la classe : `Math.pi`
+On peut appeler une variable/méthode statique a partir du nom de la classe (ie on a pas besoin d'instance) : 
+```java
+Math.pi
+```
 
 #### final
 ```java
-final int 
+final int MAX=100;
 ```
+ne peuvent pas être créés dans les méthodes et sont des variables constantes
+
+# Héritage et Polymorphisme
+
+$$\frac{1}{8}+\frac{4}{9}$$
+$$$$
