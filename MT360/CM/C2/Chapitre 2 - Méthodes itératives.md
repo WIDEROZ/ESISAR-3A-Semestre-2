@@ -59,6 +59,7 @@ e_{k} = x_{k} - s \\
 c_{k} = 1-\log_{\beta}(\rho_{k})
 \end{cases}$$
 
+
 #### Vitesse de convergence
 $$\boxed{v_{k} = \frac{\Delta c_{k}}{\Delta k} = c_{k+1}-c_{k}}$$
 Par le théorème de Banach (dans le cas général) on a : 
@@ -69,10 +70,14 @@ Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow} s$ av
 et :
 $${\forall n \in \mathbb{N}, e_{n+1} = \sum_{k \in \mathbb{N}^{*}} \frac{f^{(k)}(s)}{k!} e_{n}^{k}}$$
 
-$f$ est convergente d'ordre $p$ ssi : 
+$(x_{n})_{n \in \mathbb{N}}$ est convergente d'ordre $p$ ssi : 
 $$\boxed{\forall k \in [\![1, p]\!], f^{(k)}(s) = 0 \text{ et }f^{(p)}\neq 0}$$
 
 On pose alors, 
 $$\boxed{\frac{\left| e_{n+1}\right|}{\left| e_{n}\right|} \underset{n \to + \infty}{\sim} \lambda = \frac{f^{(p)}(s)}{p!}}$$
 
-Avec $\lambda \geq 0$ :
+#### Traub
+Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow}s$, 
+$$\boxed{(x_{n})_{n \in \mathbb{N}}\text{ est convergente d'ordre } p \Leftrightarrow \exists \lambda > 0 , \frac{\left| e_{n+1}\right|}{\left| e_{n} \right|} \underset{n \to + \infty}{\sim} \lambda}$$
+
+
