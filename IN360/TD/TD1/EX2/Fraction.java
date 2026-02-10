@@ -16,11 +16,20 @@ public class Fraction {
     }
 
     public int pgcd(int a, int b){
-        int x = 0;
+        // a, b, d, r : a = bq + r ; q = ? * r + ?
+        int q = a/b;
+        int r = a%b;
+
+        while(r != 0){
+            a = b;
+            b = r;
+            q = a/b;
+            r = a%b;
+        }
 
         
 
-        return x;
+        return b;
     }
 
     public void add(int x){
