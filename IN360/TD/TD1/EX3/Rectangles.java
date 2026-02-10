@@ -46,7 +46,20 @@ public class Rectangles {
     }
 
     public boolean sameAs(Rectangles R){
-        
+        return (P1.sameAs(R.P1) && P2.sameAs(R.P2)) || (P2.sameAs(R.P1) && P1.sameAs(R.P2));
+    }
+
+    public Rectangles hull(ArrayList<Rectangles> R_list){
+        double x_min = ;
+        double y_min;
+        double x_max;
+        double y_max;
+
+        for (Rectangles R : R_list) {
+            if 
+        }
+
+    return ;
     }
 
 }
