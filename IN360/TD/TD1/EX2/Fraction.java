@@ -13,21 +13,28 @@ public class Fraction {
             this.num = num;
             this.den = den;
         }
+    }*
+
+    public int getNum(){
+        return num;
+    }
+
+    public int getDen(){
+        return den;
+    }
+
+    public int setNum(int num){
+        return num;
     }
 
     public int pgcd(int a, int b){
-        // a, b, d, r : a = bq + r ; q = ? * r + ?
-        int q = a/b;
         int r = a%b;
 
         while(r != 0){
             a = b;
             b = r;
-            q = a/b;
             r = a%b;
         }
-
-        
 
         return b;
     }

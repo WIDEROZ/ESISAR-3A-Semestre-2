@@ -55,3 +55,14 @@ public class Voiture extends Vehicule{
 
 #### super
 Permet d'invoquer le constructeur de la superclasse sur une classe enfant. 
+
+
+# Autre
+On doit cast des classes si on assigne un parent à un enfant
+
+
+#### Override
+Ce code vient a la place de ...
+
+#### Overload
+Ce code vient en plus de ...
