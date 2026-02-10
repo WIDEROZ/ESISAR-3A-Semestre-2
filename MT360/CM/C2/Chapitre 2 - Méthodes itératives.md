@@ -81,3 +81,20 @@ Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow}s$,
 $$\boxed{(x_{n})_{n \in \mathbb{N}}\text{ est convergente d'ordre } p \Leftrightarrow \exists \lambda > 0 , \frac{\left| e_{n+1}\right|}{\left| e_{n} \right|} \underset{n \to + \infty}{\sim} \lambda}$$
 
 
+#### Acceleration d'Aitken / $\Delta^{2}$ process
+Soit $(x_{n})_{n \in \mathbb{N}}$ tel que : $x_{n} \underset{n \to +\infty}{\longrightarrow} s$ converge à l'ordre $1$ ie : 
+$$e_{n+1} \underset{n \to + \infty}{\sim} \lambda e_{n}$$
+Alors, 
+$$\begin{cases}
+x_{n+1}-s = \lambda(x_n-s) + \varepsilon_{n} \\
+x_{n+2} -s = \lambda(x_n-s) + \lambda(x_{n+1}-s) \varepsilon_{n+1}
+\end{cases}$$
+Donc, 
+$$\begin{cases}
+x_{n+1}-x_{n}' = \lambda_{n}(x_n-x'_{n}) \\
+x_{n+2} -x_{n}' = \lambda_{n}(x_{n+1}-x'_{n+1})
+\end{cases}$$
+ie : 
+$$\lambda_{n} = \frac{x_{n+2} - x_{n+1}}{x_{n+1}-x_{n}}$$
+Ainsi, 
+$$\boxed{x_{n}' = x_{n} - \frac{(x{_{n+1}-x_{n}})^{2}}{x_{n+2} - 2x_{n+1} + x_{n}}}$$
