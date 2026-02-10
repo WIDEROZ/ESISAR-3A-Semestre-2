@@ -63,3 +63,16 @@ c_{k} = 1-\log_{\beta}(\rho_{k})
 $$\boxed{v_{k} = \frac{\Delta c_{k}}{\Delta k} = c_{k+1}-c_{k}}$$
 Par le théorème de Banach (dans le cas général) on a : 
 $$\boxed{v_{k} \underset{k \to + \infty}{\sim} v = -\log \left| f'(s)\right|}$$
+
+#### Ordre de convergence (Schoeder)
+Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow} s$ avec $\forall n \in \mathbb{N}, x_{n+1} = f(x_{n})$, 
+et :
+$${\forall n \in \mathbb{N}, e_{n+1} = \sum_{k \in \mathbb{N}^{*}} \frac{f^{(k)}(s)}{k!} e_{n}^{k}}$$
+
+$f$ est convergente d'ordre $p$ ssi : 
+$$\boxed{\forall k \in [\![1, p]\!], f^{(k)}(s) = 0 \text{ et }f^{(p)}\neq 0}$$
+
+On pose alors, 
+$$\boxed{\frac{\left| e_{n+1}\right|}{\left| e_{n}\right|} \underset{n \to + \infty}{\sim} \lambda = \frac{f^{(p)}(s)}{p!}}$$
+
+Avec $\lambda \geq 0$ :
