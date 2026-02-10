@@ -13,7 +13,7 @@ public class Fraction {
             this.num = num;
             this.den = den;
         }
-    }*
+    }
 
     public int getNum(){
         return num;
@@ -23,8 +23,12 @@ public class Fraction {
         return den;
     }
 
-    public int setNum(int num){
-        return num;
+    public void setNum(int num){
+        this.num = num;
+    }
+
+    public void setDen(int den){
+        this.den = den;
     }
 
     public int pgcd(int a, int b){

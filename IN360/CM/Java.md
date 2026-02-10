@@ -66,3 +66,6 @@ Ce code vient a la place de ...
 
 #### Overload
 Ce code vient en plus de ...
+
+#### Polymorphisme
+Statique et dynamique
