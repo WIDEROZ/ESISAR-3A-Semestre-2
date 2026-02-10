@@ -119,8 +119,16 @@ f'(s) \neq 0 \Rightarrow g'(s) = 0 & x_{n} \text{ CV à un ordre} \geq 2\\
 f'(s) = 0 \Rightarrow g'(s) = g''(s) = 0 & x_{n} \text{ CV à un ordre} \geq 3
 \end{cases}$$
 
-## 4.
-Méthodes itératives pour trouver $F(x) = 0$  :
+## 4. Méthodes itératives pour trouver $F(x) = 0$
 On pose : 
 $$f(x) = x-F(x)$$
-Et on cherche 
+Et on cherche le ou les points fixes de $f$.
+On pose : 
+$$x_{n+1} = f(x_{n})$$
+Pour trouver l'existence de points fixes il suffit d'appliquer le théorème de Banach ie il faudrait trouver que $f$ est contractante ie : 
+$$\left| f'(x) \right| = \left| 1-F'(x)\right| < 1$$
+Seulement $F'(x)$ n'est souvent jamais entre $]0, 2[$ il faut donc trouver un $\mu$ tel que : 
+$$f(x) = x-\frac{F(x)}{\mu}$$
+
+De manière optimale il faudrait que : 
+$$\mu = F'(s) \text{ car : } $$
