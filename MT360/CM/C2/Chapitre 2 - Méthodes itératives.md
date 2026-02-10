@@ -119,7 +119,7 @@ f'(s) \neq 0 \Rightarrow g'(s) = 0 & x_{n} \text{ CV à un ordre} \geq 2\\
 f'(s) = 0 \Rightarrow g'(s) = g''(s) = 0 & x_{n} \text{ CV à un ordre} \geq 3
 \end{cases}$$
 
-## 4. Méthodes itératives pour trouver $F(x) = 0$
+# IV. Méthodes itératives pour trouver $F(x) = 0$
 On pose : 
 $$f(x) = x-F(x)$$
 Et on cherche le ou les points fixes de $f$.
@@ -131,4 +131,14 @@ Seulement $F'(x)$ n'est souvent jamais entre $]0, 2[$ il faut donc trouver un $\
 $$f(x) = x-\frac{F(x)}{\mu}$$
 
 De manière optimale il faudrait que : 
-$$\mu = F'(s) \text{ car : } $$
+$$\mu = F'(s) \text{ car : } f'(s)=  0 \text{ et } x_{n}\underset{n \to +\infty}{\longrightarrow} s \text{ à l'ordre 2}$$
+
+## 1. Méthode des cordes parallèles
+$$\boxed{\forall k \in \mathbb{N}, x_{k+1} = x_{k} - \frac{F(x_{k})}{\tan(\phi)} = f(x_{k}) \text{ (ici } \mu = \tan(\phi) \text{)}}$$
+
+
+## 2. Méthode de la sécante
+$$\forall k \in \mathbb{N}, x_{k+1} = x_{k} - \frac{F(x_{k})}{\frac{F(x_{n}) - F(x_{n-1})}{x_{n} - x_{n-1}}} = f(x_{n})$$
+$$\mu_{n} = \frac{F(x_{n}) - F(x_{n-1})}{x_{n}-x_{n-1}}$$
+Alors, 
+$$e_{n+1} = e_{n-1}- \frac{F(x_{n})(e_{n}-e_{n-1})}{F(x_{n})-F(x_{n-1})} $$
