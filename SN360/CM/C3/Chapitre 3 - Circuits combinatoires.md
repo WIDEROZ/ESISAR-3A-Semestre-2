@@ -53,10 +53,11 @@ $$P_d = CV_{DD}^{2}F$$
 Puissance du courant de fuite (Puissance statique): 
 $$P_{s} = V_{DD}I_{leak}$$
 ## 4. Temps de propagation
-Le temp de charge et de décharge des capacités parasites est :
-$$T_{\text{propagation}} \alpha RC$$
+Le temps de charge et de décharge des capacités parasites est :
+$$t_{c, d} = T_{\text{propagation}} \alpha RC$$
 
 #### Process
+Toutes les instructions avec des délais sont simmulables mais pas synthétisables 
 Warn du synthétiseur :
 ```VHDL
 s <= not(a) after 10 ns;
@@ -230,10 +231,3 @@ Division par autre chose que $2$ possible mais GOURMAND en ressources.
 
 
 
-
-
-
-
-```VHDL
-
-```
