@@ -5,8 +5,8 @@ public class Livre extends Document {
     protected String auteur;
 
     public Livre(int id, String titre, int nb_pages, String auteur){
-        this.id = id;
-        this.titre = titre;
+        super(id, titre);
+
         this.nb_pages = nb_pages;
         this.auteur = auteur;
     }

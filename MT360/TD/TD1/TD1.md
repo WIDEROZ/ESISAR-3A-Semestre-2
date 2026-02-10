@@ -40,3 +40,7 @@ $$\rho(f(p, q)) = \frac{p \frac{\partial f}{\partial p}(p, q)}{f(p, q)} \rho(p) 
 $$= \frac{-p}{\sqrt{p^{2}+q}} \rho (p) + \frac{p+\sqrt{p^{2}+q}}{2\sqrt{p^{2}+q}}\rho(q)$$
 
 ## 2.
+
+
+## 3.
+$$\rho' = \frac{x-x'}{x'}$$

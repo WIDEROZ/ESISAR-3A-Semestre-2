@@ -54,8 +54,11 @@ public class Voiture extends Vehicule{
 ```
 
 #### super
-Permet d'invoquer le constructeur de la superclasse sur une classe enfant. 
-
+Permet d'invoquer le constructeur de la superclasse.
+```java
+super(args);
+```
+- args : arguments du constructeur de la superclasse
 
 # Autre
 On doit cast des classes si on assigne un parent à un enfant
