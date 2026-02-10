@@ -43,4 +43,4 @@ $$= \frac{-p}{\sqrt{p^{2}+q}} \rho (p) + \frac{p+\sqrt{p^{2}+q}}{2\sqrt{p^{2}+q}
 
 
 ## 3.
-$$\rho' = \frac{x-x'}{x'}$$
+$$\rho' = \frac{-p + \sqrt{p^{2} + q}-x'}{x'}$$
