@@ -1,3 +1,5 @@
+package EX2;
+
 public class Fraction {
     private int num;
     private int den;

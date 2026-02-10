@@ -45,6 +45,7 @@ final int MAX=100;
 ne peuvent pas être créés dans les méthodes et sont des variables constantes
 
 # Héritage et Polymorphisme
+#### extends
 Pour faire hériter une classe utiliser : 
 ```java
 public class Voiture extends Vehicule{
@@ -53,3 +54,4 @@ public class Voiture extends Vehicule{
 ```
 
 #### super
+Permet d'invoquer le constructeur de la superclasse sur une classe enfant. 
