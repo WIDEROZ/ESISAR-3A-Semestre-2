@@ -18,8 +18,11 @@ public class Fraction {
     }
 
     public void add(int x){
-        num = ;
-        den = x * den;
+        num = x*den+num;
+    }
+
+    public void sub(int x){
+        add(x);
     }
 
 

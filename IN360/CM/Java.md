@@ -46,5 +46,3 @@ ne peuvent pas être créés dans les méthodes et sont des variables constantes
 
 # Héritage et Polymorphisme
 
-$$\frac{1}{8}+\frac{4}{9}$$
-$$$$
