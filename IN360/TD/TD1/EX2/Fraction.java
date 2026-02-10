@@ -42,11 +42,16 @@ public class Fraction {
     }
 
     public void addFraction(Fraction f){
-        num = ;
-        den = ;
-        
+        int x = pgcd(f.den, den);
+        num = (num * f.den/x) + (f.num * den / x);
+        den = (f.den * den) / x;
+    }
+
+    public void multFraction(Fraction f){
+        num *= f.num;
+        den *= f.den;
     }
 
 
-
 }
+
