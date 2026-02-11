@@ -64,9 +64,31 @@ i_{3} = C_{1} \frac{dV_{2}}{dt} \\
 i_{2} = C_{2} \frac{d(V_{a} - V_{2})}{dt} \\
 i_{1} = \frac{V_{1}-V_{a}}{R_{1}} \\
 i_{1} = i_{2} + i_{3} \\
-R_{2}i_{3} = V_{a} - V_{2} \\
-i_{3} = 
+i_{3} = \frac{V_{a}-V_{2}}{R_{2}}
 \end{cases}$$
+Alors, on applique la transformée de laplace : 
+$$\begin{cases}
+i_{3} = C_{1}pV_{2} \\
+i_{2} = C_{2} p(V_{a}-V_{2}) \\
+i_{1} = \frac{V_{1}-V_{a}}{R_{1}} \\
+i_{1} = i_{2} + i_{3} \\
+i_{3} = \frac{V_{a}-V_{2}}{R_{2}}
+\end{cases}$$
+$$\frac{V_{a}-V_{2}}{R_{2}} = C_{1}pV_{2} \Leftrightarrow V_{a} = R_{2}C_{1}pV_{2} + V_{2}$$
+Alors, 
+$$\frac{V_{1}-(R_{2}C_{1}p+1)V_{2}}{R_{1}} = C_{2}p(R_{2}C_{1}p )V_{2}+ C_{1}pV_{2}$$
+Donc, 
+$$V_{1}  = (R_{1}R_{2}C_{1}C_{2}p^{2} + R_{1}C_{1}p + C_{1}R_{2}p +1)V_{2}$$
+Ainsi, 
+$$T(p) = \frac{V_{2}}{V_{1}} = \frac{1}{R_{1}R_{2}C_{1}C_{2}p^{2} + R_{1}C_{1}p + C_{1}R_{2}p +1}$$
+$$\boxed{T(p)= \frac{1}{1+ (R_{1}+R_{2})C_{1}p + R_{1}R_{2}C_{1}C_{2}p^{2}}}$$
+On pose alors, 
+$$\omega_{0} = \frac{1}{\sqrt{R_{1}R_{2}C_{1}C_{2}}}$$
 
-$$T(p) = \frac{V_{2}}{V_{1}} = \frac{}{}$$
+et 
+$$ m =  \frac{(R_{1}+R_{2})C_{1}}{2}\omega_{0} = (R_{1}+R_{2}) \sqrt{\frac{C_{1}}{R_{1}R_{2}C_{2}}}$$
+et
+$$u = \frac{\omega}{\omega_{0}} = \omega\sqrt{R_{1}R_{2}C_{1}C_{2}}$$
+Ainsi, 
+$$\boxed{T(ju) = \frac{1}{1+ 2mju - u^{2}}}$$
 
