@@ -82,6 +82,7 @@ $$V_{1}  = (R_{1}R_{2}C_{1}C_{2}p^{2} + R_{1}C_{1}p + C_{1}R_{2}p +1)V_{2}$$
 Ainsi, 
 $$T(p) = \frac{V_{2}}{V_{1}} = \frac{1}{R_{1}R_{2}C_{1}C_{2}p^{2} + R_{1}C_{1}p + C_{1}R_{2}p +1}$$
 $$\boxed{T(p)= \frac{1}{1+ (R_{1}+R_{2})C_{1}p + R_{1}R_{2}C_{1}C_{2}p^{2}}}$$
+#### 2.
 On pose alors, 
 $$\omega_{0} = \frac{1}{\sqrt{R_{1}R_{2}C_{1}C_{2}}}$$
 
@@ -91,4 +92,17 @@ et
 $$u = \frac{\omega}{\omega_{0}} = \omega\sqrt{R_{1}R_{2}C_{1}C_{2}}$$
 Ainsi, 
 $$\boxed{T(ju) = \frac{1}{1+ 2mju - u^{2}}}$$
+
+
+#### 3.
+$$-10\log(1-2u^{2}-u^{4} + 4m^{2}u^{2}) = -10\log(1+(4m^{2}-2)u^{2}-u^{4})$$
+
+$$\left| T(ju)\right| = \frac{1}{\sqrt{1+(4m^{2}-2)u^{2}-u^{4}}}$$
+Comme $\sqrt{\cdot}$ est monotone on dérive : 
+$$f(u) = 1+(4m^{2}-2)u^{2}-u^{4}$$
+Alors, 
+$$f'(u) = 4(2m^{2}-1)u -4u^{3}$$
+On cherche alors $u$ tel que $f'(x) = 0$, $u=0$ ou :
+$$u^{2} = 2m^{2}-1$$
+Si $m \in\left]- \frac{1}{\sqrt{2}} ; \frac{1}{\sqrt{2}} \right[$ : 
 
