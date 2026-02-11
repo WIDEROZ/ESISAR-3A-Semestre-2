@@ -153,4 +153,3 @@ De plus si $s$ est racine de multiplicité $p$ de $F$ i.e. :
 $$F(s) = (x-s)^{p}G(s) \text{ avec } G'(s) \neq 0$$
 Donc dans ce cas on considère : 
 $$x_{k+1} = x_{k} - p \frac{F(x_{k})}{F'(x_{k})}$$
-

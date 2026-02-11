@@ -19,4 +19,11 @@ Ainsi, la suite DV.
 $$f(e^{ -y }) = \left| y\right| = y$$
 Si on veut trouver le point fixe de $f$, il faut trouver une solution à l'équation : 
 $$e^{ -y } = y$$
-Alors, il faut donc que : $e^{ -y } \in ]0, 1[$ ie : $y \in $
+Alors, il faut donc que : $e^{ -y } \in ]0, 1[$ ie : $y \in ]0,  +\infty[$
+
+
+
+
+#### 4.
+$$y_{n+1} = y_{n} - \frac{f(y_{n})}{f'(y_{n})} = y_{n} - \frac{e^{ -y_{n-1} }}{-e^{ -y_{n} }}$$
+$$\Leftrightarrow \boxed{y_{n+1} = y_{n} + e^{ y_{n}-y_{n-1} }}$$
