@@ -11,4 +11,12 @@ Donc, la fonction est strictement croissante et continue sur $]0, 1[$, puis trav
 Ainsi, $x = - \ln(x)$ admet des solutions en $]0, 1[$
 
 #### 2.
-$$e_{n} = -\ln(x_{n-1})-s$$
+On pose $\forall x \in ]0, 1[, f(x) = -\ln(x)$,
+$$\left| f'(s)\right| = \frac{1}{s} > 1$$
+Ainsi, la suite DV.
+
+#### 3.
+$$f(e^{ -y }) = \left| y\right| = y$$
+Si on veut trouver le point fixe de $f$, il faut trouver une solution à l'équation : 
+$$e^{ -y } = y$$
+Alors, il faut donc que : $e^{ -y } \in ]0, 1[$ ie : $y \in $
