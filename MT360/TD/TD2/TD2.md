@@ -51,4 +51,28 @@ $$f(y) = \frac{1+y}{1+e^{ y }}$$
 
 
 # Exercice 3
+$$\begin{cases}
+x_{0} \in [0, 1] \\
+x_{n+1} = \mu x_{n}(1-x_{n})
+\end{cases}$$
 #### 1.
+###### Lemme
+On pose : 
+$$\forall x \in [0, 1], f(x) = x(1-x)$$
+Alors, $f(x) \in \left[ 0, \frac{1}{4} \right]$, 
+
+Démonstration : 
+$$f'(x) = 1-2x \text{ alors, } f'\left( \frac{1}{2} \right)= 0$$
+Alors, $f$ est donc maximum en $\frac{1}{2}$, car $f(0)$
+
+
+
+
+Par récurrence : 
+$$\mathcal{P}_{n} : \text{"} x_{n+1 } = \mu x_{n}(1-x_{n}) \in [0, 1] \text{"}$$
+
+###### Initialisation
+Supposons que $x_{0} \in [0, 1]$, 
+$x_{1}= \mu x_{0}(1-x_{0})$ comme $x_{0} \in [0, 1]$, 
+
+
