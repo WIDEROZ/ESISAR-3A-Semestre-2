@@ -63,16 +63,25 @@ Alors, $f(x) \in \left[ 0, \frac{1}{4} \right]$,
 
 Démonstration : 
 $$f'(x) = 1-2x \text{ alors, } f'\left( \frac{1}{2} \right)= 0$$
-Alors, $f$ est donc maximum en $\frac{1}{2}$, car $f(0)$
+Alors, $f$ est donc maximum en $\frac{1}{2}$, car $f'(0)$ est positif et $f(1)$ est négatif.
+Ainsi,
+$$\boxed{x(1-x) \in \left[ 0, \frac{1}{4} \right]}$$
 
+Donc, 
+$$\boxed{x_{n+1} \in [0, 1]}$$
 
+#### 2.
+##### Analyse
+Supposons qu'il existe au moins un point fixe $s \in [0, 1]$ :
+$$s = \mu s(1-s)$$
+Alors, 
+$$s^{2} +\left(\frac{1}{\mu}-1 \right)s = 0$$
+Ainsi, les solutions sont : 
+$$0 \text{ et }  1-\frac{1}{\mu} $$
 
+##### Synthèse
+Supposons que $0$ et $1-\frac{1}{\mu}$ sont bien solutions car : $0 \in [0, 1]$ et $1-\frac{1}{\mu} \in [0, 1]$ si $\mu \in [1, 4]$
 
-Par récurrence : 
-$$\mathcal{P}_{n} : \text{"} x_{n+1 } = \mu x_{n}(1-x_{n}) \in [0, 1] \text{"}$$
+l'équilibre existe si $\mu \geq 1$
 
-###### Initialisation
-Supposons que $x_{0} \in [0, 1]$, 
-$x_{1}= \mu x_{0}(1-x_{0})$ comme $x_{0} \in [0, 1]$, 
-
-
+#### 3.
