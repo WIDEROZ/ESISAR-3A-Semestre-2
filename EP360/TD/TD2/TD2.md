@@ -57,7 +57,16 @@ Fonction : Rouge
 
 # Exercice 8
 #### 1.
+EXCAL 4
 AOP en mode linéaire (rétroaction négative)
+$$\begin{cases}
+i_{3} = C_{1} \frac{dV_{2}}{dt} \\
+i_{2} = C_{2} \frac{d(V_{a} - V_{2})}{dt} \\
+i_{1} = \frac{V_{1}-V_{a}}{R_{1}} \\
+i_{1} = i_{2} + i_{3} \\
+R_{2}i_{3} = V_{a} - V_{2} \\
+i_{3} = 
+\end{cases}$$
 
-$$T()$$
+$$T(p) = \frac{V_{2}}{V_{1}} = \frac{}{}$$
 
