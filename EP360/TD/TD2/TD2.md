@@ -46,7 +46,18 @@ $$\boxed{H(\omega)= \frac{1-RCp-LCp^{2}}{1+RCp+LCp^{2}} = \frac{1-\frac{2m}{\ome
 Avec : 
 $$\omega_{0} = \frac{1}{\sqrt{LC}} \text{ et } m = \frac{1}{2}  R \sqrt{\frac{C}{L}}$$
 
-$$H(p) = \frac{1}{\left( 1+\frac{2m}{\omega_{0}} p + \frac{p^{2}}{\omega_{0}^{2}} \right)}\left( 1-\frac{2m}{\omega_{0}} p - \frac{p^{2}}{\omega_{0}^{2}} \right)$$
 
 #### 4. Diagramme de Bode
 EXCAL 3
+
+$$H(p) = \frac{1}{ 1+\frac{2m}{\omega_{0}} p + \frac{p^{2}}{\omega_{0}^{2}}}\left( 1-\frac{2m}{\omega_{0}} p - \frac{p^{2}}{\omega_{0}^{2}} \right)$$
+Numérateur : Vert
+Dénominateur : Bleu
+Fonction : Rouge
+
+# Exercice 8
+#### 1.
+AOP en mode linéaire (rétroaction négative)
+
+$$T()$$
+
