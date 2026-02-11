@@ -41,5 +41,14 @@ $$\boxed{(y_{n})_{n \in \mathbb{N}}\text{ converge d'ordre }1}$$
 #### 4.
 On pose : 
 $$f(y) = y-e^{ -y }$$
-$$y_{n+1} = y_{n} - \frac{f(y_{n})}{f'(y_{n})} = y_{n} - \frac{y_{n-1}-e^{ -y_{n-1} }}{1+e^{ -y_{n} }}$$
-$$\Leftrightarrow \boxed{y_{n+1} = y_{n} + e^{ y_{n}-y_{n-1} }}$$
+$$y_{n+1} = y_{n} - \frac{f(y_{n})}{f'(y_{n})} = y_{n} - \frac{y_{n}-e^{ -y_{n} }}{1+e^{ -y_{n} }}$$
+Alors, 
+$$\boxed{y_{n+1} = \frac{y_{n}+1}{1+e^{ y_{n} }}}$$
+
+#### 5.
+On pose : 
+$$f(y) = \frac{1+y}{1+e^{ y }}$$
+
+
+# Exercice 3
+#### 1.
