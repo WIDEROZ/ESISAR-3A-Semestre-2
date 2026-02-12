@@ -46,9 +46,32 @@ Dépend du temps de propagation.
 
 #### Reset - Synchrone / Asynchrone
 On appuie sur le reset : 
-- Synchrone : On attend le front actif (montant ou descendant suivant le flip flop)
-- Asyc
+- Synchrone : On attend le front actif pour reset (montant ou descendant suivant le flip flop)
+- Asynchrone : On reset directement. 
 
+Reset synchrone : 
+```VHDL
+process(clk)
+begin
+if clk'event and clk='1' then
+-- if rising_egde(clk) then
+-- importer std_logic_1164 pour l'utiliser
+	if reset = '1' then
+		q <= '0';
+	elsif enable = '1' then
+		q <= d;
+	end if;
+end if;
+end process;
+```
+
+```Verilog
+
+```
+
+clk'event : bool toujours égal à $1$ 
+Mais l'outil de synthèse ne va pas reconnaître que c'est un flip flop si il n'y a que : clk='1'
+il faut donc mettre : clk'event and clk='1'
 
 
 
