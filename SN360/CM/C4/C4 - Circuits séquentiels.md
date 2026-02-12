@@ -37,6 +37,21 @@ Dépend du temps de propagation.
 ![[Pasted image 20260212090658.png]]
 
 
+#### Set / reset - enable
+![[Pasted image 20260212091612.png]]
+![[Pasted image 20260212092015.png]]
+- Set : $Q=1$
+- Reset : $Q = 0$
+- Enable : Désactive le flip flop (Même si $H = 1$ et $D$ est une valeur différente de $Q$, $Q$ ne change pas)
+
+#### Reset - Synchrone / Asynchrone
+On appuie sur le reset : 
+- Synchrone : On attend le front actif (montant ou descendant suivant le flip flop)
+- Asyc
+
+
+
+
 
 
 
