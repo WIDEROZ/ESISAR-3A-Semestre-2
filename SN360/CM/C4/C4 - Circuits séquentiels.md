@@ -148,10 +148,29 @@ signal d, q : bit_vector(…);
 process(clk)
 begin
 if clk'event and clk='1' then
-	-- ou if rising_edge(clk) then
 	if reset = '1' then
-	 q <= (others=>'0'); -- tous les bits de q so
+		q <= (others=>'0'); -- tous les bits de q sont mis a 0
+	elsif enable = '1' then
+		q<=d;
+	end if;
+end if;
+end process;
 ```
+
+> [!Important]
+> Nombre de flip flops créés par VHDL
+> 
+> Création d'un flip flop par : clk'event and clk='1'
+> Compter le nombre de bits affectés dans cette condition : 
+> ```VHDL
+> q <= (others=>'0');
+> ```
+> Ici on a donc le nombre de bits affectés par bit_vector
+
+##### Registres à changement parallèle - PIPO
+
+# VOIR DIAPO 25
+
 
 
 
