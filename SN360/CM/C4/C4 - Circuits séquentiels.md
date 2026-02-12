@@ -65,15 +65,48 @@ end if;
 end process;
 ```
 
+Reset asynchrone : 
 ```Verilog
-
+process(resset, clk)
+begin
+if reset='1' then
+	q<=0;
+elsif clk'event and clk='1' then
+	if enable = '1' then
+		q <= d;
+	end if;
+end if;
+end process;
 ```
 
 clk'event : bool toujours égal à $1$ 
 Mais l'outil de synthèse ne va pas reconnaître que c'est un flip flop si il n'y a que : clk='1'
 il faut donc mettre : clk'event and clk='1'
 
+### Signal d'horloge
+Il provient toujours d'un oscillateur externe. 
 
+```VHDL
+signal clk : bit; -- par défaut initialisé à ‘0’
+clk <= not clk after 10 ns;
+-- période de 20 ns
+-- ou avec un process
+process
+begin
+	wait for 10 ns;
+	clk <= not clk;
+end process;
+```
+
+```Verilog
+initial begin clk = 0;
+// Initialisation de l'horloge à 0
+end
+always begin
+#10 clk = ~clk;
+// clk change toutes les 10ns
+end
+```
 
 
 
