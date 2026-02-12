@@ -121,25 +121,37 @@ architecture bhv of dflipflop_TB is
 signal Reset_TB, Clock_TB, D_TB, Q_TB, Qn_TB : bit;
 
 component dflipflop
-	port(Clock, Reset, D: in bit; Q, Qn : out bit);
+	port(Clock, Reset, D : in bit;
+		 Q, Qn           : out bit);
 end component;
 
 begin
-Reset_TB <= ‘0’, ‘1’ after 15 ns;
-Clock_TB <= not Clock_TB after
-10 ns;
-D_TB <= ‘0’, ‘1’ after 55 ns, ‘0’
-after 105 ns;
-DUT: dflipflop
-Port map(Clock_TB, Reset_TB,
-D_TB, Q_TB, Qn_TB);
-End bhv;
+Reset_TB <= '0', '1' after 15 ns;
+Clock_TB <= not Clock_TB after 10 ns;
+D_TB <= '0', '1' after 55 ns, '0' after 105 ns;
+-- Tous les temps sont a partir de 0 ils ne s'additionnent pas
 
+DUT: dflipflop
+Port map(Clock_TB, Reset_TB, D_TB, Q_TB, Qn_TB);
+
+End bhv;
 ```
 
+### 5. Registre 
+![[Pasted image 20260212095913.png]]
 
 
 
+```VHDL
+-- registre de taille à définir
+signal d, q : bit_vector(…);
+process(clk)
+begin
+if clk'event and clk='1' then
+	-- ou if rising_edge(clk) then
+	if reset = '1' then
+	 q <= (others=>'0'); -- tous les bits de q so
+```
 
 
 
