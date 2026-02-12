@@ -27,7 +27,15 @@ end
 ##### Transparence des D-latch
 Le résultat de : 
 ![[Pasted image 20260212085947.png]]
-Dépend du temps de propagation 
+Dépend du temps de propagation. 
+
+### 2. D-Flip-Flop
+![[Pasted image 20260212090151.png]]
+![[Pasted image 20260212090159.png]]
+- Si D change quand H présente un front montant, Q est indéterminé
+- Intervalle de commutation interdit de $D$ : $T_{\text{Setup}}$ avant et $T_{\text{Hold}}$ après le front d’horloge actif. 
+![[Pasted image 20260212090658.png]]
+
 
 
 
