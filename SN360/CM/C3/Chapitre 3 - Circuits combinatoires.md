@@ -224,14 +224,3 @@ Attention avec les signés.
 
 ## 14. Division
 Division par autre chose que $2$ possible mais GOURMAND en ressources.
-
-
-
-
-
-
-
-$$\frac{1010}{0111}$$
-
-$$\frac{1010}{1010\,\,\,\,\,\,\,}$$
-
