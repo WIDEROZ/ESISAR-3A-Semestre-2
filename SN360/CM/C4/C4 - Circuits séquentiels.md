@@ -169,7 +169,7 @@ end process;
 
 ##### Registres à changement parallèle - PIPO
 
-# VOIR DIAPO 25
+# VOIR DIAPO 25 - 29
 
 
 
