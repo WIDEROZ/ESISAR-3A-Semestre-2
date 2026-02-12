@@ -83,7 +83,7 @@ clk'event : bool toujours égal à $1$
 Mais l'outil de synthèse ne va pas reconnaître que c'est un flip flop si il n'y a que : clk='1'
 il faut donc mettre : clk'event and clk='1'
 
-### Signal d'horloge
+### 3. Signal d'horloge
 Il provient toujours d'un oscillateur externe. 
 
 ```VHDL
@@ -107,6 +107,41 @@ always begin
 // clk change toutes les 10ns
 end
 ```
+
+### 4. Test bench
+Le test bench est un fichier HDL
+- DUT : Device Under Test
+
+Fichier a tester et nom de l'entité : dflipflop<font color="red">_TB</font>.VHDL
+```VHDL
+entity dflipflop_TB is
+end dflipflop_TB;
+
+architecture bhv of dflipflop_TB is
+signal Reset_TB, Clock_TB, D_TB, Q_TB, Qn_TB : bit;
+
+component dflipflop
+	port(Clock, Reset, D: in bit; Q, Qn : out bit);
+end component;
+
+begin
+Reset_TB <= ‘0’, ‘1’ after 15 ns;
+Clock_TB <= not Clock_TB after
+10 ns;
+D_TB <= ‘0’, ‘1’ after 55 ns, ‘0’
+after 105 ns;
+DUT: dflipflop
+Port map(Clock_TB, Reset_TB,
+D_TB, Q_TB, Qn_TB);
+End bhv;
+
+```
+
+
+
+
+
+
 
 
 
