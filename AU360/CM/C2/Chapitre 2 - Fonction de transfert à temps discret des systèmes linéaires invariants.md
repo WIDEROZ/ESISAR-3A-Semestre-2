@@ -45,4 +45,10 @@ $$T_{e} \leq \frac{\pi}{10^{N_{decades}}\left| \text{Pôle du zero le plus rapid
 
 
 
-# DIAPO 38
+# DIAPO 38 - 50
+
+
+#### Méthodes d'approximation
+- Méthode du rectangle avant
+- Méthode du rectangle arrière
+- Méthode de Tustin (Trapézoïdale )
