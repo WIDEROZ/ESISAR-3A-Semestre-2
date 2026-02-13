@@ -14,6 +14,8 @@ begin
 #### 2.
 EXCAL 2
 
+Sortie synchrone : 
+Sortie Asynchone : 
 
 
 
