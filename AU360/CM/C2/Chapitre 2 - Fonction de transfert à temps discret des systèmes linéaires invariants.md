@@ -58,3 +58,4 @@ $$T_{e} \leq \frac{\pi}{10^{N_{decades}}\left| \text{Pôle du zero le plus rapid
 Le calculateur apporte un retard pur :
 $$\Delta \varphi = - tmp\_\text{calc} \times \omega_{c} \text{ avec } \left|\left|  H_{BO}(j\omega_{c})  \right|\right|  = 1$$
 Pour pallier à ce problème le principe est d'envoyer le résultat du calcul à la période suivante
+
