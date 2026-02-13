@@ -27,6 +27,8 @@ On évite d'avoir des entrés en même temps que les fronts actifs car on peut y
 #### 1.
 Inout pas recommandé
 
+#### 2.
+
 
 
 
