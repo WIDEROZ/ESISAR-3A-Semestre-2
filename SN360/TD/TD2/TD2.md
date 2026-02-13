@@ -21,9 +21,9 @@ Sortie Asynchrone : Contraire de synchrone
 #### 4.
 Feuille
 
+On évite d'avoir des entrés en même temps que les fronts actifs car on peut y avoir une indétermination sur la valeur d'une sortie après le traitement par un circuit séquentiel. 
 
 # Exercice 3
-
 
 
 
