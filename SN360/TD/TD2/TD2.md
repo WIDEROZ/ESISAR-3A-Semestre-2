@@ -14,8 +14,16 @@ begin
 #### 2.
 EXCAL 2
 
-Sortie synchrone : 
-Sortie Asynchone : 
+#### 3.
+Sortie synchrone : Varie seulement pendant les fronts actifs d'horloge. 
+Sortie Asynchrone : Contraire de synchrone
+
+#### 4.
+Feuille
+
+
+# Exercice 3
+
 
 
 
