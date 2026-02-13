@@ -11,5 +11,6 @@ $$D = \frac{1.518 \times 8}{100 \, 000} = 121.14\times 10^{-6} s = 1.158 \, \mu 
 $$d = 1000D = 0.121 = 12\%$$
 
 #### Question $5$
-$T=\frac{l}{v_{p}}$ 
-$$\mathbb{P}(X\geq2) = \sum_{k = 2}^{+ \infty}\frac{(pT)^{k}}{k!} e^{ -pT }$$
+$T=D$ 
+$$\mathbb{P}(X\geq2) = 1- \mathbb{P}(X=1)-\mathbb{P}(X = 0) = 1-pDe^{ -pD } -e^{ -pD }$$
+
