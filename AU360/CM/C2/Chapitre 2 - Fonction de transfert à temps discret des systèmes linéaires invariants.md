@@ -52,3 +52,9 @@ $$T_{e} \leq \frac{\pi}{10^{N_{decades}}\left| \text{Pôle du zero le plus rapid
 - Méthode du rectangle avant
 - Méthode du rectangle arrière
 - Méthode de Tustin (Trapézoïdale )
+
+# Calculateur
+![[Pasted image 20260213084622.png]]
+Le calculateur apporte un retard pur :
+$$\Delta \varphi = - tmp\_\text{calc} \times \omega_{c} \text{ avec } \left|\left|  H_{BO}(j\omega_{c})  \right|\right|  = 1$$
+Pour pallier à ce problème le principe est d'envoyer le résultat du calcul à la période suivante
