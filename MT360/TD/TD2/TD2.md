@@ -85,10 +85,5 @@ Supposons que $0$ et $1-\frac{1}{\mu}$ sont bien solutions car : $0 \in [0, 1]$ 
 l'équilibre existe si $\mu \geq 1$
 
 #### 3.
-
-
-
-$$x_{n+1} = -\ln(x_{n})$$
-$$e_{n} = x_{n}-s = \left| x_{n} - x'_{n}\right|$$
-Soient $a, b \in ]0, 1[$, $a \leq b$
-$$\frac{\ln\left( \frac{b}{a} \right)}{b-a} $$
+$$g(y) = e^{ -y } \in $$
+$$ g(s) = y_{n} - \frac{g(y)}{g'(y)}$$
