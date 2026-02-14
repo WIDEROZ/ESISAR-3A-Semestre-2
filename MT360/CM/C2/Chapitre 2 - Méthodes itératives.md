@@ -32,8 +32,7 @@ $$\boxed{\begin{cases}
 \left| x_{k} -s\right| \leq \frac{L^{k}}{1-L}\left| x_{1}-x_0\right| \\
 \left| x_{k} -s\right| \leq \frac{L}{1-L}\left| x_{k+1}-x_k\right|
 \end{cases}}$$
-
-De même pour les vecteurs. 
+De même pour des vecteurs.
 
 #### Théorème semi-local du théorème de Banach
 Soit $I = \mathcal{\overline{B}}(x_{0}, r)$
