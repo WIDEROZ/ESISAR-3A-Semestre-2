@@ -85,5 +85,9 @@ Supposons que $0$ et $1-\frac{1}{\mu}$ sont bien solutions car : $0 \in [0, 1]$ 
 l'équilibre existe si $\mu \geq 1$
 
 #### 3.
-$$g(y) = e^{ -y } \in $$
-$$ g(s) = y_{n} - \frac{g(y)}{g'(y)}$$
+$$g(y) = e^{ -y } \in ]0, 1[$$
+Pour utiliser le théorème de Banach : 
+Soit $\varepsilon \in ]0, 1[$, 
+on cherche alors à trouver une solution de cette équation : 
+$$y = e^{ -y }$$
+dans $[\varepsilon, 1]$, 
