@@ -1,0 +1,18 @@
+[submodule "Contrats"]
+	path = Contrats
+	url = git@github.com:WIDEROZ/Contrats.git
+[submodule "MIC"]
+	path = MIC
+	url = git@github.com:WIDEROZ/MIC.git
+[submodule "MAC30"]
+	path = MAC30
+	url = git@github.com:WIDEROZ/MAC30.git
+[submodule "CIE"]
+	path = CIE
+	url = git@github.com:WIDEROZ/CIE.git
+[submodule "CRE"]
+	path = CRE
+	url = git@github.com:WIDEROZ/CRE.git
+[submodule ".obsidian"]
+	path = .obsidian
+	url = git@github.com:WIDEROZ/.obsidian.git
