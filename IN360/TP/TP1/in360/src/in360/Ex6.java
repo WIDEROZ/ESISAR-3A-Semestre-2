@@ -7,18 +7,22 @@ public class Ex6 {
 		int n_2c = 0;
 		int n_5c = 0;
 		int n_10c = 0;
+		
 
-
-		while((n_2c != 50) && (n_5c != 20) && (n_10c != 10)) {
+		while((n_2c != 50) && (n_5c != 20) && (n_10c != 10)){
 			if(n_2c > 50) {
 				n_2c = 0;
+				n_5c++;
 			}
-			if(n_5c > 20) {
-				n_5c = 0;
+			else {
+				n_2c++;
 			}
-			if(n_10c > 10) {
-				n_10c = 0;
+			
+			if(n_5c >50) {
+				n_5c=0;
+				n_10c++;
 			}
+			
 			
 			sum = n_2c * 2 + n_5c*5 + n_10c*10;
 			if(sum == 100) {
@@ -32,10 +36,8 @@ public class Ex6 {
 				if(n_10c != 0) {
 					System.out.print(" + " + n_10c + " X 10c");
 				}
+				
 			}
-			n_2c++;
-			n_5c++;
-			n_10c++;
 		}
 	}
 }
