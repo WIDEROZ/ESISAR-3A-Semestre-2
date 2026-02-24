@@ -2,7 +2,7 @@ package partie2;
 
 import java.util.Scanner;
 
-public class Ex1 {
+public class Ex2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -15,9 +15,6 @@ public class Ex1 {
 		float[] coefs;
 		coefs = new float[n];
 		
-		float moyenne = 0f;
-		float sumcoef = 0f;
-		
 		int k = 0;
 		while(k < n) {
 			System.out.print("Entrez la note numéro : " + k);
@@ -25,20 +22,22 @@ public class Ex1 {
 			System.out.println();
 			k++;
 		}
-		k = 0;
-		while(k < n) {
-			System.out.print("Entrez le coef numéro : " + k);
-			coefs[k] = sc.nextFloat();
-			System.out.println();
-			k++;
+		
+		
+		// Tri a bulle
+		
+		boolean exchange = true;
+		float tmp = 0f;
+		while(exchange) {
+			k = 0;
+			while(k < n-1) {
+				if(notes[k] > notes[k+1]) {
+					tmp = notes[k];
+				}
+				
+				k++;
+			}
 		}
-		k = 0;
-		while(k < n) {
-			moyenne+= notes[k]*coefs[k];
-			sumcoef+= coefs[k];
-			k++;
-		}
-		System.out.println("Votre moyenne est de : " + (moyenne/sumcoef));
 		
 	}
 }
