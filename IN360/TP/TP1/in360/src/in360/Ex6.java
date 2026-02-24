@@ -12,16 +12,20 @@ public class Ex6 {
 		while((n_2c != 50) && (n_5c != 20) && (n_10c != 10)){
 			if(n_2c > 50) {
 				n_2c = 0;
-				n_5c++;
+				
+				if(n_5c >20) {
+					n_5c=0;
+					n_10c++;
+				}
+				else {
+					n_5c++;
+				}
 			}
 			else {
 				n_2c++;
 			}
 			
-			if(n_5c >50) {
-				n_5c=0;
-				n_10c++;
-			}
+			
 			
 			
 			sum = n_2c * 2 + n_5c*5 + n_10c*10;
