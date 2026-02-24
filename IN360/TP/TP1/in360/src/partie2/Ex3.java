@@ -25,8 +25,15 @@ public class Ex3 {
 			scan = sc.nextFloat();
 		}
 		
-		
-		
-		
+		int k = 0;
+		float moyenne = 0;
+		float sumcoefs = 0;
+		while(k < notes.size()) {
+			moyenne += notes.get(k) * coefs.get(k);
+			sumcoefs += coefs.get(k);
+			k++;
+		}
+		moyenne /= sumcoefs;
+		System.out.println("Moyenne : " + moyenne);
 	}
 }
