@@ -4,5 +4,5 @@
 /**
  * 
  */
-module java {
+module in360 {
 }

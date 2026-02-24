@@ -1,4 +1,4 @@
-package src;
+package in360;
 
 import java.util.Scanner;
 
