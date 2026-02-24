@@ -17,9 +17,17 @@ public class Ex5 {
 			nombres.add(k+1);
 		}
 		k = 0;
-		while(k < nombres.size()) {
-			K 
+		int num;
+		num = nombres.get(k);
+		if(num == 1) {
+			nombres.remove(k);
 		}
-		
+		else{
+			while(k < nombres.size()) {
+				
+			}
+		}
 	}
+		
 }
+
