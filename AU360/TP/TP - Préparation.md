@@ -17,9 +17,9 @@ $$\boxed{\tau = 0.5}$$
 
 ##### Calcul de $G$
 On prend le gain à l'entrée : 
-$$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3 \text{ V}$$
+$$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3$$
 
-$$\boxed{G = 2.3 V}$$
+$$\boxed{G = 2.3}$$
 #### Domaine de validité fréquentiel
 Sur le schéma, $t \in [0, 8]$ (en secondes) Alors, $f \in \left[ \frac{1}{8}, + \infty \right[$ (en $Hz$)
 
@@ -94,3 +94,54 @@ $$TL[T_{act}(t)] = G_{act} TL[V_{a}(t)] +\frac{T_{act,0}}{p}$$
 $$H_{enc}(p) = \frac{TL[T_{enc}(t)]}{TL[T_{act}(t)]} $$
 $$= \frac{p}{\frac{G_{capt}G_{act}}{H(p)}p + T_{act,0}} - \frac{T_{capt,0}}{pG_{act} TL[V_{a}(t)] + T_{act,0}}$$
 $$\boxed{H_{enc}(p) = \frac{\frac{p}{T_{act,0}}}{1+p\frac{G_{capt}G_{act}}{H(p)T_{act,0}}}  - \frac{\frac{ T_{capt,0}}{T_{act,0}}}{1+ p \frac{G_{act}}{T_{act,0}} TL[V_{a}(t)]}}$$
+
+#### Modèle du CAN et du CNA
+##### Simulation numérique du système
+Gain : 
+On prend un Gain unitaire : $\boxed{G_{CAN/CNA} = 1}$
+
+Quantification : 
+Comme le CAN et le CNA possèdent $1$ octets il y a $256$ possibilités pour une tension entre $0$ et $5 \, V$ : 
+$$\boxed{Q = \frac{5}{265} = 19.5 \, mV}$$
+
+Saturation : 
+D'après le schéma la fréquence de saturation est de $\boxed{2.7 \, V}$
+
+###### Synthèse de la commande
+Gain :
+D'après le schéma : 
+$$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8-1.35}{2.7-1.15} = 0.94$$
+$$\boxed{G_{bruit} = 0.94}$$
+Quantification :
+Comme la quantification du CAN et du CNA donne des intervalles de $19.5 \, mV$, si le signal voulu est entre les bornes de cet intervalle on aura un bruit qui sera compris dans cet intervalle ie 
+$$\boxed{\frac{Q}{2} = 9.75 \, mV}$$
+
+
+
+#### Schéma fonctionnel
+EXCAL 3
+- $P_{b}(p)$ : Bruit de mesure
+- $P_{u}(p)$ : Perturbation de la commande
+- $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
+- $R(p)$ : Consigne que doit suivre la sortie
+- $U(p)$ : Entrée(s) du système (Commande actionneur)
+
+## 1.2 Spécifications pour la synthèse de la commande
+#### Modélisation du système
+On prend une fonction de transfert d'ordre $2$ : 
+$$\boxed{T(p) = \frac{1}{1+2\xi u + u^{2}}}$$
+avec : 
+- $\xi$ le coefficient d'amortissement
+- $u = \frac{p}{\omega_{0}}$
+- $\omega_{0}$ : la pulsation propre su système
+
+
+
+#### Schéma fonctionnel
+EXCAL 4
+- $P_{b}(p)$ : Bruit de mesure
+- $P_{u}(p)$ : Perturbation de la commande
+- $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
+- $R(p)$ : Consigne que doit suivre la sortie
+- $U(p)$ : Entrée(s) du système (Commande actionneur)
+
