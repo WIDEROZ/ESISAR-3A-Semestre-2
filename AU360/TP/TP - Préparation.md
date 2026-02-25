@@ -20,9 +20,9 @@ On prend le gain à l'entrée :
 $$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3$$
 
 $$\boxed{G = 2.3}$$
-#### Retard pur
+##### Retard pur
 On prend arbitrairement $1 \%$ du temps de réponse : 
-$$t_{R} \leq t_{R, \max} = $$
+$$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 
 
 #### Bode
@@ -131,14 +131,18 @@ EXCAL 3
 ## 1.2 Spécifications pour la synthèse de la commande
 #### Modélisation du système
 On prend une fonction de transfert d'ordre $2$ : 
-$$\boxed{T(p) = \frac{1}{1+2\xi u + u^{2}}}$$
+$$\boxed{T(u) = \frac{G}{1+2\xi u + u^{2}} e^{  -t_{R} \omega_{0} u }}$$
 avec : 
 - $\xi$ le coefficient d'amortissement
 - $u = \frac{p}{\omega_{0}}$
-- $\omega_{0}$ : la pulsation propre su système
+- $\omega_{0}$ la pulsation propre su système
+- $G$ le gain
 
-
-
+##### Validité fréquentielle
+$$T(p) = \frac{G}{1+2\xi  \frac{p}{\omega_{0}} + \left( \frac{p}{\omega_{0}} \right)^{2}} e^{ -t_{R}p }$$
+Le discriminant du dénominateur est : 
+$$4\left( \frac{\xi}{\omega_{0}} \right)^{2}-\frac{4}{\omega_{0}^{2}}=\frac{4}{\omega_{0}^{2}}(\xi^{2}-1)$$
+Si : $\xi > 1$ alors $p \in \mathbb{R}$ ie 
 
 #### Schéma fonctionnel
 EXCAL 4
@@ -146,4 +150,4 @@ EXCAL 4
 - $P_{u}(p)$ : Perturbation de la commande
 - $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
 - $R(p)$ : Consigne que doit suivre la sortie
-- $U(p)$ : Entrée(s) du système (Commande actionneu
+- $U(p)$ : Entrée(s) du système (Commande actionneur)
