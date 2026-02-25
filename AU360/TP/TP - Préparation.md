@@ -139,8 +139,13 @@ avec :
 - $G$ le gain
 
 ##### Validité fréquentielle
-$$T(p) = \frac{G}{1+2\xi  \frac{p}{\omega_{0}} + \left( \frac{p}{\omega_{0}} \right)^{2}} e^{ -t_{R}p }$$
+$$T(p) = \frac{G}{1+2\xi  \frac{\omega}{\omega_{0}} + \left( \frac{\omega}{\omega_{0}} \right)^{2}} e^{ -t_{R}p }$$
 $$G_{dB} =  20 \log(G) - 10 \log\left( \left( 1-\left( \frac{\omega}{\omega_{0}} \right)^{2} \right)^{2} + 4 \left( \frac{\xi \omega}{\omega_{0}} \right)^{2} \right)$$
+
+
+$$\Delta = 4\omega_{0}^{2}(\xi^{2}-1)$$
+
+$$$$
 
 
 
