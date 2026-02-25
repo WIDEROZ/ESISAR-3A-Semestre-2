@@ -145,4 +145,3 @@ EXCAL 4
 - $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
 - $R(p)$ : Consigne que doit suivre la sortie
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
-
