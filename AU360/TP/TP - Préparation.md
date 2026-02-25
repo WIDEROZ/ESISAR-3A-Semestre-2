@@ -140,16 +140,8 @@ avec :
 
 ##### Validité fréquentielle
 $$T(p) = \frac{G}{1+2\xi  p + p^{2}} e^{ -t_{R}p }$$
-$$G_{dB} =  20 \log(G) - 10 \log\left( \left( 1-\left( \frac{\omega}{\omega_{0}} \right)^{2} \right)^{2} + 4 \left( \frac{\xi \omega}{\omega_{0}} \right)^{2} \right)$$
-
-
-
-$$\Delta = 4(\xi^{2}-1)$$
-$$p = -\xi  \pm \sqrt{\xi^{2}-1}$$
-Si $\xi \geq 1$ alors, $p \in \mathbb{R}$ ie $\omega = 0$
-Si $\xi < 1$ : $p = -\xi$
-
-
+$$\boxed{G_{dB} =  20 \log(G) - 10 \log\left( \left( 1-\left( \frac{\omega}{\omega_{0}} \right)^{2} \right)^{2} + 4 \left( \frac{\xi \omega}{\omega_{0}} \right)^{2} \right)}$$
+$$\varphi = \mathrm{arg}(T(p)) = -t_{R}\omega- \mathrm{arg}(1+2\xi p + p^{2})$$
 
 
 
