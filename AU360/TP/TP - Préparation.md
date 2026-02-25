@@ -4,7 +4,7 @@ EXCAL 1
 
 #### Fonction de transfert
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
-$$H(p) = \frac{G}{1+\tau p}$$
+$$H(p) = \frac{G}{1+\tau p}e^{ -t_{R}p }$$
 ##### Calcul de $\tau$
 $$\tau = \frac{t_{\max} - t_{0}}{3} \text{ avec } t_{0} = 0.5 \text{ s} $$
 Calcul de $t_{\max}$ : 
@@ -20,8 +20,10 @@ On prend le gain à l'entrée :
 $$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3$$
 
 $$\boxed{G = 2.3}$$
-#### Domaine de validité fréquentiel
-Sur le schéma, $t \in [0, 8]$ (en secondes) Alors, $f \in \left[ \frac{1}{8}, + \infty \right[$ (en $Hz$)
+#### Retard pur
+On prend arbitrairement $1 \%$ du temps de réponse : 
+$$t_{R} \leq t_{R, \max} = $$
+
 
 #### Bode
 EXCAL 2
@@ -144,4 +146,4 @@ EXCAL 4
 - $P_{u}(p)$ : Perturbation de la commande
 - $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
 - $R(p)$ : Consigne que doit suivre la sortie
-- $U(p)$ : Entrée(s) du système (Commande actionneur)
+- $U(p)$ : Entrée(s) du système (Commande actionneu
