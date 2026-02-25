@@ -72,3 +72,51 @@ Ce code vient en plus de ...
 
 #### Polymorphisme
 Statique et dynamique
+
+# I - Blabla sur l'environment java
+## 1. Commandes
+#### Version à l'Esisar : 
+- Java $21$
+- OpenJDK $21$
+
+#### Créer un jar
+```bash
+jar cvf  .....
+jar cvfe .....
+```
+
+#### Exécuter un .jar
+```bash
+java -cp feur_v1.jar Feur
+java -jar Feur
+```
+
+#### Voir la structure d'un jar
+```bash
+jar tf feur_v1.jar
+```
+
+
+## 2. Faire des Makefiles en java
+#### Apache Ant
+```bash
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```bash
+
+```
