@@ -143,6 +143,7 @@ $$T(p) = \frac{G}{1+2\xi  \frac{p}{\omega_{0}} + \left( \frac{p}{\omega_{0}} \ri
 $$G_{dB} =  20 \log(G) - 10 \log\left( \left( 1-\left( \frac{\omega}{\omega_{0}} \right)^{2} \right)^{2} + 4 \left( \frac{\xi \omega}{\omega_{0}} \right)^{2} \right)$$
 
 
+
 #### Schéma fonctionnel
 EXCAL 4
 - $P_{b}(p)$ : Bruit de mesure
