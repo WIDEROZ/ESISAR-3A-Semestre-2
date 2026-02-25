@@ -135,13 +135,22 @@ $$\boxed{T(u) = \frac{G}{1+2\xi u + u^{2}} e^{  -t_{R} \omega_{0} u }}$$
 avec : 
 - $\xi$ le coefficient d'amortissement
 - $u = \frac{p}{\omega_{0}}$
-- $\omega_{0}$ la pulsation propre su système
+- $\omega_{0} = \frac{1}{\tau}$ la pulsation propre du système
 - $G$ le gain
 
 ##### Validité fréquentielle
-$$T(p) = \frac{G}{1+2\xi  p + p^{2}} e^{ -t_{R}p }$$
+$$T(p) = \frac{G}{1+\frac{2\xi}{\omega_{0}}  p + \left( \frac{\omega}{\omega_{0}} \right)^{2}} e^{ -t_{R}p }$$
 $$\boxed{G_{dB} =  20 \log(G) - 10 \log\left( \left( 1-\left( \frac{\omega}{\omega_{0}} \right)^{2} \right)^{2} + 4 \left( \frac{\xi \omega}{\omega_{0}} \right)^{2} \right)}$$
-$$\varphi = \mathrm{arg}(T(p)) = -t_{R}\omega- \mathrm{arg}(1+2\xi p + p^{2})$$
+$$\varphi = \mathrm{arg}(T(p)) = -t_{R}\omega- \mathrm{arg}\left( 1- \left( \frac{\omega}{\omega_{0}} \right)^{2}+j\frac{2\xi}{\omega_{0}} \omega \right)  $$
+Si $\omega \leq \omega_{0}$ : 
+$$\boxed{\varphi = -t_{R}\omega -\arctan\left( \frac{\frac{\omega_{0}}{\omega}- \frac{\omega}{\omega_{0}} }{2\xi} \right)}$$
+Si $\omega \geq \omega_{0}$ : 
+$$\boxed{\varphi =\pi -t_{R}\omega -\arctan\left( \frac{\frac{\omega_{0}}{\omega}- \frac{\omega}{\omega_{0}} }{2\xi} \right) }$$
+
+##### Retard pur
+De même que précédemment : 
+$$\boxed{t_{R} = 5 \, ms}$$
+
 
 
 
