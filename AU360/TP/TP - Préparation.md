@@ -140,10 +140,8 @@ avec :
 
 ##### Validité fréquentielle
 $$T(p) = \frac{G}{1+2\xi  \frac{p}{\omega_{0}} + \left( \frac{p}{\omega_{0}} \right)^{2}} e^{ -t_{R}p }$$
-Le discriminant du dénominateur est : 
-$$4\left( \frac{\xi}{\omega_{0}} \right)^{2}-\frac{4}{\omega_{0}^{2}}=\frac{4}{\omega_{0}^{2}}(\xi^{2}-1)$$
-Si : $\xi \geq 1$ alors $p \in \mathbb{R}$ ie $p=0$ 
-Sinon : 
+$$G_{dB} =  20 \log(G) - 10 \log\left( \left( 1-\left( \frac{\omega}{\omega_{0}} \right)^{2} \right)^{2} + 4 \left( \frac{\xi \omega}{\omega_{0}} \right)^{2} \right)$$
+
 
 #### Schéma fonctionnel
 EXCAL 4
