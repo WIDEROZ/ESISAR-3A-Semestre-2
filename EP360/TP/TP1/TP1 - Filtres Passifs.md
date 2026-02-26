@@ -25,6 +25,7 @@ $$\boxed{\sin(\varphi) = \frac{h}{H}}$$
 
 ## 2. Fonction de Transfert
 ![[Pasted image 20260226173038.png]]
+### a. Fonction de transfert
 #### Gabarit et ordre du filtre
 En Basse fréquence : 
 ![[Pasted image 20260226172105.png]]
@@ -72,4 +73,23 @@ De plus,
 $$\frac{2m}{\omega_{0}} = \frac{R_{1}R_{2}C+L}{R_{1}+R_{2}} \Leftrightarrow \boxed{m =\frac{R_{1}R_{2}C+L}{2\sqrt{(R_{1}+R_{2})(R_{1}LC)}}}$$
 $$\frac{H_{10}}{\omega_{0}} = \frac{R_{1}R_{2}}{R_{1}+R_{2}}C\Leftrightarrow \boxed{H_{10} = R_{2}C\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R_{2}}}}$$
 
-$$H_{1}(j\omega) = \frac{H_{10}j \frac{\omega}{\omega_{0}}}{1+2mj \frac{\omega}{\omega_{0}} - \frac{\omega^{2}}{\omega_{0}^{2}}} = \frac{H_{10}}{j\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right) +2m} = \frac{\frac{H_{10}}{2m}}{1+j \frac{1}{2m}\left(\frac{\omega}{\omega_{0}}- \frac{\omega_{0}}{\omega} \right)}$$
+#### Ecriture de la fonction de transfert sous une autre forme
+$$H_{1}(j\omega) = \frac{H_{10}j \frac{\omega}{\omega_{0}}}{1+2mj \frac{\omega}{\omega_{0}} - \frac{\omega^{2}}{\omega_{0}^{2}}} = \frac{H_{10}}{j\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right) +2m} $$
+Ainsi, 
+$$\boxed{H_{1}(j\omega)= \frac{\frac{H_{10}}{2m}}{1+j \frac{1}{2m}\left(\frac{\omega}{\omega_{0}}- \frac{\omega_{0}}{\omega} \right)}}$$
+$$\boxed{H_{m} = \frac{H_{10}}{2m}}$$
+$$\boxed{Q = \frac{1}{2m}}$$
+
+Pertinence de la forme de la fonction de transfert :
+$$\boxed{\begin{cases}
+\text{On peut voir directement la résonnance à }\omega = \omega_{0} \\
+\text{Le module est plus simple à calculer que la précédente}
+\end{cases}}$$
+
+### b. Etude de la fonction de transfert
+#### Gain maximum
+$$G_{dB}(\omega) = 20\log(\left| H_{1}(j\omega)\right|)$$
+$$ = 20\log(H_{m}) - 10\log\left( 1+Q^{2}\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right)^{2} \right)$$
+On calcule alors la dérivée du terme dans le logarithme : 
+(car si ce terme croit comme log est monotone alors $G_{dB}$ décroit) : 
+$$2Q^{2}\left( \frac{1}{\omega_{0}} \right)\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right)$$
