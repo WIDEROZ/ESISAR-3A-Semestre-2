@@ -87,20 +87,19 @@ $$5V = G_{capt}(60 + 5)$$
 Ainsi, 
 $$\boxed{G_{capt} = \frac{1}{13}}$$
 
-$$T_{enc}(V) =  13V-5$$
+
 
 #### Température externe
 C'est la température associée au voltage du début du schéma : 
-$$T_{ext} = T_{enc}(0) = T_{enc,V}(1.15) =  °C$$
+$$T_{enc}(V) =  13V-5$$
+$$\boxed{T_{ext} = T_{enc}(0) = T_{enc,V}(1.15) =  9.95°C}$$
 
 #### Fonction de transfert de la mico-enceinte climatique
 Comme le gain du système est de $G_{enc} \times G_{act} \times G_{capt} = 2.3$ (mesuré sur le schéma)
 Alors, 
 $$\boxed{G_{enc} = 1}$$
-
-
-
-
+Ainsi, 
+$$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
 
 
 
@@ -111,15 +110,15 @@ On prend un Gain unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
 Quantification : 
 Comme le CAN et le CNA possèdent $1$ octets il y a $256$ possibilités pour une tension entre $0$ et $5 \, V$ : 
-$$\boxed{Q = \frac{5}{265} = 19.5 \, mV}$$
+$$\boxed{Q = \frac{5}{256} = 19.5 \, mV}$$
 
 Saturation : 
-D'après le schéma la fréquence de saturation est de $\boxed{2.7 \, V}$
+D'après le schéma la fréquence de saturation est de $\boxed{5 \, V}$
 
 ###### Synthèse de la commande
 Gain :
 D'après le schéma : 
-$$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8-1.35}{2.7-1.15} = 0.94$$
+$$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8-1.25}{2.7-1.15} = 0.94$$
 $$\boxed{G_{bruit} = 0.94}$$
 Quantification :
 Comme la quantification du CAN et du CNA donne des intervalles de $19.5 \, mV$, si le signal voulu est entre les bornes de cet intervalle on aura un bruit qui sera compris dans cet intervalle ie 
