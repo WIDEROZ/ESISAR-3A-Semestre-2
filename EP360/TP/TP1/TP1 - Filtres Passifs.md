@@ -62,3 +62,11 @@ Alors,
 $$R_{1}Cp V_{e} - R_{1}Cp\left( 1+\frac{L}{R_{2}}p \right)V_{s} = \left( \frac{R_{1}+R_{2}+Lp}{R_{2}}\right)V_{s}$$
 Alors, 
 $$V_{s}\left( \frac{R_{1}+R_{2}}{R_{2}} + \left( R_{1}C+ \frac{L}{R_{2}}  \right)p + \frac{R_{1}LC}{R_{2}}p^{2} \right) = R_{1}CpV_{e}$$
+Donc, 
+$$H_{1}(p) = \frac{V_{s}}{V_{e}} = \frac{R_{1}Cp}{\frac{R_{1}+R_{2}}{R_{2}} + \left( R_{1}C + \frac{L}{R_{2}} \right)p + \frac{R_{1}LC}{R_{2}} p^{2}}$$
+Ainsi, 
+$$\boxed{H_{1}(p) = \frac{\frac{R_{1}R_{2}}{R_{1}+R_{2}}Cp}{1+\frac{R_{1}R_{2}C + L}{R_{1}+R_{2}} p + \frac{R_{1}LC}{R_{1}+R_{2}}p^{2}}}$$
+Donc, 
+$$\boxed{\omega_{0} = \sqrt{\frac{R_{1}+R_{2}}{R_{1}LC}}}$$
+De plus, 
+$$\frac{2m}{\omega_{0}} = \frac{R_{1}R_{2}C+L}{R_{1}+R_{2}} \Leftrightarrow \boxed{m =\frac{R_{1}R_{2}C+L}{2\sqrt{(R_{1}+R_{2})(R_{1}LC)}}}$$
