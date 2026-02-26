@@ -141,6 +141,10 @@ $$\boxed{\omega_{a_{1}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
 ## 1. Préambule
 #### Impédance de sortie d'un GBF
 A l'idéal : 
-$$\boxed{Z_{GBF} = 0 \Omega}$$
+$${Z_{GBF} = 0 \Omega}$$
+Mais dans la réalité 
+$$\boxed{Z_{GBF} \approx 50 \Omega}$$
 
 #### Effet de cette impédance sur la fonction de transfert du filtre
+![[Pasted image 20260226201516.png]]
+Le signal modifie la fonction
