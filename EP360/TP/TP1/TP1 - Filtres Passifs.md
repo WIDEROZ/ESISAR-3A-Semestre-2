@@ -71,7 +71,7 @@ $$\boxed{\omega_{0} = \sqrt{\frac{R_{1}+R_{2}}{R_{1}LC}} = 447 \, kHz}$$
 De plus, 
 $$\frac{2m}{\omega_{0}} = \frac{R_{1}R_{2}C+L}{R_{1}+R_{2}} \Leftrightarrow \boxed{m =\frac{R_{1}R_{2}C+L}{2\sqrt{(R_{1}+R_{2})(R_{1}LC)}}=0.763}$$
 $$\frac{H_{10}}{\omega_{0}} = \frac{R_{1}R_{2}}{R_{1}+R_{2}}C\Leftrightarrow \boxed{H_{10} = R_{2}C\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R_{2}}} = 1.05}$$
-$$\frac{RC + \frac{{L}}{R}}{\sqrt{LC}}$$
+
 
 #### Ecriture de la fonction de transfert sous une autre forme
 $$H_{1}(j\omega) = \frac{H_{10}j \frac{\omega}{\omega_{0}}}{1+2mj \frac{\omega}{\omega_{0}} - \frac{\omega^{2}}{\omega_{0}^{2}}} = \frac{H_{10}}{j\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right) +2m} $$
@@ -157,4 +157,4 @@ $$R = \frac{R_{2}R_{u}}{R_{2}+R_{u}}$$
 On remplace alors $R_{2}$ par cette résistance $R$
 $$\boxed{H_{2}(j\omega)=\frac{H_{m_{u}}}{1+j Q_{u}\left(\frac{\omega}{\omega_{0_{u}}}- \frac{\omega_{0_{u}}}{\omega} \right)}}$$
 Avec : 
-$$H_{m_{u}} = \frac{RC\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R}}}{2\frac{R_{1}RC+L}{2\sqrt{(R_{1}+R)(R_{1}LC)}}}= \frac{RC\sqrt{R_{1}}}{R_{1}RC+L}$$
+$$H_{m_{u}} = \frac{RC\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R}}}{2\frac{R_{1}RC+L}{2\sqrt{(R_{1}+R)(R_{1}LC)}}}= RC \frac{}{}$$
