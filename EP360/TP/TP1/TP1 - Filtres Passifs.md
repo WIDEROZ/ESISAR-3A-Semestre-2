@@ -22,3 +22,7 @@ On mesure alors la hauteur totale de l'ellipse : $H$
 et la hauteur à l'intérieur de l'ellipse au centre (Mesure des deux points issus de l'intersection entre l'ellipse et l'ordonnée) : $h$
 On a ainsi :
 $$\boxed{\sin(\varphi) = \frac{h}{H}}$$
+
+## 2. Fonction de Transfert
+#### Gabarit et ordre du filtre
+$$$$
