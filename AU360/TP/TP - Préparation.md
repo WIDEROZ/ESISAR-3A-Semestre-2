@@ -110,7 +110,7 @@ On prend un Gain unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
 Quantification : 
 Comme le CAN et le CNA possèdent $1$ octets il y a $256$ possibilités pour une tension entre $0$ et $5 \, V$ : 
-$$\boxed{Q = \frac{5}{256} = 19.5 \, mV}$$
+$$\boxed{Q = \frac{5}{256} = 0.0195 \, V}$$
 
 Saturation : 
 D'après le schéma la fréquence de saturation est de $\boxed{5 \, V}$
@@ -122,9 +122,6 @@ $\Delta e$ : Valeur moyenne du capteur
 D'après le schéma : 
 $$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8 -2.45}{2.7-1.15} = 0.23 $$
 $$\boxed{G_{bruit} = 0.23}$$
-Quantification :
-Comme la quantification du CAN et du CNA donne des intervalles de $19.5 \, mV$, 
-$$\pm\frac{350 , mV}{2} = \pm175$$
 
 
 
