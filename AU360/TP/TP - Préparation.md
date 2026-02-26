@@ -73,7 +73,7 @@ $$T_{act,0} = 223.15$$
 Ainsi, 
 $$\boxed{\begin{array}{c}
 G_{act} = 30 \\
-T_{act,0} = 223.15
+T_{act,0} = 223.15 °K
 \end{array}}$$
 
 ##### Capteur -5 a 60
