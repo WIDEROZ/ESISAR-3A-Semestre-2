@@ -161,5 +161,16 @@ Avec :
 $$\boxed{H_{m_{u}} = \frac{RC\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R}}}{2\frac{R_{1}RC+L}{2\sqrt{(R_{1}+R)(R_{1}LC)}}}= \frac{RR_{1}C}{R_{1}RC+L}}$$
 $$\boxed{Q_{u} = \frac{\sqrt{(R_{1}+R)(R_{1}LC)}}{R_{1}RC+L}}$$
 $$\boxed{\omega_{0_{u}} = \sqrt{\frac{R_{1}+R}{R_{1}LC}}}$$
-### b.
+### b. Diagramme de Bode
 # A FAIRE
+
+# III - Plus de finesse
+#### Fréquence de résonnance d'une bobine spécifique
+Bobine choisie : 77F102J-RC
+$$\boxed{\text{SRF}=1.2 \, MHz}$$
+#### Proximité de $V_{e}$ en fréquence par rapport à la fréquence de résonnance
+##### Proche de la fréquence de résonnance
+Lorsque le signal d'entré est proche de la fréquence de résonnance le signal de sortie est en régime critique. C'est à dire que si l'on augmente un peu la fréquence du signal d'entré la sortie va se mettre à osciller. 
+
+##### Bien au delà de la fréquence de résonnance
+Lorsque le signal d'entré est bien au dessus de la fréquence de résonnance le signal de sortie est en régime pseudo-périodique. C'est à dire que le signal de sortie va osciller en ayant une 
