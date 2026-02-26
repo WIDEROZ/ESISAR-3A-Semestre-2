@@ -11,5 +11,10 @@ On le multiplie ensuite par l'angle d'une division pour obtenir le déphasage en
 #### Méthode de Lissajous
 Soit deux signaux sinusoïdaux : 
 $$\begin{cases}
-f(x) = 
+f(x) = A\sin(f_{0}t) \\
+g(x) = B\sin(f_{1}t + \varphi)
 \end{cases}$$
+
+
+$$f(x) = y$$
+$$y=\sin(x) \text{ et } x = \sin\left( y+\frac{\pi}{4} \right)$$
