@@ -59,16 +59,17 @@ $$\Leftrightarrow R_{1}LCp^{2} u_{C} = (R_{1}+Lp)u_{L} + LpV_{s}$$
 Donc en injectant la $3^{eme}$ et $4^{eme}$ équation encadrée on obtiens : 
 $$R_{1}LCp^{2}\left( V_{e} - \left( 1+\frac{L}{R_{2}}p \right)V_{s} \right) = (R_{1}+Lp) \frac{L}{R_{2}}pV_{s} +LpV_{s}$$
 Alors, 
-$$R_{1}LCp V_{e} - R_{1}LCp\left( 1+\frac{L}{R_{2}}p \right)V_{s} = L\left( \frac{R_{1}+R_{2}+Lp}{R_{2}}\right)V_{s}$$
+$$R_{1}Cp V_{e} - R_{1}Cp\left( 1+\frac{L}{R_{2}}p \right)V_{s} = \left( \frac{R_{1}+R_{2}+Lp}{R_{2}}\right)V_{s}$$
 Alors, 
-$$V_{s}\left( L\frac{R_{1}+R_{2}}{R_{2}} + \left( R_{1}LC+ \frac{L^{2}}{R_{2}}  \right)p + \frac{R_{1}L^{2}C}{R_{2}}p^{2} \right) = R_{1}LCpV_{e}$$
+$$V_{s}\left( \frac{R_{1}+R_{2}}{R_{2}} + \left( R_{1}C+ \frac{L}{R_{2}}  \right)p + \frac{R_{1}LC}{R_{2}}p^{2} \right) = R_{1}CpV_{e}$$
 Donc, 
-$$H_{1}(p) = \frac{V_{s}}{V_{e}} = \frac{R_{1}LCp}{L\frac{R_{1}+R_{2}}{R_{2}} + \left( R_{1}LC + \frac{L^{2}}{R_{2}} \right)p + \frac{R_{1}L^{2}C}{R_{2}} p^{2}}$$
+$$H_{1}(p) = \frac{V_{s}}{V_{e}} = \frac{R_{1}Cp}{\frac{R_{1}+R_{2}}{R_{2}} + \left( R_{1}C + \frac{L}{R_{2}} \right)p + \frac{R_{1}LC}{R_{2}} p^{2}}$$
 Ainsi, 
 $$\boxed{H_{1}(p) = \frac{\frac{R_{1}R_{2}}{R_{1}+R_{2}}Cp}{1+\frac{R_{1}R_{2}C + L}{R_{1}+R_{2}} p + \frac{R_{1}LC}{R_{1}+R_{2}}p^{2}}}$$
 Donc, 
 $$\boxed{\omega_{0} = \sqrt{\frac{R_{1}+R_{2}}{R_{1}LC}}}$$
 De plus, 
 $$\frac{2m}{\omega_{0}} = \frac{R_{1}R_{2}C+L}{R_{1}+R_{2}} \Leftrightarrow \boxed{m =\frac{R_{1}R_{2}C+L}{2\sqrt{(R_{1}+R_{2})(R_{1}LC)}}}$$
-De plus, 
-$$\frac{R_{1}R_{2}}{R_{1}+R_{2}}Cp$$
+$$\frac{H_{10}}{\omega_{0}} = \frac{R_{1}R_{2}}{R_{1}+R_{2}}C\Leftrightarrow \boxed{H_{10} = R_{2}C\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R_{2}}}}$$
+
+$$H_{1}(j\omega) = \frac{H_{10}j \frac{\omega}{\omega_{0}}}{1+2mj \frac{\omega}{\omega_{0}} - \frac{\omega^{2}}{\omega_{0}^{2}}} = \frac{H_{10}}{j\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right) +2m} = \frac{\frac{H_{10}}{2m}}{1+j \frac{1}{2m}\left(\frac{\omega}{\omega_{0}}- \frac{\omega_{0}}{\omega} \right)}$$
