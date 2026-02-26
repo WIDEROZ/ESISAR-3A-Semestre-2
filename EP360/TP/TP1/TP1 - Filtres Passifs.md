@@ -112,9 +112,12 @@ Alors,
 $$\omega_{c_{1}} = \mp \frac{b\omega_{0}}{2} \mp \frac{\omega_{0}}{2}\sqrt{b^{2}+4}$$
 Ainsi, 
 Comme $\omega_{c_{1}}>0$ : 
-$$\boxed{\omega_{c_{1}} = \frac{\omega_{0}}{2}(b+\sqrt{b^{2}+4})}$$
+$$\boxed{\omega_{c_{1}} = \frac{\omega_{0}}{2}(b+\sqrt{b^{2}+4}) = }$$
 Comme $\sqrt{b^{2}+4} > b$ : 
-$$\boxed{\omega_{c_{2}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
+$$\boxed{\omega_{c_{2}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b) = 376 \, kHz}$$
 Donc la fréquence centrale est : 
 $$\omega_{c} = \frac{\omega_{c_{1}}+\omega_{c_{2}}}{2} = \frac{\omega_{0}}{2}\sqrt{b^{2}+4}$$
-$$\boxed{o}$$
+$$\boxed{\omega_{c} = \frac{\omega_{0}}{2Q}\sqrt{\frac{H_{m}^{2}}{10^{-\frac{3}{10}}}+3}}$$
+
+
+0.3455607641
