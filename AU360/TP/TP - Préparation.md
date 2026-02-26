@@ -75,7 +75,7 @@ $$\boxed{\begin{array}{c}
 G_{act} = 30 \\
 T_{act,0} = 223.15 °K
 \end{array}}$$
-
+	
 ##### Capteur -5 a 60
 $$V_{c}(t) = G_{capt} (T_{enc}(t)  + T_{capt,0})$$
 $$1.15 \, V = G_{capt}(T_{enc}(0) + T_{capt,0})$$
@@ -84,7 +84,10 @@ $$T_{enc,V}(V) = AV + T_{0} \text{ alors }T_{0} = 268.15 $$
 Donc, 
 $$A = 13$$
 Ainsi, 
-$$1.15 \, V = 2G_{capt}T_{capt,0} \Rightarrow G_{capt} = 2.1443 \times 10^{-3}$$
+$$1.15 \, V = G_{capt}(T_{enc}(0) + T_{capt,0}) = G_{capt}(13 \times 1.15 + 2 T_{capt, 0})$$
+Ainsi, 
+$$G_{capt} = $$
+
 
 #### Température externe
 C'est la température associée au voltage du début du schéma : 
