@@ -55,8 +55,7 @@ Donc par l'équation $2$ et $3$ puis en appliquant la transformée de Laplace :
 $$V_{e} = V_{s} + \frac{L}{R_{2}}p V_{s}+u_{C} \Leftrightarrow \boxed{u_{C} = V_{e} - \left( 1+\frac{L}{R_{2}}p \right)V_{s}}$$
 
 De plus, en appliquant la transformée de Laplace puis les équations encadrées numéro $1$ et $2$ :
-$$R_{1}LC p^{2} u_{C} = R_{1}u_{L} + Lp(V_{s}+ u_{L})$$
-$$\Leftrightarrow R_{1}LCp^{2} u_{C} = (R_{1}+Lp)u_{L} + LpV_{s}$$
+$$R_{1}LC p^{2} u_{C} = R_{1}u_{L} + Lp(V_{s}+ u_{L})= (R_{1}+Lp)u_{L} + LpV_{s}$$
 Donc en injectant la $3^{eme}$ et $4^{eme}$ équation encadrée on obtiens : 
 $$R_{1}LCp^{2}\left( V_{e} - \left( 1+\frac{L}{R_{2}}p \right)V_{s} \right) = (R_{1}+Lp) \frac{L}{R_{2}}pV_{s} +LpV_{s}$$
 Alors, 
