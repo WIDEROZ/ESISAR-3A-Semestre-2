@@ -5,6 +5,7 @@ EXCAL 1
 #### Fonction de transfert
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
 $$H(p) = \frac{G}{1+\tau p}e^{ -t_{R}p }$$
+
 ##### Calcul de $\tau$
 $$\tau = \frac{t_{\max} - t_{0}}{3} \text{ avec } t_{0} = 0.5 \text{ s} $$
 Calcul de $t_{\max}$ : 
@@ -79,11 +80,14 @@ T_{act,0} = 223.15 °K
 ##### Capteur -5 a 60
 $$V_{c}(t) = G_{capt} (T_{enc}(t)  + T_{capt,0})$$
 Alors, 
-$$5 \, V = G_{capt}(T_{enc, 5V} + T_{capt,0}) = G_{capt}(333.15 + 268.15)$$
+$$0 \, V = G_{capt}(T_{enc, 5V} + T_{capt,0}) = G_{capt}(-5 + T_{capt, 0})$$
+donc, $T_{capt} = 5 ° C$
+De plus, 
+$$5V = G_{capt}(60 + 5)$$
 Ainsi, 
-$$\boxed{G_{capt} = 2.09 \times 10^{-3}}$$
+$$\boxed{G_{capt} = \frac{1}{13}}$$
 
-$$H(p) = \frac{TL[V_{c}(t)]}{TL[V_{a}(t)]} = \frac{T_{act}(t) - T_{act, 0}}{G_{act}G_{capt} (T_{enc}(t) - T_{capt, 0})}$$
+$$H(p) = \frac{TL[V_{c}(t)]}{TL[V_{a}(t)]} = \frac{TL[T_{act}(t)] - \frac{T_{act}}{p}}{G_{act}G_{capt} \left( TL[T_{enc}(t)] - \frac{T_{capt}}{p} \right)}$$
 
 
 #### Température externe
