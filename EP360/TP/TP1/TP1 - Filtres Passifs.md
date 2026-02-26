@@ -6,4 +6,10 @@ Puis on calcule le nombres de divisions entre le premier et le deuxième signal.
 On le multiplie ensuite par l'angle d'une division pour obtenir le déphasage entre les deux signaux. 
 ![[Pasted image 20260226160816.png]]
 
+
+
 #### Méthode de Lissajous
+Soit deux signaux sinusoïdaux : 
+$$\begin{cases}
+f(x) = 
+\end{cases}$$
