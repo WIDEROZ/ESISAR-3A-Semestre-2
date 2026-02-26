@@ -11,10 +11,11 @@ On le multiplie ensuite par l'angle d'une division pour obtenir le déphasage en
 #### Méthode de Lissajous
 Soit deux signaux sinusoïdaux : 
 $$\begin{cases}
-f(x) = A\sin(f_{0}t) \\
-g(x) = B\sin(f_{1}t + \varphi)
+f(t) = A\sin(f_{0}t) \\
+g(t) = B\sin(f_{1}t + \varphi)
 \end{cases}$$
+![[Pasted image 20260226163921.png]]
 
-
-$$f(x) = y$$
-$$y=\sin(x) \text{ et } x = \sin\left( y+\frac{\pi}{4} \right)$$
+On définit alors $x = g(t)$ en abscisse et $y = f(t)$ en ordonnés
+![[Pasted image 20260226163938.png]]
+On calcule alors la hauteur de l'ellipse : $H$ l'intersection 
