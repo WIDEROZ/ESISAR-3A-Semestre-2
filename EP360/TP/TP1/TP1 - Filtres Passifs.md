@@ -39,10 +39,13 @@ $$\boxed{\text{Un filtre passe bande d'ordre 2}}$$
 
 #### Fonction de transfert
 On applique la loi des nœuds :
-$$i_{e} = i_{L} + i_{1} \Leftrightarrow C  \frac{du_{c}}{dt} = i_{L} + \frac{u_{R_{1}}}{R_{1}}$$
+$$i_{e} = i_{L} + i_{1} \Leftrightarrow C  \frac{du_{c}}{dt} = i_{L} + \frac{u_{R_{1}}}{R_{1}}\Leftrightarrow  CLR_{1} \frac{d^{2}u_{C}}{dt^{2}} = R_{1}u_{L} + Lu_{R_{1}}$$
 On applique la loi des mailles sur celle de droite : 
 $$V_{s} + u_{L} = u_{R_{1}}$$
 On applique la loi des mailles sur celle de gauche : 
 $$V_{e} = u_{R_{1}} + u_{C}$$
+Par la loi d'ohm : 
+$$V_{s} = R_{2}i_{L}$$
 Alors, 
-$$V_{e} = V_{s} + u_{L} + u_{C} = V_{s} + L\frac{di_{L}}{dt}+u_{C}$$
+$$V_{s} =R_{2}L \frac{du_{L}}{dt} = R_{2}L\left( \frac{du_{R_{1}}}{dt} - \frac{dV_{s}}{dt} \right)$$
+$$= R_{2}L\left( \frac{dV_{e}}{dt} - \frac{du_{C}}{dt} - \frac{dV_{s}}{dt} \right) = R_{2}L\left( \frac{dV_{e}}{dt} - C \frac{d^{2}i_{e}}{dt^{2}} - \frac{dV_{s}}{dt}  \right)$$
