@@ -11,7 +11,7 @@ $$\tau = \frac{t_{\max} - t_{0}}{3} \text{ avec } t_{0} = 0.5 \text{ s} $$
 Calcul de $t_{\max}$ : 
 $$\Delta V = V_{\max} - V_{0} = 2.7 - 1.15 = 1.55 V$$
 $$\Delta V \times 0.95 = 1.47 \text{ }V $$
-$$V(3\tau) = 1.47 + 1.15 = 2.62$$
+$$V(3\tau) = 1.47 + 1.15 = 2.62 \, V$$
 $$t_{\max} = 2 \text{s}$$
 Donc, 
 $$\boxed{\tau = 0.5}$$
@@ -19,8 +19,8 @@ $$\boxed{\tau = 0.5}$$
 ##### Calcul de $G$
 On prend le gain à l'entrée : 
 $$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3$$
-
 $$\boxed{G = 2.3}$$
+
 ##### Retard pur
 On prend arbitrairement $1 \%$ du temps de réponse : 
 $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
@@ -87,19 +87,22 @@ $$5V = G_{capt}(60 + 5)$$
 Ainsi, 
 $$\boxed{G_{capt} = \frac{1}{13}}$$
 
-$$H(p) = \frac{TL[V_{c}(t)]}{TL[V_{a}(t)]} = \frac{TL[T_{act}(t)] - \frac{T_{act}}{p}}{G_{act}G_{capt} \left( TL[T_{enc}(t)] - \frac{T_{capt}}{p} \right)}$$
-
+$$T_{enc}(V) =  13V-5$$
 
 #### Température externe
 C'est la température associée au voltage du début du schéma : 
-$$T_{ext} = T_{enc}(0) = T_{enc,V}(1.54) = 15.02 °C$$
+$$T_{ext} = T_{enc}(0) = T_{enc,V}(1.15) =  °C$$
 
 #### Fonction de transfert de la mico-enceinte climatique
-$$TL[T_{enc}(t)] = \frac{1}{G_{capt}} TL[V_{c}(t)] - \frac{T_{capt,0}}{p}$$
-$$TL[T_{act}(t)] = G_{act} TL[V_{a}(t)] +\frac{T_{act,0}}{p}$$
-$$H_{enc}(p) = \frac{TL[T_{enc}(t)]}{TL[T_{act}(t)]} $$
-$$= \frac{p}{\frac{G_{capt}G_{act}}{H(p)}p + T_{act,0}} - \frac{T_{capt,0}}{pG_{act} TL[V_{a}(t)] + T_{act,0}}$$
-$$\boxed{H_{enc}(p) = \frac{\frac{p}{T_{act,0}}}{1+p\frac{G_{capt}G_{act}}{H(p)T_{act,0}}}  - \frac{\frac{ T_{capt,0}}{T_{act,0}}}{1+ p \frac{G_{act}}{T_{act,0}} TL[V_{a}(t)]}}$$
+Comme le gain du système est de $G_{enc} \times G_{act} \times G_{capt} = 2.3$ (mesuré sur le schéma)
+Alors, 
+$$\boxed{G_{enc} = 1}$$
+
+
+
+
+
+
 
 #### Modèle du CAN et du CNA
 ##### Simulation numérique du système
