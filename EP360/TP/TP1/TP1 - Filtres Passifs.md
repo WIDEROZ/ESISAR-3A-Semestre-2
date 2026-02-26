@@ -77,7 +77,7 @@ $$\frac{H_{10}}{\omega_{0}} = \frac{R_{1}R_{2}}{R_{1}+R_{2}}C\Leftrightarrow \bo
 $$H_{1}(j\omega) = \frac{H_{10}j \frac{\omega}{\omega_{0}}}{1+2mj \frac{\omega}{\omega_{0}} - \frac{\omega^{2}}{\omega_{0}^{2}}} = \frac{H_{10}}{j\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right) +2m} $$
 Ainsi, 
 $$\boxed{H_{1}(j\omega)= \frac{\frac{H_{10}}{2m}}{1+j \frac{1}{2m}\left(\frac{\omega}{\omega_{0}}- \frac{\omega_{0}}{\omega} \right)}}$$
-$$\boxed{H_{m} = \frac{H_{10}}{2m}=0.689}$$
+$$\boxed{H_{m} = \frac{H_{10}}{2m}=0.688}$$
 $$\boxed{Q = \frac{1}{2m}=0.655}$$
 
 Pertinence de la forme de la fonction de transfert :
@@ -95,7 +95,7 @@ On calcule alors la dérivée du terme dans le logarithme :
 $$2Q^{2}\left( \frac{1}{\omega_{0}} + \frac{\omega_{0}}{\omega^{2}} \right)\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right)$$
 Donc, lorsque $\omega=\omega_{0}$, la dérivée s'annule il y a donc un extremum mais si $\omega < \omega_{0}$ (resp. $\omega > \omega_{0}$) le signe de cette expression est négatif (resp. positif) donc $G_{dB}$ croît (resp. décroît)
 $$\boxed{\text{Ainsi }\omega_{0} \text{ est un maximum de }G_{dB}}$$
-$$\boxed{G_{dB}(\omega_{0}) = H_{m} = 0.689}$$
+$$\boxed{G_{dB}(\omega_{0}) = H_{m} = 0.688}$$
 
 #### Fréquences de coupures à $-3dB$
 $$-3 \,dB = G_{db}(\omega_{c})  = 20\log\left( \frac{H_{m}}{\sqrt{1+Q^{2}\left( \frac{\omega_{c}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{c}} \right)^{2}}} \right) $$
@@ -136,6 +136,7 @@ $$\boxed{\omega_{a_{1}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
 ### c. Diagramme de Bode
 #### Diagramme asymptotique de Bode
 
+# A FAIRE
 
 # II - Filtre Chargé
 ## 1. Préambule
@@ -157,4 +158,8 @@ $$R = \frac{R_{2}R_{u}}{R_{2}+R_{u}}$$
 On remplace alors $R_{2}$ par cette résistance $R$
 $$\boxed{H_{2}(j\omega)=\frac{H_{m_{u}}}{1+j Q_{u}\left(\frac{\omega}{\omega_{0_{u}}}- \frac{\omega_{0_{u}}}{\omega} \right)}}$$
 Avec : 
-$$H_{m_{u}} = \frac{RC\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R}}}{2\frac{R_{1}RC+L}{2\sqrt{(R_{1}+R)(R_{1}LC)}}}= RC \frac{}{}$$
+$$\boxed{H_{m_{u}} = \frac{RC\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R}}}{2\frac{R_{1}RC+L}{2\sqrt{(R_{1}+R)(R_{1}LC)}}}= \frac{RR_{1}C}{R_{1}RC+L}}$$
+$$\boxed{Q_{u} = \frac{\sqrt{(R_{1}+R)(R_{1}LC)}}{R_{1}RC+L}}$$
+$$\boxed{\omega_{0_{u}} = \sqrt{\frac{R_{1}+R}{R_{1}LC}}}$$
+### b.
+# A FAIRE
