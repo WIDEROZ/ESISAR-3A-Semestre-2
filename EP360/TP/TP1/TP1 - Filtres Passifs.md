@@ -146,5 +146,15 @@ Mais dans la réalité
 $$\boxed{Z_{GBF} \approx 50 \Omega}$$
 
 #### Effet de cette impédance sur la fonction de transfert du filtre
-![[Pasted image 20260226201516.png]]
-Le signal modifie la fonction
+![[Pasted image 20260226201835.png]]
+L'impédance de sortie modifie la fonction de transfert elle ajoute une tension parasite de $Z_{GBF}i_{e}$.
+
+## 2. Filtre Chargé
+### a. Etude du nouveau filtre
+#### Fonction de transfert
+On créé une résistance équivalente : 
+$$R = \frac{R_{2}R_{u}}{R_{2}+R_{u}}$$
+On remplace alors $R_{2}$ par cette résistance $R$
+$$\boxed{H_{2}(j\omega)=\frac{H_{m_{u}}}{1+j Q_{u}\left(\frac{\omega}{\omega_{0_{u}}}- \frac{\omega_{0_{u}}}{\omega} \right)}}$$
+Avec : 
+$$H_{m_{u}} = \frac{}{}$$
