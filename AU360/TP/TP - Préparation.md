@@ -124,7 +124,7 @@ $$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8 -2.45}{2.7-1.15} = 0.23 $$
 $$\boxed{G_{bruit} = 0.23}$$
 Quantification :
 Comme la quantification du CAN et du CNA donne des intervalles de $19.5 \, mV$, si le signal voulu est entre les bornes de cet intervalle on aura un bruit qui sera compris dans cet intervalle ie 
-$$\boxed{\frac{Q}{2} = 9.75 \, mV}$$
+$$G_{bruit}$$
 
 
 
