@@ -68,7 +68,7 @@ $$H_{1}(p) = \frac{V_{s}}{V_{e}} = \frac{R_{1}Cp}{\frac{R_{1}+R_{2}}{R_{2}} + \l
 Ainsi, 
 $$\boxed{H_{1}(p) = \frac{\frac{R_{1}R_{2}}{R_{1}+R_{2}}Cp}{1+\frac{R_{1}R_{2}C + L}{R_{1}+R_{2}} p + \frac{R_{1}LC}{R_{1}+R_{2}}p^{2}}}$$
 Donc, 
-$$\boxed{\omega_{0} = \sqrt{\frac{R_{1}+R_{2}}{R_{1}LC}}}$$
+$$\boxed{\omega_{0} = \sqrt{\frac{R_{1}+R_{2}}{R_{1}LC}} = }$$
 De plus, 
 $$\frac{2m}{\omega_{0}} = \frac{R_{1}R_{2}C+L}{R_{1}+R_{2}} \Leftrightarrow \boxed{m =\frac{R_{1}R_{2}C+L}{2\sqrt{(R_{1}+R_{2})(R_{1}LC)}}}$$
 $$\frac{H_{10}}{\omega_{0}} = \frac{R_{1}R_{2}}{R_{1}+R_{2}}C\Leftrightarrow \boxed{H_{10} = R_{2}C\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R_{2}}}}$$
@@ -91,5 +91,8 @@ $$\boxed{\begin{cases}
 $$G_{dB}(\omega) = 20\log(\left| H_{1}(j\omega)\right|)$$
 $$ = 20\log(H_{m}) - 10\log\left( 1+Q^{2}\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right)^{2} \right)$$
 On calcule alors la dérivée du terme dans le logarithme : 
-(car si ce terme croit comme log est monotone alors $G_{dB}$ décroit) : 
-$$2Q^{2}\left( \frac{1}{\omega_{0}} \right)\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right)$$
+(car si ce terme croit (respectivement décroit) comme log est monotone alors $G_{dB}$ décroit (resp. croit)) i.e. la dérivée s'annulera pour cette fonction en $\omega$ : 
+$$2Q^{2}\left( \frac{1}{\omega_{0}} + \frac{\omega_{0}}{\omega^{2}} \right)\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right)$$
+Donc, lorsque $\omega=\omega_{0}$, la dérivée s'annule il y a donc un extremum mais si $\omega < \omega_{0}$ (resp. $\omega > \omega_{0}$) le signe de cette expression est négatif (resp. positif) donc $G_{dB}$ croît (resp. décroît)
+$$\boxed{\text{Ainsi }\omega_{0} \text{ est un maximum de }G_{dB}}$$
+$$\boxed{G_{dB}(\omega_{0}) = H_{m} = }$$
