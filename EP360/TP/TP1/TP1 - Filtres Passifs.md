@@ -25,4 +25,13 @@ $$\boxed{\sin(\varphi) = \frac{h}{H}}$$
 
 ## 2. Fonction de Transfert
 #### Gabarit et ordre du filtre
+En Basse fréquence : 
+![[Pasted image 20260226172105.png]]
+$V_{s} = 0 \, V$
+
+En haute fréquence : 
+![[Pasted image 20260226172151.png]]
+$V_{s} = 0 \, V$
+
+Comme on a un condensateur et une bob
 $$$$
