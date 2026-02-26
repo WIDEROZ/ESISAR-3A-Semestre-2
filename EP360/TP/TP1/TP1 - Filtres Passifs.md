@@ -56,3 +56,9 @@ $$V_{e} = V_{s} + \frac{L}{R_{2}}p V_{s}+u_{C} \Leftrightarrow \boxed{u_{C} = V_
 De plus, en appliquant la transformée de Laplace puis les équations encadrées numéro $1$ et $2$ :
 $$R_{1}LC p^{2} u_{C} = R_{1}u_{L} + Lp(V_{s}+ u_{L})$$
 $$\Leftrightarrow R_{1}LCp^{2} u_{C} = (R_{1}+Lp)u_{L} + LpV_{s}$$
+Donc en injectant la $3^{eme}$ et $4^{eme}$ équation encadrée on obtiens : 
+$$R_{1}LCp^{2}\left( V_{e} - \left( 1+\frac{L}{R_{2}}p \right)V_{s} \right) = (R_{1}+Lp) \frac{L}{R_{2}}pV_{s} +LpV_{s}$$
+Alors, 
+$$R_{1}Cp V_{e} - R_{1}Cp\left( 1+\frac{L}{R_{2}}p \right)V_{s} = \left( \frac{R_{1}+R_{2}+Lp}{R_{2}}\right)V_{s}$$
+Alors, 
+$$V_{s}\left( \frac{R_{1}+R_{2}}{R_{2}} + \left( R_{1}C+ \frac{L}{R_{2}}  \right)p + \frac{R_{1}LC}{R_{2}}p^{2} \right) = R_{1}CpV_{e}$$
