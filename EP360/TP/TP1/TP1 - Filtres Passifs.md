@@ -16,6 +16,9 @@ g(t) = B\sin(f_{1}t + \varphi)
 \end{cases}$$
 ![[Pasted image 20260226163921.png]]
 
-On définit alors $x = g(t)$ en abscisse et $y = f(t)$ en ordonnés
+On définit alors $x = f(t)$ en abscisse et $y = g(t)$ en ordonnés
 ![[Pasted image 20260226163938.png]]
-On calcule alors la hauteur de l'ellipse : $H$ l'intersection 
+On mesure alors la hauteur totale de l'ellipse : $H$ 
+et la hauteur à l'intérieur de l'ellipse au centre (Mesure des deux points issus de l'intersection entre l'ellipse et l'ordonnée) : $h$
+On a ainsi :
+$$\boxed{\sin(\varphi) = \frac{h}{H}}$$
