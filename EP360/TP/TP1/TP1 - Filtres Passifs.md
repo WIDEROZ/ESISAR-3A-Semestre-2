@@ -24,6 +24,7 @@ On a ainsi :
 $$\boxed{\sin(\varphi) = \frac{h}{H}}$$
 
 ## 2. Fonction de Transfert
+![[Pasted image 20260226173038.png]]
 #### Gabarit et ordre du filtre
 En Basse fréquence : 
 ![[Pasted image 20260226172105.png]]
@@ -33,5 +34,9 @@ En haute fréquence :
 ![[Pasted image 20260226172151.png]]
 $V_{s} = 0 \, V$
 
-Comme on a un condensateur et une bob
-$$$$
+Comme on a un condensateur et une bobine, le filtre est donc : 
+$$\boxed{\text{Un filtre passe bande d'ordre 2}}$$
+
+#### Fonction de transfert
+On applique la loi des nœuds :
+$$i_{e} = i_{L} + i_{1}$$
