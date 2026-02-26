@@ -39,4 +39,10 @@ $$\boxed{\text{Un filtre passe bande d'ordre 2}}$$
 
 #### Fonction de transfert
 On applique la loi des nœuds :
-$$i_{e} = i_{L} + i_{1}$$
+$$i_{e} = i_{L} + i_{1} \Leftrightarrow C  \frac{du_{c}}{dt} = i_{L} + \frac{u_{R_{1}}}{R_{1}}$$
+On applique la loi des mailles sur celle de droite : 
+$$V_{s} + u_{L} = u_{R_{1}}$$
+On applique la loi des mailles sur celle de gauche : 
+$$V_{e} = u_{R_{1}} + u_{C}$$
+Alors, 
+$$V_{e} = V_{s} + u_{L} + u_{C} = V_{s} + L\frac{di_{L}}{dt}+u_{C}$$
