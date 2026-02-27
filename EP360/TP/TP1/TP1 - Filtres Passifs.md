@@ -32,15 +32,15 @@ $$\boxed{\sin(\varphi) = \frac{h}{H}}$$
 ![[Pasted image 20260226173038.png]]
 ### a. Fonction de transfert
 #### Gabarit et ordre du filtre
-En Basse fréquence : 
+###### En Basse fréquence
 ![[Pasted image 20260226172105.png]]
-$V_{s} = 0 \, V$
+On a alors $V_{s} = 0 \, V$
 
-En haute fréquence : 
+###### En haute fréquence
 ![[Pasted image 20260226172151.png]]
-$V_{s} = 0 \, V$
+On a alors $V_{s} = 0 \, V$
 
-Comme on a un condensateur et une bobine, le filtre est donc : 
+Comme on a deux composants actifs, le filtre est donc : 
 $$\boxed{\text{Un filtre passe bande d'ordre 2}}$$
 
 #### Fonction de transfert
@@ -110,10 +110,13 @@ $$ \frac{H_{m}}{\sqrt{2}} =  \frac{H_{m}}{\sqrt{1+Q^{2}\left( \frac{\omega_{c}}{
 Alors, 
 $$\pm\left( \frac{\omega_{c}}{\omega_{0}} - \frac{\omega_{0}}{\omega_{c}} \right) Q = 1 $$
 Donc on a : 
-$$\pm \omega_{c}^{2} \mp \omega_{0}\omega_{c} -\frac{1}{Q} = 0$$
+$$\pm \omega_{c}^{2} -\frac{\omega_{0}}{Q}\omega_{c}\mp \omega_{0}^{2} = 0$$
 
 On cherche a trouver les solutions de cette équation : 
-# A FAIRE
+$$\Delta = \frac{\omega_{0}^{2}}{Q^{2}} - 4(\pm 1)(\mp \omega_{0}^{2}) = \omega_{0}^{2}\left( \frac{1}{Q^{2}}+4 \right)> 0$$
+
+$$\omega_{c} = \mp\frac{\omega_{0}}{2 }\left( \frac{1}{Q} \pm   \sqrt{\frac{1}{Q^{2}}+4}\right)$$
+Alors, comme 
 
 #### Bande passante 
 # A FAIRE
