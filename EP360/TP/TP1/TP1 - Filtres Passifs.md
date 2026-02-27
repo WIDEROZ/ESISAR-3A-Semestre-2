@@ -103,24 +103,12 @@ $$\left| H_{1}(j\omega_{c})\right| = \frac{H_{m}}{\sqrt{2}}$$
 Alors, 
 $$ \frac{H_{m}}{\sqrt{2}} =  \frac{H_{m}}{\sqrt{1+Q^{2}\left( \frac{\omega_{c}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{c}} \right)^{2}}}$$
 Alors, 
-$$\frac{1}{Q}\sqrt{\frac{H_{m}^{2}}{10^{-\frac{3}{10}}}-1} = \pm\left( \frac{\omega_{c}}{\omega_{0}} - \frac{\omega_{0}}{\omega_{c}} \right)$$
-Donc, en posant : 
-$$b = \frac{1}{Q}\sqrt{\frac{H_{m}^{2}}{10^{-\frac{3}{10}}}-1}$$
-On a : 
-$$\pm\omega_{c}^{2} -b\omega_{0}\omega_{c} \mp \omega_{0}^{2}=0$$
+$$\pm\left( \frac{\omega_{c}}{\omega_{0}} - \frac{\omega_{0}}{\omega_{c}} \right) Q = 1 $$
+Donc on a : 
+$$\pm \omega_{c}^{2} \mp \omega_{0}\omega_{c} -\frac{1}{Q} = 0$$
 
 On cherche a trouver les solutions de cette équation : 
-$$(b\omega_{0})^{2}-4(\pm 1)(\mp 1)\omega_{0}^{2} = \omega_{0}^{2}(b^{2}+4)> 0$$
-Alors, 
-$$\omega_{c_{1}} = \mp \frac{b\omega_{0}}{2} \mp \frac{\omega_{0}}{2}\sqrt{b^{2}+4}$$
-Ainsi, 
-Comme $\omega_{c_{1}}>0$ : 
-$$\boxed{\omega_{c_{1}} = \frac{\omega_{0}}{2}(b+\sqrt{b^{2}+4})}$$
-Comme $\sqrt{b^{2}+4} > b$ : 
-$$\boxed{\omega_{c_{2}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
-Donc la fréquence centrale est : 
-$$\omega_{c} = \frac{\omega_{c_{1}}+\omega_{c_{2}}}{2} = \frac{\omega_{0}}{2}\sqrt{b^{2}+4}$$
-$$\boxed{\omega_{c} = \frac{\omega_{0}}{2Q}\sqrt{\frac{H_{m}^{2}}{10^{-\frac{3}{10}}}+3}}$$
+# A FAIRE
 
 #### Bande passante 
 # A FAIRE
