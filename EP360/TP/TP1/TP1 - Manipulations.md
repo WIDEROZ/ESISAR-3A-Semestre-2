@@ -3,5 +3,6 @@ On mesure l'écart temporel avec les curseurs
 
 # II - Filtre passif sans charge
 #### Effet sur le gain
+Le gain diminue fortement
 
 #### Mesure de la fréquence centrale
