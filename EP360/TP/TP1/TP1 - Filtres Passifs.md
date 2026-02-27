@@ -145,7 +145,8 @@ $$\boxed{\omega_{a_{2}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
 ### c. Diagramme de Bode
 #### Diagramme asymptotique de Bode
 
-# A FAIRE
+![[Pasted image 20260227155352.png]]
+
 
 # II - Filtre Chargé
 ## 1. Préambule
