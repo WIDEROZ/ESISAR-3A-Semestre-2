@@ -1,3 +1,8 @@
+# Introduction
+On étudie ici les caractéristiques de retard d'un filtre passif RLC parallèle série, plus précisément un filtre passe bande. 
+En premier lieu l'étude nous aura mené à calculer les caractéristiques fréquentielles de ce filtre, notamment sa fonction de transfert puis son diagramme de Bode avec ses pulsations caractéristiques associés.
+
+
 # I - Filtre passif non chargé
 ## 1. Préliminaires
 #### Méthode des $9$ carreaux
