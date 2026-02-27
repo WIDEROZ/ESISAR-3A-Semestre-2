@@ -114,9 +114,17 @@ $$\pm \omega_{c}^{2} -\frac{\omega_{0}}{Q}\omega_{c}\mp \omega_{0}^{2} = 0$$
 
 On cherche a trouver les solutions de cette équation : 
 $$\Delta = \frac{\omega_{0}^{2}}{Q^{2}} - 4(\pm 1)(\mp \omega_{0}^{2}) = \omega_{0}^{2}\left( \frac{1}{Q^{2}}+4 \right)> 0$$
+De plus
+$$\omega_{c_{1/2}} = \mp\frac{\omega_{0}}{2 }\left( \frac{1}{Q} \pm   \sqrt{\frac{1}{Q^{2}}+4}\right)$$
+Alors, comme $\frac{1}{Q} < \sqrt{\frac{1}{Q^{2}}+4}$ : 
+$$\boxed{\omega_{c_{1}} = \frac{\omega_{0}}{2}\left( \sqrt{\frac{1}{Q^{2}}+4}-\frac{1}{Q} \right) = 221131 \, Hz \approx 221  kHz}$$
+De plus comme $\omega_{c} > 0$ : 
+$$\boxed{\omega_{c_{2}} = \frac{\omega_{0}}{2}\left( \sqrt{\frac{1}{Q^{2}}+4} +\frac{1}{Q} \right) = 903574 \approx 904 \, kHz}$$
 
-$$\omega_{c} = \mp\frac{\omega_{0}}{2 }\left( \frac{1}{Q} \pm   \sqrt{\frac{1}{Q^{2}}+4}\right)$$
-Alors, comme 
+Ainsi, 
+La pulsation centrale est : 
+$$\boxed{\omega_{c} = \frac{\omega_{c_{1}}+\omega_{c_{2}}}{2} = \frac{\omega_{0}}{2}\sqrt{\frac{1}{Q^{2}}+4} = 562353 \, Hz \approx 562 \, kHz}$$
+
 
 #### Bande passante 
 # A FAIRE
