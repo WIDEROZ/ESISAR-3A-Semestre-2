@@ -6,5 +6,4 @@ On mesure l'écart temporel avec les curseurs
 Le gain diminue fortement si on prend en compte
 
 #### Mesure de la fréquence centrale
-
-s
+$$Q = \frac{1}{2m}$$
