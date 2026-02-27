@@ -50,7 +50,7 @@ Dans le pire des cas le bruit est de : $0.3 \, V$
 
 #### Modèles statiques
 ##### Actionneur
-Si on prend un modèle affine de la température ; 
+Si on prend un modèle affine de la température
 $-50°C = 223.15° K$
 $$T_{act}(V)=  AV +223.15 \Rightarrow A = \frac{(100+273.15)-223.15}{5} = 30$$
 $$T_{act}(V) = 30V +223.15$$
