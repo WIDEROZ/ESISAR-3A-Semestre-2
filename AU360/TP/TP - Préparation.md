@@ -66,7 +66,7 @@ $$V_{c}(t) = G_{capt} (T_{enc}(t)  + T_{capt,0})$$
 Alors, 
 $$0 \, V = G_{capt}(T_{enc, 5V} + T_{capt,0}) = G_{capt}(-5 + T_{capt, 0})$$
 donc,
-$$\boxed{T_{capt} = 5 ° C}$
+$$\boxed{T_{capt} = 5 ° C}$$
 De plus, 
 $$5V = G_{capt}(60 + 5)$$
 Ainsi, 
@@ -76,8 +76,8 @@ $$\boxed{G_{capt} = \frac{1}{13}}$$
 
 #### Température externe
 C'est la température associée au voltage du début du schéma :
-$$T_{enc}(t) =  \frac{1}{G_{capt}}V_{c}(t)-T_{capt, 0} = 13V_{c} - 5$$
-$$\boxed{T_{ext} = T_{enc}(0) = T_{enc,V}(1.15) =  9.95°C}$$
+$$T_{enc}(t) =  \frac{1}{G_{capt}}V_{c}(t)-T_{capt, 0} = 13V_{c}(t) - 5$$
+$$\boxed{T_{ext} = T_{enc}(0) = 9.95°C}$$
 
 #### Fonction de transfert de la mico-enceinte climatique
 Comme le gain du système est de $G_{enc} \times G_{act} \times G_{capt} = 2.3$ (mesuré sur le schéma)
@@ -86,28 +86,25 @@ $$\boxed{G_{enc} = 1}$$
 Ainsi, 
 $$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
 
-
-
 #### Modèle du CAN et du CNA
 ##### Simulation numérique du système
 Gain : 
-On prend un Gain unitaire : $\boxed{G_{CAN/CNA} = 1}$
+Le gain idéal pour un CNA doît être unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
 Quantification : 
 Comme le CAN et le CNA possèdent $1$ octets il y a $256$ possibilités pour une tension entre $0$ et $5 \, V$ : 
-$$\boxed{Q = \frac{5}{256} = 0.0195 \, V}$$
+$$\boxed{Q = \frac{5}{256} = 19.5 \,m V}$$
 
 Saturation : 
-D'après le schéma la fréquence de saturation est de $\boxed{5 \, V}$
+D'après le schéma la fréquence de saturation du CAN et du CNA est de $\boxed{5 \, V}$
 
 ###### Synthèse de la commande
 Gain :
-$\Delta s$ : On a pris l'amplitude du bruit la plus grande 
-$\Delta e$ : Valeur moyenne du capteur
+$\Delta s$ : On prend l'amplitude du bruit la plus grande 
+$\Delta e$ : On prend la distance entre la valeur moyenne du maximum de l'amplitude et du minimum de l'amplitude
 D'après le schéma : 
 $$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8 -2.45}{2.7-1.15} = 0.23 $$
 $$\boxed{G_{bruit} = 0.23}$$
-
 
 
 #### Schéma fonctionnel
