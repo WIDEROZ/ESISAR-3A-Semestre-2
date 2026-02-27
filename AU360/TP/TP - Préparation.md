@@ -49,35 +49,24 @@ si on prend les pulsations en dessous de $\omega = \frac{1}{\tau}$.
 Dans le pire des cas le bruit est de : $0.3 \, V$
 
 #### Modèles statiques
+
 ##### Actionneur
 Si on prend un modèle affine de la température
-$-50°C = 223.15° K$
-$$T_{act}(V)=  AV +223.15 \Rightarrow A = \frac{(100+273.15)-223.15}{5} = 30$$
-$$T_{act}(V) = 30V +223.15$$
-Alors, 
-$$\begin{cases}
-\forall t \in [0, 0.5], &T_{act}(t) = 223.95 °K = -0.2 °C \\
-\forall t \in [0.5, 4],&T_{act}(t) = 293.05 °K = 19.9°C \\
-\forall t \in [4, 8],&T_{act}(t) = 278.05 °K = 4.9°C
-\end{cases}$$
-Donc, 
-$$\begin{cases}
-\forall t \in [0, 0.5], &272.95 = 1.66G_{act} + T_{act,0} \\
-\forall t \in [0.5, 4],&293.05 = 2.33G_{act} + T_{act,0}
-\end{cases}$$
-$$293.05 = 2.33G_{act} + 272.95 - 1.66G_{act} \Rightarrow G_{act} = 30$$
-$$T_{act,0} = 223.15$$
+Comme $-50 = G_{act} \times 0 + T_{act, 0}$ : 
+$$T_{act}(t)=  G_{act}V_{act}(t) -50$$
+Alors, comme $100 = G_{act}\times 5 - 50$ 
 Ainsi, 
 $$\boxed{\begin{array}{c}
 G_{act} = 30 \\
-T_{act,0} = 223.15 °K
+T_{act,0} = -50 ° C
 \end{array}}$$
 
-##### Capteur -5 a 60
+##### Capteur
 $$V_{c}(t) = G_{capt} (T_{enc}(t)  + T_{capt,0})$$
 Alors, 
 $$0 \, V = G_{capt}(T_{enc, 5V} + T_{capt,0}) = G_{capt}(-5 + T_{capt, 0})$$
-donc, $T_{capt} = 5 ° C$
+donc,
+$$\boxed{T_{capt} = 5 ° C}$
 De plus, 
 $$5V = G_{capt}(60 + 5)$$
 Ainsi, 
@@ -86,8 +75,8 @@ $$\boxed{G_{capt} = \frac{1}{13}}$$
 
 
 #### Température externe
-C'est la température associée au voltage du début du schéma : 
-$$T_{enc}(V) =  13V-5$$
+C'est la température associée au voltage du début du schéma :
+$$T_{enc}(t) =  \frac{1}{G_{capt}}V_{c}(t)-T_{capt, 0} = 13V_{c} - 5$$
 $$\boxed{T_{ext} = T_{enc}(0) = T_{enc,V}(1.15) =  9.95°C}$$
 
 #### Fonction de transfert de la mico-enceinte climatique
