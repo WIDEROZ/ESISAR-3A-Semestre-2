@@ -4,7 +4,7 @@ EXCAL 1
 
 #### Fonction de transfert
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
-$$H(p) = \frac{G}{1+\tau p}e^{ -t_{R}p }$$
+$$H(p) = \frac{G}{1+\tau p}$$
 Avec un retard pur $t_{R}$
 
 ##### Calcul de $\tau$
@@ -50,11 +50,6 @@ Dans le pire des cas le bruit est de : $0.3 \, V$
 
 #### Modèles statiques
 ##### Actionneur
-$$\begin{cases}
-\forall t \in [0, 0.5], &T_{act}(t) = 1.66G_{act} + T_{act,0} \\
-\forall t \in [0.5, 4],&T_{act}(t) = 2.33G_{act} + T_{act,0} \\
-\forall t \in [4, 8],&T_{act}(t) = 1.83G_{act} + T_{act,0}
-\end{cases}$$
 Si on prend un modèle affine de la température ; 
 $-50°C = 223.15° K$
 $$T_{act}(V)=  AV +223.15 \Rightarrow A = \frac{(100+273.15)-223.15}{5} = 30$$
