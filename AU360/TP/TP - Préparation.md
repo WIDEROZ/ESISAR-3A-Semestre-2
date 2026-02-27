@@ -151,7 +151,6 @@ $$\boxed{\varphi =\pi -t_{R}\omega -\arctan\left( \frac{\frac{\omega_{0}}{\omega
 ##### Retard pur
 De même que précédemment : 
 $$\boxed{t_{R} \leq t_{R, \max} = 5 \, ms}$$
-$$$$
 
 
 
