@@ -126,10 +126,12 @@ La pulsation centrale est :
 $$\boxed{\omega_{c} = \frac{\omega_{c_{1}}+\omega_{c_{2}}}{2} = \frac{\omega_{0}}{2}\sqrt{\frac{1}{Q^{2}}+4} = 562353 \, Hz \approx 562 \, kHz}$$
 
 
-#### Bande passante 
-# A FAIRE
+#### Bande passante
+La bande passante À $-3dB$ est : 
+$$\boxed{\Delta \omega = \omega_{c_{2}}-\omega_{c_{1}} = \frac{\omega_{0}}{Q}}$$
 
 #### Pulsations à l'intersection des asymptotes avec l'axe $0dB$
+
 $$ 0 = G_{db}(\omega_{a})  = 20\log\left( \frac{H_{m}}{\sqrt{1+Q^{2}\left( \frac{\omega_{a}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{a}} \right)^{2}}} \right)$$
 $$\frac{H_{m}}{\sqrt{1+Q^{2}\left( \frac{\omega_{a}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{a}} \right)^{2}}} = 1$$
 Alors, 
@@ -138,7 +140,7 @@ Par analogie avec les fréquences de coupure :
 En posant : 
 $$\boxed{b = \frac{1}{Q}\sqrt{H_{m}^{2}-1}}$$
 $$\boxed{\omega_{a_{1}} = \frac{\omega_{0}}{2}(b+\sqrt{b^{2}+4})}$$
-$$\boxed{\omega_{a_{1}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
+$$\boxed{\omega_{a_{2}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
 
 ### c. Diagramme de Bode
 #### Diagramme asymptotique de Bode
