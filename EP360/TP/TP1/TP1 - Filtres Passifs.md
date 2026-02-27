@@ -95,10 +95,13 @@ On calcule alors la dérivée du terme dans le logarithme :
 $$2Q^{2}\left( \frac{1}{\omega_{0}} + \frac{\omega_{0}}{\omega^{2}} \right)\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right)$$
 Donc, lorsque $\omega=\omega_{0}$, la dérivée s'annule il y a donc un extremum mais si $\omega < \omega_{0}$ (resp. $\omega > \omega_{0}$) le signe de cette expression est négatif (resp. positif) donc $G_{dB}$ croît (resp. décroît)
 $$\boxed{\text{Ainsi }\omega_{0} \text{ est un maximum de }G_{dB}}$$
-$$\boxed{G_{dB}(\omega_{0}) = H_{m} = 0.688}$$
+$$\boxed{G_{dB}(\omega_{0}) = 20\log(H_{m})}$$
 
 #### Fréquences de coupures à $-3dB$
-$$-3 \,dB = G_{db}(\omega_{c})  = 20\log\left( \frac{H_{m}}{\sqrt{1+Q^{2}\left( \frac{\omega_{c}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{c}} \right)^{2}}} \right) $$
+Le gain est à $-\, 3dB$ lorsque : 
+$$\left| H_{1}(j\omega_{c})\right| = \frac{H_{m}}{\sqrt{2}}$$
+Alors, 
+$$ \frac{H_{m}}{\sqrt{2}} =  \frac{H_{m}}{\sqrt{1+Q^{2}\left( \frac{\omega_{c}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{c}} \right)^{2}}}$$
 Alors, 
 $$\frac{1}{Q}\sqrt{\frac{H_{m}^{2}}{10^{-\frac{3}{10}}}-1} = \pm\left( \frac{\omega_{c}}{\omega_{0}} - \frac{\omega_{0}}{\omega_{c}} \right)$$
 Donc, en posant : 
