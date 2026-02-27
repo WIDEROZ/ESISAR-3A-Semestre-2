@@ -84,6 +84,10 @@ Ainsi,
 $$\boxed{H_{1}(j\omega)= \frac{\frac{H_{10}}{2m}}{1+j \frac{1}{2m}\left(\frac{\omega}{\omega_{0}}- \frac{\omega_{0}}{\omega} \right)}}$$
 $$\boxed{H_{m} = \frac{H_{10}}{2m}=0.688}$$
 $$\boxed{Q = \frac{1}{2m}=0.655}$$
+$$arg(H_{1}) = -\arg\left( 1+j Q\left( \frac{\omega}{\omega_{0}} - \frac{\omega_{0}}{\omega} \right) \right)$$
+
+
+
 
 Pertinence de la forme de la fonction de transfert :
 $$\boxed{\begin{cases}
@@ -147,6 +151,11 @@ $$\boxed{\omega_{a_{2}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
 
 ![[Pasted image 20260227155352.png]]
 
+Comme $1>0$ : 
+$$\boxed{\arg(H_{1}) = -\arctan\left( Q\left( \frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega} \right) \right)}$$
+On a ainsi : 
+![[Pasted image 20260227160043.png]]
+En échelle logarithmique $(1\sim10, 2 \sim 10^{2})$
 
 # II - Filtre Chargé
 ## 1. Préambule
@@ -172,10 +181,10 @@ $$\boxed{H_{m_{u}} = \frac{RC\sqrt{\frac{\frac{R_{1}}{LC}}{R_{1}+R}}}{2\frac{R_{
 $$\boxed{Q_{u} = \frac{\sqrt{(R_{1}+R)(R_{1}LC)}}{R_{1}RC+L}}$$
 $$\boxed{\omega_{0_{u}} = \sqrt{\frac{R_{1}+R}{R_{1}LC}}}$$
 ### b. Diagramme de Bode
-# A FAIRE
+De même que l'ancien diagramme de Bode avec un décalage par rapport à l'axe des abscisses. 
 
 # III - Plus de finesse
-#### Fréquence de résonnance d'une bobine spécifique
+#### Fréquence de résonance d'une bobine spécifique
 Bobine choisie : 77F102J-RC
 $$\boxed{\text{SRF}=1.2 \, MHz}$$
 #### Proximité de $V_{e}$ en fréquence par rapport à la fréquence de résonnance
