@@ -5,6 +5,7 @@ EXCAL 1
 #### Fonction de transfert
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
 $$H(p) = \frac{G}{1+\tau p}e^{ -t_{R}p }$$
+Avec un retard pur $t_{R}$
 
 ##### Calcul de $\tau$
 $$\tau = \frac{t_{\max} - t_{0}}{3} \text{ avec } t_{0} = 0.5 \text{ s} $$
