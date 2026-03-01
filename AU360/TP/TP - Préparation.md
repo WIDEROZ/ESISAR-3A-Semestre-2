@@ -1,6 +1,6 @@
 ## 1.1 - Modélisation
 #### Schéma
-fddvdddddddddddddddddddddddd
+![[Pasted image 20260301160819.png]]
 
 Entrées / sorties : 
 - $U(t)$ : Signal de commande
@@ -130,8 +130,8 @@ $$\boxed{G_{bruit} = 0.23}$$
 ![[Pasted image 20260301151748.png]]
 - $P_{b}(p)$ : Bruit de mesure
 - $P_{u}(p)$ : Perturbation de la commande
-- $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
 - $R(p)$ : Consigne que doit suivre la sortie
+- Modélisation compliquée des variations très lentes du système
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
 
 ## 1.2 Spécifications pour la synthèse de la commande
