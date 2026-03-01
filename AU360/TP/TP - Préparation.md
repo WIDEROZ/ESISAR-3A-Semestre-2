@@ -51,10 +51,11 @@ $$\boxed{\varphi = -\arctan(\omega \tau)}$$
 ![[Pasted image 20260301130654.png]]
 
 ##### Avec un retard pur
-$$\arg(H(p)) = \arg(G)+\arg(e^{ -t_{R}j\omega \tau }) - \arg(1+j\omega \tau) $$
-$$= -\omega t_{R}\tau - \arctan(\omega \tau)$$
+$$\arg(H(p)) = \arg(G)+\arg(e^{ -t_{R}j\omega}) - \arg(1+j\omega \tau) $$
+$$= -\omega t_{R} - \arctan(\omega \tau)$$
 Donc, 
-$$\boxed{\varphi = -\arctan(\omega \tau)}$$
+$$\boxed{\varphi = -\omega t_{R} - \arctan(\omega \tau)}$$
+
 
 
 
