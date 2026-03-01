@@ -1,8 +1,9 @@
 ## 1.1 - Modélisation
-#### Schema
-![[Pasted image 20260301115635.png|697]]
+#### Schéma
+![[Pasted image 20260301121014.png]]
 
 Entrées / sorties : 
+- $U(t)$ : Signal de commande
 - $y_{c}(t)$ : Consigne
 - $y(t)$ : Réponse en temps continu
 - $y(k)$ : Réponse en temps discret
@@ -16,7 +17,6 @@ Perturbations :
 #### Fonction de transfert
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
 $$H(p) = \frac{G}{1+\tau p}$$
-Avec un retard pur $t_{R}$
 
 ##### Calcul de $\tau$
 $$\tau = \frac{t_{\max} - t_{0}}{3} \text{ avec } t_{0} = 0.5 \text{ s} $$
@@ -38,12 +38,12 @@ On prend arbitrairement $1 \%$ du temps de réponse :
 $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 
 
-#### Bode
+#### Diagramme de Bode
 EXCAL 2
 Gain : 
 $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\sqrt{1+(\omega \tau)^{2}}} \right)}$$
 Phase : 
-$$\arg(H(p)) = \arg(G) - \arg(1+j\omega \tau) = \arg(G) - \arctan(\omega \tau)=-\arctan(\omega \tau)$$
+$$\arg(H(p)) = \arg(G) - \arg(1+j\omega \tau) = \arg(G) - \arctan(\omega \tau)$$
 Donc, 
 $$\boxed{\varphi = -\arctan(\omega \tau)}$$
 
