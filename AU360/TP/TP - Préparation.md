@@ -42,7 +42,7 @@ $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 #### Diagramme de Bode
 Gain : 
 $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\sqrt{1+(\omega \tau)^{2}}} \right)}$$
-![[Pasted image 20260301130634.png]]
+![[Pasted image 20260301132540.png]]
 Phase : 
 $$\arg(H(p)) = \arg(G) - \arg(1+j\omega \tau) = \arg(G) - \arctan(\omega \tau)$$
 Donc, 
