@@ -1,4 +1,8 @@
-#### Equation de la chaleur
+#### Actionneur
+D'après la fonction de transfert en préparation : 
+$$H_{enc}(p) = \frac{TL[V_{\mathrm{can}}(t)]}{TL[V_{act}(t)]} = \frac{G_{act}}{1+p \tau}$$
+$$\dot{x} = \tau(G_{act}V_{act} (t) - x)$$
+#### Enceinte
 D'après la fonction de transfert en préparation : 
 $$H_{enc}(p) = \frac{TL[V_{capt}(t)]}{TL[V_{act}(t)]} = \frac{1}{1+p \tau}$$
 Alors, 
