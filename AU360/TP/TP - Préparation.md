@@ -96,9 +96,11 @@ C'est la température associée au voltage du début du schéma :
 $$T_{enc}(t) =  \frac{1}{G_{capt}}V_{c}(t)-T_{capt, 0} = 13V_{c}(t) - 5$$
 $$\boxed{T_{ext} = T_{enc}(0) = 9.95°C}$$
 
-#### Fonction de transfert de la mico-enceinte climatique
+#### Fonction de transfert de la micro-enceinte climatique
 Comme le gain du système est de $G_{enc} \times G_{act} \times G_{capt} = 2.3$ (mesuré sur le schéma)
 Alors, 
+$$G_{enc} = \frac{2.3}{G_{act}G_{capt}}$$
+Donc
 $$\boxed{G_{enc} = 1}$$
 Ainsi, 
 $$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
@@ -106,7 +108,7 @@ $$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
 #### Modèle du CAN et du CNA
 ##### Simulation numérique du système
 Gain : 
-Le gain idéal pour un CNA doît être unitaire : $\boxed{G_{CAN/CNA} = 1}$
+Le gain idéal pour un CNA doit être unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
 Quantification : 
 Comme le CAN et le CNA possèdent $1$ octets il y a $256$ possibilités pour une tension entre $0$ et $5 \, V$ : 
