@@ -1,6 +1,17 @@
 ## 1.1 - Modélisation
 #### Schema
-EXCAL 1
+![[Pasted image 20260301115635.png|697]]
+
+Entrées / sorties : 
+- $y_{c}(t)$ : Consigne
+- $y(t)$ : Réponse en temps continu
+- $y(k)$ : Réponse en temps discret
+
+Perturbations : 
+- $P_{b}(p)$ : Bruit de mesure (Bruit électrique par exemple)
+- $P_{u}(p)$ : Perturbation de la commande (Bruit électrique par exemple)
+- $P_{y}(p)$ : Variations lentes $H(p)$ suivant l'environnement (usure par exemple)
+
 
 #### Fonction de transfert
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
