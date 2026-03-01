@@ -1,20 +1,10 @@
 #### Equation de la chaleur
-On a un système d'ordre $1$ :
-$$H_{enc}(p) = \frac{1}{1+\tau p}$$
-$$H_{enc}(p) = \frac{TL[T_{enc}(t)]}{TL[T_{act}(t)]+TL[T_{capt}(t)]} = \frac{1}{1+\tau p}$$
-$$TL[T_{capt}(t)] = \frac{G_{enc}TL[T_{act }(t)]}{1+\tau p}$$
-$$(1+\tau p)TL[T_{capt}(t)] = TL[G_{enc}T_{act}(t)]$$
-
-
-L'équation de la chaleur dans ce système d'ordre $1$ est : 
-$$\tau \frac{\partial T_{enc}}{\partial t} + T_{enc} = G_{enc}(T_{capt} + T_{act}) =T_{capt}+T_{act}$$
-L'entrée est : 
-$$\dot{x} = Ax + Bu \text{ et } y = Cx + Du$$
-$$\begin{cases}
-u(t) = T_{act}(t)+T_{capt}(t) \\
-x(t) = T_{enc}(t) \\
-y(t) = T_{enc}(t)
-\end{cases}$$
+D'après la fonction de transfert en préparation : 
+$$H_{enc}(p) = \frac{TL[V_{capt}(t)]}{TL[V_{act}(t)]} = \frac{1}{1+p \tau}$$
+Alors, 
+$$TL\left[ V_{capt}(t) + \tau \frac{d V_{cap t}(t)}{dt}  \right] = TL[V_{act}(t)]$$
+Donc, 
+$$\tau\frac{dV_{capt}(t)}{dt} + V_{capt}(t) = V_{act}(t) \Leftrightarrow \frac{dV_{capt}(t)}{dt} =\tau(V_{act}(t) -V_{capt}(t)) $$
 Ainsi, 
 $$\boxed{\begin{cases}
 A = -2\\
