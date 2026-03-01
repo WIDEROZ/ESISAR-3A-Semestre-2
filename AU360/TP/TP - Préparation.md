@@ -34,6 +34,8 @@ $$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3$$
 $$\boxed{G = 2.3}$$
 
 ##### Retard pur
+$$H(p)e^{ -t_{R}p }$$
+$t_{R}$ : le retard pur entre l'actionneur et le capteur. 
 On prend arbitrairement $1 \%$ du temps de réponse : 
 $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 
