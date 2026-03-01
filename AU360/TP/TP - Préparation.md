@@ -33,32 +33,37 @@ $$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3$$
 $$\boxed{G = 2.3}$$
 
 ##### Retard pur
-$$H_{}H(p)e^{ -t_{R}p }$$
+$$H_{t_{R}}(p)=H(p)e^{ -t_{R}p }$$
 $t_{R}$ : le retard pur entre l'actionneur et le capteur. 
 On prend arbitrairement $1 \%$ du temps de réponse : 
 $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 
 
 #### Diagramme de Bode
-Gain : 
+##### Gain 
 $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\sqrt{1+(\omega \tau)^{2}}} \right)}$$
 ![[Pasted image 20260301132540.png]]
-Phase : 
+##### Phase
+##### Sans retard pur
 $$\arg(H(p)) = \arg(G) - \arg(1+j\omega \tau) = \arg(G) - \arctan(\omega \tau)$$
 Donc, 
 $$\boxed{\varphi = -\arctan(\omega \tau)}$$
 ![[Pasted image 20260301130654.png]]
 
+##### Avec un retard pur
+$$\arg(H(p)) = \arg(G)+\arg(e^{ -t_{R}j\omega \tau }) - \arg(1+j\omega \tau) $$
+$$= -\omega t_{R}\tau - \arctan(\omega \tau)$$
+Donc, 
+$$\boxed{\varphi = -\arctan(\omega \tau)}$$
+
+
+
+
 ###### Validité fréquentielle
 Plus on s'approche de la fréquence de coupure plus le signal a du retard d'après le diagramme de Bode, alors on choisit de travailler en dessous de la fréquence de coupure. 
 
-##### Retard pur
-$$$$
-$$\left| \varphi\right| \leq \frac{\pi}{4}$$
-si on prend les pulsations en dessous de $\omega = \frac{1}{\tau}$. 
-
 #### Bruit
-Dans le pire des cas le bruit est de : $0.3 \, V$
+Dans le pire des cas le bruit est de : $\boxed{0.3 \, V}$
 
 #### Modèles statiques
 
