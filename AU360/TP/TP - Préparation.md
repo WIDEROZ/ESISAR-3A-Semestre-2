@@ -40,20 +40,20 @@ $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 
 
 #### Diagramme de Bode
-EXCAL 2
 Gain : 
 $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\sqrt{1+(\omega \tau)^{2}}} \right)}$$
+![[Pasted image 20260301130634.png]]
 Phase : 
 $$\arg(H(p)) = \arg(G) - \arg(1+j\omega \tau) = \arg(G) - \arctan(\omega \tau)$$
 Donc, 
 $$\boxed{\varphi = -\arctan(\omega \tau)}$$
+![[Pasted image 20260301130654.png]]
 
-
-#### Validité fréquentielle et retard
 ###### Validité fréquentielle
-Plus on s'approche de la fréquence de coupure plus le signal a du retard d'après le diagramme de bode, alors on choisit de travailler en dessous de la fréquence de coupure. 
+Plus on s'approche de la fréquence de coupure plus le signal a du retard d'après le diagramme de Bode, alors on choisit de travailler en dessous de la fréquence de coupure. 
 
 ##### Retard pur
+$$$$
 $$\left| \varphi\right| \leq \frac{\pi}{4}$$
 si on prend les pulsations en dessous de $\omega = \frac{1}{\tau}$. 
 
