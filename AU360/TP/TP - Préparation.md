@@ -1,6 +1,6 @@
 ## 1.1 - Modélisation
 #### Schéma
-![[Pasted image 20260301151748.png]]
+fddvdddddddddddddddddddddddd
 
 Entrées / sorties : 
 - $U(t)$ : Signal de commande
@@ -127,7 +127,7 @@ $$\boxed{G_{bruit} = 0.23}$$
 
 
 #### Schéma fonctionnel
-EXCAL 3
+![[Pasted image 20260301151748.png]]
 - $P_{b}(p)$ : Bruit de mesure
 - $P_{u}(p)$ : Perturbation de la commande
 - $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
