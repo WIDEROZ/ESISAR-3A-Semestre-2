@@ -108,7 +108,7 @@ $$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
 #### Modèle du CAN et du CNA
 ##### Simulation numérique du système
 Gain : 
-Le gain idéal pour un CNA doit être unitaire : $\boxed{G_{CAN/CNA} = 1}$
+Le gain idéal pour un CNA doît être unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
 Quantification : 
 Comme le CAN et le CNA possèdent $1$ octets il y a $256$ possibilités pour une tension entre $0$ et $5 \, V$ : 
