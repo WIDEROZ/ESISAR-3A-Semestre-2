@@ -40,7 +40,7 @@ $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 
 
 #### Diagramme de Bode
-##### Gain 
+##### Gain
 $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\sqrt{1+(\omega \tau)^{2}}} \right)}$$
 ![[Pasted image 20260301132540.png]]
 ##### Phase
@@ -55,9 +55,9 @@ $$\arg(H(p)) = \arg(G)+\arg(e^{ -t_{R}j\omega}) - \arg(1+j\omega \tau) $$
 $$= -\omega t_{R} - \arctan(\omega \tau)$$
 Donc, 
 $$\boxed{\varphi = -\omega t_{R} - \arctan(\omega \tau)}$$
-
-
-
+![[Pasted image 20260301140118.png]]
+- Rouge : sans retard pur
+- Bleu : avec retard pur
 
 
 ###### Validité fréquentielle
@@ -67,10 +67,9 @@ Plus on s'approche de la fréquence de coupure plus le signal a du retard d'apr�
 Dans le pire des cas le bruit est de : $\boxed{0.3 \, V}$
 
 #### Modèles statiques
-
 ##### Actionneur
-Si on prend un modèle affine de la température
-Comme $-50 = G_{act} \times 0 + T_{act, 0}$ : 
+$$T_{act}(t) = G_{act}V_{a}(t) + T_{act, 0}$$
+Alors, comme $-50 = G_{act} \times 0 + T_{act, 0}$ : 
 $$T_{act}(t)=  G_{act}V_{act}(t) -50$$
 Alors, comme $100 = G_{act}\times 5 - 50$ 
 Ainsi, 
