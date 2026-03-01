@@ -1,6 +1,6 @@
 ## 1.1 - Modélisation
 #### Schéma
-![[Pasted image 20260301121014.png]]
+![[Pasted image 20260301151748.png]]
 
 Entrées / sorties : 
 - $U(t)$ : Signal de commande
