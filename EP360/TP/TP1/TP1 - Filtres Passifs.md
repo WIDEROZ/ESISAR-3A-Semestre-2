@@ -137,19 +137,20 @@ $$\boxed{\Delta \omega = \omega_{c_{2}}-\omega_{c_{1}} = \frac{\omega_{0}}{Q}}$$
 #### Pulsations à l'intersection des asymptotes avec l'axe $0dB$
 A $0\, dB$ :
 $$0 = 20\log(\left| H_{1}(\omega)\right|)$$
+##### Hautes fréquences
 Alors de plus, 
-$$1=\left| H_{1}(\omega_{a})\right| = \frac{H_{m}}{\sqrt{1 + Q^{2}\left( \frac{\omega_{a}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{a}} \right)^{2}}}\approx\frac{H_{m}}{Q \frac{\omega_{0}}{\omega_{a}}}$$
+$$1=\left| H_{1}(\omega_{a_{1}})\right| = \frac{H_{m}}{\sqrt{1 + Q^{2}\left( \frac{\omega_{a_{1}}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{a_{1}}} \right)^{2}}}=\frac{H_{m}}{\sqrt{1 + Q^{2}\left(\frac{\omega_{0}}{\omega_{a_{1}}} \right)^{2}}}$$
 Donc, 
-$$om$$
-Alors, 
-$$$$
-Alors, 
-$$\frac{1}{Q}\sqrt{H_{m}^{2}-1} =\pm \left( \frac{\omega_{a}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{a}} \right)$$
-Par analogie avec les fréquences de coupure : 
-En posant : 
-$$\boxed{b = \frac{1}{Q}\sqrt{H_{m}^{2}-1}}$$
-$$\boxed{\omega_{a_{1}} = \frac{\omega_{0}}{2}(b+\sqrt{b^{2}+4})}$$
-$$\boxed{\omega_{a_{2}} = \frac{\omega_{0}}{2}(\sqrt{b^{2}+4}-b)}$$
+$$1 = \frac{H_{m}}{Q \frac{\omega_{0}}{\omega_{a_{1}}}}$$
+Aisni, 
+$$\boxed{\omega_{a_{1}} = \frac{Q}{H_{m}} \omega_{0} = 425560 \, Hz\approx 426 \, kHz}$$
+
+##### Hautes fréquences
+$$1=\left| H_{1}(\omega_{a_{2}})\right| = \frac{H_{m}}{\sqrt{1 + Q^{2}\left( \frac{\omega_{a_{2}}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{a_{2}}} \right)^{2}}}=\frac{H_{m}}{\sqrt{1 + Q^{2}\left(\frac{\omega_{a_{2}}}{\omega_{0}} \right)^{2}}}$$
+Donc, 
+$$1 = \frac{H_{m}}{Q \frac{\omega_{a_{2}}}{\omega_{0}}}$$
+Ainsi, 
+$$\boxed{\omega_{a_{2}} = \frac{H_{m}}{Q}\omega_{0}  = 469521 \, Hz = 470 \, kHz}$$
 
 ### c. Diagramme de Bode
 #### Diagramme asymptotique de Bode
