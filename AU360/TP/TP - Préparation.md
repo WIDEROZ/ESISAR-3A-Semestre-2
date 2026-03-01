@@ -66,8 +66,9 @@ Plus on s'approche de la fréquence de coupure plus le signal a du retard d'apr�
 #### Bruit
 Dans le pire des cas le bruit est de : $\boxed{0.3 \, V}$
 
-$$V_{a} = G_{act}(T_{act}-T_{act, 0})$$
+$$V_{a}(t) = G_{act}(T_{act}(t)-T_{act, 0})$$
 $$V_{c}(t) = G_{capt} (T_{enc}(t)  + T_{capt,0})$$
+
 #### Modèles statiques
 ##### Actionneur
 $$T_{act}(t) = G_{act}V_{a}(t) + T_{act, 0}$$
