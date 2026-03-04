@@ -119,7 +119,7 @@ f'(s) = 0 \Rightarrow g'(s) = g''(s) = 0 & x_{n} \text{ CV à un ordre} \geq 3
 
 # IV. Méthodes itératives pour trouver $F(x) = 0$
 On pose : 
-$$f(x) = x-F(x)$$
+$$F(x) = x-f(x)$$
 Et on cherche le ou les points fixes de $f$.
 On pose : 
 $$x_{n+1} = f(x_{n})$$
