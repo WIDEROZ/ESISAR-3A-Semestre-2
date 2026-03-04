@@ -71,7 +71,10 @@ $$\exists !s \in [-1, 1], \, \begin{cases}
 
 
 #### ii. 
-Ordre de convergence : 
-$$\cos'(s) = 1 = \sin(s)$$
-car $\cos(s) = s$, 
-de plus, 
+
+
+#### iii.
+$$x_{n+1} = x_{n} - \frac{F(x_{n})}{F'(x_{n})}$$
+$$f'(x) = \frac{F(x)F''(x)}{F'(x)^{2}} = \left( \frac{\cos(x)}{\sin(x)} \right)^{2}$$
+$$f''(x) = -2\left( \frac{\sin(x)\cos(x) + \cos(x)^{2}}{\sin(x)^{2}} \right)\left( \frac{\cos(x)}{\sin(x)} \right)$$
+$$\frac{1}{\tan ^{2}(x)} $$
