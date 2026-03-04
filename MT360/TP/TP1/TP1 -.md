@@ -35,4 +35,16 @@ $$I_{n}= \sum_{k = 1}^{n} (-1)^{k-1}\frac{a^{n-k}}{k} = ln(1-a^{n-k})$$
 
 
 #### 4.
-$$d_{n}^{(m)} = $$
+$$d_{n}^{(m)} = I_{n}^{(m)}-I_{n}$$
+On procède par récurrence de $m$ à $0$ : 
+Initialisation : 
+$$d_{m}^{(m)} = -\left( -\frac{1}{a} \right)^{m-m} I_{m} = -I_{m} = I_{m}^{(m)}- I_{m}$$
+
+Hérédité : 
+Supposons que :
+$$d_{n}^{(m)} = -\left( -\frac{1}{a} \right)^{m-n} I_{m}$$
+Alors, 
+$$d_{n-1}^{(m)} = I_{n-1}^{(m)} - I_{n-1} = \frac{1}{a}\left( \frac{1}{n} - I_{n}^{(m)} \right) -I_{n-1}$$
+$$= \frac{1}{an} - \frac{1}{a}I_{n}^{(m)} - I_{n-1} = \frac{1}{an} - \frac{1}{a}d_{n}^{(m)} - I_{n-1}$$
+$$= \frac{1}{an}+ \frac{1}{a}\left( -\frac{1}{a} \right)^{m-n} I_{m}- I_{n-1}$$
+$$= - \left( -\frac{1}{a} \right)^{m-(n-1)}I_{m} +\frac{1}{an} -I_{n-1}$$
