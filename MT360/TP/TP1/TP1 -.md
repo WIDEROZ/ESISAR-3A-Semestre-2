@@ -29,6 +29,10 @@ Ainsi, $I_{n}$ décroit et comme :
 $$I_{n}+ aI_{n-1} = \frac{1}{n} \underset{n \to +\infty}{\longrightarrow} 0$$
 On a :
 $$I_{n} = \frac{1}{n} - a\left( \frac{1}{n-1}-aI_{n-2} \right)$$
-$$= i_{N}$$
+$$I_{n}= \sum_{k = 1}^{n} (-1)^{k-1}\frac{a^{n-k}}{k} = ln(1-a^{n-k})$$
 
 #### 3.
+
+
+#### 4.
+$$d_{n}^{(m)} = $$
