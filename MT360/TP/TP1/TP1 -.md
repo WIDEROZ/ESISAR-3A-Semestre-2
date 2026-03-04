@@ -45,6 +45,26 @@ Supposons que :
 $$d_{n}^{(m)} = -\left( -\frac{1}{a} \right)^{m-n} I_{m}$$
 Alors, 
 $$d_{n-1}^{(m)} = I_{n-1}^{(m)} - I_{n-1} = \frac{1}{a}\left( \frac{1}{n} - I_{n}^{(m)} \right) -I_{n-1}$$
-$$= \frac{1}{an} - \frac{1}{a}I_{n}^{(m)} - I_{n-1} = \frac{1}{an} - \frac{1}{a}d_{n}^{(m)} - I_{n-1}$$
-$$= \frac{1}{an}+ \frac{1}{a}\left( -\frac{1}{a} \right)^{m-n} I_{m}- I_{n-1}$$
-$$= - \left( -\frac{1}{a} \right)^{m-(n-1)}I_{m} +\frac{1}{an} -I_{n-1}$$
+$$= \frac{1}{an} - \frac{1}{a}I_{n}^{(m)} - I_{n-1} = \frac{1}{an} - \frac{1}{a}d_{n}^{(m)} + \frac{1}{a} I_{n}- I_{n-1}$$
+$$= \frac{1}{an}+ \frac{1}{a}\left( -\frac{1}{a} \right)^{m-n} I_{m}- I_{n-1}+ \frac{1}{a} I_{n}$$
+$$= - \left( -\frac{1}{a} \right)^{m-(n-1)}I_{m} +\frac{1}{an} -I_{n-1}+ \frac{1}{a} I_{n}$$
+$$= - \left( -\frac{1}{a} \right)^{m-(n-1)}I_{m} + \frac{1}{a}\left( \frac{1}{n}- \right)$$
+
+
+
+
+
+
+
+
+Soit E un evn de dim finie Soit J ⊂ E et I un intervalle, $$f : \begin{cases} J \times I \to \mathbb{C} \ (x, t) \mapsto f(x, t) \end{cases}$$ Soit x 0 ∈ J ― ,
+
+#### Théorème (TCVD)
+
+On pose : F : x ↦ ∫ I f ( x , t ) , d t Si : $$\begin{cases} \forall x \in J,  
+t \mapsto f(x, t) \in \mathcal{C}_{m}^{0} (I, \mathbb{C})  \\
+ \forall t \in I, x \mapsto f(x, t) \text{ admet en } x_{0}\text{ une lim }g(t) \,
+  g \in \mathcal{C}^{0}(I, \mathbb{C})  \\
+  \exists \varphi : I \to \mathbb{R} \text{ intégrable telle que :} \ \forall (x, t)\in J \times I, \left| f(x, t)\right|\leq \varphi(t) \end{cases}$$ Alors, $$\begin{cases} F \text{ est bien définie sur }J  \\
+   \underset{ x \to x_{0} }{\lim} F(x) = \int _{I} g(t) , dt  
+\end{cases}$$
