@@ -54,3 +54,9 @@ $$0 \leq I_{n} \leq \int_{0}^{1} \frac{x^{n}}{a}\, dx $$
 $$\forall n \in [\![0, m[\![, \left| d_{n}^{(m)} \right|=  \frac{1}{a^{m-n}} I_{m} \leq \frac{1}{a^{m-n}} \int_{0}^{1} \frac{x^{n}}{a} \, dx = \frac{1}{a^{m-(n-1)} (n+1)}$$
 Ainsi, 
 $$\boxed{\forall n \in [\![0, m[\![, \left| d_{n}^{(m)}\right| \leq \frac{1}{a^{m-(n-1)}(n+1)}}$$
+
+# Exercice 3
+## 2. Méthodes itératives, ordre et accélération de convergence
+### 1.
+$\cos$ est lipschitzienne contractante : 
+$$\cos'(x) = \sin(x) \leq 1$$
