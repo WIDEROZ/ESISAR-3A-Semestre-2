@@ -27,7 +27,8 @@ $\forall [0, 1], f_{n}(x) = \frac{x^{n}}{x+a} \underset{n \to +\infty}{\longrigh
 et 
 $$\forall  x \in [0, 1], \left| \frac{x^{n}}{x+a} \right| \leq \frac{1}{x+a} \text{ qui est intégrable sur } [0, 1]$$
 Ainsi, 
-$$$$
+$$\boxed{\lim_{ n \to \infty }I_{n} = \int_{0}^{1} \lim_{ n \to \infty } \frac{x^{n}}{x+a} \, dx = 0  }$$
+
 
 #### 3.
 
@@ -46,4 +47,10 @@ $$d_{n-1}^{(m)} = I_{n-1}^{(m)} - I_{n-1} = \frac{1}{a}\left( \frac{1}{n} - I_{n
 $$= \frac{1}{an} - \frac{1}{a}I_{n}^{(m)} - I_{n-1} = \frac{1}{an} - \frac{1}{a}d_{n}^{(m)} - \frac{1}{a} I_{n}- I_{n-1}$$
 $$= \frac{1}{an}+ \frac{1}{a}\left( -\frac{1}{a} \right)^{m-n} I_{m}- I_{n-1}- \frac{1}{a} I_{n}$$
 $$= - \left( -\frac{1}{a} \right)^{m-(n-1)}I_{m} +\frac{1}{an} -\frac{1}{an} + \frac{1}{a}I_{n}- \frac{1}{a} I_{n}$$
-$$= - \left( -\frac{1}{a} \right)^{m-(n-1)}I_{m}$$
+Ainsi, 
+$$\boxed{d_{n-1}^{(m)}= - \left( -\frac{1}{a} \right)^{m-(n-1)}I_{m}}$$
+
+$$0 \leq I_{n} \leq \int_{0}^{1} \frac{x^{n}}{a}\, dx $$
+
+$$\forall n \in [\![0, m[\![, \left| d_{n}^{(m)} \right|=  \frac{1}{a^{m-n}}  I_{m} = \frac{1}{a^{m-n}} \int_{0}^{1} \frac{x^{m}}{x+a} \, dx \leq  $$
+
