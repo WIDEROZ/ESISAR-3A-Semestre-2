@@ -22,4 +22,13 @@ Ainsi,
 $$\boxed{\forall n \in \mathbb{N}^{*},I_{n} = \frac{1}{n} - aI_{n-1}}$$
 ___
 On a : 
-$$I_{n} + aI_{n-1} = \frac{1}{n} \underset{n \to +\infty}{\longrightarrow} 0$$
+$$I_{n}- I_{n-1} = \int_{0}^{1} \frac{x^{n}-x^{n-1}}{a+x} \, dx $$
+Comme $x \mapsto \frac{x^{n}-x^{n-1}}{a+x} <0$ car $x \in [0, 1]$ alors, 
+$$I_{n}-I_{n-1} <0$$
+Ainsi, $I_{n}$ décroit et comme : 
+$$I_{n}+ aI_{n-1} = \frac{1}{n} \underset{n \to +\infty}{\longrightarrow} 0$$
+On a :
+$$I_{n} = \frac{1}{n} - a\left( \frac{1}{n-1}-aI_{n-2} \right)$$
+$$= i_{N}$$
+
+#### 3.
