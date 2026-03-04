@@ -58,5 +58,19 @@ $$\boxed{\forall n \in [\![0, m[\![, \left| d_{n}^{(m)}\right| \leq \frac{1}{a^{
 # Exercice 3
 ## 2. Méthodes itératives, ordre et accélération de convergence
 ### 1.
-$\cos$ est lipschitzienne contractante : 
-$$\cos'(x) = \sin(x) \leq 1$$
+#### i.
+$\cos$ est lipschitzienne contractante continue : 
+$$\forall x \in \mathbb{R}, \cos'(x) = \sin(x) \leq 1$$
+De plus, 
+$$\cos([-1,1]) \subset [-1, 1] \text{ qui est un fermé borné}$$
+Ainsi, d'après le théorème de Banach : 
+$$\exists !s \in [-1, 1], \, \begin{cases}
+\cos(s) = s \\
+\boxed{x_{n} \underset{n \to +\infty}{\longrightarrow} s}
+\end{cases}$$
+
+#### ii. 
+Ordre de convergence : 
+$$\cos'(s) = 1 = \sin(s) \Rightarrow s= \frac{\pi}{}$$
+car $\cos(s) = s$, 
+de plus, 
