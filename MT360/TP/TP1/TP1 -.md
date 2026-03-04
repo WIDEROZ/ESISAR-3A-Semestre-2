@@ -68,9 +68,10 @@ $$\exists !s \in [-1, 1], \, \begin{cases}
 \cos(s) = s \\
 \boxed{x_{n} \underset{n \to +\infty}{\longrightarrow} s}
 \end{cases}$$
+$$\left| x_{k} -s\right| \leq \frac{L^{k}}{1-L}\left| x_{1}-x_0\right|$$
 
 #### ii. 
 Ordre de convergence : 
-$$\cos'(s) = 1 = \sin(s) \Rightarrow s= \frac{\pi}{}$$
+$$\cos'(s) = 1 = \sin(s)$$
 car $\cos(s) = s$, 
 de plus, 

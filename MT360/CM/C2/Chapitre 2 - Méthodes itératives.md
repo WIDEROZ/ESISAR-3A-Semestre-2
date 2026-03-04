@@ -58,11 +58,10 @@ e_{k} = x_{k} - s \\
 c_{k} = 1-\log_{\beta}(\rho_{k})
 \end{cases}$$
 
-
 #### Vitesse de convergence
 $$\boxed{v_{k} = \frac{\Delta c_{k}}{\Delta k} = c_{k+1}-c_{k}}$$
 Par le théorème de Banach (dans le cas général) on a : 
-$$\boxed{v_{k} \underset{k \to + \infty}{\sim} v = -\log \left| f'(s)\right|}$$
+$$\boxed{v_{k} \underset{k \to + \infty}{\sim} v = -\log_{\beta} \left| f'(s)\right|}$$
 
 #### Ordre de convergence (Schoeder)
 Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow} s$ avec $\forall n \in \mathbb{N}, x_{n+1} = f(x_{n})$, 
