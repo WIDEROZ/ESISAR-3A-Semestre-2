@@ -51,6 +51,6 @@ Ainsi,
 $$\boxed{d_{n-1}^{(m)}= - \left( -\frac{1}{a} \right)^{m-(n-1)}I_{m}}$$
 
 $$0 \leq I_{n} \leq \int_{0}^{1} \frac{x^{n}}{a}\, dx $$
-
-$$\forall n \in [\![0, m[\![, \left| d_{n}^{(m)} \right|=  \frac{1}{a^{m-n}}  I_{m} = \frac{1}{a^{m-n}} \int_{0}^{1} \frac{x^{m}}{x+a} \, dx \leq  $$
-
+$$\forall n \in [\![0, m[\![, \left| d_{n}^{(m)} \right|=  \frac{1}{a^{m-n}} I_{m} \leq \frac{1}{a^{m-n}} \int_{0}^{1} \frac{x^{n}}{a} \, dx = \frac{1}{a^{m-(n-1)} (n+1)}$$
+Ainsi, 
+$$\boxed{\forall n \in [\![0, m[\![, \left| d_{n}^{(m)}\right| \leq \frac{1}{a^{m-(n-1)}(n+1)}}$$
