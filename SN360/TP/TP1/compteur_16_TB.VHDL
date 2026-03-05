@@ -18,11 +18,12 @@ architecture bhv of compteur_16_TB is
     end component;
 
     begin
-
-
+        clk_TB <= not clk_TB after 5 ns;
+        rst <= '0', '1' after 17 ns, '0' after 45 ns, '1' after 82 ns;
+        enable <= '0', '1' after 45 ns;
 
 
         COMPTEUR: compteur_16
         port map(clk_TB, rst_TB, enable_TB, deb_TB, out_count_TB);
 
-    end bhv ;
+    end bhv;
