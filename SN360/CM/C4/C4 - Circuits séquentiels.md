@@ -134,7 +134,7 @@ D_TB <= '0', '1' after 55 ns, '0' after 105 ns;
 DUT: dflipflop
 Port map(Clock_TB, Reset_TB, D_TB, Q_TB, Qn_TB);
 
-End bhv;
+end bhv;
 ```
 
 ### 5. Registre 
