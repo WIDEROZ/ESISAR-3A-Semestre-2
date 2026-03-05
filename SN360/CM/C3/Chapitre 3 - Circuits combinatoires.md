@@ -57,7 +57,7 @@ Le temps de charge et de décharge des capacités parasites est :
 $$t_{c, d} = T_{\text{propagation}} \alpha RC$$
 
 #### Process
-Toutes les instructions avec des délais sont simmulables mais pas synthétisables 
+Toutes les instructions avec des délais sont simulables mais pas synthétisables
 Warn du synthétiseur :
 ```VHDL
 s <= not(a) after 10 ns;
