@@ -34,12 +34,10 @@ EXCAL 4
 
 $$\int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx $$
 $$\int_{\mathbb{R}} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx+ i\int_{\mathbb{R}} \frac{\sin(tx) - \sin(tx)\cos(x)}{\pi x^{2}} \, dx$$
-$$= 2\int_{0}^{+ \infty} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx$$
-$$=  \int_\mathbb{R} \cos(tx)\frac{1-\cos(x)}{\pi x^{2}} \, dx$$
+$$ =  \int_\mathbb{R} \cos(tx)\frac{1-\cos(x)}{\pi x^{2}} \, dx$$
+On pose : 
+$$I(t) = \int_{\mathbb{R}} \frac{\cos(tx)}{\pi x^{2}} \, dx $$
 
-$$TF\left[ \frac{1-\cos(x)}{\pi x^{2}} \right]\left( -\frac{t}{2\pi} \right)$$
+$$I'(t) = -\int_{\mathbb{R}} \frac{\sin(tx)}{\pi x} \, dx \underset{u = xt}{=} - \int_{\mathbb{R}} \frac{\sin(u)}{\pi u}\, du = -1 $$
 
-
-
-
-$$\cos(2u) \frac{1-}{\pi}$$
+$$I(t) = -t + C$$
