@@ -30,3 +30,10 @@ EXCAL 4
 - $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
 - $R(p)$ : Consigne que doit suivre la sortie
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
+
+
+$$\int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx $$
+$$\int_{\mathbb{R}} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx+ i\int_{\mathbb{R}} \frac{\sin(tx) - \sin(tx)\cos(x)}{\pi x^{2}} \, dx$$
+$$= 2\int_{0}^{+ \infty} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx$$
+$$= 2 \int_{0}^{+ \infty} \cos(tx)\frac{1-\cos(x)}{\pi x^{2}} \, dx$$
+$$= 2\left(\left[\frac{1}{t}\cos(tx) \frac{1-\cos(x)}{\pi x^{2}} \right]_{0}^{+ \infty} - \frac{1}{t} \int_{0}^{+ \infty} \cos(tx)\sin(x)  \, dx  \right) $$
