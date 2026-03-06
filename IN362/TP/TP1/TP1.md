@@ -68,3 +68,5 @@ L'adresse MAC est celle du routeur internet de l'école
 
 # Bases de donnés publiques
 #### 13.
+$6$ trames
+
