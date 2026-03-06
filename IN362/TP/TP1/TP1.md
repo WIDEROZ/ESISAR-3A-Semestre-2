@@ -40,3 +40,18 @@ On utilise un protocole réseau : Internet Protocol Version 4
 Ainsi on passe donc par un routeur. 
 
 #### 9.
+$$\boxed{\begin{array}{c}
+\boxed{\begin{array}{c}
+\boxed{\begin{array}{c}
+\boxed{\begin{array}{c}
+\text{ICMP - Internet Control}  \\
+\text{Message Protocol (couche donnés)}
+\end{array}} \\
+\text{IPV4 (couche réseau)}
+\end{array}} \\
+\text{Ethernet II (couche liaison)}
+\end{array}} \\
+\text{98 Bytes (Couche physique)}
+\end{array}}$$
+
+On a $20$ octets pour $1$ Adresse (on a deux adresses)
