@@ -60,3 +60,10 @@ On a $20$ octets pour $1$ Adresse (on a deux adresses)
 Oui 
 
 ### 11.
+Routeur entre les salles : 192.168.130.213
+Routeur internet (par défaut) : 192.168.130.254
+
+#### 12.
+L'adresse MAC est celle du routeur internet de l'école
+
+# Bases de donnés publiques
