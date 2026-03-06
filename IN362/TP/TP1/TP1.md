@@ -55,3 +55,8 @@ $$\boxed{\begin{array}{c}
 \end{array}}$$
 
 On a $20$ octets pour $1$ Adresse (on a deux adresses)
+
+#### 10.
+Oui 
+
+### 11.
