@@ -16,4 +16,7 @@ $14$ octets au début de la trame et $8$ octets a la fin
 C'est le nombre d'octets des informations des couches supérieures. 
 
 #### 3.
-C'est la couche liaison 
+C'est la couche liaison, le protocole se nomme logical link Control
+
+#### 4.
+Les protocoles propriétaires sont les trames qui contiennent 
