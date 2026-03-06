@@ -10,4 +10,10 @@ Adresse MAC : a0:f3:c1:10:87:73
 Norme Ethernet $2$
 $14$ octets au début de la trame
 et $IEEE$ 802.3
+$14$ octets au début de la trame et $8$ octets a la fin
 
+#### 2.
+C'est le nombre d'octets des informations des couches supérieures. 
+
+#### 3.
+C'est la couche liaison 
