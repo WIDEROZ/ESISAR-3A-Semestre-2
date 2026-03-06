@@ -36,8 +36,10 @@ $$\int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx $$
 $$\int_{\mathbb{R}} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx+ i\int_{\mathbb{R}} \frac{\sin(tx) - \sin(tx)\cos(x)}{\pi x^{2}} \, dx$$
 $$ =  \int_\mathbb{R} \cos(tx)\frac{1-\cos(x)}{\pi x^{2}} \, dx$$
 On pose : 
-$$I(t) = \int_{\mathbb{R}} \frac{\cos(tx)}{\pi x^{2}} \, dx $$
-
+$$I(t) = \int_{\mathbb{R}} \frac{\cos(tx)-1}{\pi x^{2}} \, dx $$
 $$I'(t) = -\int_{\mathbb{R}} \frac{\sin(tx)}{\pi x} \, dx \underset{u = xt}{=} - \int_{\mathbb{R}} \frac{\sin(u)}{\pi u}\, du = -1 $$
 
-$$I(t) = -t + C$$
+$$I(t) = -t + C = -t \text{ (car } I(0) = 0 \text{)} $$
+
+$$\int_{\mathbb{R}} \frac{\cos(tx)- \cos((t-1)x) -\cos((t+1)x)}{\pi x^{2}} \, dx $$
+$$\cos(tx)\cos(x) = $$
