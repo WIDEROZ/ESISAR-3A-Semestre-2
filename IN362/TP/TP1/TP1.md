@@ -23,4 +23,4 @@ Les protocoles propriétaires sont les trames qui contiennent un OUI (Organisati
 
 ### Ethernet commuté ou pas commuté
 #### 5.
-Si on était sur un hub, on aurait probablement vu les communications de quelques adresses dans notre réseau qui ne nous sont pas destinés seulement, 
+Si on était sur un hub, on aurait probablement vu les communications de quelques adresses dans notre réseau qui ne nous sont pas destinés seulement il n'y en a aucune, soit on a pas eu de chance soit 
