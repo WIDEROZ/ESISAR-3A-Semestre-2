@@ -70,3 +70,17 @@ L'adresse MAC est celle du routeur internet de l'école
 #### 13.
 $6$ trames
 
+#### 14.
+Freebox
+Server DNS
+Mdrr non
+
+#### 15.
+Oui : UDP
+
+
+#### 16.
+$8$ octets
+
+#### 17.
+Couche Application
