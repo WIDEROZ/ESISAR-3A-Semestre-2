@@ -35,10 +35,8 @@ EXCAL 4
 $$\int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx $$
 $$\int_{\mathbb{R}} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx+ i\int_{\mathbb{R}} \frac{\sin(tx) - \sin(tx)\cos(x)}{\pi x^{2}} \, dx$$
 $$= 2\int_{0}^{+ \infty} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx$$
-$$= 2 \int_{0}^{+ \infty} \cos(tx)\frac{1-\cos(x)}{\pi x^{2}} \, dx$$
-$$= 2\left(\left[\frac{1}{t}\cos(tx) \frac{1-\cos(x)}{\pi x^{2}} \right]_{0}^{+ \infty} - \frac{1}{t} \int_{0}^{+ \infty} \cos(tx)\frac{\sin(x)+}{}  \, dx  \right) $$
+$$=  \int_\mathbb{R} \cos(tx)\frac{1-\cos(x)}{\pi x^{2}} \, dx$$
 
-$$\int_{-\infty}^{+ \infty} \frac{e^{ itx }+e^{ -itx }-(e^{ itx }+e^{ -itx })(e^{ ix }+e^{ -ix })}{2\pi x^{2}} \, dx $$
-$$= \int_{\mathbb{R}} \frac{e^{ itx }+e^{ -itx } - e^{ i(t+1)x }-e^{ -i(t+1)x }-e^{ i(t-1)x  } - e^{- i(t-1)x  }}{2\pi x^{2}} \, dx $$
+$$$$
 
-$$2 \int_{-} \, dx $$
+$$\cos(2u) \frac{1-}{\pi}$$
