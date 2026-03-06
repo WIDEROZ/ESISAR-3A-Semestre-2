@@ -36,3 +36,7 @@ On est la couche liaison au maximum dans la salle de TP.
 192.168.130.6
 
 #### 8.
+On utilise un protocole réseau : Internet Protocol Version 4
+Ainsi on passe donc par un routeur. 
+
+#### 9.
