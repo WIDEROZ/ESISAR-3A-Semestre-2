@@ -37,6 +37,9 @@ $$\int_{\mathbb{R}} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx+ i\int_{\
 $$= 2\int_{0}^{+ \infty} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx$$
 $$=  \int_\mathbb{R} \cos(tx)\frac{1-\cos(x)}{\pi x^{2}} \, dx$$
 
-$$$$
+$$TF\left[ \frac{1-\cos(x)}{\pi x^{2}} \right]\left( -\frac{t}{2\pi} \right)$$
+
+
+
 
 $$\cos(2u) \frac{1-}{\pi}$$
