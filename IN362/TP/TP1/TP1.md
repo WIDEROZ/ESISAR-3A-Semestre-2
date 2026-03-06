@@ -19,4 +19,7 @@ C'est le nombre d'octets des informations des couches supérieures.
 C'est la couche liaison, le protocole se nomme logical link Control
 
 #### 4.
-Les protocoles propriétaires sont les trames qui contiennent 
+Les protocoles propriétaires sont les trames qui contiennent un OUI (Organisation Unique Identifier) et un PID (Protocol Identifier) 
+
+### Ethernet commuté ou pas commuté
+#### 5.
