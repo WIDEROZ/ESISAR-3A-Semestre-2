@@ -23,4 +23,16 @@ Les protocoles propriétaires sont les trames qui contiennent un OUI (Organisati
 
 ### Ethernet commuté ou pas commuté
 #### 5.
-Si on était sur un hub, on aurait probablement vu les communications de quelques adresses dans notre réseau qui ne nous sont pas destinés seulement il n'y en a aucune, soit on a pas eu de chance soit 
+Si on était sur un hub, on aurait probablement vu les communications de quelques adresses dans notre réseau qui ne nous sont pas destinés seulement il n'y en a aucune, soit on a pas eu de chance, soit on est dans la configuration $C$ (Machines connecté a des switch uniquement)
+
+#### 6.
+On remarque que on est en full duplex on ne peut donc pas être connecté directement à un hub
+
+#### 7.
+On est la couche liaison au maximum dans la salle de TP. 
+
+# Observations de protocoles IP
+#### Adresse ip eth0
+192.168.130.6
+
+#### 8.
