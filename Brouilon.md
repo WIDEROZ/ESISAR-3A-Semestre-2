@@ -30,7 +30,3 @@ EXCAL 4
 - $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
 - $R(p)$ : Consigne que doit suivre la sortie
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
-
-
-$$\int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx $$
-$$\int_{\mathbb{R}} e^{ itx } \, dx $$
