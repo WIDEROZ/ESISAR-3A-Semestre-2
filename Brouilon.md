@@ -32,14 +32,24 @@ EXCAL 4
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
 
 
-$$\int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx $$
+$$J(t) = \int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx $$
 $$\int_{\mathbb{R}} \frac{\cos(tx) - \cos(tx)\cos(x)}{\pi x^{2}} \, dx+ i\int_{\mathbb{R}} \frac{\sin(tx) - \sin(tx)\cos(x)}{\pi x^{2}} \, dx$$
 $$ =  \int_\mathbb{R} \cos(tx)\frac{1-\cos(x)}{\pi x^{2}} \, dx$$
+Or, 
+$$\cos(a)\cos(b) = \frac{1}{2}$$
+
+$$=\int_{\mathbb{R}} \frac{2\cos(tx)- \cos((t-1)x) -\cos((t+1)x)}{2\pi x^{2}} \, dx $$
+
 On pose : 
 $$I(t) = \int_{\mathbb{R}} \frac{\cos(tx)-1}{\pi x^{2}} \, dx $$
+Alors, 
+$$\int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx = I(t)-\frac{1}{2}(I(t-1)+I(t+1))$$
+Or : 
 $$I'(t) = -\int_{\mathbb{R}} \frac{\sin(tx)}{\pi x} \, dx \underset{u = xt}{=} - \int_{\mathbb{R}} \frac{\sin(u)}{\pi u}\, du = -1 $$
-
+Donc, 
 $$I(t) = -t + C = -t \text{ (car } I(0) = 0 \text{)} $$
 
-$$\int_{\mathbb{R}} \frac{\cos(tx)- \cos((t-1)x) -\cos((t+1)x)}{\pi x^{2}} \, dx $$
-$$\cos(tx)\cos(x) = $$
+Ainsi : 
+$$\boxed{\int_{\mathbb{R}} e^{ itx } \frac{1-\cos(x)}{\pi x^{2}} \, dx = -t - \frac{1}{2}(-(t-1) - (t+1))= 0}$$
+
+
