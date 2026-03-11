@@ -21,7 +21,7 @@ $$\int_{x(0)}^{x(t)} \, \frac{d\xi}{\xi^{2}} = \int_{0}^{t} \, dt  \Leftrightarr
 Ainsi, 
 $$\boxed{x(t) = \frac{x_{0}}{1-x_{0}t}}$$
 
-# Exercice 2
+#### 2.
 $$X'(t) = \begin{pmatrix}
 x_{1}'(t) \\
 x_{2}'(t)
@@ -37,4 +37,8 @@ y-xy
 Alors, 
 $$\left|\left| A \right|\right|  = \sup_{U = (u, v) \neq (0, 0)} \frac{\left|\left| AU \right|\right| }{\left|\left| U \right|\right| } = \sup_{U \neq 0}\frac{\left| u(xy-x) + v(y-xy)\right|}{\left| u+v\right|} $$
 $$\leq \sup_{U \neq 0 }  \frac{\left| u(r^{2}-r)\right|}{\left| u+v\right|} + \sup_{U \neq 0 } \frac{\left| v(r-r^{2})\right|}{\left| u+v\right|} = L_{1}$$
-$$$$
+
+$$\frac{\left|\left| A \right|\right| - \left|\left| B \right|\right|}{\left|\left| X \right|\right| - \left|\left| Y \right|\right| } $$
+
+
+# Exercice 2
