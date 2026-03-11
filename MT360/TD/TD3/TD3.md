@@ -30,9 +30,11 @@ x_{2}'(t)
 x_{2}(t)-x_{1}(t)x_{2}(t)
 \end{pmatrix}$$
 On cherche a savoir si $X'(t)$ est lipschitzienne. 
-$$\forall r \in \mathbb{R}^{2}, \forall x, y \in \mathcal{B}((0, 0), r), A = \begin{pmatrix}
+$$\forall r \in \mathbb{R}, \forall x, y \in \mathcal{B}((0, 0), r), A = \begin{pmatrix}
 -x+xy \\
 y-xy
 \end{pmatrix}$$
 Alors, 
-$$\left|\left| A \right|\right|  = \sup_{U = (u, v) \neq (0, 0)} \frac{\left|\left| AU \right|\right| }{\left|\left| U \right|\right| } = $$
+$$\left|\left| A \right|\right|  = \sup_{U = (u, v) \neq (0, 0)} \frac{\left|\left| AU \right|\right| }{\left|\left| U \right|\right| } = \sup_{U \neq 0}\frac{\left| u(xy-x) + v(y-xy)\right|}{\left| u+v\right|} $$
+$$\leq \sup_{U \neq 0 }  \frac{\left| u(r^{2}-r)\right|}{\left| u+v\right|} + \sup_{U \neq 0 } \frac{\left| v(r-r^{2})\right|}{\left| u+v\right|} = L_{1}$$
+$$$$
