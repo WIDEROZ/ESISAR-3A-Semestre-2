@@ -122,7 +122,7 @@ Gain :
 $\Delta s$ : On prend l'amplitude du bruit la plus grande 
 $\Delta e$ : On prend la distance entre la valeur moyenne du maximum de l'amplitude et du minimum de l'amplitude
 D'après le schéma : 
-$$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8 -2.45}{2.7-1.15} = 0.23 $$
+$$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8 -2.45}{2.7-1.15} = 0.23$$
 $$\boxed{G_{bruit} = 0.23}$$
 
 
@@ -135,27 +135,77 @@ $$\boxed{G_{bruit} = 0.23}$$
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
 
 ## 1.2 Spécifications pour la synthèse de la commande
-#### Modélisation du système
-On prend une fonction de transfert d'ordre $2$ : 
-$$\boxed{T(u) = \frac{G}{1+2\xi u + u^{2}} e^{  -t_{R} \omega_{0} u }}$$
-avec : 
-- $\xi$ le coefficient d'amortissement
-- $u = \frac{p}{\omega_{0}}$
-- $\omega_{0} = \frac{1}{\tau}$ la pulsation propre du système
-- $G$ le gain
 
-##### Validité fréquentielle
-$$T(p) = \frac{G}{1+\frac{2\xi}{\omega_{0}}  p + \left( \frac{\omega}{\omega_{0}} \right)^{2}} e^{ -t_{R}p }$$
-$$\boxed{G_{dB} =  20 \log(G) - 10 \log\left( \left( 1-\left( \frac{\omega}{\omega_{0}} \right)^{2} \right)^{2} + 4 \left( \frac{\xi \omega}{\omega_{0}} \right)^{2} \right)}$$
-$$\varphi = \mathrm{arg}(T(p)) = -t_{R}\omega- \mathrm{arg}\left( 1- \left( \frac{\omega}{\omega_{0}} \right)^{2}+j\frac{2\xi}{\omega_{0}} \omega \right)  $$
-Si $\omega \leq \omega_{0}$ : 
-$$\boxed{\varphi = -t_{R}\omega -\arctan\left( \frac{\frac{\omega_{0}}{\omega}- \frac{\omega}{\omega_{0}} }{2\xi} \right)}$$
-Si $\omega \geq \omega_{0}$ : 
-$$\boxed{\varphi =\pi -t_{R}\omega -\arctan\left( \frac{\frac{\omega_{0}}{\omega}- \frac{\omega}{\omega_{0}} }{2\xi} \right) }$$
+# 1.2 Prof
+#### Donnés
+On a un retard max de $15$ ms et et un retard min (min????) de $20$ ms alors le retard total est de $L = 35$ms
+$$M_{\varphi} \geq 45° \text{ et } M_{M}  \geq 0.5 \text{ et } M_{r} = 3 \times L$$
+Avec $L$ le retard total. 
+___
+$$\left| C(p)\right| \leq N_{\max} = 5$$
+#### Tests a faire selon le cahier des charges
+###### a. On traite ma commande
+On applique un échelon de température $Y_{C}(t)$ en commande avant $F$ puis on regarde la sortie $Y(t)$
 
-##### Retard pur
-De même que précédemment : 
-$$\boxed{t_{R} \leq t_{R, \max} = 5 \, ms}$$
+###### b. On traite $P_{u}$ et $P_{y}$
+$C$ doit contenir un intégrateur
+Le gain statique de $F$ doit être égal à $1$
+Si on applique un échelon de température $Y_{C}(t)$ en commande avant $F$ et que l'on regarde la sortie $Y(t)$, la différence : $Y_{c}(t)- Y(t)\underset{}{\longrightarrow} 0$.
+
+###### c. On traite le bruit
+$$\left| C(p)\right| \leq_{\omega \to \infty} N_{\max} = \frac{\left| U_{b}\right|}{\left| P_{b}\right|} = \frac{0.5}{0.1} = 5$$
+$$Y_{C} = cte \underset{}{\longrightarrow} \text{mesure de } \left| U_{b}\right| $$
+
+###### d. On traite $P_{y}$
+Diagramme de Bode, Nyquist, Black-Nichols sur le calculateur
+
+###### e. On traite $P_{u}$
+On fais un échelon sur $P_{u}$ et on regarde la sortie $Y_{C}(t)= cte$ 
+$$\min \left|\left| \frac{Y}{P_{u}} \right|\right|_{H_{2}} $$
+
+# 1.3.1 Prof
+#### Compensation du pôle dominant à temps continu
+$$R(p) = KA = K(p+2) \text{ et } S(p) = p$$
+$2$ car $\tau = 0.5$ et donc $\omega_{0} = \frac{1}{\tau} = 2$
+
+Alors, 
+$$C(p) = K \frac{p+2}{p} = 5 \frac{p+2}{p}$$
+Car $N_{\max} = 5$. 
+Alors, 
+$$H_{BO}(p) = H(p) C(p) = \frac{G}{1+\tau p} \times 5\frac{p+z}{p} = \frac{5\times\frac{G}{\tau}}{p} = \frac{23}{p}$$
+
+
+
+###### Calcul de la marge de module
+(?)
+$$M_{M} = \max_{\omega} \left| S_{y}(p)\right| = \left| \frac{Y}{P_{b}}\right| = \left| \frac{1}{1+H_{BO}}\right|$$
+Alors, 
+$$S_{y}(p) = \frac{p}{p+23} \Rightarrow \left| S_{y}\right| \leq 1$$
+
+###### Calcul de la marge de retard
+(Plus grand retard que l'on peut avoir dans la boucle)
+$$M_{\text{retard}} = \frac{M_{\varphi}[rad]}{\omega_{c}} = \frac{\frac{\pi}{2}}{23} = 68 \, \text{ms}$$
+on veut que : $(M_{\text{retard}})_{\text{désirée}} \leq M_{\text{retard}}$ 
+
+Alors :
+###### Il faut que l'on diminue $K$
+$$(M_{\text{retard}})_{\text{désirée}} = 105 \, \text{ms} = \frac{M_{\varphi}}{\omega_{c}}$$
+Alors, on veut que : $(M_{\text{retard}})_{\text{désirée}} \leq M_{\text{retard}}$ donc, 
+$$\omega_{c} \leq \frac{M_{\varphi}}{(M_{\text{retard}})_{\text{désirée}}} = \frac{\frac{\pi}{2}}{0.105} = 15 \, \text{rad.s}^{-1}$$
+Ainsi, 
+$$\boxed{C(p) = 3.26 \times \frac{p+2}{p}}$$
+
+#### Avec pré-filtre
+EXCAL5
+$$H_{BF} = \frac{HC}{1+HC} = \frac{15}{p+15} = \frac{1}{1+\frac{p}{15}}$$
+
+#### Sans pré-filtre
+$F = 1$ : 
+EXCAL6
+
+EXCAL7
+
+$$\frac{Y}{P_{u}} = \frac{H}{1+HC} = \frac{1}{C} H_{BF} = \dots$$
 
 
 
@@ -166,3 +216,6 @@ EXCAL 4
 - $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
 - $R(p)$ : Consigne que doit suivre la sortie
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
+
+
+
