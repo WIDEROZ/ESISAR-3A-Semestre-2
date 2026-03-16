@@ -1,5 +1,5 @@
 ## 1.1 - Modélisation
-#### Schéma
+#### 1.1.1 - Schéma
 ![[Pasted image 20260301160819.png]]
 
 Entrées / sorties : 
@@ -13,11 +13,11 @@ Perturbations :
 - $P_{u}(p)$ : Perturbation de la commande (Bruit électrique par exemple)
 - $P_{y}(p)$ : Variations lentes $H(p)$ suivant l'environnement (usure par exemple)
 
-#### Fonction de transfert
+#### 1.1.2 - Fonction de transfert
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
 $$H(p) = \frac{G}{1+\tau p}$$
 
-##### Calcul de $\tau$
+##### a. Calcul de $\tau$
 $$\tau = \frac{t_{\max} - t_{0}}{3} \text{ avec } t_{0} = 0.5 \text{ s} $$
 Calcul de $t_{\max}$ : 
 $$\Delta V = V_{\max} - V_{0} = 2.7 - 1.15 = 1.55 V$$
@@ -27,30 +27,30 @@ $$t_{\max} = 2 \text{s}$$
 Donc, 
 $$\boxed{\tau = 0.5}$$
 
-##### Calcul de $G$
+##### b. Calcul de $G$
 On prend le gain à l'entrée : 
 $$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3$$
 $$\boxed{G = 2.3}$$
 
-##### Retard pur
+##### c. Retard pur
 $$H_{t_{R}}(p)=H(p)e^{ -t_{R}p }$$
 $t_{R}$ : le retard pur entre l'actionneur et le capteur. 
 On prend arbitrairement $1 \%$ du temps de réponse : 
 $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 
 
-#### Diagramme de Bode
-##### Gain
+#### 1.1.3 - Diagramme de Bode
+##### a. Gain
 $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\sqrt{1+(\omega \tau)^{2}}} \right)}$$
 ![[Pasted image 20260301132540.png]]
-##### Phase
-##### Sans retard pur
+##### b. Phase
+###### Sans retard pur
 $$\arg(H(p)) = \arg(G) - \arg(1+j\omega \tau) = \arg(G) - \arctan(\omega \tau)$$
 Donc, 
 $$\boxed{\varphi = -\arctan(\omega \tau)}$$
 ![[Pasted image 20260301130654.png]]
 
-##### Avec un retard pur
+###### Avec un retard pur
 $$\arg(H(p)) = \arg(G)+\arg(e^{ -t_{R}j\omega}) - \arg(1+j\omega \tau) $$
 $$= -\omega t_{R} - \arctan(\omega \tau)$$
 Donc, 
@@ -59,15 +59,11 @@ $$\boxed{\varphi = -\omega t_{R} - \arctan(\omega \tau)}$$
 - Rouge : sans retard pur
 - Bleu : avec retard pur
 
-
-###### Validité fréquentielle
-Plus on s'approche de la fréquence de coupure plus le signal a du retard d'après le diagramme de Bode, alors on choisit de travailler en dessous de la fréquence de coupure. 
-
-#### Bruit
+#### 1.1.4 - Bruit
 Dans le pire des cas le bruit est de : $\boxed{0.3 \, V}$
 
-#### Modèles statiques
-##### Actionneur
+#### 1.1.5 - Modèles statiques
+##### a. Actionneur
 $$T_{act}(t) = G_{act}V_{a}(t) + T_{act, 0}$$
 Alors, comme $-50 = G_{act} \times 0 + T_{act, 0}$ : 
 $$T_{act}(t)=  G_{act}V_{act}(t) -50$$
@@ -78,7 +74,7 @@ G_{act} = 30 \\
 T_{act,0} = -50 ° C
 \end{array}}$$
 
-##### Capteur
+##### b. Capteur
 $$V_{c}(t) = G_{capt} (T_{enc}(t)  + T_{capt,0})$$
 Alors, 
 $$0 \, V = G_{capt}(T_{enc, 5V} + T_{capt,0}) = G_{capt}(-5 + T_{capt, 0})$$
@@ -91,12 +87,12 @@ $$\boxed{G_{capt} = \frac{1}{13}}$$
 
 
 
-#### Température externe
+#### 1.1.6 - Température externe
 C'est la température associée au voltage du début du schéma :
 $$T_{enc}(t) =  \frac{1}{G_{capt}}V_{c}(t)-T_{capt, 0} = 13V_{c}(t) - 5$$
 $$\boxed{T_{ext} = T_{enc}(0) = 9.95°C}$$
 
-#### Fonction de transfert de la micro-enceinte climatique
+#### 1.1.7 - Fonction de transfert de la micro-enceinte climatique
 Comme le gain du système est de $G_{enc} \times G_{act} \times G_{capt} = 2.3$ (mesuré sur le schéma)
 Alors, 
 $$G_{enc} = \frac{2.3}{G_{act}G_{capt}}$$
@@ -105,8 +101,8 @@ $$\boxed{G_{enc} = 1}$$
 Ainsi, 
 $$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
 
-#### Modèle du CAN et du CNA
-##### Simulation numérique du système
+#### 1.1.8 - Modèle du CAN et du CNA
+##### a. Simulation numérique du système
 Gain : 
 Le gain idéal pour un CNA doît être unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
@@ -117,7 +113,7 @@ $$\boxed{Q = \frac{5}{256} = 19.5 \,m V}$$
 Saturation : 
 D'après le schéma la fréquence de saturation du CAN et du CNA est de $\boxed{5 \, V}$
 
-###### Synthèse de la commande
+###### b. Synthèse de la commande
 Gain :
 $\Delta s$ : On prend l'amplitude du bruit la plus grande 
 $\Delta e$ : On prend la distance entre la valeur moyenne du maximum de l'amplitude et du minimum de l'amplitude
@@ -126,7 +122,7 @@ $$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8 -2.45}{2.7-1.15} = 0.23$$
 $$\boxed{G_{bruit} = 0.23}$$
 
 
-#### Schéma fonctionnel
+#### 1.1.9 - Schéma fonctionnel
 ![[Pasted image 20260301151748.png]]
 - $P_{b}(p)$ : Bruit de mesure
 - $P_{u}(p)$ : Perturbation de la commande
@@ -135,6 +131,45 @@ $$\boxed{G_{bruit} = 0.23}$$
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
 
 ## 1.2 Spécifications pour la synthèse de la commande
+### 1.2.1 - Modèle à temps continu du système
+![[Pasted image 20260316105448.png]]
+Avec $H_{sys}(z)$ représentant la transformée en $Z$ de la fonction de transfert de l'enceinte et de la chaîne d’acquisition. 
+
+#### a. Fonction de transfert
+$$H_{sys}(p) = H_{BOZ}(p) H_{enc}(p)$$
+Or la fonction de transfert d'un bloqueur d'ordre $0$ est : 
+$$H_{BOZ}(p) = \frac{1-e^{ -pT_{e} }}{p}$$
+Avec $T_{e}$ la période d’échantillonnage du CAN/CNA. 
+Ainsi, 
+$$\boxed{H_{sys}(p) = \frac{1-e^{ -pT_{e} }}{p + \tau p^{2}}}$$
+
+
+$$H_{sys}(z) = $$
+
+
+
+#### b. Diagramme de Bode
+
+
+
+
+
+
+
+
+
+#### 1.2.2 Schéma du système commandé par un calculateur et précédé par un pré-filtre
+![[Pasted image 20260316103815.png]]
+
+
+
+
+
+
+
+
+
+
 
 # 1.2 Prof
 #### Donnés
