@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class BookStore {
-    ArrayList<Book> bibliotheque = new ArrayList<Book>();
+    private ArrayList<Book> bibliotheque = new ArrayList<Book>();
 
     BookStore(){}
 
@@ -13,8 +13,29 @@ public class BookStore {
 
     public void removeBook(int rfid){
         Iterator<Book> book = bibliotheque.iterator();
-        
+        while (book.hasNext() && book.next().getTag_rfid() != rfid);
     }
+
+    public ArrayList<Book> findBookByAuthor(String author){
+        ArrayList<Book> livres = new ArrayList<Book>();
+        for(Book book : bibliotheque){
+            if(book.getAuteur() == author){
+                livres.add(book);
+            }
+        }
+        return livres;
+    }
+
+    public ArrayList<Book> findBookByTitle(String title){
+        ArrayList<Book> livres = new ArrayList<Book>();
+        for(Book book : bibliotheque){
+            if(book.getTitre() == title){
+                livres.add(book);
+            }
+        }
+        return livres;
+    }
+
 
     public void displayAllBooks(){
         int c = 0;
@@ -24,6 +45,12 @@ public class BookStore {
         }
         System.out.println();
         System.out.println("Le nombre de livres dans la bibliothèque est de : " + c);
+    }
+
+
+    public void updateBooks(int rfid){
+        Iterator<Book>
+
     }
 
     public static void main(String[] args) {
