@@ -1,5 +1,6 @@
-package EX1;
+package EX2;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class BookStore {
     ArrayList<Book> bibliotheque = new ArrayList<Book>();
@@ -8,6 +9,11 @@ public class BookStore {
 
     public void addBook(Book livre){
         bibliotheque.add(livre);
+    }
+
+    public void removeBook(int rfid){
+        Iterator<Book> book = bibliotheque.iterator();
+        
     }
 
     public void displayAllBooks(){
@@ -22,8 +28,8 @@ public class BookStore {
 
     public static void main(String[] args) {
         BookStore biblio = new BookStore();
-        Book livre1 = new Book(1, "Georges Orwell", "1984", "17-03-2026", 39.99f);
-        Book livre2 = new Book(2, "Baruch Spinoza", "Traité théologico-politique", "12-08-1712", 9.99f);
+        Book livre1 = new Book(1, "Georges Orwell", "1984", "17-03-2026", 39.99f, false);
+        Book livre2 = new Book(2, "Baruch Spinoza", "Traité théologico-politique", "12-08-1712", 9.99f, true);
         
 
         livre1.printInfo();
