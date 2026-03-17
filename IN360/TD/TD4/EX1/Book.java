@@ -52,8 +52,21 @@ public class Book{
     /* FIN Setters */
 
 
+    public void printInfo(){
+        System.out.println("Tag RFID : " + tag_rfid);
+        System.out.println("Auteur : " + auteur);
+        System.out.println("Titre : " + titre);
+        System.out.println("date_achat : " + date_achat);
+        System.out.println("Prix : " + prix);
+    }
+
     public static void main(String[] args) {
-        Book livre1 = ;
+        Book livre1 = new Book(1, "Georges Orwell", "1984", "17-03-2026", 39.99f);
+        Book livre2 = new Book(2, "Baruch Spinoza", "Traité théologico-politique", "12-08-1712", 9.99f);
+        
+
+        livre1.printInfo();
+        livre2.printInfo();
     }
 
 
