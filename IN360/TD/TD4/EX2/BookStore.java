@@ -60,8 +60,30 @@ public class BookStore {
     }
 
     public boolean getBookStatus(int rfid){
-
+        ListIterator<Book> book = bibliotheque.listIterator();
+        Book nextBook;
+        while(book.hasNext()){
+            nextBook = book.next();
+            if(nextBook.getTag_rfid() == rfid){
+                return nextBook.getDisponible() ;
+            }
+        }
+        return false;
     }
+
+    public void setBookStatus(int rfid, boolean disponibilite){
+        ListIterator<Book> book = bibliotheque.listIterator();
+        Book nextBook;
+        while(book.hasNext()){
+            nextBook = book.next();
+            if(nextBook.getTag_rfid() == rfid){
+                nextBook.setDisponible(disponibilite);
+                break;
+            }
+        }
+    }
+
+
 
     public static void main(String[] args) {
         BookStore biblio = new BookStore();
