@@ -121,7 +121,6 @@ D'après le schéma :
 $$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8 -2.45}{2.7-1.15} = 0.23$$
 $$\boxed{G_{bruit} = 0.23}$$
 
-
 #### 1.1.9 - Schéma fonctionnel
 ![[Pasted image 20260301151748.png]]
 - $P_{b}(p)$ : Bruit de mesure
@@ -144,24 +143,57 @@ Ainsi,
 $$\boxed{H_{sys}(p) = \frac{1-e^{ -pT_{e} }}{p + \tau p^{2}}}$$
 
 
-$$H_{sys}(z) = $$
-
 
 
 #### b. Diagramme de Bode
+Pour $T_{e} = \frac{1}{100}$
+##### Gain
+$$G_{dB}(\omega) = 20 \log(\left| H_{sys}(\omega)\right|)$$
+En échelle logarithmique on a : 
+![[Pasted image 20260316160459.png]]
 
+##### Phase
+$$\boxed{\varphi(\omega) = \arg(H_{sys}(\omega))}$$
+En échelle logarithmique on a :
+![[Pasted image 20260316160550.png]]
 
+#### c. Majorant d'un retard pur
+Le retard du CAN/CNA est de l'ordre de la $\mu s$ on peut donc le négliger alors on prend le retard pur de l'enceinte : 
+$$\boxed{L_{\max} = 5 \, ms}$$
 
+#### d. Amplitude du bruit de mesure
+L'amplitude du bruit du capteur à été mesuré dans la partie précédente : 
+$$\boxed{A_{bruit, capt} = 230 \, mV}$$
 
-
-
-
-
+Le bruit de quantification du CAN/CNA est compris entre : 
+$$-9.75 \, mV=-\frac{Q}{2} \leq G_{bruit, \mathrm{can}}(p) \leq \frac{Q}{2} = 9.75 \, mV$$
+Donc, 
+$$\boxed{A_{bruit, \mathrm{can}} = 19.5 \, mV}$$
+Ainsi, 
+$$\boxed{A_{bruit, \,total, \,\max} = 249.5 \, mV}$$
 
 #### 1.2.2 Schéma du système commandé par un calculateur et précédé par un pré-filtre
-![[Pasted image 20260316103815.png]]
+![[Pasted image 20260316164226.png]]
 
+#### 1.2.3 Spécification du cahier des charges
+##### a. On traite la commande
+On applique un échelon de température $Y_{C}(t)$ en commande puis on regarde la sortie $Y(t)$
 
+##### b. On traite $P_{u}$ et $P_{y}$
+$C$ doit contenir un intégrateur
+Le gain statique de $F$ doit être égal à $1$
+Si on applique un échelon de température $Y_{C}(t)$ en commande avant $F$ et que l'on regarde la sortie $Y(t)$, la différence : $Y_{c}(t)- Y(t)\underset{}{\longrightarrow} 0$.
+
+##### c. On traite le bruit
+$$\left| C(p)\right| \leq_{\omega \to \infty} N_{\max} = \frac{\left| U_{b}\right|}{\left| P_{b}\right|} = \frac{0.5}{0.1} = 5$$
+$$Y_{C} = cte \underset{}{\longrightarrow} \text{mesure de } \left| U_{b}\right| $$
+
+##### d. On traite $P_{y}$
+Diagramme de Bode, Nyquist, Black-Nichols sur le calculateur
+
+##### e. On traite $P_{u}$
+On fais un échelon sur $P_{u}$ et on regarde la sortie $Y_{C}(t)= cte$ 
+$$\min \left|\left| \frac{Y}{P_{u}} \right|\right|_{H_{2}} $$
 
 
 
