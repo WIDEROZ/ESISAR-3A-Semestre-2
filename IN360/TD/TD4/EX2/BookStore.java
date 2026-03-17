@@ -1,6 +1,7 @@
 package EX2;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.ListIterator;
 
 public class BookStore {
     private ArrayList<Book> bibliotheque = new ArrayList<Book>();
@@ -48,8 +49,17 @@ public class BookStore {
     }
 
 
-    public void updateBooks(int rfid){
-        Iterator<Book>
+    public void updateBooks(int rfid, Book livre){
+        ListIterator<Book> book = bibliotheque.listIterator();
+        while(book.hasNext()){
+            if(book.next().getTag_rfid() == rfid){
+                book.set(livre);
+                break;
+            }
+        }
+    }
+
+    public boolean getBookStatus(int rfid){
 
     }
 
