@@ -7,4 +7,4 @@ Ainsi,
 $$\boxed{\beta_{1} = \beta_{3}(1+\beta_{4}) = 1050}$$
 Schéma : VOIR TEL
 
-### 2.
+#### Schéma petits signaux $T_{3}$ et $T_{4}$
