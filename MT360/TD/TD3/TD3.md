@@ -59,7 +59,7 @@ x(0) = x_{0} \in \mathbb{R}
 On pose : 
 $$\dot{x}(t) = f(t, x(t))$$
 de plus,
-$$k_{k} = x(t_{k})$$
+$$x_{k} = x(t_{k})$$
 ### 1.
 #### Euler explicite
 $$f(t, x(t)) = \dot{x}(t) \approx \frac{x_{k+1}-x_{k}}{t_{k+1}-t_{k}} = \frac{x_{k+1}-x_{k}}{h}$$
@@ -91,13 +91,21 @@ $$t_{M} = t_{k} + \frac{h}{2} \text{ et } x_{M} = x_{k} + \frac{h}{2} f(t_{k}, x
 Alors, 
 $$x_{k+1} = x_{k} + h f\left( t_{k} + \frac{h}{2}, x_{k} + \frac{h}{2} f(t_{k}, x_{k}) \right)$$
 $$= x_{k} + h\left( f\left( t_{k}+\frac{h}{2}, x_{k} \right) +\frac{h}{2} f\left( t_{k}+\frac{h}{2}, f(t_{k},x_{k}) \right) \right)$$
-$$= x_{k} + h\$$
-
-
-$$x_{k+1} = x_{k} + h \begin{pmatrix}
+$$= x_{k} + h(J-R)Q \left( x_{k} + \frac{h}{2} f\left( t_{k} + \frac{h}{2}, x_{k} \right) \right)$$
+$$\boxed{= x_{k} + h(J-R)Q \left( x_{k} + \frac{h}{2} (J-R)Q x_{k} \right)}$$
+Ainsi, 
+$$\boxed{x_{k+1} = x_{k} + h \begin{pmatrix}
 -\frac{R_{2}}{L} & \frac{1}{C} \\
 -\frac{1}{L} & -\frac{1}{R_{1}C}
 \end{pmatrix} \left( x_{k} + \frac{h}{2} \begin{pmatrix}
  -\frac{R_{2}}{L} & \frac{1}{C} \\
  -\frac{1}{L} & -\frac{1}{R_{1}C}
-\end{pmatrix} x_{k} \right) $$
+\end{pmatrix} x_{k} \right) }$$
+
+### 2.
+$$\dot{x}(t) = Ax(t) = \begin{pmatrix}
+0& \frac{1}{C} \\
+-\frac{1}{L} & 0
+\end{pmatrix}x(t)$$
+Par recurrence rapide : 
+$$x_{k} = x_{k} + h f(t_{k}, x_{k}) = (I+hA)^{k}x_{0}$$
