@@ -85,3 +85,19 @@ Ainsi,
 $$\boxed{x_{k+1} = h \frac{f(t_{k+1} , x_{k+1}) + f(t_{k}, x_{k})}{2} + x_{k}}$$
 
 #### Méthode du point milieu
+$$x_{k+1} = x_{k} + hf(t_{M}, x_{M})$$
+Avec : 
+$$t_{M,k+1} = t_{M, k} + \frac{h}{2} \text{ et } x_{M, k+1} = x_{M,k}+\frac{h}{2}f(t_{M, k}, x_{M, k})$$
+Alors, 
+
+
+
+
+
+$$x_{k+1} = x_{k} + h \begin{pmatrix}
+-\frac{R_{2}}{L} & \frac{1}{C} \\
+-\frac{1}{L} & -\frac{1}{R_{1}C}
+\end{pmatrix} \left( x_{k} + \frac{h}{2} \begin{pmatrix}
+ -\frac{R_{2}}{L} & \frac{1}{C} \\
+ -\frac{1}{L} & -\frac{1}{R_{1}C}
+\end{pmatrix} x_{k} \right) $$
