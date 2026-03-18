@@ -41,4 +41,8 @@ $$\leq \sup_{U \neq 0 }  \frac{\left| u(r^{2}-r)\right|}{\left| u+v\right|} + \s
 $$\frac{\left|\left| A \right|\right| - \left|\left| B \right|\right|}{\left|\left| X \right|\right| - \left|\left| Y \right|\right| } $$
 
 
-# Exercice 2
+# Exercice 4
+$$\begin{cases}
+\dot{x}(t) = (J-R)Qx(t) \\
+x(0) = x_{0} \in \mathbb{R}
+\end{cases}$$
