@@ -64,7 +64,7 @@ $$k_{k} = x(t_{k})$$
 #### Euler explicite
 $$f(t, x(t)) = \dot{x}(t) \approx \frac{x_{k+1}-x_{k}}{t_{k+1}-t_{k}} = \frac{x_{k+1}-x_{k}}{h}$$
 Ainsi, 
-$$\boxed{x_{k+1} = hf(t, x(t)) + x_{k}}$$
+$$\boxed{x_{k+1} = hf(t_{k}, x_{k}) + x_{k}}$$
 $$\boxed{\begin{pmatrix}
 \phi_{k+1} \\
 Q_{k+1}
@@ -80,4 +80,8 @@ Q_{k}
 \end{pmatrix}}$$
 
 #### Méthode des trapèzes
-$$f(t, x(t)) = \dot{x}(t) = $$
+$$\frac{x_{k+1}-x_{k}}{h} \approx \frac{f(t_{k+1}, x_{k+1}) + f(t_{k}, x_{k})}{2}$$
+Ainsi, 
+$$\boxed{x_{k+1} = h \frac{f(t_{k+1} , x_{k+1}) + f(t_{k}, x_{k})}{2} + x_{k}}$$
+
+#### Méthode du point milieu
