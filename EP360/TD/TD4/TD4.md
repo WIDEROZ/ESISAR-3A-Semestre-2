@@ -7,4 +7,11 @@ Ainsi,
 $$\boxed{\beta_{1} = \beta_{3}(1+\beta_{4}) = 1050}$$
 Schéma : VOIR TEL
 
-#### Schéma petits signaux $T_{3}$ et $T_{4}$
+#### Petits signaux $T_{3}$ et $T_{4}$
+Schéma : VOIR TEL
+On cherche l'impédance d'entrée de $T_{1}$ : 
+$$r_{be_{1}}= \frac{\tilde{V}_{be_{1}}}{\tilde i_{be_{1}}} = \frac{\tilde V_{be_{3}}}{\tilde i_{b_{3}}} = r_{be_{3}}$$
+
+
+#### Pourquoi la résistance de $100 \Omega$
+On considère que le transistor est ON : le courant de la resistance est de $6mA$  (avec $V_{be_{4}} = 0.7 \, V$ et $I_{E_{3}} = 2\, A$) et $i_{b_{4}} = 100 \, mA$ on néglige donc la resistance de
