@@ -134,3 +134,15 @@ $$x_{k+1} = h \frac{f(t_{k+1} , x_{k+1}) + f(t_{k}, x_{k})}{2} + x_{k} = \frac{h
 $$\left( I_{2}-\frac{h}{2}A \right)x_{k+1} = \left( \frac{h}{2}A + I_{2}\right)x_{k}$$
 $\left( I_{2}-\frac{h}{2}A \right)$ est bien inversible
 $$x_{k+1} = \left( I_{2}-\frac{h}{2}A \right)^{-1}\left( I_{2}+\frac{h}{2}A \right)x_{k}$$
+Ainsi, 
+$$\boxed{x_{k} = \left( \left( I_{2}-\frac{h}{2}A \right)^{-1}\left( I_{2}+\frac{h}{2}A \right) \right)^{k}x_{0}}$$
+De même que précédemment : 
+$$ \left( I_{2}-\frac{h}{2}A \right)^{-1}\left( I_{2}+\frac{h}{2}A \right) = PDP^{-1}$$
+avec : 
+$$D = \begin{pmatrix}
+\frac{1+i\frac{h}{2\sqrt{LC}}}{1-i \frac{h}{2\sqrt{LC}}} = \lambda_{+}&0 \\
+0&\frac{1-i\frac{h}{2\sqrt{LC}}}{1+i \frac{h}{2\sqrt{LC}}} = \lambda_{-}
+\end{pmatrix}$$
+Ainsi, 
+$$\left| \lambda_{\pm}\right| = 1$$
+Donc dans tous les cas la méthode des trapèzes est stable. 
