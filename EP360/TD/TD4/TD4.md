@@ -31,7 +31,6 @@ Pour les deux transistors : $V_{be} < 0$ Donc les transistors sont OFF ainsi, $i
 
 ## II - Etude statique et Dynamique
 #### Calculer $A_{V}, A_{I}$
-$$A_{V} = \frac{V_{s}}{V_{e}}$$
-$$\begin{cases}
-V_{s} = 
-\end{cases}$$
+Schéma petits signaux : 
+$$A_{V} = \frac{V_{s}}{V_{e}}= \frac{(\beta+1)i_{b_{1}}R_{L}}{(r_{be_{1}} + (\beta+1) R_{L})i_{b}} \approx 1^{-}$$
+$$A_{i} = \frac{i_{s}}{i_{e}} = \frac{i_{s}}{i_{121} + i_{b_{1}}} \approx \frac{i_{s}}{i_{b_{1}}} = \beta_{1}+1$$
