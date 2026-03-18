@@ -89,9 +89,9 @@ $$x_{k+1} = x_{k} + hf\left(t_{M} , x_{M} \right)$$
 Avec : 
 $$t_{M} = t_{k} + \frac{h}{2} \text{ et } x_{M} = x_{k} + \frac{h}{2} f(t_{k}, x_{k})$$
 Alors, 
-$$x_{k+1} = x_{k} + h f\left( t_{M, k-1} + \frac{h}{2}, x_{M, k-1} + \frac{h}{2} f(t_{M, k-1}, x_{M, k-1}) \right) = $$
-
-
+$$x_{k+1} = x_{k} + h f\left( t_{k} + \frac{h}{2}, x_{k} + \frac{h}{2} f(t_{k}, x_{k}) \right)$$
+$$= x_{k} + h\left( f\left( t_{k}+\frac{h}{2}, x_{k} \right) +\frac{h}{2} f\left( t_{k}+\frac{h}{2}, f(t_{k},x_{k}) \right) \right)$$
+$$= x_{k} + h\$$
 
 
 $$x_{k+1} = x_{k} + h \begin{pmatrix}
