@@ -21,4 +21,14 @@ Cela permet de dévier le courant lorsque $T_{2}$ est OFF
 La tension de jonction diminue de $2 \, mV$ pour chaque degré Celsius de plus. 
 
 #### Point de repos de $T_{1}$ et $T_{2}$
-On cherche le Point : $(i_{c_{0}}, V_{ce_{0}})$
+Schéma : remplacement des transistors par des transistors équivalents. 
+
+On cherche le Point : $(i_{c_{0}}, V_{ce_{0}})$ avec $V_{e} = 0$ : 
+La tension de repos de $T_{1}$ est alors de $V_{cc}$
+La tension de repos de $T_{2}$ est alors de $-V_{cc}$
+
+Pour les deux transistors : $V_{be} < 0$ Donc les transistors sont OFF ainsi, $i_{c_{0}} = 0$
+
+## II - Etude statique et Dynamique
+#### Calculer $A_{V}, A_{I}$
+$$A_{V} = \frac{V_{s}}{V_{e}} $$
