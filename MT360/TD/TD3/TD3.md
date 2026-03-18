@@ -108,4 +108,9 @@ $$\dot{x}(t) = Ax(t) = \begin{pmatrix}
 -\frac{1}{L} & 0
 \end{pmatrix}x(t)$$
 Par recurrence rapide : 
-$$x_{k} = x_{k} + h f(t_{k}, x_{k}) = (I+hA)^{k}x_{0}$$
+$$x_{k} = x_{k} + h f(t_{k}, x_{k}) = (I_{2} + hA)x_{k} = (I_{2}+hA)^{k}x_{0}$$
+$x_{k}$ converge si les valeurs propres de $(I_{2}+hA)$ sont inférieures à $1$ : 
+On cherche alors les valeurs propres de $A$ : (si $\lambda$ est une vp de $A$ alors, $1+\lambda h$ est une propre propre de $I_{2}+hA$)
+$$\det(A-\lambda I_{2}) = 0 \Leftrightarrow \lambda^{2} = -\frac{1}{LC} \Leftrightarrow \lambda = \pm i \frac{1}{\sqrt{LC}}$$
+Alors par le théorème spectral il existe $P \in GL_{n}(\mathbb{R})$
+$$x_{k} = ()$$
