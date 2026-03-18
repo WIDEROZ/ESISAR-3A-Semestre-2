@@ -107,10 +107,30 @@ $$\dot{x}(t) = Ax(t) = \begin{pmatrix}
 0& \frac{1}{C} \\
 -\frac{1}{L} & 0
 \end{pmatrix}x(t)$$
+
+#### Méthode d'Euler explicite
 Par recurrence rapide : 
 $$x_{k} = x_{k} + h f(t_{k}, x_{k}) = (I_{2} + hA)x_{k} = (I_{2}+hA)^{k}x_{0}$$
-$x_{k}$ converge si les valeurs propres de $(I_{2}+hA)$ sont inférieures à $1$ : 
+$x_{k}$ converge si le module des valeurs propres de $(I_{2}+hA)$ sont inférieures à $1$ : 
 On cherche alors les valeurs propres de $A$ : (si $\lambda$ est une vp de $A$ alors, $1+\lambda h$ est une propre propre de $I_{2}+hA$)
 $$\det(A-\lambda I_{2}) = 0 \Leftrightarrow \lambda^{2} = -\frac{1}{LC} \Leftrightarrow \lambda = \pm i \frac{1}{\sqrt{LC}}$$
-Alors par le théorème spectral il existe $P \in GL_{n}(\mathbb{R})$
-$$x_{k} = ()$$
+Alors par le théorème spectral il existe $P \in GL_{n}(\mathbb{R})$ tel que : 
+$$x_{k} = \left( P\begin{pmatrix}
+i \frac{1}{\sqrt{LC}}&0 \\
+0&-i \frac{1}{\sqrt{LC}}
+\end{pmatrix} P^{-1} \right)^{k}x_{0}$$
+Ainsi, en posant : 
+$$D = \begin{pmatrix}
+i \left( 1+\frac{h}{\sqrt{LC}} \right)&0 \\
+0&-i \left( 1+\frac{h}{\sqrt{LC}} \right)
+\end{pmatrix}$$
+$$\boxed{x_{k} = PD^{k}P^{-1}x_{0}}$$
+Ainsi,
+$$\boxed{x_{k} \text{ CV} \Leftrightarrow h < 0}$$
+Donc la méthode d'Euler est instable pour tout $h$ positif.
+
+#### Méthode des trapèzes
+$$x_{k+1} = h \frac{f(t_{k+1} , x_{k+1}) + f(t_{k}, x_{k})}{2} + x_{k} = \frac{h}{2}A(x_{k+1} + x_{k})+x_{k}$$
+$$\left( I_{2}-\frac{h}{2}A \right)x_{k+1} = \left( \frac{h}{2}A + I_{2}\right)x_{k}$$
+$\left( I_{2}-\frac{h}{2}A \right)$ est bien inversible
+$$x_{k+1} = \left( I_{2}-\frac{h}{2}A \right)^{-1}\left( I_{2}+\frac{h}{2}A \right)x_{k}$$
