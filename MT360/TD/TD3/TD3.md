@@ -65,5 +65,19 @@ $$k_{k} = x(t_{k})$$
 $$f(t, x(t)) = \dot{x}(t) \approx \frac{x_{k+1}-x_{k}}{t_{k+1}-t_{k}} = \frac{x_{k+1}-x_{k}}{h}$$
 Ainsi, 
 $$\boxed{x_{k+1} = hf(t, x(t)) + x_{k}}$$
+$$\boxed{\begin{pmatrix}
+\phi_{k+1} \\
+Q_{k+1}
+\end{pmatrix} = h\begin{pmatrix}
+-\frac{R_{2}}{L}& \frac{1}{C} \\
+-\frac{1}{L} &  -\frac{1}{R_{1}C}
+\end{pmatrix}\begin{pmatrix}
+\phi_{k} \\
+Q_{k} 
+\end{pmatrix} + \begin{pmatrix}
+\phi_{k} \\
+Q_{k} 
+\end{pmatrix}}$$
 
 #### Méthode des trapèzes
+$$f(t, x(t)) = \dot{x}(t) = $$
