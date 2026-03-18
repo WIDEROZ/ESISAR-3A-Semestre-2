@@ -42,7 +42,28 @@ $$\frac{\left|\left| A \right|\right| - \left|\left| B \right|\right|}{\left|\le
 
 
 # Exercice 4
+$$J = \begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix} \text{ et } R =\begin{pmatrix}
+R_{2} & 0 \\
+0 & \frac{1}{R_{1}}
+\end{pmatrix} \text{ et } Q = \begin{pmatrix}
+\frac{1}{L} & 0 \\
+0 & \frac{1}{C}
+\end{pmatrix}$$
 $$\begin{cases}
 \dot{x}(t) = (J-R)Qx(t) \\
 x(0) = x_{0} \in \mathbb{R}
 \end{cases}$$
+On pose : 
+$$\dot{x}(t) = f(t, x(t))$$
+de plus,
+$$k_{k} = x(t_{k})$$
+### 1.
+#### Euler explicite
+$$f(t, x(t)) = \dot{x}(t) \approx \frac{x_{k+1}-x_{k}}{t_{k+1}-t_{k}} = \frac{x_{k+1}-x_{k}}{h}$$
+Ainsi, 
+$$\boxed{x_{k+1} = hf(t, x(t)) + x_{k}}$$
+
+#### Méthode des trapèzes
