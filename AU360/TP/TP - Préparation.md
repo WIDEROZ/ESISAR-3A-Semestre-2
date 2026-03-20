@@ -262,7 +262,7 @@ $$\omega_{c} \leq \frac{M_{\varphi}}{(M_{\text{retard}})_{\text{désirée}}} = \
 Ainsi, 
 $$\boxed{C(p) = 3.26 \times \frac{p+2}{p}}$$
 
-$$C(z)$$
+$$C(z) = \frac{0.1}{1-z^{-1}}$$
 
 #### Avec pré-filtre
 EXCAL5
