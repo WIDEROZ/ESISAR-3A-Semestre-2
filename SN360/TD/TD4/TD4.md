@@ -35,15 +35,40 @@ begin
 	
 	process(state, up, down, enable)
 	begin
-	
+		nextState <= state;
+		count_intern <= (others => '0');
+		
 		case state is
 			when s0 =>
-				if enable='1' and up='1' then
-					state <= s1;
-					nextState <= s2;
-				else if enable='1' and down='1' then
+				if enable='1' and
+				up='1' and down='0' then
 					
+					nextState <= s1;
+					
+				elsif enable='1' and
+				down='1' and up='0' then
+					
+					nextState <= s5;
+				
 				end if;
+				
+				count_intern <= (others => '0');
+			
+			when s1 =>
+				if enable='1' and
+				up='1' and down='0' then
+					
+					nextState <= s2;
+					
+				elsif enable='1' and
+				down='1' and up='0' then
+					
+					nextState <= s0;
+				
+				end if;
+				
+				count_intern <= '001';
+			
 	
 	
 	
