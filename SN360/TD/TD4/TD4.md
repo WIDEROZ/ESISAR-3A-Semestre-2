@@ -24,6 +24,7 @@ architecture BHV of COUNT is
 type stateType is (s0, s1, s2, s3, s4, s5);
 signal state, nextState : stateType;
 
+
 begin
 	process(clk)
 	begin
@@ -93,8 +94,32 @@ begin
 	port(
 		clk : in STD_LOGIC;
 		rst : in STD_LOGIC;
-		
+		t   : in STD_LOGIC;
+		q   : out STD_LOGIC
 	)
-	
 end TOGGLE;
+
+architecture BHV of TOGGLE is
+type stateType is (s0, s1);
+signal state, nextState : stateType;
+
+begin
+	process(rst)
+	begin
+		if rst='1' then
+			state <= s0;
+		end if;
+	end process;
+	
+	process(state, t)
+	begin
+		case state is
+		when s0 =>
+			if t = '0' then
+				
+		
+	end process;
+
+
+end BHV;
 ```
