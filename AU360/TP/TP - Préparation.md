@@ -262,6 +262,8 @@ $$\omega_{c} \leq \frac{M_{\varphi}}{(M_{\text{retard}})_{\text{désirée}}} = \
 Ainsi, 
 $$\boxed{C(p) = 3.26 \times \frac{p+2}{p}}$$
 
+$$C(z)$$
+
 #### Avec pré-filtre
 EXCAL5
 $$H_{BF} = \frac{HC}{1+HC} = \frac{15}{p+15} = \frac{1}{1+\frac{p}{15}}$$

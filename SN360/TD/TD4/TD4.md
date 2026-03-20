@@ -116,7 +116,10 @@ begin
 		case state is
 		when s0 =>
 			if t = '0' then
-				
+				nextState <= s0;
+			if t = '1' then
+				nextState <= s1;
+				q <= not(q);
 		
 	end process;
 
