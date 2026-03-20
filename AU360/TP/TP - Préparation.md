@@ -277,14 +277,4 @@ EXCAL7
 $$\frac{Y}{P_{u}} = \frac{H}{1+HC} = \frac{1}{C} H_{BF} = \dots$$
 
 
-
-#### Schéma fonctionnel
-EXCAL 4
-- $P_{b}(p)$ : Bruit de mesure
-- $P_{u}(p)$ : Perturbation de la commande
-- $P_{y}(p)$ : Variations lentes $\Delta H(p)$ de $H(p)$
-- $R(p)$ : Consigne que doit suivre la sortie
-- $U(p)$ : Entrée(s) du système (Commande actionneur)
-
-
-
+$$$$
