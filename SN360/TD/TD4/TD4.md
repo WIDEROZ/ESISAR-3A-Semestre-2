@@ -1,3 +1,8 @@
+# Exercice 1
+## 1.
+EXCAL
+## 2.
+
 ```VHDL
 library IEEE;
 use IEEE.std_logic6411.all;
@@ -15,7 +20,6 @@ port(
 end COUNT;
 
 architecture BHV of COUNT is
-signal count_intern : unsigned(2 downto 0) := (others => '0');
 
 type stateType is (s0, s1, s2, s3, s4, s5);
 signal state, nextState : stateType;
@@ -36,7 +40,7 @@ begin
 	process(state, up, down, enable)
 	begin
 		nextState <= state;
-		count_intern <= (others => '0');
+		count <= (others => '0');
 		
 		case state is
 			when s0 =>
@@ -52,7 +56,7 @@ begin
 				
 				end if;
 				
-				count_intern <= (others => '0');
+				count <= (others => '0');
 			
 			when s1 =>
 				if enable='1' and
@@ -67,14 +71,17 @@ begin
 				
 				end if;
 				
-				count_intern <= '001';
+				count <= '001';
 			
+			-- etc...
 	
 	
 	
 	end process;
-	count <= count_int;
+	count <= count_intern;
 end BHV;
-
-
 ```
+
+# Exercice 2
+## 1.
+$$int$$
