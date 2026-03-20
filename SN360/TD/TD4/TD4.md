@@ -84,4 +84,17 @@ end BHV;
 
 # Exercice 2
 ## 1.
-$$int$$
+```VHDL
+library IEEE;
+use IEEE.std_logic6411.all;
+
+entity TOGGLE is
+begin
+	port(
+		clk : in STD_LOGIC;
+		rst : in STD_LOGIC;
+		
+	)
+	
+end TOGGLE;
+```
