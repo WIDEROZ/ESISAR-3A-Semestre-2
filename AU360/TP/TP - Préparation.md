@@ -292,12 +292,3 @@ $$r_{0} = \frac{2\omega_{0} -2}{4-6} \text{ et } r_{1} = \frac{\omega_{0}^{2}}{4
 Si $r_{0}=5$ alors, $\omega_{0} =12.5 \text{ rad.s}^{-1}$
 Ainsi, 
 $$r_{1} = 3.4$$
-
-Sleeptoken
-THÉA
-JeanneTo
-Cavetown
-Graphy-t
-MDNS
-girl in red
-mitski
