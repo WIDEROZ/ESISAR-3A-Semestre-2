@@ -15,30 +15,38 @@ port(
 end COUNT;
 
 architecture BHV of COUNT is
-signal count_int : unsigned(2 downto 0) := (others => '0');
+signal count_intern : unsigned(2 downto 0) := (others => '0');
 
 type stateType is (s0, s1, s2, s3, s4, s5);
 signal state, nextState : stateType;
 
 begin
-	process(clk, up, down)
+	process(clk)
 	begin
-		if enable='1' then
-			if up='1' then
-				state <= 
-			end if;
-			if down='1' then
-				count_int <= count_int - 1;
-			end if;
-		end if;
-		
 		if clk'event and clk='1' then
 			if rst='1' then
 				state <= s0;
-				nextState <= s1;
+			else
+				state <= nextState;
 			end if;
 		end if;
 		
+	end process;
+	
+	process(state, up, down, enable)
+	begin
+	
+		case state is
+			when s0 =>
+				if enable='1' and up='1' then
+					state <= s1;
+					nextState <= s2;
+				else if enable='1' and down='1' then
+					
+				end if;
+	
+	
+	
 	end process;
 	count <= count_int;
 end BHV;
