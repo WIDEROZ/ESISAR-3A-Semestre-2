@@ -284,7 +284,11 @@ De plus dans le cours :
 $$D(p) -A(p)S(p) + B(p) R(p) = 0$$
 $$D(p) = (p+2)p + 4.6(r_{0}+r_{1}p)$$
 $$D(p) = p^{2} + (2+4.6r_{0})p + 4.6r_{1}$$
-Or : d
+Or : 
+$$D_{désiré} (p) = (p+\omega_{0})^{2} = p^{2} + 2\omega_{0}p + \omega_{0}^{2}$$
+
+$$z = e^{ -\sigma + j\omega}$$
+
 
 
 Si $r_{0}=5$ alors, $\omega_{0} =12.5$ 
