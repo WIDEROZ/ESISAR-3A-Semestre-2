@@ -277,4 +277,14 @@ EXCAL7
 $$\frac{Y}{P_{u}} = \frac{H}{1+HC} = \frac{1}{C} H_{BF} = \dots$$
 
 
-$$$$
+# 20/03
+$$H(p) = \frac{B(p)}{A(p)} = \frac{4.6}{p+2}$$
+$$C(p) = \frac{R(p)}{S(p)} = \frac{r_{0}+r_{1}p}{p}$$
+De plus dans le cours : 
+$$D(p) -A(p)S(p) + B(p) R(p) = 0$$
+$$D(p) = (p+2)p + 4.6(r_{0}+r_{1}p)$$
+$$D(p) = p^{2} + (2+4.6r_{0})p + 4.6r_{1}$$
+Or : d
+
+
+Si $r_{0}=5$ alors, $\omega_{0} =12.5$ 
