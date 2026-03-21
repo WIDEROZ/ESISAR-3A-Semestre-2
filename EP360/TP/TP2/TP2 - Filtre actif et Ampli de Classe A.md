@@ -13,3 +13,6 @@ $$V_{2}= \frac{Y_{3}+Y_{4}}{Y_{3}+Y_{4}+Y_{5}} \frac{Y_{1}}{Y_{1}+Y_{2}} V_{1}$$
 
 Ainsi, 
 $$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}(Y_{3}+Y_{4})}{(Y_{1}+Y_{2})(Y_{3}+Y_{4}+Y_{5})}}$$
+
+
+$$\frac{A+1+pB}{A+pB}$$
