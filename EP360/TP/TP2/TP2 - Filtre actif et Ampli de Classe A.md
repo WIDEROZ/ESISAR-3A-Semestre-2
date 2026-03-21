@@ -15,4 +15,4 @@ Ainsi,
 $$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}(Y_{3}+Y_{4})}{(Y_{1}+Y_{2})(Y_{3}+Y_{4}+Y_{5})}}$$
 
 
-$$\frac{C_{1}}{C_{1}+C_{2}} - \frac{\frac{C_{1}R_{4}}{(C_{1}+C_{2})(R_{4}+R_{5})}}{1+j\omega \frac{C_{3}R_{4}R_{5}}{R_{4}+R_{5}}}$$
+$$V_{2}= \frac{Y_{1}Y_{3}}{\left( Y_{1}+Y_{2}+ \frac{Y_{3}Y_{5}}{Y_{3}+Y_{5}} \right)(Y_{3}+Y_{5})}li$$
