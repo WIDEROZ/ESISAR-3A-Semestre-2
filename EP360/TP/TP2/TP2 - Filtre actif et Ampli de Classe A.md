@@ -15,4 +15,5 @@ Ainsi,
 $$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}(Y_{3}+Y_{4})}{(Y_{1}+Y_{2})(Y_{3}+Y_{4}+Y_{5})}}$$
 
 
-$$V_{2}= \frac{Y_{1}Y_{3}}{\left( Y_{1}+Y_{2}+ \frac{Y_{3}Y_{5}}{Y_{3}+Y_{5}} \right)(Y_{3}+Y_{5})}li$$
+$$\underline{V_{2}}= \frac{Y_{1}Y_{3}}{\left( Y_{1}+Y_{2}+ \frac{Y_{3}Y_{5}}{Y_{3}+Y_{5}} \right)(Y_{3}+Y_{5})}\underline{V_{1}}$$
+$$$$
