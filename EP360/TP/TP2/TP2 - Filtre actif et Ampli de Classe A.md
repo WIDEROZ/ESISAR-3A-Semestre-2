@@ -39,3 +39,6 @@ $$\omega_{0} = \frac{1}{C_{3}R_{5}} \text{ et }\omega_{1} = \frac{C_{1}+C_{2}}{C
 #### Constantes de la fonction de transfert : 
 On pose : 
 $$\omega_{0} = $$
+
+# II - Amplificateur classe A
+## I 
