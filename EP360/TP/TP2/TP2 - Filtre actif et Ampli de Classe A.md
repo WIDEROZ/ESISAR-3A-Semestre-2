@@ -19,10 +19,10 @@ $$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}Y_{3}}{Y_{3}(Y
 $$H(p) = \frac{p^{2}C_{1}C_{3}}{p^{2}(C_{1}+C_{2})C_{3} + \frac{1}{R_{5}}\left( pC_{1}+pC_{2} + pC_{3}+\frac{1}{R_{4}} \right)}$$
 Ainsi : 
 $$\boxed{H(p)=\frac{p^{2}C_{1}C_{3}R_{4}R_{5}}{1+pR_{4}(C_{1}+C_{2}+C_{3})+p^{2}(C_{1}+C_{2})C_{3}R_{4}R_{5}}}$$
+De plus : 
+$$\boxed{H(p) = \frac{H_{0}p^{2}}{1+\frac{2m}{\omega_{0}} p + \left( \frac{p}{\omega_{0}} \right)^{2}}}$$
 
-$$H(p) = u^{2}$$
-
-On pose alors $u = \frac{p}{\omega_{0}}$ et : 
+On pose alors : 
 $$\boxed{H_{0} = C_{1}C_{3}R_{4}R_{5} \text{ le gain dynamique}}$$
 $$\boxed{\omega_{0} = \frac{1}{\sqrt{(C_{1}+C_{2})C_{3}R_{4}R_{5}}}  }$$
 de plus : 
@@ -30,10 +30,12 @@ $$2\frac{m}{\omega_{0}} = R_{4}(C_{1}+C_{2}+C_{3})$$
 Ainsi, 
 $$\boxed{m = \frac{\omega_{0}}{2}R_{4}(C_{1}+C_{2}+C_{3}) = \frac{C_{1}+C_{2}+C_{3}}{2}\sqrt{\frac{R_{4}}{(C_{1}+C_{2})C_{3}R_{5}}}}$$
 
+#### Constantes du système
+
+
+
 ## 2. Application
-#### Constantes de la fonction de transfert : 
-On pose : 
-$$\omega_{0} = $$
+#### Constantes de la fonction de transfert 
 
 
 
