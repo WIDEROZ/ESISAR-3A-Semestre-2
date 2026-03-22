@@ -41,4 +41,11 @@ On pose :
 $$\omega_{0} = $$
 
 # II - Amplificateur classe A
-## I 
+## III - Etude préliminaire
+#### Type de transistor
+Le transistor $2n2222$ est un $\boxed{\text{Bipolaire }NPN}$
+
+#### Polarisation en pont de base
+On utilise un pont diviseur de tension pour contrôler la tension qui rentre dans le transistor ce qui donne au système une bonne stabilité thermique et ne dépend pas de l'amplification du transistor. 
+
+#### 
