@@ -10,25 +10,32 @@ $$\underline{V_{1}} = \frac{-Y_{4}-Y_{3}}{Y_{1}} \underline{V_{2}} + \left( \fra
 Or, d'après un pont diviseur de tension appliqué à $R_{5}$ et $C_{3}$ : 
 $$\underline{V_{c_{2}}} = \frac{Y_{3} + Y_{5}}{Y_{3}}\underline{V_{2}}$$
 On a :
-$$\underline{V_{1}} = \frac{Y_{3}(Y_{4}-Y_{2}-Y_{3}) + (Y_{3}+Y_{5})(Y_{1}+Y_{2}+Y_{3}-Y_{4})}{Y_{1}Y_{3}}\underline{V_{2}}$$
+$$\underline{V_{1}} = \frac{Y_{3}(-Y_{4}-Y_{3})+(Y_{3}+Y_{5})(Y_{1}+Y_{2}+Y_{3}+Y_{4})}{Y_{1}Y_{3}}\underline{V_{2}}$$
 Ainsi, 
-$$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}Y_{3}}{Y_{1}Y_{3} + Y_{5}(Y_{1}+Y_{2}+Y_{3}-Y_{4})}}$$
+$$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}Y_{3}}{Y_{3}(Y_{1}+Y_{2}) + Y_{5}(Y_{1}+Y_{2}+Y_{3}+Y_{4})}}$$
 
 
 #### Fonction de transfert
-$$H(p) = \frac{p^{2}C_{1}C_{3}}{p^{2}C_{1}C_{3} + \frac{1}{R_{5}}\left( pC_{1}+pC_{2} + pC_{3}-\frac{1}{R_{4}} \right)}$$
+$$H(p) = \frac{p^{2}C_{1}C_{3}}{p^{2}(C_{1}+C_{2})C_{3} + \frac{1}{R_{5}}\left( pC_{1}+pC_{2} + pC_{3}+\frac{1}{R_{4}} \right)}$$
 Ainsi : 
-$$\boxed{H(p)=\frac{p^{2}C_{1}C_{3}R_{4}R_{5}}{pR_{4}(C_{1}+C_{2}+C_{3})+p^{2}C_{1}C_{3}R_{4}R_{5}-1}}$$
+$$\boxed{H(p)=\frac{p^{2}C_{1}C_{3}R_{4}R_{5}}{1+pR_{4}(C_{1}+C_{2}+C_{3})+p^{2}(C_{1}+C_{2})C_{3}R_{4}R_{5}}}$$
 
-On pose alors : 
+$$H(p) = u^{2}$$
+
+On pose alors $u = \frac{p}{\omega_{0}}$ et : 
 $$\boxed{H_{0} = C_{1}C_{3}R_{4}R_{5} \text{ le gain dynamique}}$$
-$$\omega_{0} = \frac{1}{\sqrt{C_{1}C_{3}R_{4}R_{5}}} \text{ et } m= $$
-
+$$\boxed{\omega_{0} = \frac{1}{\sqrt{(C_{1}+C_{2})C_{3}R_{4}R_{5}}}  }$$
+de plus : 
+$$2\frac{m}{\omega_{0}} = R_{4}(C_{1}+C_{2}+C_{3})$$
+Ainsi, 
+$$\boxed{m = \frac{\omega_{0}}{2}R_{4}(C_{1}+C_{2}+C_{3}) = \frac{C_{1}+C_{2}+C_{3}}{2}\sqrt{\frac{R_{4}}{(C_{1}+C_{2})C_{3}R_{5}}}}$$
 
 ## 2. Application
 #### Constantes de la fonction de transfert : 
 On pose : 
 $$\omega_{0} = $$
+
+
 
 # II - Amplificateur classe A
 ## III - Etude préliminaire
