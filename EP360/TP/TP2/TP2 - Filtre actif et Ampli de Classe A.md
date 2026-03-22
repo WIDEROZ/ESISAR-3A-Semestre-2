@@ -6,7 +6,7 @@
 On applique la loi des nœuds :
 $$Y_{1}(\underline{V_{1}}-\underline{V_{c_{2}}}) + Y_{4}(\underline{V_{{2}}}-\underline{V_{c_{2}}}) = Y_{3}(\underline{V_{c_{2}}}-\underline{V_{2}}) + Y_{2}\underline{V_{c_{2}}}$$
 Alors, 
-$$\underline{V_{1}} = \frac{Y_{4}-Y_{2}-Y_{3}}{Y_{1}} \underline{V_{2}} + \frac{Y_{1}+Y_{2}+Y_{3}-Y_{4}}{Y_{1}}\underline{V_{c_{2}}}$$
+$$\underline{V_{1}} = \frac{-Y_{4}-Y_{3}}{Y_{1}} \underline{V_{2}} + \left( \frac{Y_{1}+Y_{2}+Y_{3}+Y_{4}}{Y_{1}} \right)\underline{V_{c_{2}}}$$
 Or, d'après un pont diviseur de tension appliqué à $R_{5}$ et $C_{3}$ : 
 $$\underline{V_{c_{2}}} = \frac{Y_{3} + Y_{5}}{Y_{3}}\underline{V_{2}}$$
 On a :
