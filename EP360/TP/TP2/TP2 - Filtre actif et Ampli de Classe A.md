@@ -4,7 +4,7 @@
 
 ### Rapport entre $V_{1}$ et $V_{2}$
 On applique la loi des nœuds :
-$$Y_{1}(\underline{V_{1}}-\underline{V_{c_{2}}}) + Y_{4}(\underline{V_{c_{2}}}-\underline{V_{2}}) = Y_{3}(\underline{V_{c_{2}}}-\underline{V_{2}}) + Y_{2}(\underline{V_{c_{2}}}- \underline{V_{2}})$$
+$$Y_{1}(\underline{V_{1}}-\underline{V_{c_{2}}}) + Y_{4}(\underline{V_{{2}}}-\underline{V_{c_{2}}}) = Y_{3}(\underline{V_{c_{2}}}-\underline{V_{2}}) + Y_{2}\underline{V_{c_{2}}}$$
 Alors, 
 $$\underline{V_{1}} = \frac{Y_{4}-Y_{2}-Y_{3}}{Y_{1}} \underline{V_{2}} + \frac{Y_{1}+Y_{2}+Y_{3}-Y_{4}}{Y_{1}}\underline{V_{c_{2}}}$$
 Or, d'après un pont diviseur de tension appliqué à $R_{5}$ et $C_{3}$ : 
@@ -17,11 +17,12 @@ $$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}Y_{3}}{Y_{1}Y_
 
 #### Fonction de transfert
 $$H(p) = \frac{p^{2}C_{1}C_{3}}{p^{2}C_{1}C_{3} + \frac{1}{R_{5}}\left( pC_{1}+pC_{2} + pC_{3}-\frac{1}{R_{4}} \right)}$$
-$$=p^{2}$$
+Ainsi : 
+$$\boxed{H(p)=\frac{p^{2}C_{1}C_{3}R_{4}R_{5}}{pR_{4}(C_{1}+C_{2}+C_{3})+p^{2}C_{1}C_{3}R_{4}R_{5}-1}}$$
 
 On pose alors : 
-$$H_{0} = \frac{C_{1}R_{5}}{(C_{1}+C_{2})(R_{4}+R_{5})} \text{ le gain dynamique}$$
-$$\omega_{0} = \frac{R_{4}+R_{5}}{C_{3}R_{4}R_{5}} \text{ et } m= $$
+$$\boxed{H_{0} = C_{1}C_{3}R_{4}R_{5} \text{ le gain dynamique}}$$
+$$\omega_{0} = \frac{1}{\sqrt{C_{1}C_{3}R_{4}R_{5}}} \text{ et } m= $$
 
 
 ## 2. Application
