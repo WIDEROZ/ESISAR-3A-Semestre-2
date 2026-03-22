@@ -13,7 +13,11 @@ $$V_{2}= \frac{Y_{3}+Y_{4}}{Y_{3}+Y_{4}+Y_{5}} \frac{Y_{1}}{Y_{1}+Y_{2}} V_{1}$$
 
 Ainsi, 
 $$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}(Y_{3}+Y_{4})}{(Y_{1}+Y_{2})(Y_{3}+Y_{4}+Y_{5})}}$$
-
-
-$$\underline{V_{2}}= \frac{Y_{1}Y_{3}}{\left( Y_{1}+Y_{2}+ \frac{Y_{3}Y_{5}}{Y_{3}+Y_{5}} \right)(Y_{3}+Y_{5})}\underline{V_{1}}$$
+Autre manière : 
+$$\underline{V_{c_{2}}} = \frac{Y_{1}}{Y_{1}+Y_{2}} \underline{V_{1}}$$
+et 
+$$\underline{V_{2}} = \frac{Y_{3}}{Y_{3}+Y_{5}} \underline{V_{c_{2}}}$$
+Ainsi : 
+$$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}Y_{3}}{(Y_{1}+Y_{2})(Y_{3}+Y_{5})}}$$
+#### Fonction de transfert
 $$$$
