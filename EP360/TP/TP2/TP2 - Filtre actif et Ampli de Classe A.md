@@ -1,6 +1,6 @@
 # I - Filtre actif de Tchebychev
 ## 1. Etude de la cellule Sallen-Key
-![[Pasted image 20260321144951.png]]
+![[Pasted image 20260323183119.png]]
 
 ### Rapport entre $V_{1}$ et $V_{2}$
 On applique la loi des nœuds :
@@ -99,6 +99,50 @@ On se place dans le cas ou on applique une tension continue à l'entrée.
 Alors, 
 
 #### Courant de collecteur au repos
-On prend $V_{E} = 0 \, V$
-Alors, $V_{B} = 0.7 \, V$
-$$i_{c} = \beta i_{b}$$
+On considère que le transistor est ON et que l'on met le circuit en courant continu, alors on prend $V_{CE} \approx 0 \, V$
+Alors, 
+$$V_{cc} = R_{C}i_{c} + V_{CE} + (R_{E_{2}} + R_{E_{1}})i_{e} = (R_{C} + \beta(R_{E_{1}}+R_{E_{2}}))I_{co}$$
+car :
+$$i_{e} + i_{b} = i_{c} = \beta i_{b} \Leftrightarrow i_{e} = (\beta-1)i_{b} = \beta i_{b}$$
+Ainsi, 
+$$\boxed{I_{co} = \frac{V_{cc}}{R_{C} + \beta(R_{E_{1}}+R_{E_{2}})}}$$
+
+#### Calcul de $R_{e}$
+$$R_{E} = R_{E_{1}} + R_{E_{2}}$$
+Comme $V_{bmo} = 4.7 \, V$ et $V_{BE} = 0.7 \, V$
+Alors par la loi des mailles : 
+$$V_{bmo} = V_{BE} + V_{Emo} \Leftrightarrow V_{EMo} = R_{E}I_{eo} = V_{bmo} - V_{BE} = 4 \, V$$
+Or $I_{eo} = \left( 1+\frac{1}{\beta} \right)i_{c} \approx I_{co}$
+Ainsi, 
+$$\boxed{R_{E} = \frac{V_{EMo}}{I_{co}} = 1 \, k\Omega}$$
+
+#### Calcul de $R_{1}, R_{2}, R_{c}$
+##### $R_{1}$
+On suppose que : 
+$$I_{p} = 20 I_{bo}$$
+Alors, comme : $I_{bo} = \frac{1}{\beta}I_{co}$ : 
+$$I_{p} = \frac{20}{\beta}I_{co}$$
+D'après la loi d'ohm : 
+$$V_{cc}-V_{bmo} = R_{1}I_{p} \Leftrightarrow \boxed{R_{1} = \frac{V_{cc}-V_{bmo}}{I_{p}} = 25,375 \, k\Omega}$$
+
+##### $R_{2}$
+D'après la loi des noeuds : 
+$$I_{p} = I_{2o} + I_{bo} \Leftrightarrow I_{2o} = I_{p} - I_{bo}$$
+Avec la loi d'ohm on a ainsi : 
+$$V_{bmo} = R_{2}I_{2o} \Leftrightarrow \boxed{R_{2} = \frac{V_{bmo}}{I_{p}-I_{bo}} = 6,184 \, k \Omega}$$
+
+
+##### $R_{C}$
+On suppose que : 
+$$V_{CEo}\approx \frac{V_{cc}}{2}$$
+Ainsi par la loi d'ohm : 
+$$\boxed{R_{C} = \frac{V_{cc}-V_{CEo}}{I_{co}} \approx \frac{V_{cc}}{2I_{co}} = 3,125 \, k \Omega}$$
+
+#### Calcul de la résistance interne $r_{be}$ du transistor
+$$\boxed{r_{be} = \frac{0.7}{I_{bo}} = \frac{0.7}{\frac{0.004}{100}} = 17,5 k \Omega}$$
+
+#### Etude en petits signaux
+![[Pasted image 20260323185439.png]]
+$$V_{s} = \frac{R_{c}R_{u}}{R_{c}+R_{u}}\beta i_{b} = \frac{R_{c}R_{u}}{R_{c}+R_{u}} \frac{\beta}{R_{be}} V_{BE} = \frac{R_{c}R_{u}}{R_{c}+R_{u}} \frac{\beta}{R_{be}} (V_{e} - V_{E}) $$
+$$= \frac{R_{c}R_{u}}{R_{c}+R_{u}} \frac{\beta}{R_{be}} (V_{e}-R_{E}I_{e}) = \frac{R_{c}R_{u}}{R_{c}+R_{u}} \frac{\beta}{R_{be}} (V_{e}-R_{E}\beta I_{b})$$
+
