@@ -62,7 +62,15 @@ $$\boxed{R_{5} = 36.727 \,k \Omega}$$
 On trace le diagramme sur geogebra : 
 ![[Pasted image 20260323103132.png]]
 
-
+## 3. Modélisation d'un défaut
+#### Calcul de la nouvelle fonction de transfert
+On place en parallèle de $R_{5}$ : $C_{6} = 20 \, pF$ on note $Y_{6}$ son admittance : 
+$$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}Y_{3}}{Y_{3}(Y_{1}+Y_{2}) + (Y_{5}+Y_{6})(Y_{1}+Y_{2}+Y_{3}+Y_{4})}}$$
+Alors, 
+$$H(p) = \frac{p^{2}C_{1}C_{3}}{p^{2}(C_{1}+C_{2})C_{3} + \left( \frac{1}{R_{5}} +pC_{6}\right)\left( pC_{1}+pC_{2} + pC_{3}+\frac{1}{R_{4}} \right)}$$
+Donc, 
+$$=\frac{p^{2}C_{1}C_{3}R_{4}R_{5}}{p^{2}R_{4}R_{5}((C_{1}+C_{2})(C_{3}+C_{6}) + C_{3}C_{6}) + p\left( C_{6}R_{5} + (C_{1}+C_{2}+C_{3})R_{4} \right)+1}$$
+$$$$
 
 # II - Amplificateur classe A
 ## III - Etude préliminaire
