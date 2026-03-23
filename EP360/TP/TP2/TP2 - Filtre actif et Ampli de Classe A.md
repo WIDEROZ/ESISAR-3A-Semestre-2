@@ -31,13 +31,21 @@ Ainsi,
 $$\boxed{m = \frac{\omega_{0}}{2}R_{4}(C_{1}+C_{2}+C_{3}) = \frac{C_{1}+C_{2}+C_{3}}{2}\sqrt{\frac{R_{4}}{(C_{1}+C_{2})C_{3}R_{5}}}}$$
 
 #### Constantes du système
-$$\frac{2m}{\omega_{0}} = R_{4}(C_{1}+C_{2}+C_{3})$$
-$$H_{0} = C_{1}C_{3}R_{4}R_{5}$$
 $$R_{4}R_{5}=\frac{H_{0}}{C_{1}C_{3}}$$
-$$\frac{2m}{\omega_{0}(C_{1}+C_{2}+C_{3})}$$
 $$\frac{1}{\omega_{0}^{2}} = {(C_{1}+C_{2})C_{3}R_{4}R_{5}} =H_{0}+C_{2}C_{3}R_{4}R_{5} = H_{0} + \frac{C_{2}}{C_{1}}H_{0}$$
 
-$$\frac{1}{\omega_{0}^{2}} = C_{1}+C_{2}$$
+$$\frac{C_{1}}{\omega_{0}^{2}} = (C_{1}+C_{2})H_{0}$$
+$$\boxed{C_{2} = \frac{C_{1}}{\omega_{0}^{2}H_{0}} - C_{1} = \frac{C_{1}(1-\omega_{0}^{2}H_{0})}{\omega_{0}^{2}H_{0}}}$$
+De plus, 
+$$\frac{2m}{\omega_{0}} = R_{4}(C_{1}+C_{2}+C_{3})$$
+$$\frac{2m}{\omega_{0}} = R_{4}\left( \frac{C_{1}}{\omega_{0}^{2}H_{0}} +C_{3} \right)$$
+Ainsi, 
+$$\boxed{R_{4} = \frac{2m}{\frac{C_{1}}{\omega_{0}H_{0}} + C_{3}\omega_{0}} = \frac{2m\omega_{0}H_{0}}{C_{1}+}}$$
+Donc comme : 
+$$R_{4}R_{5}=\frac{H_{0}}{C_{1}C_{3}}$$
+On a : 
+$$\boxed{R_{5} = \frac{\frac{C_{1}}{\omega_{0}} + C_{3}\omega_{0}H_{0}}{2mC_{1}C_{3}}}$$
+
 
 
 ## 2. Application
