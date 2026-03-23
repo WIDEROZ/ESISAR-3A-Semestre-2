@@ -40,17 +40,21 @@ De plus,
 $$\frac{2m}{\omega_{0}} = R_{4}(C_{1}+C_{2}+C_{3})$$
 $$\frac{2m}{\omega_{0}} = R_{4}\left( \frac{C_{1}}{\omega_{0}^{2}H_{0}} +C_{3} \right)$$
 Ainsi, 
-$$\boxed{R_{4} = \frac{2m}{\frac{C_{1}}{\omega_{0}H_{0}} + C_{3}\omega_{0}} = \frac{2m\omega_{0}H_{0}}{C_{1}+}}$$
+$$\boxed{R_{4} = \frac{2m}{\frac{C_{1}}{\omega_{0}H_{0}} + C_{3}\omega_{0}} = \frac{2m\omega_{0}H_{0}}{C_{1}+C_{3}\omega_{0}^{2}H_{0}}}$$
 Donc comme : 
 $$R_{4}R_{5}=\frac{H_{0}}{C_{1}C_{3}}$$
 On a : 
-$$\boxed{R_{5} = \frac{\frac{C_{1}}{\omega_{0}} + C_{3}\omega_{0}H_{0}}{2mC_{1}C_{3}}}$$
+$$\boxed{R_{5} = \frac{\frac{C_{1}}{\omega_{0}} + C_{3}\omega_{0}H_{0}}{2mC_{1}C_{3}} = \frac{C_{1}+C_{3}\omega_{0}^{2}H_{0}}{2m\omega_{0}C_{1}C_{3}}}$$
 
 
 
 ## 2. Application
 #### Constantes de la fonction de transfert 
-
+$$\frac{1}{\omega_{0}^{2}} = 2.776 \times 10^{-11} \Leftrightarrow \omega_{0} \approx 183797.4045 \, \text{Hz}$$
+$$\frac{2m}{\omega_{0}} = 1.481 \times 10^{-6} \Leftrightarrow m \approx 0.136$$
+$${H_{0} = 2.475 \times 10^{-11}}$$
+Ainsi : 
+$$C_{2} = $$
 
 
 # II - Amplificateur classe A
