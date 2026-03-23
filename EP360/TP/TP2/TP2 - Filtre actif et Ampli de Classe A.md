@@ -99,6 +99,6 @@ On se place dans le cas ou on applique une tension continue à l'entrée.
 Alors, 
 
 #### Courant de collecteur au repos
-On prend $V_{E} = 0 \, V$,
+On prend $V_{E} = 0 \, V$
 Alors, $V_{B} = 0.7 \, V$
 $$i_{c} = \beta i_{b}$$
