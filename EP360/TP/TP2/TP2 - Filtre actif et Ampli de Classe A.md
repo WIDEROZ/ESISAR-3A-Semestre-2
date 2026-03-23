@@ -67,10 +67,23 @@ On trace le diagramme sur geogebra :
 On place en parallèle de $R_{5}$ : $C_{6} = 20 \, pF$ on note $Y_{6}$ son admittance : 
 $$\boxed{\frac{\underline{V_{2}}}{\underline{V_{1}}} = \frac{Y_{1}Y_{3}}{Y_{3}(Y_{1}+Y_{2}) + (Y_{5}+Y_{6})(Y_{1}+Y_{2}+Y_{3}+Y_{4})}}$$
 Alors, 
-$$H(p) = \frac{p^{2}C_{1}C_{3}}{p^{2}(C_{1}+C_{2})C_{3} + \left( \frac{1}{R_{5}} +pC_{6}\right)\left( pC_{1}+pC_{2} + pC_{3}+\frac{1}{R_{4}} \right)}$$
+$$H_{c}(p) = \frac{p^{2}C_{1}C_{3}}{p^{2}(C_{1}+C_{2})C_{3} + \left( \frac{1}{R_{5}} +pC_{6}\right)\left( pC_{1}+pC_{2} + pC_{3}+\frac{1}{R_{4}} \right)}$$
 Donc, 
 $$=\frac{p^{2}C_{1}C_{3}R_{4}R_{5}}{p^{2}R_{4}R_{5}((C_{1}+C_{2})(C_{3}+C_{6}) + C_{3}C_{6}) + p\left( C_{6}R_{5} + (C_{1}+C_{2}+C_{3})R_{4} \right)+1}$$
-$$$$
+On a ainsi : 
+$$\boxed{H_{c}(p) = \frac{H_{0,c}p^{2}}{1+\frac{2m_{c}}{\omega_{0,c}}p + \left( \frac{p}{\omega_{0,c}} \right)^{2}}}$$
+Avec, 
+$$\boxed{H_{0,c} = H_{0} = C_{1}C_{3}R_{4}R_{5}}$$
+$$\boxed{\omega_{0,c} = \frac{1}{\sqrt{R_{4}R_{5}((C_{1}+C_{2})(C_{3}+C_{6}) + C_{3}C_{6})}}}$$
+$$\boxed{m_{c} = \frac{\omega_{0,c}}{2}(C_{6}R_{5}+(C_{1}+C_{2}+C_{3})R_{4})}$$
+
+#### Diagramme de Bode
+
+
+$$\boxed{C_{2} = 19.6 nF}$$
+$$\boxed{R_{4} = 61.77 \, \Omega}$$
+$$\boxed{R_{5} = 36.727 \,k \Omega}$$
+
 
 # II - Amplificateur classe A
 ## III - Etude préliminaire
