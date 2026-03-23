@@ -78,7 +78,7 @@ $$\boxed{\omega_{0,c} = \frac{1}{\sqrt{R_{4}R_{5}((C_{1}+C_{2})(C_{3}+C_{6}) + C
 $$\boxed{m_{c} = \frac{\omega_{0,c}}{2}(C_{6}R_{5}+(C_{1}+C_{2}+C_{3})R_{4})= 0.150}$$
 
 #### Diagramme de Bode
-![[Pasted image 20260323105830.png]]
+![[Pasted image 20260323110506.png]]
 Le Gain diminue quand même pas mal pour un condo de $20 \, pF$.
 
 
