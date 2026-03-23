@@ -54,7 +54,12 @@ $$\frac{1}{\omega_{0}^{2}} = 2.776 \times 10^{-11} \Leftrightarrow \omega_{0} \a
 $$\frac{2m}{\omega_{0}} = 1.481 \times 10^{-6} \Leftrightarrow m \approx 0.136$$
 $${H_{0} = 2.475 \times 10^{-11}}$$
 Ainsi : 
-$$C_{2} = $$
+$$\boxed{C_{2} = 19.6 nF}$$
+$$\boxed{R_{4} = 61.77 \, \Omega}$$
+$$\boxed{R_{5} = 36.727 \,k \Omega}$$
+
+#### Diagramme de bode
+
 
 
 # II - Amplificateur classe A
