@@ -59,6 +59,8 @@ $$\boxed{R_{4} = 61.77 \, \Omega}$$
 $$\boxed{R_{5} = 36.727 \,k \Omega}$$
 
 #### Diagramme de bode
+On trace le diagramme sur geogebra : 
+![[Pasted image 20260323103132.png]]
 
 
 
