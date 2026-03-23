@@ -94,7 +94,11 @@ On utilise un pont diviseur de tension pour contrôler la tension qui rentre dan
 La résistance $R_{E_{2}}$ rend les signaux électriques et thermiques stables à la sortie de l’émetteur en cédant une partie du gain. 
 Lorsque l’émetteur est soumis à un courant continu, le condensateur $C_{d}$ n'agit pas sur le système donc la résistance $R_{E_{1}}$ prend le relais pour rendre la tension en sortie de l'émetteur plus stable. Dans le cas contraire en courant alternatif, c'est le condensateur qui prend le relais ce qui permet de garder une grande amplification en tension.
 
-#### Minorant de $V_{cc}$
+#### Minorant de $V_{cc}$ A FAIRE 
 On se place dans le cas ou on applique une tension continue à l'entrée.
 Alors, 
-$$$$
+
+#### Courant de collecteur au repos
+On prend $V_{E} = 0 \, V$,
+Alors, $V_{B} = 0.7 \, V$
+$$i_{c} = \beta i_{b}$$
