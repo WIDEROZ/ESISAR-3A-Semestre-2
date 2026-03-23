@@ -73,16 +73,13 @@ $$=\frac{p^{2}C_{1}C_{3}R_{4}R_{5}}{p^{2}R_{4}R_{5}((C_{1}+C_{2})(C_{3}+C_{6}) +
 On a ainsi : 
 $$\boxed{H_{c}(p) = \frac{H_{0,c}p^{2}}{1+\frac{2m_{c}}{\omega_{0,c}}p + \left( \frac{p}{\omega_{0,c}} \right)^{2}}}$$
 Avec, 
-$$\boxed{H_{0,c} = H_{0} = C_{1}C_{3}R_{4}R_{5}}$$
-$$\boxed{\omega_{0,c} = \frac{1}{\sqrt{R_{4}R_{5}((C_{1}+C_{2})(C_{3}+C_{6}) + C_{3}C_{6})}}}$$
-$$\boxed{m_{c} = \frac{\omega_{0,c}}{2}(C_{6}R_{5}+(C_{1}+C_{2}+C_{3})R_{4})}$$
+$$\boxed{H_{0,c} = H_{0} = C_{1}C_{3}R_{4}R_{5} = 2.475 \times 10^{-11}}$$
+$$\boxed{\omega_{0,c} = \frac{1}{\sqrt{R_{4}R_{5}((C_{1}+C_{2})(C_{3}+C_{6}) + C_{3}C_{6})}} = 144769.87 \, Hz}$$
+$$\boxed{m_{c} = \frac{\omega_{0,c}}{2}(C_{6}R_{5}+(C_{1}+C_{2}+C_{3})R_{4})= 0.150}$$
 
 #### Diagramme de Bode
-
-
-$$\boxed{C_{2} = 19.6 nF}$$
-$$\boxed{R_{4} = 61.77 \, \Omega}$$
-$$\boxed{R_{5} = 36.727 \,k \Omega}$$
+![[Pasted image 20260323105830.png]]
+Le Gain diminue quand même pas mal pour un condo de $20 \, pF$.
 
 
 # II - Amplificateur classe A
