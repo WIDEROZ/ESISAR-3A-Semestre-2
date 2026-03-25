@@ -143,8 +143,6 @@ Ainsi,
 $$\boxed{H_{sys}(p) = \frac{1-e^{ -pT_{e} }}{p + \tau p^{2}}}$$
 
 
-
-
 #### b. Diagramme de Bode
 Pour $T_{e} = \frac{1}{100}$
 ##### Gain
@@ -170,7 +168,7 @@ $$-9.75 \, mV=-\frac{Q}{2} \leq G_{bruit, \mathrm{can}}(p) \leq \frac{Q}{2} = 9.
 Donc, 
 $$\boxed{A_{bruit, \mathrm{can}} = 19.5 \, mV}$$
 Ainsi, 
-$$\boxed{A_{bruit, \,total, \,\max} = 249.5 \, mV}$$
+$$\boxed{A_{bruit, \,total, \,\max} = 19.5 + 230 = 249.5 \, mV}$$
 
 #### 1.2.2 Schéma du système commandé par un calculateur et précédé par un pré-filtre
 ![[Pasted image 20260316164226.png]]
@@ -178,15 +176,18 @@ $$\boxed{A_{bruit, \,total, \,\max} = 249.5 \, mV}$$
 #### 1.2.3 Spécification du cahier des charges
 ##### a. On traite la commande
 On applique un échelon de température $Y_{C}(t)$ en commande puis on regarde la sortie $Y(t)$
+![[Pasted image 20260325093032.png]]
+
 
 ##### b. On traite $P_{u}$ et $P_{y}$
 $C$ doit contenir un intégrateur
-Le gain statique de $F$ doit être égal à $1$
-Si on applique un échelon de température $Y_{C}(t)$ en commande avant $F$ et que l'on regarde la sortie $Y(t)$, la différence : $Y_{c}(t)- Y(t)\underset{}{\longrightarrow} 0$.
+Le gain statique de $F$ doit être égal à $1$ ($F(0)=1$)
+Si on applique un échelon de température $Y_{C}(t)$ en commande avant $F$ et que l'on regarde la sortie $Y(t)$, la différence : $e(t) = Y_{c}(t)- Y(t)\underset{t \to + \infty}{\longrightarrow} 0 = e_{stat}$.
 
-##### c. On traite le bruit
+##### c. On traite le bruit $P_{b}$ en hautes fréquences
 $$\left| C(p)\right| \leq_{\omega \to \infty} N_{\max} = \frac{\left| U_{b}\right|}{\left| P_{b}\right|} = \frac{0.5}{0.1} = 5$$
-$$Y_{C} = cte \underset{}{\longrightarrow} \text{mesure de } \left| U_{b}\right| $$
+On applique une commande : $Y_{C} = cte$
+Puis on mesure : $\left| U_{b}\right|$ et on vérifie que $\left| P_{b}\right|$ ne dépasse pas $10 \%$ de $\left| U_{b}\right|$
 
 ##### d. On traite $P_{y}$
 Diagramme de Bode, Nyquist, Black-Nichols sur le calculateur
@@ -194,8 +195,6 @@ Diagramme de Bode, Nyquist, Black-Nichols sur le calculateur
 ##### e. On traite $P_{u}$
 On fais un échelon sur $P_{u}$ et on regarde la sortie $Y_{C}(t)= cte$ 
 $$\min \left|\left| \frac{Y}{P_{u}} \right|\right|_{H_{2}} $$
-
-
 
 
 
