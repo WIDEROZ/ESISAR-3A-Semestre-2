@@ -3,15 +3,16 @@
 ![[Pasted image 20260301160819.png]]
 
 Entrées / sorties : 
-- $U(t)$ : Signal de commande
-- $y_{c}(t)$ : Consigne
+- $U(k)$ : Signal de commande
+- $y_{c}(k)$ : Consigne
 - $y(t)$ : Réponse en temps continu
 - $y(k)$ : Réponse en temps discret
+- $\varepsilon(k)$ : Erreur entre la réponse et la consigne
 
 Perturbations : 
-- $P_{b}(p)$ : Bruit de mesure (Bruit électrique par exemple)
-- $P_{u}(p)$ : Perturbation de la commande (Bruit électrique par exemple)
-- $P_{y}(p)$ : Variations lentes $H(p)$ suivant l'environnement (usure par exemple)
+- $P_{b}(t)$ : Bruit de mesure (Bruit électrique par exemple)
+- $P_{u}(t)$ : Perturbation de la commande (Bruit électrique par exemple)
+- $P_{y}(t)$ : Variations lentes $H(p)$ suivant l'environnement (usure par exemple)
 
 #### 1.1.2 - Fonction de transfert
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
@@ -48,8 +49,6 @@ $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\s
 $$\arg(H(p)) = \arg(G) - \arg(1+j\omega \tau) = \arg(G) - \arctan(\omega \tau)$$
 Donc, 
 $$\boxed{\varphi = -\arctan(\omega \tau)}$$
-![[Pasted image 20260301130654.png]]
-
 ###### Avec un retard pur
 $$\arg(H(p)) = \arg(G)+\arg(e^{ -t_{R}j\omega}) - \arg(1+j\omega \tau) $$
 $$= -\omega t_{R} - \arctan(\omega \tau)$$
@@ -58,16 +57,19 @@ $$\boxed{\varphi = -\omega t_{R} - \arctan(\omega \tau)}$$
 ![[Pasted image 20260301140118.png]]
 - Rouge : sans retard pur
 - Bleu : avec retard pur
-
+![[Pasted image 20260301130654.png]]
 #### 1.1.4 - Bruit
-Dans le pire des cas le bruit est de : $\boxed{0.3 \, V}$
+Dans le pire des cas le bruit est de : ${0.3 \, V}$ pour une moyenne de $2.66 \, V$ pour l'actionneur alors, le gain du bruit est de : 
+$$\boxed{G_{bruit} = \frac{0.3}{2.66} \approx 0.1}$$
+
 
 #### 1.1.5 - Modèles statiques
 ##### a. Actionneur
 $$T_{act}(t) = G_{act}V_{a}(t) + T_{act, 0}$$
-Alors, comme $-50 = G_{act} \times 0 + T_{act, 0}$ : 
+Alors, comme l'actionneur délivre une température de $-50° C$ pour une tension de $0 \, V$ : $-50 = G_{act} \times 0 + T_{act, 0}$
+On à donc : 
 $$T_{act}(t)=  G_{act}V_{act}(t) -50$$
-Alors, comme $100 = G_{act}\times 5 - 50$ 
+Alors, comme l'actionneur délivre une température de $100° C$ pour une tension de $5 \, V$ : $100 = G_{act}\times 5 - 50$ 
 Ainsi, 
 $$\boxed{\begin{array}{c}
 G_{act} = 30 \\
@@ -76,35 +78,34 @@ T_{act,0} = -50 ° C
 
 ##### b. Capteur
 $$V_{c}(t) = G_{capt} (T_{enc}(t)  + T_{capt,0})$$
-Alors, 
-$$0 \, V = G_{capt}(T_{enc, 5V} + T_{capt,0}) = G_{capt}(-5 + T_{capt, 0})$$
+Alors, comme le capteur délivre une tension de $0\,V$ pour une température de $-5 \, °C$ : $0 \, V = G_{capt}(-5 + T_{capt, 0})$
 donc,
-$$\boxed{T_{capt} = 5 ° C}$$
-De plus, 
-$$5V = G_{capt}(60 + 5)$$
+$$V_{c}(t) = G_{capt} (T_{enc}(t)  + 5)$$
+De plus, comme le capteur délivre une tension de $5\,V$ pour une température de $60 \, °C$ : $5V = G_{capt}(60 + 5)$
 Ainsi, 
-$$\boxed{G_{capt} = \frac{1}{13}}$$
+$$\boxed{\begin{cases}
+G_{capt} = \frac{1}{13} \\
+T_{capt,0} = 5 ° C
+\end{cases}}$$
 
 
 
 #### 1.1.6 - Température externe
-C'est la température associée au voltage du début du schéma :
+C'est la température associée a la tension au temps $0$ du schéma :
 $$T_{enc}(t) =  \frac{1}{G_{capt}}V_{c}(t)-T_{capt, 0} = 13V_{c}(t) - 5$$
 $$\boxed{T_{ext} = T_{enc}(0) = 9.95°C}$$
 
 #### 1.1.7 - Fonction de transfert de la micro-enceinte climatique
 Comme le gain du système est de $G_{enc} \times G_{act} \times G_{capt} = 2.3$ (mesuré sur le schéma)
-Alors, 
-$$G_{enc} = \frac{2.3}{G_{act}G_{capt}}$$
-Donc
-$$\boxed{G_{enc} = 1}$$
+Donc, 
+$$G_{enc} = \frac{2.3}{G_{act}G_{capt}} = 1$$
 Ainsi, 
 $$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
 
 #### 1.1.8 - Modèle du CAN et du CNA
 ##### a. Simulation numérique du système
 Gain : 
-Le gain idéal pour un CNA doît être unitaire : $\boxed{G_{CAN/CNA} = 1}$
+Le gain idéal pour un CNA doit être unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
 Quantification : 
 Comme le CAN et le CNA possèdent $1$ octets il y a $256$ possibilités pour une tension entre $0$ et $5 \, V$ : 

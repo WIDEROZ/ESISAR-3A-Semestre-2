@@ -1,3 +1,5 @@
+# Introduction
+
 #### Actionneur
 D'après la fonction de transfert en préparation : 
 $$H_{enc}(p) = \frac{TL[V_{\mathrm{can}}(t)]}{TL[V_{act}(t)]} = \frac{G_{act}}{1+p \tau}$$
