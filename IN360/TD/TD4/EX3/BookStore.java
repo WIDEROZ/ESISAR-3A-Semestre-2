@@ -11,6 +11,9 @@ public class BookStore {
     public void addBook(Book livre){
         bibliotheque.add(livre);
     }
+    
+
+
 
     public void removeBook(int rfid){
         ListIterator<Book> book = bibliotheque.listIterator();

@@ -57,6 +57,11 @@ Ainsi :
 $$\boxed{C_{2} = 19.6 nF}$$
 $$\boxed{R_{4} = 61.77 \, \Omega}$$
 $$\boxed{R_{5} = 36.727 \,k \Omega}$$
+$$\frac{V_{s}}{V_{e}}$$
+
+$$G = 20\log\left( \frac{V_{s}}{V_{e}} \right)$$
+
+	
 
 #### Diagramme de bode
 On trace le diagramme sur geogebra : 
@@ -146,3 +151,4 @@ $$\boxed{r_{be} = \frac{0.7}{I_{bo}} = \frac{0.7}{\frac{0.004}{100}} = 17,5 k \O
 $$V_{s} = \frac{R_{c}R_{u}}{R_{c}+R_{u}}\beta i_{b} = \frac{R_{c}R_{u}}{R_{c}+R_{u}} \frac{\beta}{R_{be}} V_{BE} = \frac{R_{c}R_{u}}{R_{c}+R_{u}} \frac{\beta}{R_{be}} (V_{e} - V_{E}) $$
 $$= \frac{R_{c}R_{u}}{R_{c}+R_{u}} \frac{\beta}{R_{be}} (V_{e}-R_{E}I_{e}) = \frac{R_{c}R_{u}}{R_{c}+R_{u}} \frac{\beta}{R_{be}} (V_{e}-R_{E}\beta I_{b})$$
 
+$$$$
