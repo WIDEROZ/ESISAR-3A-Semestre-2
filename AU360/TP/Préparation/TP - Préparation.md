@@ -2,12 +2,19 @@
 #### 1.1.1 - Schéma
 ![[Pasted image 20260301160819.png]]
 
-Entrées / sorties : 
-- $U(k)$ : Signal de commande
+Entrées / sorties  su système : 
 - $y_{c}(k)$ : Consigne
 - $y(t)$ : Réponse en temps continu
 - $y(k)$ : Réponse en temps discret
-- $\varepsilon(k)$ : Erreur entre la réponse et la consigne
+
+Variables notables du système : 
+- $V_{a}(t)$ : Tension de commande de l'actionneur
+- $T_{act}(t)$ : Température délivrée de l'actionneur
+- $H_{enc}(p)$ : Fonction de transfert de l'enceinte
+- $T_{capt}(t)$ : Température à l'entrée du capteur
+- $V_{c}(t)$ : Tension délivrée par le capteur
+- $H(p)$ : Fonction de transfert du système
+
 
 Perturbations : 
 - $P_{b}(t)$ : Bruit de mesure (Bruit électrique par exemple)
@@ -103,7 +110,6 @@ Ainsi,
 $$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
 
 #### 1.1.8 - Modèle du CAN et du CNA
-##### a. Simulation numérique du système
 Gain : 
 Le gain idéal pour un CNA doit être unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
@@ -113,14 +119,6 @@ $$\boxed{Q = \frac{5}{256} = 19.5 \,m V}$$
 
 Saturation : 
 D'après le schéma la fréquence de saturation du CAN et du CNA est de $\boxed{5 \, V}$
-
-###### b. Synthèse de la commande
-Gain :
-$\Delta s$ : On prend l'amplitude du bruit la plus grande 
-$\Delta e$ : On prend la distance entre la valeur moyenne du maximum de l'amplitude et du minimum de l'amplitude
-D'après le schéma : 
-$$G_{bruit} = \frac{\Delta s}{\Delta e} = \frac{2.8 -2.45}{2.7-1.15} = 0.23$$
-$$\boxed{G_{bruit} = 0.23}$$
 
 #### 1.1.9 - Schéma fonctionnel
 ![[Pasted image 20260301151748.png]]
