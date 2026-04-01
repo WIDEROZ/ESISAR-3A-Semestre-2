@@ -29,11 +29,10 @@ $$\forall  x \in [0, 1], \left| \frac{x^{n}}{x+a} \right| \leq \frac{1}{x+a} \te
 Ainsi, 
 $$\boxed{\lim_{ n \to \infty }I_{n} = \int_{0}^{1} \lim_{ n \to \infty } \frac{x^{n}}{x+a} \, dx = 0  }$$
 
+#### 2.
+
 
 #### 3.
-
-
-#### 4.
 $$d_{n}^{(m)} = I_{n}^{(m)}-I_{n}$$
 On procède par récurrence de $m$ à $0$ : 
 Initialisation : 

@@ -9,11 +9,11 @@ x(t_{0}) = x_{0}
 \end{cases}$$
 Soit $h$ le pas sur lequel on intègre et $(t_{i})_{i \in \mathbb{N}}\in D_{\mathbb{E}}^{\mathbb{N}}$ tel que : 
 $$\forall n \in \mathbb{N}, t_{n+1} = t_{n} + h$$
-On intègre l'équation :
+On intègre l'équation différentielle :
 $$\forall n \in \mathbb{N}, x(t_{n}+h)-x(t_{n}) = \int_{t_{n}}^{t_{n}+h}f(t, x(t)) \, dt $$
 On cherche à approximer $f$. 
-On fait alors un changement de variable $x \leftarrow \frac{t-t_{n}}{h}$ :
-$$\boxed{\forall n \in \mathbb{N}, x(t_{n}+h) = x(t_{n})+ h\int_{0}^{1} f(hx+t_{n}, x(hx+t_{n})) \, dx }$$
+On fait alors un changement de variable $u \leftarrow \frac{t-t_{n}}{h}$ :
+$$\boxed{\forall n \in \mathbb{N}, x(t_{n}+h) = x(t_{n})+ h\int_{0}^{1} f(hu+t_{n}, x(hu+t_{n})) \, du }$$
 
 ____
 #### Notes (Brouillon)
