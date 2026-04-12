@@ -1,5 +1,28 @@
-## 1.1 - Modélisation
-#### 1.1.1 - Schéma
+# Sommaire
+
+>[!Sommaire]
+>
+> [[#^a1|1.1 - Modélisation]]
+> > [[#^a11|1.1.1 - Schéma]]
+> > [[#^a12|1.1.2 - Fonction de Transfert]] 
+> > [[#^a13|1.1.3 - Diagramme de Bode]]
+> > [[#^a14|1.1.4 - Bruit]]
+> > [[#^a15 |1.1.5 - Modèles statiques]]
+> > [[#^a16 |1.1.6 - Température externe]]
+> > [[#^a17 |1.1.7 - Fonction de transfert de la micro-enceinte climatique]]
+> > [[#^a18|1.1.8 - Modèle du CAN/CNA]]
+> > [[#^a19|1.1.9 - Schéma Fonctionnel]]
+>
+> [[#^a2|1.2 - Spécifications de la synthèse de la commande]]
+> > [[#^a21|1.2.1 - Modèle à temps continu du système]]
+> > [[#^a22|1.2.2 - Schéma du système commandé par un calculateur et précédé par un pré-filtre]]
+> > [[#^a23|1.2.3 - Spécifications du cahier des charges]]
+>
+
+
+## 1.1 - Modélisation ^a1
+
+#### 1.1.1 - Schéma ^a11
 ![[Pasted image 20260301160819.png]]
 
 Entrées / sorties  su système : 
@@ -21,7 +44,7 @@ Perturbations :
 - $P_{u}(t)$ : Perturbation de la commande (Bruit électrique par exemple)
 - $P_{y}(t)$ : Variations lentes $H(p)$ suivant l'environnement (usure par exemple)
 
-#### 1.1.2 - Fonction de transfert
+#### 1.1.2 - Fonction de transfert ^a12
 D'après le schéma on suppose que le système est linéaire de premier ordre : 
 $$H(p) = \frac{G}{1+\tau p}$$
 
@@ -47,7 +70,7 @@ On prend arbitrairement $1 \%$ du temps de réponse :
 $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
 
 
-#### 1.1.3 - Diagramme de Bode
+#### 1.1.3 - Diagramme de Bode ^a13
 ##### a. Gain
 $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\sqrt{1+(\omega \tau)^{2}}} \right)}$$
 ![[Pasted image 20260301132540.png]]
@@ -65,12 +88,12 @@ $$\boxed{\varphi = -\omega t_{R} - \arctan(\omega \tau)}$$
 - Rouge : sans retard pur
 - Bleu : avec retard pur
 ![[Pasted image 20260301130654.png]]
-#### 1.1.4 - Bruit
+#### 1.1.4 - Bruit ^a14
 Dans le pire des cas le bruit est de : ${0.3 \, V}$ pour une moyenne de $2.66 \, V$ pour l'actionneur alors, le gain du bruit est de : 
 $$\boxed{G_{bruit} = \frac{0.3}{2.66} \approx 0.1}$$
 
 
-#### 1.1.5 - Modèles statiques
+#### 1.1.5 - Modèles statiques ^a15
 ##### a. Actionneur
 $$T_{act}(t) = G_{act}V_{a}(t) + T_{act, 0}$$
 Alors, comme l'actionneur délivre une température de $-50° C$ pour une tension de $0 \, V$ : $-50 = G_{act} \times 0 + T_{act, 0}$
@@ -96,20 +119,19 @@ T_{capt,0} = 5 ° C
 \end{cases}}$$
 
 
-
-#### 1.1.6 - Température externe
+#### 1.1.6 - Température externe ^a16
 C'est la température associée a la tension au temps $0$ du schéma :
 $$T_{enc}(t) =  \frac{1}{G_{capt}}V_{c}(t)-T_{capt, 0} = 13V_{c}(t) - 5$$
 $$\boxed{T_{ext} = T_{enc}(0) = 9.95°C}$$
 
-#### 1.1.7 - Fonction de transfert de la micro-enceinte climatique
+#### 1.1.7 - Fonction de transfert de la micro-enceinte climatique ^a17
 Comme le gain du système est de $G_{enc} \times G_{act} \times G_{capt} = 2.3$ (mesuré sur le schéma)
 Donc, 
 $$G_{enc} = \frac{2.3}{G_{act}G_{capt}} = 1$$
 Ainsi, 
 $$\boxed{H_{enc}(p) = \frac{1}{1+\tau p}}$$
 
-#### 1.1.8 - Modèle du CAN et du CNA
+#### 1.1.8 - Modèle du CAN et du CNA ^a18
 Gain : 
 Le gain idéal pour un CNA doit être unitaire : $\boxed{G_{CAN/CNA} = 1}$
 
@@ -120,7 +142,7 @@ $$\boxed{Q = \frac{5}{256} = 19.5 \,m V}$$
 Saturation : 
 D'après le schéma la fréquence de saturation du CAN et du CNA est de $\boxed{5 \, V}$
 
-#### 1.1.9 - Schéma fonctionnel
+#### 1.1.9 - Schéma fonctionnel ^a19
 ![[Pasted image 20260301151748.png]]
 - $P_{b}(p)$ : Bruit de mesure
 - $P_{u}(p)$ : Perturbation de la commande
@@ -128,22 +150,32 @@ D'après le schéma la fréquence de saturation du CAN et du CNA est de $\boxed{
 - Modélisation compliquée des variations très lentes du système
 - $U(p)$ : Entrée(s) du système (Commande actionneur)
 
-## 1.2 Spécifications pour la synthèse de la commande
-### 1.2.1 - Modèle à temps continu du système
 ![[Pasted image 20260316105448.png]]
-Avec $H_{sys}(z)$ représentant la transformée en $Z$ de la fonction de transfert de l'enceinte et de la chaîne d’acquisition. 
+
+## 1.2 Spécifications pour la synthèse des commande ^a2
+### 1.2.1 - Modèle à temps continu du système ^a21
+![[Pasted image 20260407155334.png]]
+Avec : 
+- $H_{sys}(p)$ : Fonction de transfert de l'enceinte et de la chaîne d’acquisition. 
+- $C(p)$ : Fonction de transfert du calculateur
+- $F(p)$ : Fonction de transfert du filtre
+- $R(p)$ : Consigne
+- $R_{f}(p)$ : Consigne filtrée (pour éviter le dépassement)
+- $U(p)$ : Commande du calculateur
 
 #### a. Fonction de transfert
 $$H_{sys}(p) = H_{BOZ}(p) H_{enc}(p)$$
 Or la fonction de transfert d'un bloqueur d'ordre $0$ est : 
 $$H_{BOZ}(p) = \frac{1-e^{ -pT_{e} }}{p}$$
 Avec $T_{e}$ la période d’échantillonnage du CAN/CNA. 
+De plus comme d'après le 1.1.7 (Fonction de transfert de l'enceinte) : 
+$$H_{enc}(p) = \frac{1}{1+\tau p}$$
 Ainsi, 
 $$\boxed{H_{sys}(p) = \frac{1-e^{ -pT_{e} }}{p + \tau p^{2}}}$$
 
 
 #### b. Diagramme de Bode
-Pour $T_{e} = \frac{1}{100}$
+Pour $T_{e} = \frac{1}{100}$ la période d'échantillonnage minimale du CAN/CNA
 ##### Gain
 $$G_{dB}(\omega) = 20 \log(\left| H_{sys}(\omega)\right|)$$
 En échelle logarithmique on a : 
@@ -169,14 +201,15 @@ $$\boxed{A_{bruit, \mathrm{can}} = 19.5 \, mV}$$
 Ainsi, 
 $$\boxed{A_{bruit, \,total, \,\max} = 19.5 + 230 = 249.5 \, mV}$$
 
-#### 1.2.2 Schéma du système commandé par un calculateur et précédé par un pré-filtre
+#### 1.2.2 - Schéma du système commandé par un calculateur et précédé par un pré-filtre ^a22
 ![[Pasted image 20260316164226.png]]
 
-#### 1.2.3 Spécification du cahier des charges
+#### 1.2.3 - Spécification du cahier des charges ^a23
 ##### a. On traite la commande
-On applique un échelon de température $Y_{C}(t)$ en commande puis on regarde la sortie $Y(t)$
-![[Pasted image 20260325093032.png]]
-
+On applique un échelon de température $Y_{C}(t)$ en commande puis on regarde la sortie $Y(t)$ 
+![[Pasted image 20260408175715.png]]
+Ainsi $T_{d}$ doit être inférieur à : $5\%$ de $T$ : $\boxed{T_{d} \leq 5 \% T}$
+Il faudra alors faire en sorte que le <u>calculateur et le filtre</u> respectent cette spécification.
 
 ##### b. On traite $P_{u}$ et $P_{y}$
 $C$ doit contenir un intégrateur
@@ -184,111 +217,200 @@ Le gain statique de $F$ doit être égal à $1$ ($F(0)=1$)
 Si on applique un échelon de température $Y_{C}(t)$ en commande avant $F$ et que l'on regarde la sortie $Y(t)$, la différence : $e(t) = Y_{c}(t)- Y(t)\underset{t \to + \infty}{\longrightarrow} 0 = e_{stat}$.
 
 ##### c. On traite le bruit $P_{b}$ en hautes fréquences
-$$\left| C(p)\right| \leq_{\omega \to \infty} N_{\max} = \frac{\left| U_{b}\right|}{\left| P_{b}\right|} = \frac{0.5}{0.1} = 5$$
-On applique une commande : $Y_{C} = cte$
-Puis on mesure : $\left| U_{b}\right|$ et on vérifie que $\left| P_{b}\right|$ ne dépasse pas $10 \%$ de $\left| U_{b}\right|$
+$$\left| C(p)\right| \leq_{\omega \to \infty} N_{\max} = \frac{\left| U_{b}\right|}{\left| P_{b}\right|} = \frac{5}{0.1} = 50$$
+On applique une consigne telle que la tension de commande soit maximale ($5 \, V$) puis on mesure $\left| P_{b}\right|$ et on vérifie que $\left| P_{b}\right|$ ne dépasse pas $10 \%$ de $\left| U_{b}\right|$ : $\left| P_{b}\right| = 0.1$ et $\left| U_{b}\right| = 5 \, V$ alors comme : $10\%\left| U_{b}\right| = 5$ et que $0.1\leq 5$ : $\boxed{\left| P_{b}\right| \leq 10\% \left| U_{b}\right|}$.
+Le <u>calculateur</u> devra respecter ce critère. 
+
 
 ##### d. On traite $P_{y}$
-Diagramme de Bode, Nyquist, Black-Nichols sur le calculateur
+Le but de cette contrainte est d'assurer la stabilité du système en vérifiant en premier lieu le critère du revers. 
+Ensuite on trace les diagrammes de Bode, Nyquist et Black-Nichols de la fonction de transfert du système en boucle ouverte puis on mesure la marge de module sur le diagramme de Nyquist puis la marge de phase sur l'un des $3$ diagrammes. 
+Ici la fonction de transfert du <u>calculateur</u>, de l'enceinte et du bloqueur d'ordre zero seront prises en compte ($H_{BO}(p)= C(p)H_{sys}(p) = C(p)H_{BOZ}(p)H_{enc}(p)$)
+
+![[Pasted image 20260409172615.png]]
 
 ##### e. On traite $P_{u}$
-On fais un échelon sur $P_{u}$ et on regarde la sortie $Y_{C}(t)= cte$ 
-$$\min \left|\left| \frac{Y}{P_{u}} \right|\right|_{H_{2}} $$
+On recherche : $\min \left|\left| \frac{Y}{P_{u}} \right|\right|$,
+Alors on fait un échelon de bruit sur $P_{u}(t)$ et on regarde la sortie $Y_{C}(t)= cte$ puis on s'assure que $Y(t)$ suive la consigne. 
 
 
 
-
-
-
-
-# 1.2 Prof
-#### Donnés
-On a un retard max de $15$ ms et et un retard min (min????) de $20$ ms alors le retard total est de $L = 35$ms
-$$M_{\varphi} \geq 45° \text{ et } M_{M}  \geq 0.5 \text{ et } M_{r} = 3 \times L$$
-Avec $L$ le retard total. 
-___
-$$\left| C(p)\right| \leq N_{\max} = 5$$
-#### Tests a faire selon le cahier des charges
-###### a. On traite ma commande
-On applique un échelon de température $Y_{C}(t)$ en commande avant $F$ puis on regarde la sortie $Y(t)$
-
-###### b. On traite $P_{u}$ et $P_{y}$
-$C$ doit contenir un intégrateur
-Le gain statique de $F$ doit être égal à $1$
-Si on applique un échelon de température $Y_{C}(t)$ en commande avant $F$ et que l'on regarde la sortie $Y(t)$, la différence : $Y_{c}(t)- Y(t)\underset{}{\longrightarrow} 0$.
-
-###### c. On traite le bruit
-$$\left| C(p)\right| \leq_{\omega \to \infty} N_{\max} = \frac{\left| U_{b}\right|}{\left| P_{b}\right|} = \frac{0.5}{0.1} = 5$$
-$$Y_{C} = cte \underset{}{\longrightarrow} \text{mesure de } \left| U_{b}\right| $$
-
-###### d. On traite $P_{y}$
-Diagramme de Bode, Nyquist, Black-Nichols sur le calculateur
-
-###### e. On traite $P_{u}$
-On fais un échelon sur $P_{u}$ et on regarde la sortie $Y_{C}(t)= cte$ 
-$$\min \left|\left| \frac{Y}{P_{u}} \right|\right|_{H_{2}} $$
-
-# 1.3.1 Prof
-#### Compensation du pôle dominant à temps continu
-$$R(p) = KA = K(p+2) \text{ et } S(p) = p$$
-$2$ car $\tau = 0.5$ et donc $\omega_{0} = \frac{1}{\tau} = 2$
-
-Alors, 
+## 1.3 - Synthèses à temps continu et discrétisation ^a3
+### 1.3.1 - Synthèse par compensation du pôle dominant à temps continu ^a31
+#### 1.3.1.1 - Compensation du pôle dominant à temps continu ^a311
+$$H_{enc}(p) = \frac{G}{1 + \tau p}$$
+On prend le pôle le plus rapide : $-\frac{1}{\tau}$, 
+$$R(p) = K\left( p+\frac{1}{\tau} \right)= K(p+2) \text{ donc } S(p) = p$$
+Donc, 
 $$C(p) = K \frac{p+2}{p} = 5 \frac{p+2}{p}$$
-Car $N_{\max} = 5$. 
+Car $\left| C(p)\right| \underset{\omega \to + \infty}{=}N_{\max} = 5$. 
 Alors, 
-$$H_{BO}(p) = H(p) C(p) = \frac{G}{1+\tau p} \times 5\frac{p+z}{p} = \frac{5\times\frac{G}{\tau}}{p} = \frac{23}{p}$$
-
+$$H_{BO}(p) = H_{enc}(p) C(p) = \frac{G}{1+\tau p} \times 5\frac{p+2}{p} = \frac{5\times\frac{G}{\tau}}{p} = \frac{23}{p}$$
 
 
 ###### Calcul de la marge de module
-(?)
-$$M_{M} = \max_{\omega} \left| S_{y}(p)\right| = \left| \frac{Y}{P_{b}}\right| = \left| \frac{1}{1+H_{BO}}\right|$$
+$$M_{M} = \max_{\omega} \left| S_{y}(p)\right| = \left| \frac{1}{1+H_{BO}(p)}\right|$$
 Alors, 
 $$S_{y}(p) = \frac{p}{p+23} \Rightarrow \left| S_{y}\right| \leq 1$$
+Ainsi, $\boxed{M_{M} = 1 \geq 0.5}$ Le cahier des charges est bien suivi.
+
+###### Calcul de la marge de phase
+$$\boxed{M_{\varphi} = \pi + \arg(H_{BO}(p)_{\left| H_{BO}(\omega_{c})\right| = 1}) = \pi + \arg(-j) = \frac{\pi}{2} }$$
+$\boxed{M_{\varphi} = \frac{\pi}{2}\geq \frac{\pi}{4}}$ Le cahier des charges est bien suivi.
 
 ###### Calcul de la marge de retard
 (Plus grand retard que l'on peut avoir dans la boucle)
-$$M_{\text{retard}} = \frac{M_{\varphi}[rad]}{\omega_{c}} = \frac{\frac{\pi}{2}}{23} = 68 \, \text{ms}$$
-on veut que : $(M_{\text{retard}})_{\text{désirée}} \leq M_{\text{retard}}$ 
-
-Alors :
-###### Il faut que l'on diminue $K$
+Ainsi, 
+$$\boxed{M_{retard}  = \frac{M_{\varphi}}{\omega_{c}} = \frac{\frac{\pi}{2}}{23} = 68 \, \text{ms}}$$
+on veut que : $(M_{\text{retard}})_{\text{désirée}} = 105 \, \text{ms}\leq M_{\text{retard}}$ or $105 \, \text{ms}\nleq 68 \, \text{ms}$, alors Il faut que l'on diminue $K$ : 
 $$(M_{\text{retard}})_{\text{désirée}} = 105 \, \text{ms} = \frac{M_{\varphi}}{\omega_{c}}$$
 Alors, on veut que : $(M_{\text{retard}})_{\text{désirée}} \leq M_{\text{retard}}$ donc, 
 $$\omega_{c} \leq \frac{M_{\varphi}}{(M_{\text{retard}})_{\text{désirée}}} = \frac{\frac{\pi}{2}}{0.105} = 15 \, \text{rad.s}^{-1}$$
+Donc comme : $H_{BO}(p) =\frac{K \times \frac{G}{\tau}}{p}$ on a : $\left| H_{BO}(\omega_{c})\right| = 1 = \frac{K \times \frac{G}{\tau}}{\omega_{c}}$, alors $K = \frac{\omega_{c}}{\frac{G}{\tau}} = 3.26$
 Ainsi, 
 $$\boxed{C(p) = 3.26 \times \frac{p+2}{p}}$$
 
-$$C(z) = \frac{0.1}{1-z^{-1}}$$
-
-#### Avec pré-filtre
-EXCAL5
-$$H_{BF} = \frac{HC}{1+HC} = \frac{15}{p+15} = \frac{1}{1+\frac{p}{15}}$$
-
-#### Sans pré-filtre
-$F = 1$ : 
-EXCAL6
-
-EXCAL7
-
-$$\frac{Y}{P_{u}} = \frac{H}{1+HC} = \frac{1}{C} H_{BF} = \dots$$
 
 
-# 20/03
-$$H(p) = \frac{B(p)}{A(p)} = \frac{4.6}{p+2}$$
-$$C(p) = \frac{R(p)}{S(p)} = \frac{r_{0}+r_{1}p}{p}$$
-De plus dans le cours : 
-$$D(p) -A(p)S(p) + B(p) R(p) = 0$$
-$$D(p) = (p+2)p + 4.6(r_{0}+r_{1}p)$$
-$$D(p) = p^{2} + (2+4.6r_{0})p + 4.6r_{1}$$
-Or : 
-$$D_{désiré} (p) = (p+\omega_{0})^{2} = p^{2} + 2\omega_{0}p + \omega_{0}^{2}$$
-Alors, 
-$$r_{0} = \frac{2\omega_{0} -2}{4-6} \text{ et } r_{1} = \frac{\omega_{0}^{2}}{4.6}$$
-
-Si $r_{0}=5$ alors, $\omega_{0} =12.5 \text{ rad.s}^{-1}$
+#### 1.3.1.2 - Nécessité d'utiliser un préfiltre ^a312
+Comme : $H_{BO}(p)= \frac{K \times \frac{G}{\tau}}{p} = \frac{15}{p}$ alors, 
+$$H_{BF}(p) = \frac{H(p)C(p)}{1+H(p)C(p)} = \frac{15}{p+15} = \frac{1}{1+\frac{p}{15}}$$
+Dans le cas ou il n'y a pas de filtre on applique un échelon de consigne : $Y_{C}(t) = T °C$ alors en appliquant la transformée de Laplace : $Y_{C}(p) = \frac{T}{p}$ donc : 
+$$Y(p) = H_{BF}(p)Y_{C}(p) = \frac{15}{p(p+15)}T = \left( \frac{1}{p}-\frac{1}{p+15} \right)T$$
 Ainsi, 
-$$r_{1} = 3.4$$
+$$\boxed{Y(t) = \mathcal{L}^{-1}(Y(p)) = T(1-e^{ -15t }) }$$
+![[Pasted image 20260409221409.png]]
+Il n'y a pas de dépassement ainsi l'<u>utilisation d'un préfiltre dans ce cas n'est pas utile</u>. 
 
-3.95
+##### a. Echelon de consigne
+Comme on a une réponse exponentielle : $Y(t) = T\left( 1-e^{ -\frac{t}{\tau_{_{y}}} } \right)$ (en posant $\tau_{y}=\frac{1}{15}$) on peut facilement calculer le temps de réponse à $95\%$ qui est de $\boxed{t_{r} =3 \tau_{y} = 0.2 \, s}$
+
+##### b. Perturbation de commande
+Si on perturbe la commande avec un bruit $P_{u}(t)=\mathcal{P} = \text{cte}$ en utilisant la transformée de Laplace : $P_{u}(p) = \frac{\mathcal{P}}{p}$
+$$Y(p) = \frac{H_{enc}(p)}{1+C(p)H_{enc}(p)}P_{u}(p) =\frac{G\mathcal{P}}{p(1+\tau p)\left( 1+\frac{15}{p} \right)} $$
+$$= \frac{\frac{G\mathcal{P}}{\tau}}{\left( \frac{1}{\tau}+ p \right)\left( 15+p \right)} = \frac{G\mathcal{P}}{\tau}\left( \frac{A}{\frac{1}{\tau}+ p} + \frac{B}{15+p} \right)$$
+Alors par une décomposition en éléments simples on a : 
+$$A = \frac{1}{15-\frac{1}{\tau}} \text{ et }B = \frac{1}{\frac{1}{\tau}-15}$$
+Donc, 
+$$Y(p) = \frac{G\mathcal{P}}{1-15\tau}\left( \frac{1}{15+p} - \frac{1}{\frac{1}{\tau}+p} \right)$$
+Ainsi, 
+$$\boxed{Y(t) = \frac{G\mathcal{P}}{1-15\tau}\left( e^{ -15t } - e^{ -\frac{t}{\tau} } \right)}$$
+![[Pasted image 20260409230817.png]]
+On observe un dépassement qui dépend de l'amplitude du bruit de commande : $\mathcal{P}$. De plus à cause de ce dépassement, pour que la réponse atteigne son régime permanent il faut prendre en compte un retard additionnel.
+Ainsi pour réduire le dépassement de la réponse voulue il faut minimiser le bruit de commande $P_{u}$. 
+
+##### c. Retard additionnel admissible
+
+
+
+#### 1.3.1.2 - Implantation du calculateur à temps discret ^a312
+$$\boxed{T_{e} = 10 \, \text{ms}}$$
+
+#### 1.3.1.4 - Filtre anti-repliement de spectre ^a314
+On veut supprimer les composantes spectrales supérieures à $\frac{f_{e}}{2}$ ($f_{e}=\frac{1}{T_{e}}$ la fréquence d'échantillonnage) pour respecter le critère de Shannon : $f_{\max}\leq \frac{f_{e}}{2}$ (et donc éviter le repliement de spectre)
+![[Pasted image 20260410142719.png]]
+On choisit donc un filtre passe bas idéal de gain unitaire et fréquence de coupure : $\frac{f_{e}}{}$ (i.e. $\omega_{c} = \omega_{0} = \pi f_{e}$)
+![[Pasted image 20260410150319.png]]
+$$H_{FAR}(f) = \mathrm{Rect}_{f_{e}}(f) \overset{TF^{-1}}{\Rightarrow} h_{FAR}(t) = f_{e}\mathrm{sinc}\left( \pi f_{e} t \right)$$
+Donc, on rend le filtre causal pour assurer la stabilité du filtre : 
+$$y(n) = f_{e} \sum_{k = 0}^{+ \infty} \mathrm{sinc}\left( \pi f_{e}k \right)x(n-k)$$
+$\forall n \in \mathbb{N}, x(n) \text{ l'entrée} \text{ et } y(n) \text{ la sortie à temps discret du filtre}$
+Ainsi on applique la transformée en $z$ : 
+$$\boxed{ H_{FAR}(z)= \frac{y(n)}{x(n)} =f_{e} \sum_{k = 0}^{+ \infty} \mathrm{sinc}\left( \pi f_{e}k \right)z^{-k}}$$
+On peut donc facilement choisir l'ordre de ce filtre en arrêtant la somme à l'ordre voulu. 
+
+#### 1.3.1.5 - Fonction de transfert du calculateur à temps discret ^a315
+$$C(p) = 3.26 \frac{p+2}{p} \Leftrightarrow C(z) =  3.26 \frac{1+2T_{e}-z^{-1}}{1-z^{-1}} $$
+$$C(p) =  3.26 \frac{0.98p+2}{p} \Leftrightarrow C(z) =  3.26 \frac{1-(1-2T_{e})z^{-1}}{1-z^{-1}} $$
+($1+2T_{e}=1.02$ et $1-2T_{e}=0.98$)
+
+#### 1.3.1.6 - Fonctions de transfert à temps discret implémentés ^a316
+$$H_{enc}(z) = \frac{G}{1+\frac{\tau}{T_{e}} (1-z^{-1})}=\frac{\frac{G}{1+\frac{\tau}{T_{e}}}}{1- \frac{1}{1+\frac{T_{e}}{\tau}}z^{-1}}=\frac{0.045}{1-2.255z^{-1}}$$
+$$C(z) = 3.26 \frac{1-0.98z^{-1}}{1-z^{-1}}$$
+
+
+
+#### 1.3.1.7 - Algorithme de commande ^a317
+On convertit l'expressions de la fonction de transfert en $z$ de $C$ en $n$ avec les entrées-sorties associés : 
+$$U(z) = C(z)\varepsilon(z) = U(z)(1-z^{-1}) = 3.26(1-0.98z^{-1})\varepsilon(z)$$
+Alors, 
+$$\boxed{U(n)=U(n-1) + 3.26(\varepsilon(n)-0.98\varepsilon(n-1))}$$
+```
+Entrées : U(n-1), ε(n), ε(n-1)
+	max=5;
+	min=0;
+	
+	U(n) = U(n-1) + 3.26*(ε(n)-0.98ε(n-1));
+	if(U(n) > max){
+		return max;
+	}
+	else if(U(n)<min){
+		return min;
+	}
+	else{
+		return U(n);
+	}
+```
+
+
+#### 1.3.1.8 - Algorithme du système ^a318
+On convertit toutes les expressions des fonctions de transfert en $z$ en $n$ avec les entrées sorties associés.
+
+###### Enceinte :
+$$Y(z)=H(z)U(z) \Leftrightarrow Y(z)\left( 1-\frac{1}{1+\frac{T_{e}}{\tau}}z^{-1} \right) = \frac{G}{1+\frac{\tau}{T_{e}}}U(z)$$
+Alors, 
+$$ \boxed{Y(n) = \frac{1}{1+\frac{T_{e}}{\tau}}Y(n-1) + \frac{G}{1+\frac{\tau}{T_{e}}}U(n)}$$
+
+
+
+```C
+int N=500;
+
+float G=2.3;
+float tau=0.5;
+float fe=100;
+float Te=1/fe;
+
+
+uint8_t H_discret(uint8_t U, uint8_t Y){
+	return 1/(1+Te/tau)*Y + G/(1+tau/Te)*U;
+}
+
+uint8_t[N] C_discret_tableau(uint8_t Yc){
+	uint8_t Y = Yc[0];
+	int erreur=Yc[0]-Y;
+	
+	uint8_t U[N];
+	
+	int tmp;
+	
+	for(int n=1; n < N; n++){
+		tmp = 0.98*erreur; // err = Yc(n-1)-Y(n-1)
+		Y = H_discret(U[n], Y); // Y(n)
+		erreur = Yc[n]-Y; // Yc(n)-Y(n)
+		U[n] = U[n-1] + 3.26*(erreur-tmp); // U(n)
+	}
+	
+	
+	return U;
+}
+
+
+uint8_t C_discret(uint8_t Yc, uint8_t Yc_avant, uint8_t Y_avant, uint8_t U){
+	int erreur=Yc_avant-Y_avant;
+	int Y;
+	int tmp;
+	
+	
+	tmp = 0.98*erreur; // err = Yc(n-1)-Y(n-1)
+	Y = H_discret(U, Y_avant); // Y(n)
+	erreur = Yc-Y; // Yc(n)-Y(n)
+	U = U + 3.26*(erreur-tmp); // U(n)
+	
+	return U;
+}
+```
+
+
+### 1.3.2 - Synthèse par placement des pôles de la boucle fermée à temps continu ^a32
+#### 1.3.2.1 - Méthode de placement des pôles de la boucle fermée ^a321
