@@ -253,7 +253,7 @@ $$M_{M} = \max_{\omega} \left| S_{y}(p)\right| = \left| \frac{1}{1+H_{BO}(p)}\ri
 Alors, 
 $$S_{y}(p) = \frac{p}{p+23} \Rightarrow \left| S_{y}\right| \leq 1$$
 Ainsi, $\boxed{M_{M} = 1 \geq 0.5}$ Le cahier des charges est bien suivi.
-
+	
 ###### Calcul de la marge de phase
 $$\boxed{M_{\varphi} = \pi + \arg(H_{BO}(p)_{\left| H_{BO}(\omega_{c})\right| = 1}) = \pi + \arg(-j) = \frac{\pi}{2} }$$
 $\boxed{M_{\varphi} = \frac{\pi}{2}\geq \frac{\pi}{4}}$ Le cahier des charges est bien suivi.
@@ -414,3 +414,102 @@ uint8_t C_discret(uint8_t Yc, uint8_t Yc_avant, uint8_t Y_avant, uint8_t U){
 
 ### 1.3.2 - Synthèse par placement des pôles de la boucle fermée à temps continu ^a32
 #### 1.3.2.1 - Méthode de placement des pôles de la boucle fermée ^a321
+On définit : 
+$$C(p) = \frac{R(p)}{S(p)} \text{ et }H(p) = \frac{B(p)}{A(p)} \text{ et } F(p) = \frac{T(p)}{R(p)}$$
+##### a. Choix des degrés 
+On choisit le degré de $R(p)$ : 
+$\deg(R(p)) = \deg(A(p)) = 1$
+$$R(p) = r_{1}p+r_{0}$$
+Donc pour le cas d'un correcteur propre et intégral : 
+$$S(p) = p$$
+car $S(0)= 0$ pour assurer le rejet des perturbations constantes.
+
+On choisit le degré du polynôme de régulation $D(p)$ : 
+$$\deg(D(p)) = \deg(A) + \deg(S(p)) = 1+1 = 2$$
+Alors, 
+$$D(p) = p^{2} + d_{1}p + d_{0}$$
+Donc comme par définition : 
+$$D(p) = A(p)S(p) + B(p)R(p)$$
+On a : 
+$$D(p) = p(p+2) + 2G(r_{1}p+r_{0}) = p^{2} + (2+2Gr_{1})p + 2Gr_{0}$$
+Donc, 
+$$\begin{cases}
+d_{1} = 2(1+Gr_{1}) \\
+d_{0} = 2Gr_{0}
+\end{cases}$$
+Or les pôles de la boucle fermée sont : 
+$$D(p) = (p+p_{0})^{2} = p^{2}+2p_{0}p + p_{0}^{2}$$
+Ainsi, 
+$$\boxed{\begin{cases}
+1+Gr_{1} = p_{0} \\
+2Gr_{0}=p_{0}^{2}
+\end{cases} \Leftrightarrow \begin{cases}
+r_{1} = \frac{p_{0}-1}{G} \\
+r_{0} = \frac{p_{0}^{2}}{2G}
+\end{cases}}$$
+De plus, 
+$$(1+Gr_{1})^{2} = p_{0}^{2}=2Gr_{0} \Leftrightarrow r_{0} = \frac{(1+Gr_{1})^{2}}{2G}$$
+Alors, 
+$$C(p) = \frac{r_{1}p+r_{0}}{p}$$
+
+##### b. Gain en haute fréquence du correcteur
+$$C(p) \underset{p\to + \infty}{=} r_{1} = \frac{p_{0}-1}{G} \leq N_{\max} = 5$$
+Alors, 
+$$p_{0} \leq \frac{5+1}{G} = 2.6$$
+
+##### c. Calcul des marges
+###### Marge de module
+$$\min(1+\left| H_{BO}(p)\right|) = M_{M} > 0.5$$
+$$\left| C(p)H(p)\right| = 2G\left| \frac{r_{1}p+r_{0}}{p(p+2)}\right|=\frac{2G}{\omega_{c}\sqrt{\omega_{c}^{2}+2}} \sqrt{r_{1}^{2}+r_{0}^{2}}= 3.34$$
+(pour $p_{0}=2.6$)
+
+$$\max(\left| S_{y}(p)\right|) = \max \left| \frac{1}{1+C(p)H(p)}\right|$$
+
+$$S_{y}(p) = \frac{p(p+2)}{p(p+2)+2G(r_{1}p+r_{0})} = \frac{p^{2}+2p}{p^{2} + 2p_{0}p + p_{0}}$$
+
+Alors, 
+$$S_{y}(j\omega) = \frac{\omega^{2}-2j\omega}{(\omega-jp_{0})^{2}}$$
+$$f(\omega) = \frac{\omega \sqrt{\omega^{2}+4}}{\omega^{2}+p_{0}^{2}}=\left| S_{y}(p)\right|$$
+$$f'(\omega) = \frac{\left( \sqrt{\omega^{2}+4} + \frac{\omega^{2}}{\sqrt{\omega^{2}+4}} \right)(\omega^{2}+p_{0}^{2})-2\omega^{2} \sqrt{\omega^{2}+4}}{(\omega^{2}+p_{0}^{2})^{2}} $$
+$$f'(\omega) = 0 \Leftrightarrow (p_{0}^{2}-\omega^{2})\sqrt{\omega^{2}+4} + (\omega^{2}+p_{0}^{2})\frac{\omega^{2}}{\sqrt{\omega^{2}+4}}=0$$
+$$\Leftrightarrow (\omega^{2}-p_{0}^{2})(\omega^{2}+4) = (\omega^{2}+p_{0}^{2})\omega^{2}$$
+$$\Leftrightarrow \omega^{2} (4- p_{0}^{2})-4p_{0}^{2} = p_{0}^{2}\omega^{2} \Leftrightarrow (4-2p_{0}^{2})\omega^{2}=4p_{0}^{2} $$
+$$\Leftrightarrow \omega = p_{0}\sqrt{\frac{2}{2-p_{0}^{2}}}$$
+
+$$f'(\omega)> 0 \Leftrightarrow \omega < p_{0}\sqrt{\frac{2}{2-p_{0}^{2}}} \text{ et } f'(\omega)< 0 \Leftrightarrow \omega > p_{0}\sqrt{\frac{2}{2-p_{0}^{2}}}$$
+donc $0< p_{0} < \sqrt{2}$
+
+
+###### Marge de phase
+$$\pi + \arg(H_{BO}(p)_{H_{BO}(j\omega_{c}) = 1})=M_{\varphi} > 45°$$
+$$\left| H_{BO}(j\omega_{c})\right| = 1 = 2G\left| \frac{r_{1}j\omega_{c}+r_{0}}{2j\omega_{c}-\omega_{c}^{2}}\right| = \frac{2G}{\omega_{c}} \frac{\sqrt{r_{1}^{2}\omega_{c} + r_{0}^{2}}}{\sqrt{4+\omega_{c}^{2}}} $$
+$$\Leftrightarrow \omega_{c}\sqrt{\omega_{c}^{2}+4} = 2G\sqrt{r_{1}^{2}\omega_{c}^{2}+r_{0}^{2}} \Leftrightarrow \omega_{c}^{4}+4\omega_{c}^{2} = 4G^{2}(r_{1}^{2}\omega_{c}^{2} +r_{0}^{2})$$
+$$\Leftrightarrow \omega_{c}^{4}+ 4(1-(Gr_{1})^{2})\omega_{c}^{2} = 4G^{2}r_{0}^{2}$$
+On pose $X=\omega_{c}^{2}$,
+$$\Leftrightarrow X^{2}+4(1-(Gr_{1})^{2})X - (2Gr_{0})^{2} = 0$$
+___
+$$1+Gr_{1}=p_{0} \Leftrightarrow (Gr_{1})^{2} = (p_{0}-1)^{2} $$
+$$\Leftrightarrow 4(1-(Gr_{1})^{2}) = 4(1-(p_{0}-1)^{2})$$
+___
+$$\Leftrightarrow X^{2} + 4(1-(p_{0}-1)^{2})X - p_{0}^{4} = 0$$
+$$\Delta = 16(1-(p_{0}-1)^{2})^{2}+4p_{0}^{4}\geq0$$
+Alors, 
+$$\Delta = 20p_{0}^{4}-64p_{0}^{3}+64p_{0}^{2} = p_{0}^{2}(20p_{0}^{2}-64p_{0}+64)$$
+Alors, 
+$$X = p_{0}(2p_{0}-4) \pm p_{0}\sqrt{5p_{0}^{2}-16p_{0}+16}$$
+$$= p_{0}(2p_{0}-4 + \sqrt{5p_{0}^{2}-16p_{0}+16})$$
+$$\omega_{c} = \sqrt{X}$$
+
+$$H_{BO}(j\omega_{c}) = 2G\frac{r_{1}j\omega_{c}+r_{0}}{2j\omega_{c}-\omega_{c}^{2}} = 4.6 \frac{r_{1}j\omega_{c}+r_{0}}{2j\omega_{c}-\omega_{c}^{2}}$$
+Alors, 
+$$M_{\varphi} = \pi + \arg(r_{1}j\omega_{c}+r_{0}) - \arg(2j\omega_{c}-\omega_{c}^{2}) $$
+Donc, 
+$$M_{\varphi}= \pi + \left( \arctan\left( \frac{r_{1}}{r_{0}} \right) -\left( \pi+\arctan\left( \frac{2}{\omega_{c}} \right) \right) \right)$$
+Donc, 
+$$M_{\varphi} = \arctan\left( \frac{r_{1}}{r_{0}}\right)-\arctan\left( \frac{2}{\omega_{c}} \right) > \frac{\pi}{4} $$
+Or, 
+$$\frac{r_{1}}{r_{0}} = 2 \frac{p_{0}-1}{p_{0}^{2}}$$
+Donc, 
+$$\arctan\left( 2 \frac{p_{0}-1}{p_{0}^{2}} \right) > \frac{\pi}{4} + \arctan\left( \frac{2}{\omega_{c}} \right) = \arctan\left( \frac{1+\frac{2}{\omega_{c}}}{1-\frac{2}{\omega_{c}}} \right)$$
+Ainsi, 
+$$2\frac{p_{0}-1}{p_{0}^{2}} > \frac{\omega_{c}+2}{\omega_{c}-2}$$
