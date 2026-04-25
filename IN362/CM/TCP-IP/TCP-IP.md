@@ -73,3 +73,58 @@ Si le type est supérieur à : $1536_{2} = 600_{16}$ c'est une trame Ethernet II
 
 ##### En tête IPV4
 ![[Pasted image 20260402171058.png]]
+
+___
+# Séchage intensif de cours
+___
+# Protocole IP
+- Donnés (utilisateurs)
+- Donnés de contrôle
+  Protocole de contrôle : **ICMP**
+
+# Couche transport (communication entre applications)
+## Port
+Identifiant local à une machine auquel une application s'associe.
+
+### Protocoles
+- UDP
+- TCP
+
+#### UDP
+Datagramme (Photo)
+
+
+#### TCP
+Transmission fiable d'un flux d'octet bidirectionnel. 
+![[Pasted image 20260423111353.png]]
+
+
+
+
+##### Echanges TCP
+###### Début des échanges
+Initialisation de de seq
+$$ack_{n+1} = seq_{n}+1$$
+$$ack_{n+1} = len(DATA_{n}) +1$$
+![[Pasted image 20260423111448.png]]
+
+###### Tampon TCP
+A tout moment il peut ne plus avoir de place dans le tampon, alors, il ne faut pas que l'émetteur en envoie plus.
+Donc dans chaque segment on a une annonce de fenêtre (quantité de place restante dans le tampon)
+
+$$[\![0, 1024[\![ \cancel{ \Leftrightarrow } [0, 1024[$$
+
+![[Pasted image 20260423113325.png]]
+
+###### Choix des ISN
+De manière croissante dans le temps, avec un offset secret pour chaque quadruplet
+
+Croissant : Éliminer les vieux segments d'une incarnation précédente de la connection. 
+Secret : Empêcher les attaques en injection aveugle.
+
+
+##### Automate TCP
+###### Ouverture TCP
+![[Pasted image 20260423120744.png]]
+
+###### Fermeture TCP

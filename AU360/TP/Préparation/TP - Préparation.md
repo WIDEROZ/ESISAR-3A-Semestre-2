@@ -1,23 +1,20 @@
 # Sommaire
 
->[!Sommaire]
->
-> [[#^a1|1.1 - Modélisation]]
-> > [[#^a11|1.1.1 - Schéma]]
-> > [[#^a12|1.1.2 - Fonction de Transfert]] 
-> > [[#^a13|1.1.3 - Diagramme de Bode]]
-> > [[#^a14|1.1.4 - Bruit]]
-> > [[#^a15 |1.1.5 - Modèles statiques]]
-> > [[#^a16 |1.1.6 - Température externe]]
-> > [[#^a17 |1.1.7 - Fonction de transfert de la micro-enceinte climatique]]
-> > [[#^a18|1.1.8 - Modèle du CAN/CNA]]
-> > [[#^a19|1.1.9 - Schéma Fonctionnel]]
->
-> [[#^a2|1.2 - Spécifications de la synthèse de la commande]]
-> > [[#^a21|1.2.1 - Modèle à temps continu du système]]
-> > [[#^a22|1.2.2 - Schéma du système commandé par un calculateur et précédé par un pré-filtre]]
-> > [[#^a23|1.2.3 - Spécifications du cahier des charges]]
->
+[[#^a1|1.1 - Modélisation]]
+[[#^a11|1.1.1 - Schéma]]
+[[#^a12|1.1.2 - Fonction de Transfert]] 
+  [[#^a13|1.1.3 - Diagramme de Bode]]
+  [[#^a14|1.1.4 - Bruit]]
+  [[#^a15 |1.1.5 - Modèles statiques]]
+  [[#^a16 |1.1.6 - Température externe]]
+  [[#^a17 |1.1.7 - Fonction de transfert de la micro-enceinte climatique]]
+  [[#^a18|1.1.8 - Modèle du CAN/CNA]]
+  [[#^a19|1.1.9 - Schéma Fonctionnel]]
+
+ [[#^a2|1.2 - Spécifications de la synthèse de la commande]]
+  [[#^a21|1.2.1 - Modèle à temps continu du système]]
+  [[#^a22|1.2.2 - Schéma du système commandé par un calculateur et précédé par un pré-filtre]]
+  [[#^a23|1.2.3 - Spécifications du cahier des charges]]
 
 
 ## 1.1 - Modélisation ^a1
@@ -174,7 +171,7 @@ Ainsi,
 $$\boxed{H_{sys}(p) = \frac{1-e^{ -pT_{e} }}{p + \tau p^{2}}}$$
 
 
-#### b. Diagramme de Bode
+#### b. Diagramme de Bode A FAIRE
 Pour $T_{e} = \frac{1}{100}$ la période d'échantillonnage minimale du CAN/CNA
 ##### Gain
 $$G_{dB}(\omega) = 20 \log(\left| H_{sys}(\omega)\right|)$$
@@ -211,14 +208,14 @@ On applique un échelon de température $Y_{C}(t)$ en commande puis on regarde l
 Ainsi $T_{d}$ doit être inférieur à : $5\%$ de $T$ : $\boxed{T_{d} \leq 5 \% T}$
 Il faudra alors faire en sorte que le <u>calculateur et le filtre</u> respectent cette spécification.
 
-##### b. On traite $P_{u}$ et $P_{y}$
+##### b. On traite $P_{u}$ et $P_{y}$ A FAIRE
 $C$ doit contenir un intégrateur
 Le gain statique de $F$ doit être égal à $1$ ($F(0)=1$)
 Si on applique un échelon de température $Y_{C}(t)$ en commande avant $F$ et que l'on regarde la sortie $Y(t)$, la différence : $e(t) = Y_{c}(t)- Y(t)\underset{t \to + \infty}{\longrightarrow} 0 = e_{stat}$.
 
-##### c. On traite le bruit $P_{b}$ en hautes fréquences
-$$\left| C(p)\right| \leq_{\omega \to \infty} N_{\max} = \frac{\left| U_{b}\right|}{\left| P_{b}\right|} = \frac{5}{0.1} = 50$$
-On applique une consigne telle que la tension de commande soit maximale ($5 \, V$) puis on mesure $\left| P_{b}\right|$ et on vérifie que $\left| P_{b}\right|$ ne dépasse pas $10 \%$ de $\left| U_{b}\right|$ : $\left| P_{b}\right| = 0.1$ et $\left| U_{b}\right| = 5 \, V$ alors comme : $10\%\left| U_{b}\right| = 5$ et que $0.1\leq 5$ : $\boxed{\left| P_{b}\right| \leq 10\% \left| U_{b}\right|}$.
+##### c. On traite le bruit $P_{b}$ en hautes fréquences A FAIRE
+$$\left| C(p)\right| \leq_{\omega \to \infty} N_{\max} = \frac{\left| U_{b}\right|}{\left| P_{b}\right|} = \frac{0.5}{0.1} = 5$$
+On applique une consigne telle que la tension de commande soit maximale ($5 \, V$) puis on mesure $\left| P_{b}\right|$ et on vérifie que $\left| P_{b}\right|$ ne dépasse pas $10 \%$ de $\left| U_{b}\right|$ : $\left| P_{b}\right| = 0.1$ et $\left| U_{b}\right| = 0.5 \, V$ alors comme : $10\%\left| U_{b}\right| = 5$ et que $0.1\leq 5$ : $\boxed{\left| P_{b}\right| \leq 10\% \left| U_{b}\right|}$.
 Le <u>calculateur</u> devra respecter ce critère. 
 
 
@@ -229,7 +226,7 @@ Ici la fonction de transfert du <u>calculateur</u>, de l'enceinte et du bloqueur
 
 ![[Pasted image 20260409172615.png]]
 
-##### e. On traite $P_{u}$
+##### e. On traite $P_{u}$ A FAIRE
 On recherche : $\min \left|\left| \frac{Y}{P_{u}} \right|\right|$,
 Alors on fait un échelon de bruit sur $P_{u}(t)$ et on regarde la sortie $Y_{C}(t)= cte$ puis on s'assure que $Y(t)$ suive la consigne. 
 
@@ -253,15 +250,16 @@ $$M_{M} = \max_{\omega} \left| S_{y}(p)\right| = \left| \frac{1}{1+H_{BO}(p)}\ri
 Alors, 
 $$S_{y}(p) = \frac{p}{p+23} \Rightarrow \left| S_{y}\right| \leq 1$$
 Ainsi, $\boxed{M_{M} = 1 \geq 0.5}$ Le cahier des charges est bien suivi.
-	
+
 ###### Calcul de la marge de phase
-$$\boxed{M_{\varphi} = \pi + \arg(H_{BO}(p)_{\left| H_{BO}(\omega_{c})\right| = 1}) = \pi + \arg(-j) = \frac{\pi}{2} }$$
+$$\boxed{M_{\varphi} = \pi + \arg(H_{BO}(p)_{\left| H_{BO}(\omega_{c})\right| = 1}) = \pi - \arg(j) = \frac{\pi}{2} }$$
 $\boxed{M_{\varphi} = \frac{\pi}{2}\geq \frac{\pi}{4}}$ Le cahier des charges est bien suivi.
 
 ###### Calcul de la marge de retard
 (Plus grand retard que l'on peut avoir dans la boucle)
 Ainsi, 
 $$\boxed{M_{retard}  = \frac{M_{\varphi}}{\omega_{c}} = \frac{\frac{\pi}{2}}{23} = 68 \, \text{ms}}$$
+A FAIRE
 on veut que : $(M_{\text{retard}})_{\text{désirée}} = 105 \, \text{ms}\leq M_{\text{retard}}$ or $105 \, \text{ms}\nleq 68 \, \text{ms}$, alors Il faut que l'on diminue $K$ : 
 $$(M_{\text{retard}})_{\text{désirée}} = 105 \, \text{ms} = \frac{M_{\varphi}}{\omega_{c}}$$
 Alors, on veut que : $(M_{\text{retard}})_{\text{désirée}} \leq M_{\text{retard}}$ donc, 
@@ -299,27 +297,27 @@ $$\boxed{Y(t) = \frac{G\mathcal{P}}{1-15\tau}\left( e^{ -15t } - e^{ -\frac{t}{\
 On observe un dépassement qui dépend de l'amplitude du bruit de commande : $\mathcal{P}$. De plus à cause de ce dépassement, pour que la réponse atteigne son régime permanent il faut prendre en compte un retard additionnel.
 Ainsi pour réduire le dépassement de la réponse voulue il faut minimiser le bruit de commande $P_{u}$. 
 
-##### c. Retard additionnel admissible
+##### c. Retard additionnel admissible A FAIRE
 
 
 
 #### 1.3.1.2 - Implantation du calculateur à temps discret ^a312
 $$\boxed{T_{e} = 10 \, \text{ms}}$$
 
-#### 1.3.1.4 - Filtre anti-repliement de spectre ^a314
+#### 1.3.1.4 - Filtre anti-repliement de spectre A FAIRE (Voir C2 pour intégrer un retard pur de $T_{e}$) ^a314
 On veut supprimer les composantes spectrales supérieures à $\frac{f_{e}}{2}$ ($f_{e}=\frac{1}{T_{e}}$ la fréquence d'échantillonnage) pour respecter le critère de Shannon : $f_{\max}\leq \frac{f_{e}}{2}$ (et donc éviter le repliement de spectre)
 ![[Pasted image 20260410142719.png]]
-On choisit donc un filtre passe bas idéal de gain unitaire et fréquence de coupure : $\frac{f_{e}}{}$ (i.e. $\omega_{c} = \omega_{0} = \pi f_{e}$)
+On choisit donc un filtre passe bas idéal de gain unitaire et fréquence de coupure : $\frac{f_{e}}{2}$ (i.e. $\omega_{c} = \omega_{0} = \pi f_{e}$)
 ![[Pasted image 20260410150319.png]]
 $$H_{FAR}(f) = \mathrm{Rect}_{f_{e}}(f) \overset{TF^{-1}}{\Rightarrow} h_{FAR}(t) = f_{e}\mathrm{sinc}\left( \pi f_{e} t \right)$$
 Donc, on rend le filtre causal pour assurer la stabilité du filtre : 
 $$y(n) = f_{e} \sum_{k = 0}^{+ \infty} \mathrm{sinc}\left( \pi f_{e}k \right)x(n-k)$$
 $\forall n \in \mathbb{N}, x(n) \text{ l'entrée} \text{ et } y(n) \text{ la sortie à temps discret du filtre}$
 Ainsi on applique la transformée en $z$ : 
-$$\boxed{ H_{FAR}(z)= \frac{y(n)}{x(n)} =f_{e} \sum_{k = 0}^{+ \infty} \mathrm{sinc}\left( \pi f_{e}k \right)z^{-k}}$$
+$$\boxed{ H_{FAR}(z)= \frac{y(z)}{x(z)} =f_{e} \sum_{k = 0}^{+ \infty} \mathrm{sinc}\left( \pi f_{e}k \right)z^{-k}}$$
 On peut donc facilement choisir l'ordre de ce filtre en arrêtant la somme à l'ordre voulu. 
 
-#### 1.3.1.5 - Fonction de transfert du calculateur à temps discret ^a315
+#### 1.3.1.5 - Fonction de transfert du calculateur à temps discret A FAIRE ^a315
 $$C(p) = 3.26 \frac{p+2}{p} \Leftrightarrow C(z) =  3.26 \frac{1+2T_{e}-z^{-1}}{1-z^{-1}} $$
 $$C(p) =  3.26 \frac{0.98p+2}{p} \Leftrightarrow C(z) =  3.26 \frac{1-(1-2T_{e})z^{-1}}{1-z^{-1}} $$
 ($1+2T_{e}=1.02$ et $1-2T_{e}=0.98$)
@@ -332,7 +330,7 @@ $$C(z) = 3.26 \frac{1-0.98z^{-1}}{1-z^{-1}}$$
 
 #### 1.3.1.7 - Algorithme de commande ^a317
 On convertit l'expressions de la fonction de transfert en $z$ de $C$ en $n$ avec les entrées-sorties associés : 
-$$U(z) = C(z)\varepsilon(z) = U(z)(1-z^{-1}) = 3.26(1-0.98z^{-1})\varepsilon(z)$$
+$$U(z) = C(z)\varepsilon(z) \Leftrightarrow U(z)(1-z^{-1}) = 3.26(1-0.98z^{-1})\varepsilon(z)$$
 Alors, 
 $$\boxed{U(n)=U(n-1) + 3.26(\varepsilon(n)-0.98\varepsilon(n-1))}$$
 ```
@@ -340,7 +338,7 @@ Entrées : U(n-1), ε(n), ε(n-1)
 	max=5;
 	min=0;
 	
-	U(n) = U(n-1) + 3.26*(ε(n)-0.98ε(n-1));
+	U(n) = U(n-1) + 3.26*(ε(n)-0.98*ε(n-1));
 	if(U(n) > max){
 		return max;
 	}
@@ -374,25 +372,6 @@ float Te=1/fe;
 
 uint8_t H_discret(uint8_t U, uint8_t Y){
 	return 1/(1+Te/tau)*Y + G/(1+tau/Te)*U;
-}
-
-uint8_t[N] C_discret_tableau(uint8_t Yc){
-	uint8_t Y = Yc[0];
-	int erreur=Yc[0]-Y;
-	
-	uint8_t U[N];
-	
-	int tmp;
-	
-	for(int n=1; n < N; n++){
-		tmp = 0.98*erreur; // err = Yc(n-1)-Y(n-1)
-		Y = H_discret(U[n], Y); // Y(n)
-		erreur = Yc[n]-Y; // Yc(n)-Y(n)
-		U[n] = U[n-1] + 3.26*(erreur-tmp); // U(n)
-	}
-	
-	
-	return U;
 }
 
 
@@ -447,41 +426,26 @@ $$\boxed{\begin{cases}
 r_{1} = \frac{p_{0}-1}{G} \\
 r_{0} = \frac{p_{0}^{2}}{2G}
 \end{cases}}$$
-De plus, 
-$$(1+Gr_{1})^{2} = p_{0}^{2}=2Gr_{0} \Leftrightarrow r_{0} = \frac{(1+Gr_{1})^{2}}{2G}$$
 Alors, 
-$$C(p) = \frac{r_{1}p+r_{0}}{p}$$
+$$\boxed{C(p) = \frac{r_{1}p+r_{0}}{p}}$$
 
 ##### b. Gain en haute fréquence du correcteur
 $$C(p) \underset{p\to + \infty}{=} r_{1} = \frac{p_{0}-1}{G} \leq N_{\max} = 5$$
 Alors, 
-$$p_{0} \leq \frac{5+1}{G} = 2.6$$
+$$p_{0} \leq 5\times 2.3+1 = 12.5$$
+Donc on choisit $r_{1} = 5$. 
+Ainsi, 
+$$\boxed{r_{1} = 5 \text{ et } r_{0} = 34}$$
 
 ##### c. Calcul des marges
 ###### Marge de module
-$$\min(1+\left| H_{BO}(p)\right|) = M_{M} > 0.5$$
-$$\left| C(p)H(p)\right| = 2G\left| \frac{r_{1}p+r_{0}}{p(p+2)}\right|=\frac{2G}{\omega_{c}\sqrt{\omega_{c}^{2}+2}} \sqrt{r_{1}^{2}+r_{0}^{2}}= 3.34$$
-(pour $p_{0}=2.6$)
-
-$$\max(\left| S_{y}(p)\right|) = \max \left| \frac{1}{1+C(p)H(p)}\right|$$
-
-$$S_{y}(p) = \frac{p(p+2)}{p(p+2)+2G(r_{1}p+r_{0})} = \frac{p^{2}+2p}{p^{2} + 2p_{0}p + p_{0}}$$
-
+$$\min(1+\left| H_{BO}(p)\right|) = M_{M}$$
+$$\left| C(p)H(p)\right| = 2G\left| \frac{r_{1}p+r_{0}}{p(p+2)}\right|=\frac{2G}{\omega\sqrt{\omega^{2}+2}} \sqrt{(r_{1}\omega)^{2}+r_{0}^{2}} \underset{\omega \to +\infty}{\longrightarrow} 0$$
 Alors, 
-$$S_{y}(j\omega) = \frac{\omega^{2}-2j\omega}{(\omega-jp_{0})^{2}}$$
-$$f(\omega) = \frac{\omega \sqrt{\omega^{2}+4}}{\omega^{2}+p_{0}^{2}}=\left| S_{y}(p)\right|$$
-$$f'(\omega) = \frac{\left( \sqrt{\omega^{2}+4} + \frac{\omega^{2}}{\sqrt{\omega^{2}+4}} \right)(\omega^{2}+p_{0}^{2})-2\omega^{2} \sqrt{\omega^{2}+4}}{(\omega^{2}+p_{0}^{2})^{2}} $$
-$$f'(\omega) = 0 \Leftrightarrow (p_{0}^{2}-\omega^{2})\sqrt{\omega^{2}+4} + (\omega^{2}+p_{0}^{2})\frac{\omega^{2}}{\sqrt{\omega^{2}+4}}=0$$
-$$\Leftrightarrow (\omega^{2}-p_{0}^{2})(\omega^{2}+4) = (\omega^{2}+p_{0}^{2})\omega^{2}$$
-$$\Leftrightarrow \omega^{2} (4- p_{0}^{2})-4p_{0}^{2} = p_{0}^{2}\omega^{2} \Leftrightarrow (4-2p_{0}^{2})\omega^{2}=4p_{0}^{2} $$
-$$\Leftrightarrow \omega = p_{0}\sqrt{\frac{2}{2-p_{0}^{2}}}$$
-
-$$f'(\omega)> 0 \Leftrightarrow \omega < p_{0}\sqrt{\frac{2}{2-p_{0}^{2}}} \text{ et } f'(\omega)< 0 \Leftrightarrow \omega > p_{0}\sqrt{\frac{2}{2-p_{0}^{2}}}$$
-donc $0< p_{0} < \sqrt{2}$
+$$\boxed{M_{M} = \max(\left| S_{y}(p)\right|) = \max \left| \frac{1}{1+C(p)H(p)}\right| = 1}$$
 
 
-###### Marge de phase
-$$\pi + \arg(H_{BO}(p)_{H_{BO}(j\omega_{c}) = 1})=M_{\varphi} > 45°$$
+###### Calcul de $\omega_{c}$ 
 $$\left| H_{BO}(j\omega_{c})\right| = 1 = 2G\left| \frac{r_{1}j\omega_{c}+r_{0}}{2j\omega_{c}-\omega_{c}^{2}}\right| = \frac{2G}{\omega_{c}} \frac{\sqrt{r_{1}^{2}\omega_{c} + r_{0}^{2}}}{\sqrt{4+\omega_{c}^{2}}} $$
 $$\Leftrightarrow \omega_{c}\sqrt{\omega_{c}^{2}+4} = 2G\sqrt{r_{1}^{2}\omega_{c}^{2}+r_{0}^{2}} \Leftrightarrow \omega_{c}^{4}+4\omega_{c}^{2} = 4G^{2}(r_{1}^{2}\omega_{c}^{2} +r_{0}^{2})$$
 $$\Leftrightarrow \omega_{c}^{4}+ 4(1-(Gr_{1})^{2})\omega_{c}^{2} = 4G^{2}r_{0}^{2}$$
@@ -498,18 +462,229 @@ $$\Delta = 20p_{0}^{4}-64p_{0}^{3}+64p_{0}^{2} = p_{0}^{2}(20p_{0}^{2}-64p_{0}+6
 Alors, 
 $$X = p_{0}(2p_{0}-4) \pm p_{0}\sqrt{5p_{0}^{2}-16p_{0}+16}$$
 $$= p_{0}(2p_{0}-4 + \sqrt{5p_{0}^{2}-16p_{0}+16})$$
-$$\omega_{c} = \sqrt{X}$$
+$$\boxed{\omega_{c} = \sqrt{X} = 23.83 \, \text{rad.s}^{-1}}$$
 
+###### Marge de phase
+$$\pi + \arg(H_{BO}(p)_{H_{BO}(j\omega_{c}) = 1})=M_{\varphi}$$
+Alors comme : 
 $$H_{BO}(j\omega_{c}) = 2G\frac{r_{1}j\omega_{c}+r_{0}}{2j\omega_{c}-\omega_{c}^{2}} = 4.6 \frac{r_{1}j\omega_{c}+r_{0}}{2j\omega_{c}-\omega_{c}^{2}}$$
-Alors, 
+On a : 
 $$M_{\varphi} = \pi + \arg(r_{1}j\omega_{c}+r_{0}) - \arg(2j\omega_{c}-\omega_{c}^{2}) $$
+Alors, 
+$$M_{\varphi}= \pi + \left( \arctan\left( \frac{r_{1}\omega_{c}}{r_{0}} \right) -\left( \pi+\arctan\left( \frac{2}{\omega_{c}} \right) \right) \right)$$
 Donc, 
-$$M_{\varphi}= \pi + \left( \arctan\left( \frac{r_{1}}{r_{0}} \right) -\left( \pi+\arctan\left( \frac{2}{\omega_{c}} \right) \right) \right)$$
+$$M_{\varphi} = \arctan\left( \frac{r_{1}\omega_{c}}{r_{0}}\right)-\arctan\left( \frac{2}{\omega_{c}} \right) > \frac{\pi}{4} $$
+Ainsi : 
+$$\boxed{M_{\varphi} = \arctan\left( \frac{2(p_{0}-1)\omega_{c}}{p_{0}^{2}} \right) -\arctan\left( \frac{2}{\omega_{c}} \right) =69.29°>45°}$$
+
+##### Correcteur Final
+Ainsi en posant : 
+$$r_{1}= \frac{p_{0}-1}{G}=5 \text{ et } r_{0} = \frac{p_{0}^{2}}{2G}\approx34$$
+$$\boxed{C(p) = \frac{5p+34}{p}}$$
+
+##### Filtre Final
+	On a : $F(p) = \frac{T(p)}{R(p)}$ et on souhaite que $F(0) = 1$ donc $T(0) = R(0) = r_{0}=34$ de plus on considère aussi que $T(p)$ est constant on a ainsi : 
+$$\boxed{F(p) = \frac{34}{5p+34}}$$
+
+
+#### 1.3.2.2 - Commande obtenue ^a322
+##### a. Temps de réponse d'un échelon de consigne en température
+$$Y_{c}(t) = T \Leftrightarrow Y_{c}(p) = \frac{T}{p}$$
+Alors, 
+$$Y(p) = F(p) \frac{H(p)C(p)}{1+H(p)C(p)}Y_{c}(p) = \frac{5}{5p+34} \times \frac{\frac{5p+34}{p} \frac{G}{1+\tau p}}{1+\frac{5p+34}{p} \frac{G}{1+\tau p}} \frac{T}{p}$$
+$$= \frac{5T}{p} \frac{G}{p(1+\tau p) + G(5p+34)}$$
+$$= \frac{5T}{p} \frac{G}{34G + (1+5G)p+ \tau p^{2}}$$
+Alors, en posant : 
+$$a = \tau = 0.5\text{ et }b = 1+5G = 14 \text{ et } c=34G=88.4$$
+$$\Delta = b^{2}-4ac = 19.2> 0$$
+Alors, 
+$$p_{-} = \frac{-b -\sqrt{\Delta}}{2a} = -18.38\text{ et }p_{+} = \frac{-b +\sqrt{\Delta}}{2a} = -9.62$$
 Donc, 
-$$M_{\varphi} = \arctan\left( \frac{r_{1}}{r_{0}}\right)-\arctan\left( \frac{2}{\omega_{c}} \right) > \frac{\pi}{4} $$
-Or, 
-$$\frac{r_{1}}{r_{0}} = 2 \frac{p_{0}-1}{p_{0}^{2}}$$
-Donc, 
-$$\arctan\left( 2 \frac{p_{0}-1}{p_{0}^{2}} \right) > \frac{\pi}{4} + \arctan\left( \frac{2}{\omega_{c}} \right) = \arctan\left( \frac{1+\frac{2}{\omega_{c}}}{1-\frac{2}{\omega_{c}}} \right)$$
+$$34G + (1+5G)p+ \tau p^{2}= \tau(p-p_{-})(p-p_{+})$$
+On effectue alors une decomposition en éléments simples :
+$$Y(p)= \frac{5TG}{\tau} \frac{1}{p(p-p_{-})(p-p_{+})}$$
+$$=\frac{5TG}{\tau}\left( \frac{\frac{1}{p_{+}p_{-}}}{p}+\frac{\frac{1}{p_{-}(p_{-}-p_{+})}}{p-p_{-}}+\frac{\frac{1}{p_{+}(p_{+}-p_{-})}}{p-p_{+}} \right)$$
+$$Y(t)= \frac{5TG}{\tau}\left( \frac{1}{p_{+}p_{-}} + \frac{1}{p_{-}(p_{-}-p_{+})} e^{ p_{-}t } + \frac{1}{p_{+}(p_{+}-p_{-})} e^{ p_{+}t } \right)$$
+![[Pasted image 20260417224040.png]]
+
+
+##### b. Retard additionnel admissible dans la commande A FAIRE
+
+
+#### 1.3.2.3 - Période d'échantillonnage A FAIRE ^a323
+$$\boxed{T_{e} = 10 \, \text{ms}}$$
+
+
+#### 1.3.2.4 - Filtre anti-repliement de spectre ^a324
+Voir [[#^a314|1.3.1.4 - Filtre anti-repliement de spectre]].
+
+#### 1.3.2.5 - Fonctions de transfert à temps discret ^a325
+$$C(p) = \frac{5p+34}{p} \text{ et } F(p) = \frac{34}{5p+34}$$
+Ainsi, en utilisant l'approximation d'Euler implicite
+$$\boxed{C(z) = \frac{5(1-z^{-1}) + 34T_{e}}{1-z^{-1}} = \frac{5.34-5z^{-1}}{1-z^{-1}}}$$
+$$\boxed{F(z) = \frac{34}{\frac{5}{T_{e}}(1-z^{-1})+34} = \frac{34}{534-500z^{-1}}}$$
+
+
+#### 1.3.2.6 - Fonctions de transfert implémentées ^a326
+$$\boxed{H_{enc}(z)=\frac{0.045}{1-2.255z^{-1}}}$$
+$$\boxed{C(z) = \frac{5.34-5z^{-1}}{1-z^{-1}}}$$
+$$\boxed{F(z) =  \frac{34}{534-500z^{-1}}}$$
+
+#### 1.3.2.7 - Fonctions de transfert implémentées ^a327
+On convertit l'expressions de la fonction de transfert en $z$ de $C$ en $n$ avec les entrées-sorties associés : 
+$$U(z) = C(z)\varepsilon(z) \Leftrightarrow U(z)(1-z^{-1}) = (5.34-5z^{-1})\varepsilon(z)$$
+Alors, 
+$$\boxed{U(n)=U(n-1) + (5.34\varepsilon(n)-5\varepsilon(n-1))}$$
+```
+Entrées : U(n-1), ε(n), ε(n-1)
+	max=5;
+	min=0;
+	
+	U(n) = U(n-1) + (5.34*ε(n)-5*ε(n-1));
+	if(U(n) > max){
+		return max;
+	}
+	else if(U(n)<min){
+		return min;
+	}
+	else{
+		return U(n);
+	}
+```
+
+#### 1.3.2.8 - Fonctions de transfert implémentées ^a328
+On convertit l'expressions de la fonction de transfert en $z$ de $F$ en $n$ avec les entrées-sorties associés : 
+$$Y_{C}(z)=F(z)Ref(z) = \frac{34}{\left( \frac{5}{T_{e}}+34 \right)-\frac{5}{T_{e}}z^{-1}}Ref(z)$$
+Alors, 
+$$\left( \frac{5}{34T_{e}}+1 \right)Y_{C}(n)=\frac{5}{34T_{e}}Y_{C}(n-1)+Ref(n)$$
 Ainsi, 
-$$2\frac{p_{0}-1}{p_{0}^{2}} > \frac{\omega_{c}+2}{\omega_{c}-2}$$
+$$\boxed{Y_{C}(n) = \frac{1}{1+\frac{34T_{e}}{5}} Y_{C}(n-1)+ \frac{1}{\frac{5}{34T_{e}}+1} Ref(n)}$$
+
+Comme la fonction de transfert de l'enceinte reste inchangée :
+```C
+int N=500;
+
+float G=2.3;
+float tau=0.5;
+float fe=100;
+float Te=1/fe;
+
+
+uint8_t H_discret(uint8_t U, uint8_t Y){
+	return 1/(1+Te/tau)*Y + G/(1+tau/Te)*U;
+}
+
+
+uint8_t C_discret(uint8_t Yc, uint8_t Yc_avant, uint8_t Y_avant, uint8_t U){
+	int erreur=Yc_avant-Y_avant;
+	int Y;
+	int tmp;
+	
+	
+	tmp = erreur; // err = Yc(n-1)-Y(n-1)
+	Y = H_discret(U, Y_avant); // Y(n)
+	erreur = Yc-Y; // Yc(n)-Y(n)
+	U = U + ((5+34*Te)*erreur-5*tmp); // U(n)
+	
+	return U;
+}
+
+uint8_t F_discret(uint8_t Ref, uint8_t Yc_avant){
+	return (1/(1+34*Te/5))*Yc_avant + (1/(1+5*Te/34))*Ref;
+}
+```
+
+## 1.4 - Synthèses de commandes à temps discret ^a4
+#### a. Période d'échantillonnage A FAIRE
+$$\boxed{T_{e} = 10ms}$$
+
+#### b. Filtre anti-repliement de spectre
+Voir [[#^a314|1.3.1.4 - Filtre anti-repliement de spectre]].
+
+A FAIRE : CALCUL D'UN PROBABLE RETARD PUR
+
+#### c. Modèle linéaire à temps discret
+$$\frac{Ny(p)}{Nu(p)} = H_{\mathrm{CNA}}(p)H_{BOZ}H(p)H_{\mathrm{CAN}}(p) $$
+Comme $H_{CNA}(p) = 1$ : 
+$$H_{CNA\to CAN}(p) = \frac{Ny(p)}{Nu(p)} = H_{BOZ}(p) H(p)H_{CAN}(p)$$
+On a donc :
+$$H_{CNA\to CAN}(p) = H(p)H_{BOZ}(p) = G\frac{1-e^{ -pT_{e} }}{p(1+\tau p)}$$
+Alors, 
+$$H_{CNA\to CAN}(z) = G\,\, \mathcal{TZ}\left( \frac{1-e^{ -pT_{e} }}{p(1+\tau p)} \right) = G (1-z^{-1}) \mathcal{Z}\left( \frac{1}{p(1+\tau p)} \right)$$
+Mais comme : 
+$$\frac{1}{p(1+\tau p)} = \frac1p - \frac{1}{\frac{1}{\tau}+p}$$
+On a : 
+$$\mathcal{TZ}\left( \frac{1}{p(1+\tau p)} \right) = \frac{1}{1-z^{-1}}-\frac{1}{1-e^{ -\frac{T_{e}}{\tau} }z^{-1} }$$
+$$ = \frac{1-e^{ -\frac{T_{e}}{\tau} }z^{-1} - (1-z^{-1})}{(1-z^{-1})\left( 1-e^{ -\frac{T_{e}}{\tau} }z^{-1} \right)} = \frac{\left( 1-e^{ -\frac{T_{e}}{\tau} } \right)z^{-1}}{(1-z^{-1})\left( 1-e^{ -\frac{T_{e}}{\tau} }z^{-1} \right)}$$
+Donc, 
+$$\boxed{H_{sys}(z) = \mathcal{TZ}(H(p)H_{BOZ}(p)) = G\frac{\left( 1-e^{ -\frac{T_{e}}{\tau} } \right)z^{-1}}{ 1-e^{ -\frac{T_{e}}{\tau} }z^{-1} }}$$
+
+### 1.4.1 - Synthèse par compensation du pôle dominant à temps discret ^a41
+#### 1.4.1.1 - Méthode de compensation du pôle dominant discrete A FAIRE ^a411
+
+
+### 1.4.2 - Synthèse par placement des pôles de la boucle fermée à temps discret ^a42
+#### 1.4.2.1 - Méthode de placement des pôles de la boucle fermée à temps discret ^a421
+##### a. Calcul de $z_{BF}$
+L'expression du polynôme de régulation désiré est : 
+$$D(z) = (1-z_{BF}z^{-1})^{n}$$
+Avec : 
+$$z_{BF} = e^{ -\frac{6.3T_{e}}{t_{rep_{95\%}}}} $$
+Alors, on recherche le temps de réponse ($t_{rep_{95\%}}$) du système, précédemment synthétisé dans le domaine continu ([[#^a322|a. Temps de réponse d'un échelon de consigne en température]]) à un échelon de température. 
+
+Il faut donc résoudre l'équation :
+$$Y(t_{rep_{95\%}}) = 95\% \lim_{ t \to +\infty } Y(t) = 95 \%\frac{5TG}{\tau p_{-}p_{+}}$$
+Avec :
+$$Y(t)= \frac{5TG}{\tau}\left( \frac{1}{p_{+}p_{-}} + \frac{1}{p_{-}(p_{-}-p_{+})} e^{ p_{-}t } + \frac{1}{p_{+}(p_{+}-p_{-})} e^{ p_{+}t } \right)$$
+
+Remarque : $t_{rep_{95\%}}$ ne dépend pas de $T$ (l'amplitude de l'échelon de température)
+
+On la résout de manière numérique avec Geogebra :
+On teste en premier avec un petit échelon de température : 
+![[Pasted image 20260423200634.png]]
+
+En deuxième avec un grand échelon de température : 
+![[Pasted image 20260423200703.png]]
+Donc, 
+$$t_{rep_{95\%}} = 0.387$$
+Ainsi, 
+$$\boxed{z_{BF}= e^{ - \frac{6.3 T_{e}}{0.387} } = 0.850}$$
+
+##### b. Détermination de $C(p)$
+$$H_{sys}(z) = G\frac{\left( 1-e^{ -\frac{T_{e}}{\tau} } \right)z^{-2}}{ 1-e^{ -\frac{T_{e}}{\tau} }z^{-1} } = \frac{0.046z^{-2}}{1-0.980z^{-1}} $$
+On pose : 
+$$C(z) = \frac{R(z)}{S(z)} \text{ et } H_{sys}(z)  = \frac{A(z)}{B(z)}$$
+
+Alors, comme $\deg(R(z))= \deg(B(z))=1$, puis que 
+$\deg(S(z)) > \deg(R(z))=1$ et $S(z=1)=0$ on choisit alors : 
+$$R(z) = r_{0}+r_{1}z^{-1} \text{ et } S(z) =(1-z^{-1})(1-s_{0}z^{-1})$$
+
+Donc par définition du polynôme de régulation : 
+$$D(z) = A(z)S(z) + B(z)R(z) $$
+$$= (1-0.98z^{-1})(1-z^{-1})(1-s_{0}z^{-1}) + 0.046z^{-2}(r_{0}+r_{1}z^{-1})$$
+$$ \begin{array}{llcl}
+=&-&(-0.046r_{1}+0.98s_{0})&z^{-3} \\
+&+&(0.046r_{0}+s_{0}+0.98+0.98s_{0})&z^{-2} \\
+&-& (s_{0}+1+0.98)&z^{-1}  \\
+&+&1&
+\end{array}$$
+Or on désire : 
+$$D_{desiré}(z) = (1-z_{BF}z^{-1})^{3}$$
+$$\begin{array}{llcl}
+=&-&z_{BF}^{3}&z^{-3} \\
+&+&3z_{BF}^{2}&z^{-2} \\
+&-&3z_{BF}&z^{-1} \\
+&+&1
+\end{array}$$
+Ainsi par identification (et quelques calculs) : 
+$$\begin{cases}
+s_{0}=0.569 \\
+r_{0}=1.32 \\
+r_{1}=-1.23
+\end{cases}$$
+$$\boxed{C(p) = \frac{1.32-1.23z^{-1}}{(1-z^{-1})(1-0.569z^{-1})} }$$
+
+
+##### c. Détermination du Pré-Filtre
+On choisit un filtre $5 \times$ plus rapide que le système avec le temps de réponse à $95\%$ alors : 
+$$5\times t_{reponse} = T_{e}\left(\frac{\ln(0.05)}{\ln(\text{root 1})} + \frac{\ln(0.05)}{\ln(\text{root 2})} \right) = 0.1 $$

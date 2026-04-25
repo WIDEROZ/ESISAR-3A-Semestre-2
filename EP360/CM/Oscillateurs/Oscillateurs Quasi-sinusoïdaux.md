@@ -27,4 +27,5 @@ $$\begin{cases}
 Le système est instable il sera amplifié à chaque passage dans la boucle à cause de : $\frac{A}{1+AB}$
 
 #### $1^{\text{eme}}$ cas : $\left| A(j\omega_{osc})B(j\omega_{osc})\right| = 1- \varepsilon < 1$
-Le système est stable car il sera amplifié à chaque passage dans la boucle de : 
+Le système est stable car il sera amplifié à chaque passage dans la boucle de
+
