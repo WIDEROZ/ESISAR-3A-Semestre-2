@@ -3,69 +3,119 @@ package jeu;
 public class Chess {
 	
 	public static void main(String[] args) {
-		new Chess().execute();
+		//new Chess().execute(plateau);
 	}
 
-	static public final int ROOK_WHITE = 0x2656; 
-	static public final int ROOK_BLACK = 0x265C;
+	static public final int Tour_WHITE = 0x2656; 
+	static public final int Tour_BLACK = 0x265C;
 	
-	static public final int KNIGHT_WHITE = 0x2658;
-	static public final int KNIGHT_BLACK = 0x265E;
+	static public final int Chevalier_WHITE = 0x2658;
+	static public final int Chevalier_BLACK = 0x265E;
 	
-	static public final int BISHOP_WHITE = 0x2657;
-	static public final int BISHOP_BLACK = 0x265D;
+	static public final int Fou_WHITE = 0x2657;
+	static public final int Fou_BLACK = 0x265D;
 	
-	static public final int PAWN_WHITE = 0x2659;
-	static public final int PAWN_BLACK = 0x265F;
+	static public final int Pion_WHITE = 0x2659;
+	static public final int Pion_BLACK = 0x265F;
 	
-	static public final int QUEEN_WHITE = 0x2655;
-	static public final int QUEEN_BLACK = 0x265B;
+	static public final int Reine_WHITE = 0x2655;
+	static public final int Reine_BLACK = 0x265B;
 	
-	static public final int KING_WHITE = 0x2656;
-	static public final int KING_BLACK = 0x265A;
-	
-	private void execute() 
-	{
-		// 
-		System.out.println("8|"+show(ROOK_BLACK)+"|"+show(KNIGHT_BLACK)+"|"+show(BISHOP_BLACK)+"|"+show(QUEEN_BLACK)+"|"+show(KING_BLACK)+"|"+show(BISHOP_BLACK)+"|"+show(KNIGHT_BLACK)+"|"+show(ROOK_BLACK)+"|");
-		System.out.println("7|"+show(PAWN_BLACK)+"|"+show(PAWN_BLACK)+"|"+show(PAWN_BLACK)+"|"+show(PAWN_BLACK)+"|"+show(PAWN_BLACK)+"|"+show(PAWN_BLACK)+"|"+show(PAWN_BLACK)+"|"+show(PAWN_BLACK)+"|");
-		System.out.println("6|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|");
-		System.out.println("5|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|");
-		System.out.println("4|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|");
-		System.out.println("3|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|"+empty()+"|");
-		System.out.println("2|"+show(12)+"|"+show(22)+"|"+show(32)+"|"+show(42)+"|"+show(52)+"|"+show(62)+"|"+show(72)+"|"+show(82)+"|");
-		System.out.println("1|"+show(11)+"|"+show(21)+"|"+show(31)+"|"+show(41)+"|"+show(51)+"|"+show(61)+"|"+show(71)+"|"+show(81)+"|");
-		System.out.println("  A B C D E F G H");
-		
+	static public final int Roi_WHITE = 0x2654;
+	static public final int Roi_BLACK = 0x265A;
+
+
+	public Chess(){
+
 	}
 
 
-	private void execute(Plateau plateau){
-		int c=8;
-		int l=1;
-		while (l <= 8) {
-			while (c >= 1){
-				if (plateau.isTherePiece(c * 10 + l)){
-					System.out.print( + '|');
+	public void execute(Plateau board){
+		int c=1;
+		int l=8;
+		while (l >= 1) {
+			System.out.print(l + " |");
+			while (c <= 8){
+				if (board.isTherePiece(c * 10 + l)){
+					//System.out.println("AAAAAAAAAAAAAA : " + (int)(c * 10 + l) + ".");
+					//System.out.println(new String(board.plateau[l-1][c-1].getClass().getName()));
+					System.out.print(new String(board.plateau[l-1][c-1].getCouleur()));
+					
+					String piece = show(new String(board.plateau[l-1][c-1].getClass().getName()), new String(board.plateau[l-1][c-1].getCouleur()));
+					System.out.print(piece + '|');
 				}
-				c--;
+				else{
+					System.out.print(" " + "|");
+				}
+				c++;
 			}
-		System.out.println(8-c + '|');
-		l++;
+		System.out.println();
+		c=1;
+		l--;
 		}
-		System.out.println("  A B C D E F G H");
-	}
-	
-	
-	private String empty() 
-	{
-		return " ";
+		System.out.println("   A B C D E F G H");
 	}
 
 
-	private String show(int piece, int index)
-	{
-		return new String(Character.toChars(KING_BLACK));
+
+
+	private String show(String nom, String couleur){
+		int piece;
+
+		
+		if (couleur.equals("BLACK")) {
+			if (nom.equals("jeu.Tour")) {
+				piece = Tour_BLACK;
+			}
+			else if (nom.equals("jeu.Cavalier")) {
+				piece = Chevalier_BLACK;
+			}
+			else if (nom.equals("jeu.Fou")) {
+				piece = Fou_BLACK;
+			}
+			else if (nom.equals("jeu.Reine")) {
+				piece = Reine_BLACK;
+			}
+			else if (nom.equals("jeu.Roi")) {
+				piece = Roi_BLACK;
+			}
+			else if (nom.equals("jeu.Pion")) {
+				piece = Pion_BLACK;
+			}
+			else {
+				System.out.println("Mauvais nom de pièce");
+				return "Error";
+			}
+		}
+		else if (couleur.equals("WHITE")) {
+			if (nom.equals("jeu.Tour")) {
+				piece = Tour_WHITE;
+			}
+			else if (nom.equals("jeu.Cavalier")) {
+				piece = Chevalier_WHITE;
+			}
+			else if (nom.equals("jeu.Fou")) {
+				piece = Fou_WHITE;
+			}
+			else if (nom.equals("jeu.Reine")) {
+				piece = Reine_WHITE;
+			}
+			else if (nom.equals("jeu.Roi")) {
+				piece = Roi_WHITE;
+			}
+			else if (nom.equals("jeu.Pion")) {
+				piece = Pion_WHITE;
+			}
+			else {
+				System.out.println("Mauvais nom de pièce");
+				return "Error";
+			}
+		}
+		else{
+			System.out.println("Mauvaise couleure de pièce pour show chess");
+			return "Error";
+		}
+		return new String(Character.toChars(piece));
 	}
 
 }

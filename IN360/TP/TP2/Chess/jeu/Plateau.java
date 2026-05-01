@@ -10,8 +10,9 @@ public class Plateau {
 	 * - Colonnes : Chiffre des dixaines
 	 *  */
 	public Piece[][] plateau = new Piece[8][8];
+	public Chess plateau_graphique = new Chess();
 	
-	Plateau() {
+	public Plateau() {
 		
 	}
 	
@@ -45,6 +46,9 @@ public class Plateau {
 	}
 
 	public Piece getPiece(int index){
+		/* 
+			Obtenir la piece à l'index donné en paramètre
+		*/
 		int ligne  = index-((index/10)*10)-1;
 		int colone = index/10-1;
 		return plateau[ligne][colone];
@@ -96,19 +100,59 @@ public class Plateau {
 			System.out.println("Il y a déjà une pièce sur cette case impossible d'en placer une");
 		}
 	}
+
+	public void initTableau(){
+		add(new Pion("BLACK"), "A2");
+		add(new Pion("BLACK"), "B2");
+		add(new Pion("BLACK"), "C2");
+		add(new Pion("BLACK"), "D2");
+		add(new Pion("BLACK"), "E2");
+		add(new Pion("BLACK"), "F2");
+		add(new Pion("BLACK"), "G2");
+		add(new Pion("BLACK"), "H2");
+
+		add(new Tour("BLACK"), "A1");
+		add(new Cavalier("BLACK"), "B1");
+		add(new Fou("BLACK"), "C1");
+		add(new Reine("BLACK"), "D1");
+		add(new Roi("BLACK"), "E1");
+		add(new Fou("BLACK"), "F1");
+		add(new Cavalier("BLACK"), "G1");
+		add(new Tour("BLACK"), "H1");
+
+
+
+		add(new Tour("WHITE"), "A8");
+		add(new Cavalier("WHITE"), "B8");
+		add(new Fou("WHITE"), "C8");
+		add(new Reine("WHITE"), "D8");
+		add(new Roi("WHITE"), "E8");
+		add(new Fou("WHITE"), "F8");
+		add(new Cavalier("WHITE"), "G8");
+		add(new Tour("WHITE"), "H8");
+
+		add(new Pion("WHITE"), "A7");
+		add(new Pion("WHITE"), "B7");
+		add(new Pion("WHITE"), "C7");
+		add(new Pion("WHITE"), "D7");
+		add(new Pion("WHITE"), "E7");
+		add(new Pion("WHITE"), "F7");
+		add(new Pion("WHITE"), "G7");
+		add(new Pion("WHITE"), "H7");
+
+
+
+	}
 	
 	public void afficherTableau(){
-		
+		plateau_graphique.execute(this);
 	}
 
 	public static void main(String[] args) {
 		Plateau Board = new Plateau();
 		
-		Piece pion = new Pion("WHITE");
-		
-		System.out.println(pion.couleur);
-		
-		Board.add(pion, "A2");
+		Board.initTableau();
+		Board.afficherTableau();
 
 
 		System.out.println();
