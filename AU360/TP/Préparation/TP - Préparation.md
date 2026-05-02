@@ -1,22 +1,4 @@
-# Sommaire
-
-[[#^a1|1.1 - Modélisation]]
-[[#^a11|1.1.1 - Schéma]]
-[[#^a12|1.1.2 - Fonction de Transfert]] 
-  [[#^a13|1.1.3 - Diagramme de Bode]]
-  [[#^a14|1.1.4 - Bruit]]
-  [[#^a15 |1.1.5 - Modèles statiques]]
-  [[#^a16 |1.1.6 - Température externe]]
-  [[#^a17 |1.1.7 - Fonction de transfert de la micro-enceinte climatique]]
-  [[#^a18|1.1.8 - Modèle du CAN/CNA]]
-  [[#^a19|1.1.9 - Schéma Fonctionnel]]
-
- [[#^a2|1.2 - Spécifications de la synthèse de la commande]]
-  [[#^a21|1.2.1 - Modèle à temps continu du système]]
-  [[#^a22|1.2.2 - Schéma du système commandé par un calculateur et précédé par un pré-filtre]]
-  [[#^a23|1.2.3 - Spécifications du cahier des charges]]
-
-
+# 1. Préparation
 ## 1.1 - Modélisation ^a1
 
 #### 1.1.1 - Schéma ^a11
@@ -243,10 +225,10 @@ $$H_{BO}(p) = H_{enc}(p) C(p) = \frac{G}{1+\tau p} \times 5\frac{p+2}{p} = \frac
 
 ##### b. Calcul des marges ^a311b
 ###### $\alpha.$ Calcul de la marge de module ^a311ba
-$$M_{M} = \max_{\omega} \left| S_{y}(p)\right| = \left| \frac{1}{1+H_{BO}(p)}\right|$$
+$$\frac{1}{M_{M}} = \sup_{\omega} \left| S_{y}(p)\right| = \sup_{\omega}\left| \frac{1}{1+H_{BO}(p)}\right|$$
 Alors, 
-$$S_{y}(p) = \frac{p}{p+23} \Rightarrow \left| S_{y}\right| \leq 1$$
-Ainsi, $\boxed{M_{M} = 1 \geq 0.5}$ Le cahier des charges est bien suivi.
+$$S_{y}(p) = \frac{p}{p+23} \Rightarrow \left| S_{y}\right| \leq 1 \Rightarrow \sup_{\omega}\left| S_{y}(p)\right| \leq 1$$
+Ainsi, $\boxed{M_{M} \geq 1 \geq 0.5}$ Le cahier des charges est bien suivi.
 
 ###### $\beta.$ Calcul de la marge de phase  ^a311bb
 $$\boxed{M_{\varphi} = \pi + \arg(H_{BO}(p)_{\left| H_{BO}(\omega_{c})\right| = 1}) = \pi - \arg(j) = \frac{\pi}{2} }$$
@@ -280,10 +262,10 @@ $$\boxed{Y(t) = \mathcal{L}^{-1}(Y(p)) = T(1-e^{ -15t }) }$$
 ![[Pasted image 20260409221409.png]]
 Il n'y a pas de dépassement ainsi l'<u>utilisation d'un préfiltre dans ce cas n'est pas utile</u>. 
 
-##### a. Echelon de consigne
+##### a. Echelon de consigne ^a312a
 Comme on a une réponse exponentielle : $Y(t) = T\left( 1-e^{ -\frac{t}{\tau_{_{y}}} } \right)$ (en posant $\tau_{y}=\frac{1}{15}$) on peut facilement calculer le temps de réponse à $95\%$ qui est de $\boxed{t_{r} =3 \tau_{y} = 0.2 \, s}$
 
-##### b. Perturbation de commande
+##### b. Perturbation de commande ^a312b
 Si on perturbe la commande avec un bruit $P_{u}(t)=\mathcal{P} = \text{cte}$ en utilisant la transformée de Laplace : $P_{u}(p) = \frac{\mathcal{P}}{p}$
 $$Y(p) = \frac{H_{enc}(p)}{1+C(p)H_{enc}(p)}P_{u}(p) =\frac{G\mathcal{P}}{p(1+\tau p)\left( 1+\frac{15}{p} \right)} $$
 $$= \frac{\frac{G\mathcal{P}}{\tau}}{\left( \frac{1}{\tau}+ p \right)\left( 15+p \right)} = \frac{G\mathcal{P}}{\tau}\left( \frac{A}{\frac{1}{\tau}+ p} + \frac{B}{15+p} \right)$$
@@ -297,7 +279,7 @@ $$\boxed{Y(t) = \frac{G\mathcal{P}}{1-15\tau}\left( e^{ -15t } - e^{ -\frac{t}{\
 On observe un dépassement qui dépend de l'amplitude du bruit de commande : $\mathcal{P}$. De plus à cause de ce dépassement, pour que la réponse atteigne son régime permanent il faut prendre en compte un retard additionnel.
 Ainsi pour réduire le dépassement de la réponse voulue il faut minimiser le bruit de commande $P_{u}$. 
 
-##### c. Retard additionnel admissible
+##### c. Retard additionnel admissible ^a312c
 Le retard additionnel admissible dans la boucle de commande est de : $M_{\text{retard}} - R_{\text{existants}}$ avec $R_{\text{existants}}$ les retards déjà existants dans la boucle de commande :
 - $5\, \text{ms}$ pour le BOZ
 - $10 \text{ ms}$ pour le FAR
@@ -313,7 +295,7 @@ Remarque :
 Si le calculateur atteint son retard maximal de $20 \,\text{ms}$ le retard maximal admissible sera de $65 \, \text{ms}$
 
 
-#### 1.3.1.2 - Période d’échantillonnage ^a312
+#### 1.3.1.3 - Période d’échantillonnage ^a313
 On propose : 
 $$\boxed{T_{e} = 10 \, \text{ms}}$$
 Les calculs de la marge de retard faits précédemment ([[#^a311bc|Calcul de la marge de retard]]), confirme que l'on puisse utiliser cette période d’échantillonnage. (Cette période d'échantillonnage ne nuit pas au cahier des charges)
@@ -473,11 +455,11 @@ Donc,
 $$\boxed{C(p) = \frac{5p+34}{p}}$$
 
 ##### c. Calcul des marges ^a321c
+$$\boxed{H_{BO}(p) = 2G\frac{r_{1}p+r_{0}}{p(p+2)}}$$
 ###### $\alpha.$ Calcul de la marge de module ^a321ca
-$$\min(1+\left| H_{BO}(p)\right|) = M_{M}$$
-$$\left| C(p)H(p)\right| = 2G\left| \frac{r_{1}p+r_{0}}{p(p+2)}\right|=\frac{2G}{\omega\sqrt{\omega^{2}+2}} \sqrt{(r_{1}\omega)^{2}+r_{0}^{2}} \underset{\omega \to +\infty}{\longrightarrow} 0$$
-Alors, 
-$$\boxed{M_{M} = \max(\left| S_{y}(p)\right|) = \max \left| \frac{1}{1+C(p)H(p)}\right| = 1}$$
+$$M_{M}=\min(\left|1+ H_{BO}(p)\right|)$$
+D'après un algorithme d'approximation réalisé en langage $C$ on obtiens une marge de module de : 
+$$\boxed{M_{M} = 1.0 \geq 0.5}$$
 
 
 ###### $\beta.$ Calcul de $\omega_{c}$ ^a321cb
@@ -538,7 +520,7 @@ $$\boxed{\begin{cases}
 r_{0}=7.16 \\
 r_{1}=2.06 \\
 \omega_{c}=9.85 \,\text{rad.s}^{-1} \\
-M_{M} = 1 \\
+M_{M} = 1.0 \\
 M_{\varphi}=59.1° \\
 M_{\text{retard}} = 105 \, \text{ms}
 \end{cases}}$$
@@ -594,7 +576,7 @@ Remarque :
 Si le calculateur atteint son retard maximal de $20 \,\text{ms}$ le retard maximal admissible sera de $65 \, \text{ms}$.
 
 #### 1.3.2.3 - Période d'échantillonnage ^a323
-De même que précédemment ([[^a312|1.3.1.2 - Période d’échantillonnage]]) la période d'échantillonnage à été prise en compte dans le calcul des marges de retard ainsi :
+De même que précédemment ([[#^a313|1.3.1.3 - Période d’échantillonnage]]) la période d'échantillonnage à été prise en compte dans le calcul des marges de retard ainsi :
 $$\boxed{T_{e} = 10 \, \text{ms}}$$
 
 
@@ -639,7 +621,7 @@ Entrées : U(n-1), ε(n), ε(n-1)
 	}
 ```
 
-#### 1.3.2.8 - Fonctions de transfert implémentées ^a328
+#### 1.3.2.8 - Algorithme de commande ^a328
 On convertit l'expressions de la fonction de transfert en $z$ de $F$ en $n$ avec les entrées-sorties associés : 
 $$Y_{C}(z)=F(z)Ref(z) = \frac{r_{0}T_{e}}{(r_{1}+r_{0}T_{e})-r_{1}z^{-1}}Ref(z)$$
 Alors, 
@@ -687,7 +669,7 @@ Comme $H_{CAN}H_{CNA}(p) = 1$ :
 $$H_{sys}(p) = \frac{Ny(p)}{Nu(p)} = H_{BOZ}(p) H(p)H_{FAR}(p)$$
 On a donc :
 $$H_{BOZ}(p)H(p) = G\frac{1-e^{ -pT_{e} }}{p(1+\tau p)}$$
-Alors on passe du dommaine de Laplace en z : 
+Alors on passe du domaine de Laplace en z : 
 $$\begin{array}{ll}
 \mathcal{Z}(H_{BOZ}(p)H(p)) &= G\, \mathcal{Z}\left( \frac{1-e^{ -pT_{e} }}{p(1+\tau p)} \right)  \\
 &= G (1-z^{-1}) \mathcal{Z}\left( \frac{1}{p(1+\tau p)} \right)
@@ -716,6 +698,7 @@ $$\boxed{H_{sys}(z) = G\frac{\left( 1-e^{ -\frac{T_{e}}{\tau} } \right)z^{-2}}{ 
 
 ### 1.4.1 - Synthèse par compensation du pôle dominant à temps discret ^a41
 #### 1.4.1.1 - Méthode de compensation du pôle dominant discret A FAIRE ^a411
+##### a. Synthèse du correcteur ^a411a
 On pose : 
 $$H_{sys}(z) = \frac{B(p)}{A(p)} \text{ et } C(z) = \frac{R(z)}{S(z)} $$
 On choisit : 
@@ -727,60 +710,125 @@ $$C(z) \underset{z \to -1}{\longrightarrow} \frac{1.980}{2}K\leq N_{\max} = 5 \L
 Ainsi, 
 $$\boxed{C(z) = 5.05 \frac{1-0.980z^{-1}}{1-z^{-1}}}$$
 
+##### b. Calcul des marges ^a411b
+La fonction de transfert en boucle ouverte est : 
+$$\boxed{H_{BO}(z) = H(z)C(z) = 5.05 \frac{0.046z^{-2}}{1-z^{-1}}= \frac{0.23z^{-2}}{1-z^{-1}}}$$
+
+###### $\alpha.$ Calcul de la marge de module ^a411ba
+Par définition :
+$$M_{M} = \min_{\omega}\left| 1+H_{BO}(e^{ j\omega T_{e} })\right|$$
+Alors d'après un algorithme d'approximation réalisé en langage $C$ on obtient une marge de module de : 
+$$\boxed{M_{M} = 0.73 \geq 0.5}$$
+
+###### $\beta.$ Calcul de $\omega_{c}$ ^a411bb
+
+$$\left| H_{BO}(e^{ j\omega_{c}T_{e} })\right| = 1 = \left| K\frac{0.046z^{-2}}{1-z^{-1}}\right| = K\frac{0.046}{\sqrt{2-2\cos(\omega_{c}T_{e})}}$$
+Alors, 
+$$(0.046K)^{2} = 2-2\cos(\omega_{c}T_{e}) \Leftrightarrow \cos(\omega_{c}T_{e}) = \frac{2-(0.046K)^{2}}{2}$$
+$$\boxed{\omega_{c} =\frac{1}{T_{e}}\cos ^{-1}\left( \frac{2-(0.046K)^{2}}{2} \right)=23.05 \text{ rad.s}^{-1}}$$
 
 
+###### $\gamma.$ Calcul de la marge de phase ^a411bc
+Par définition :
+$$M_{\varphi}=  \pi + \arg(1+H_{BO}(z))$$
+Calculé pour $\omega = \omega_{c}$ : $z=e^{ j\omega_{c}T_{e} }$
+Alors d'après un algorithme d'approximation réalisé en langage $C$ on obtient : 
+$$\boxed{M_{\varphi} = \pi +\arg\left( \frac{1-z^{-1}+0.23z^{-2}}{1-z^{-1}} \right) = 130°}$$
+
+
+
+###### $\delta.$ Calcul de la marge de retard ^a411bd
+Par définition et après calcul on a :
+$$M_{\text{retard}} = \frac{M_{\varphi}}{\omega_{c}} = 98 \, \text{ms}$$
+Seulement on souhaite que $M_{\text{retard}} \geq 105 \, \text{ms}$, alors, 
+$$ H_{BO}(p) = K \frac{0.046z^{-2}}{1-z^{-1}}$$
+avec $K = 5.05$
+On calcule une nouvelle fois $\omega_{C}$ : 
+$$\boxed{\omega_{c} = \frac{M_{\varphi}}{0.105} = 21.6 \text{ rad.s}^{-1}}$$
+Alors, comme : 
+$$\left| H_{BO}(e^{ j\omega_{c}T_{e} })\right| = K\frac{0.046}{\sqrt{2-2\cos(\omega_{c}T_{e})}}=1$$
+On a ainsi :
+$$\boxed{K=\frac{\sqrt{2-2\cos(\omega_{c}T_{e})}}{0.046} = 4.69}$$
+
+Ainsi après calcul on a les donnés suivantes :
+$$\boxed{\begin{cases}
+\omega_{c} = 21.6 \text{ rad.s}^{-1}\\
+M_{M} = 0.74 \\
+M_{\varphi}=130° \\
+M_{\text{retard}} =105 \, \text{ms}
+\end{cases}}$$
+Le cahier des charges est bien respecté.
+
+
+##### c. Correcteur Final ^a411c
+Ainsi, le correcteur final est : 
+$$\boxed{ C(z) = 4.69 \frac{1-0.980z^{-1}}{1-z^{-1}}}$$
 
 
 
 #### 1.4.1.2 - Fonctions de transferts implémentés ^a412
-$$\boxed{H(z) = \frac{0.046z^{-2}}{1-0.980z^{-1}}}$$
-$$\boxed{C(z) = 5.051 \frac{1-0.980z^{-1}}{1-z^{-1}}}$$
+$$\boxed{C(z) = 4.69 \frac{1-0.980z^{-1}}{1-z^{-1}}}$$
 
 #### 1.4.1.3 - Equations de récurrence ^a413
-##### Fonction de transfert
-Par définition :
-$$H(z) = \frac{Y(z)}{U(z)}$$
-$$Y(z)(1-0.98z^{-1}) = 0.046z^{-2}U(z)$$
-
-Ainsi, 
-$$\boxed{Y(n)=0.046U(n-2) + 0.980Y(n-1) }$$
-
 ##### Calculateur
 $$C(z) = \frac{U(z)}{\varepsilon(z)}$$
 Alors, 
-$$\varepsilon(z)(1-z^{-1}) = 5.051U(z)(1-0.98z^{-1})$$
+$$\varepsilon(z)(1-z^{-1}) = KU(z)(1-0.98z^{-1})$$
+(avec $K=4.69$)
 Ainsi, 
-$$\boxed{U(n) = 0.198(\varepsilon(n)-\varepsilon(n-1)) + 0.980U(n-1)}$$
+$$\boxed{U(n) = \frac{1}{K}(\varepsilon(n)-\varepsilon(n-1)) + 0.980U(n-1)}$$
 
+```
+Entrées : U(n-1), ε(n), ε(n-1)
+	max=5;
+	min=0;
+	
+	K=4.69;
+	
+	U(n) = 0.98*U(n-1) + (ε(n)-ε(n-1))/K;
+	if(U(n) > max){
+		return max;
+	}
+	else if(U(n)<min){
+		return min;
+	}
+	else{
+		return U(n);
+	}
+```
+
+
+#### 1.4.1.4 - Algorithme de Commande ^a414
+```C
+float fe=100;
+float Te=1/fe;
+
+K=4.69
+
+uint8_t Correcteur(uint8_t Yc, uint8_t Yc_nm1, uint8_t Y, uint8_t Y_nm1, uint8_t U_nm1){
+	// ε(n-1)=Yc(n-1)-Y(n-1) :
+	int erreur_nm1=Yc_nm1-Y_nm1;
+	// ε(n)=Yc(n)-Y(n) :
+	int erreur=Yc-Y;
+	
+	// U(n) = 0.98*U(n-1) + (ε(n)-ε(n-1))/K : 
+	return 0.98*U_nm1+(erreur-erreur_nm1)/K;
+}
+```
 
 ### 1.4.2 - Synthèse par placement des pôles de la boucle fermée à temps discret ^a42
 #### 1.4.2.1 - Méthode de placement des pôles de la boucle fermée à temps discret ^a421
-##### a. Calcul de $z_{BF}$
+##### a. Calcul de $z_{BF}$ ^a421a
 L'expression du polynôme de régulation désiré est : 
 $$D(z) = (1-z_{BF}z^{-1})^{n}$$
 Avec : 
 $$z_{BF} = e^{ -\frac{6.3T_{e}}{t_{rep_{95\%}}}} $$
-Alors, on recherche le temps de réponse ($t_{rep_{95\%}}$) du système, précédemment synthétisé dans le domaine continu ([[#^a322|a. Temps de réponse d'un échelon de consigne en température]]) à un échelon de température. 
-
-Il faut donc résoudre l'équation :
-$$Y(t_{rep_{95\%}}) = 95\% \lim_{ t \to +\infty } Y(t) = 95 \%\frac{5TG}{\tau p_{-}p_{+}}$$
-Avec :
-$$Y(t)= \frac{5TG}{\tau}\left( \frac{1}{p_{+}p_{-}} + \frac{1}{p_{-}(p_{-}-p_{+})} e^{ p_{-}t } + \frac{1}{p_{+}(p_{+}-p_{-})} e^{ p_{+}t } \right)$$
-
-Remarque : $t_{rep_{95\%}}$ ne dépend pas de $T$ (l'amplitude de l'échelon de température)
-
-On la résout de manière numérique avec Geogebra :
-On teste en premier avec un petit échelon de température : 
-![[Pasted image 20260423200634.png]]
-
-En deuxième avec un grand échelon de température : 
-![[Pasted image 20260423200703.png]]
-Donc, 
+Alors, on choisit  le temps de réponse ($t_{rep_{95\%}}$) du système :
 $$t_{rep_{95\%}} = 0.387$$
 Ainsi, 
 $$\boxed{z_{BF}= e^{ - \frac{6.3 T_{e}}{0.387} } = 0.850}$$
 
-##### b. Détermination de $C(p)$
+##### b. Détermination de $C(p)$ ^a421b
 $$H_{sys}(z) = \frac{0.046z^{-2}}{1-0.980z^{-1}} $$
 On pose : 
 $$C(z) = \frac{R(z)}{S(z)} \text{ et } H_{sys}(z)  = \frac{B(z)}{A(z)}$$
@@ -815,9 +863,41 @@ r_{1}=-1.21
 $$\boxed{C(z) = \frac{1.28-1.21z^{-1}}{(1-z^{-1})(1-0.569z^{-1})}}$$
 
 
+##### c. Calcul des marges ^a421c
+$$\boxed{H_{BO}(z) = \frac{0.046z^{-2}}{(1-0.980z^{-1})} \frac{r_{0}-r_{1}z^{-1}}{(1-z^{-1})(1-s_{0}z^{-1})}}$$
+
+Dans cette partie toutes les marges et valeurs calculées l'ont été avec des algorithmes d'approximation (voir annexe)
+
+###### $\alpha.$ Calcul de la marge de module ^a421ca
+$$\boxed{M_{M} = \min_{\omega}\left| 1+H_{BO}(e^{ j\omega T_{e} })\right| = 1}$$
+
+###### $\alpha.$ Calcul de $\omega_{c}$
+$$\boxed{\omega_{c} = 42.3 \text{ rad.s}^{-1}}$$
+
+###### $\alpha.$ Calcul de la marge de phase
+$$\boxed{M_{\varphi} = \pi + \arg(1+H_{BO}(e^{ j\omega_{c}T_{e} }))=232.6° \geq 45 °}$$
 
 
-##### c. Détermination du Pré-Filtre
+###### $\alpha.$ Calcul de la marge de retard
+$$\boxed{M_{\text{retard}} = \frac{M_{\varphi}}{\omega_{c}}= 96 \, \text{ms}}$$
+
+Or $M_{\text{retard}} \geq 105 \, \text{ms}$, on augmente alors le temps de réponse à $95\%$ pour pouvoir atteindre une marge de retard égale à $105\, \text{ms}$, 
+On obtiens ainsi : 
+$$\boxed{\begin{cases}
+t_{rep, 95\% } &= 0.437& \,\text{s} \\
+z_{BF} &=0.866 \\
+s_{0}&= 0.617 \\
+r_{0}&=1.01 \\
+r_{1}&=-0.956 \\
+\omega_{c}&=38.6& \text{rad.s}^{-1} \\
+M_{M}&=1.00 \\
+M_{\varphi}&=232° \\
+M_{\text{retard}} &=105 &\, \text{ms}
+\end{cases}}$$
+
+
+
+##### d. Détermination du Pré-Filtre
 On pose : 
 $$F(z) = \frac{T(z)}{R(z)} = \frac{T(z)}{r_{0}+r_{1}z^{-1}}$$
 Pour avoir une erreur statique nulle il faut que : 
@@ -828,36 +908,71 @@ Alors, comme : $S(z=1) = 0$.
 $$T(z=1) = \frac{D(z=1)}{B(z=1)} = R(z=1) = r_{0}+r_{1}$$
 (A FAIRE : peut être moyen de trouver un autre coef. de $T(z)$ avec $S(z=s_{0})=0$)
 
-Ainsi, Votre préfiltre a un **gain statique de 1.28**, ce qui signifie qu'en régime permanent, la sortie sera **1.28 fois plus grande que l'entrée**. Cela explique l'amplification que vous observez.
-$$\boxed{F(z) = \frac{r_{0}+r_{1}}{r_{0}+r_{1}z^{-1}} = \frac{0.07}{1.28-1.21z^{-1}}}$$
+Ainsi, 
+$$\boxed{F(z) = \frac{r_{0}+r_{1}}{r_{0}+r_{1}z^{-1}} = \frac{0.054}{1.01-0.956z^{-1}}}$$
 
 
 
 #### 1.4.2.2 - Fonctions de transferts implémentés ^a422
-$$\boxed{H(z) = \frac{0.046z^{-2}}{1-0.980z^{-1}}}$$
-$$\boxed{C(z) = \frac{1.28-1.21z^{-1}}{1-1.57z^{-1}+0.57z^{-2}}}\text{ et }\boxed{F(z) = \frac{0.07}{1.28 - 1.21z^{-1}}}$$
+$$\boxed{C(z) = \frac{1.01-0.956z^{-1}}{1-1.617+z^{-1}+0.617z^{-2}}}\text{ et }\boxed{F(z) = \frac{0.054}{1.01-0.956z^{-1}}}$$
 
-
-##### Fonction de transfert du système
-Par définition :
-$$H(z) = \frac{Y(z)}{U(z)}$$
-$$Y(z)(1-0.98z^{-1}) = 0.046z^{-2}U(z)$$
-
-Ainsi, 
-$$\boxed{Y(n)=0.046U(n-2) + 0.980Y(n-1) }$$
-
+#### 1.4.2.3 - Equations de récurrence ^a423
 ##### Correcteur discret
 Par définition : 
 $$\frac{U(z)}{\varepsilon(z)} = C(z)$$
 Alors : 
 $$(1-1.57z^{-1}+0.57z^{-2})U(z) = (1.28-1.21z^{-1})\varepsilon(z)$$
 Donc en appliquant la transformée en $z$ inverse on a : 
-$$\boxed{U(n) = 1.28\varepsilon(n)-1.21\varepsilon(n-1)+1.57U(n-1) - 0.57U(n-2)}$$
+$$\boxed{U(n) = r_{0}\varepsilon(n)-r_{1}\varepsilon(n-1)+(1+s_{0})U(n-1) - s_{0}U(n-2)}$$
 
 
 ##### Filtre
 $$F(z)= \frac{Y_{C}(z)}{Ref(z)}$$
-$$1.28Y_{c}(n)=0.07Ref(n)+1.21Y_{C}(n-1)$$
+$$r_{0}Y_{c}(n)=(r_{0}+r_{1})Ref(n)+r_{1}Y_{C}(n-1)$$
 Alors, 
-$$\boxed{Y_{C}(n) = 0.0547 Ref(n) + 0.9453 Y_{C}(n-1)}$$
+$$\boxed{Y_{C}(n) = \frac{r_{0}+r_{1}}{r_{0}}Ref(n) + \frac{r_{1}}{r_{0}} Y_{C}(n-1)}$$
 
+
+```
+Entrées : U(n-1), U(n-2), ε(n), ε(n-1)
+	max=5;
+	min=0;
+	
+	r0=1.01;
+	r1=0.956;
+	s0=0.617;
+	
+	U(n) = r0*ε(n)-r1*ε(n-1) + (1+s0)*U(n-1)-s0*U(n-2);
+	
+	if(U(n) > max){
+		return max;
+	}
+	else if(U(n)<min){
+		return min;
+	}
+	else{
+		return U(n);
+	}
+```
+
+#### 1.4.2.4 - Algorithme de Commande ^a424
+```C
+float r0=1.01;
+float r1=0.956;
+float s0=0.617;
+
+uint8_t Correcteur(uint8_t Yc, uint8_t Yc_nm1, uint8_t Y, uint8_t Y_nm1, uint8_t U_nm1, uint8_t U_nm2){
+	// ε(n-1)=Yc(n-1)-Y(n-1) :
+	int erreur_nm1=Yc_nm1-Y_nm1;
+	// ε(n)=Yc(n)-Y(n) :
+	int erreur=Yc-Y;
+	
+	
+	// U(n) = r0*ε(n)-r1*ε(n-1) + (1+s0)*U(n-1)-s0*U(n-2)
+	return r0*erreur(n)-r1*erreur_nm1 + (1+s0)*U_nm1-s0*U_nm2;
+}
+
+uint8_t Filtre(uint8_t Ref, uint8_t Yc_nm1){
+	return (r0+r1)/r0 *Ref + r1/r0 *Yc_nm1;
+}
+```
