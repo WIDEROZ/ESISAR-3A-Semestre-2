@@ -102,11 +102,18 @@ Transmission fiable d'un flux d'octet bidirectionnel.
 
 
 ##### Echanges TCP
+Voir le seq 
 ###### Début des échanges
 Initialisation de de seq
-$$ack_{n+1} = seq_{n}+1$$
-$$ack_{n+1} = len(DATA_{n}) +1$$
-![[Pasted image 20260423111448.png]]
+![[Pasted image 20260503193330.png]]
+
+###### Echanges de donnés
+![[Pasted image 20260503193411.png]]
+
+
+###### Fin des échanges
+![[Pasted image 20260503193456.png]]
+
 
 ###### Tampon TCP
 A tout moment il peut ne plus avoir de place dans le tampon, alors, il ne faut pas que l'émetteur en envoie plus.
@@ -127,4 +134,5 @@ Secret : Empêcher les attaques en injection aveugle.
 ###### Ouverture TCP
 ![[Pasted image 20260423120744.png]]
 
-###### Fermeture TCP
+# Automate
+![[Pasted image 20260503193927.png]]

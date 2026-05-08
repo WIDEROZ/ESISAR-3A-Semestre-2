@@ -1,3 +1,10 @@
+# Sommaire
+- 1.1 - Modélisation
+- 1.2 - Spécifications pour la synthèse des commandes
+- 1.3 - Synthèse à temps continu et discrétisation
+- 1.4 - Synthèse des commandes à temps discret
+
+
 # 1. Préparation
 ## 1.1 - Modélisation ^a1
 
@@ -43,7 +50,6 @@ $$G = \frac{\Delta s}{\Delta e} = \frac{2.7 - 1.15}{2.33-1.66} \approx 2.3$$
 $$\boxed{G = 2.3}$$
 
 ##### c. Retard pur
-$$H_{t_{R}}(p)=H(p)e^{ -t_{R}p }$$
 $t_{R}$ : le retard pur entre l'actionneur et le capteur. 
 On prend arbitrairement $1 \%$ du temps de réponse : 
 $$\boxed{t_{R} \leq t_{R, \max} = 0.01 \tau = 5 \, ms}$$
@@ -58,15 +64,8 @@ $$\boxed{G_{db}(\omega) = 20 \log(\left| H(p)\right|) = 20\log\left( \frac{G}{\s
 $$\arg(H(p)) = \arg(G) - \arg(1+j\omega \tau) = \arg(G) - \arctan(\omega \tau)$$
 Donc, 
 $$\boxed{\varphi = -\arctan(\omega \tau)}$$
-###### Avec un retard pur
-$$\arg(H(p)) = \arg(G)+\arg(e^{ -t_{R}j\omega}) - \arg(1+j\omega \tau) $$
-$$= -\omega t_{R} - \arctan(\omega \tau)$$
-Donc, 
-$$\boxed{\varphi = -\omega t_{R} - \arctan(\omega \tau)}$$
-![[Pasted image 20260301140118.png]]
-- Rouge : sans retard pur
-- Bleu : avec retard pur
 ![[Pasted image 20260301130654.png]]
+
 #### 1.1.4 - Bruit ^a14
 Dans le pire des cas le bruit est de : ${0.3 \, V}$ pour une moyenne de $2.66 \, V$ pour l'actionneur alors, le gain du bruit est de : 
 $$\boxed{G_{bruit} = \frac{0.3}{2.66} \approx 0.1}$$
@@ -183,7 +182,7 @@ On applique un échelon de température $Y_{C}(t)$ en commande puis on regarde l
 Ainsi $T_{d}$ doit être inférieur à : $5\%$ de $T$ : $\boxed{T_{d} \leq 5 \% T}$
 Il faudra alors faire en sorte que le <u>calculateur et le pré-filtre</u> respectent cette spécification.
 
-##### b. On traite $P_{u}$ et $P_{y}$ A FAIRE
+##### b. On traite $P_{u}$ et $P_{y}$
 $C$ doit contenir un intégrateur
 Le gain statique de $F$ doit être égal à $1$ ($F(0)=1$) pour que le système suive au mieux les références constantes. 
 Si on applique un échelon de température $Y_{C}(t)$ en commande avant $F$ et que l'on regarde la sortie $Y(t)$, la différence : $e(t) = Y_{c}(t)- Y(t)$ doit tendre vers une erreur statique nulle.
@@ -204,7 +203,7 @@ Ici la fonction de transfert du <u>calculateur</u>, de l'enceinte et du bloqueur
 
 ![[Pasted image 20260409172615.png]]
 
-##### e. On traite $P_{u}$ A FAIRE
+##### e. On traite $P_{u}$
 On recherche : $\min \left|\left| \frac{Y}{P_{u}} \right|\right|$,
 Alors on fait un échelon de bruit sur $P_{u}(t)$ et on regarde la sortie $Y_{C}(t)= cte$ puis on s'assure que $Y(t)$ suive la consigne. 
 
@@ -495,7 +494,7 @@ $$\boxed{\omega_{c} = \sqrt{X} = 23.83 \, \text{rad.s}^{-1}}$$
 
 ###### $\gamma.$ Calcul de la marge de phase ^a321cc
 Par définition :
-$$\pi + \arg(H_{BO}(p)_{H_{BO}(j\omega_{c}) = 1})=M_{\varphi}$$
+$$M_{\varphi}=\pi + \arg(H_{BO}(p)_{H_{BO}(j\omega_{c}) = 1})$$
 Alors comme : 
 $$H_{BO}(j\omega_{c}) = 2G\frac{r_{1}j\omega_{c}+r_{0}}{2j\omega_{c}-\omega_{c}^{2}} = 4.6 \frac{r_{1}j\omega_{c}+r_{0}}{2j\omega_{c}-\omega_{c}^{2}}$$
 On a : 
@@ -514,25 +513,25 @@ Ainsi on résout alors numériquement l'équation :
 $$M_{\text{retard}} = 105\, \text{ms}$$
 (i.e. on souhaite trouver $p_{0}$ pour respecter la marge de retard)
 À l'aide d'un script codé en $C$, on obtiens : 
-$$\boxed{p_{0} = 5.738}$$
+$$\boxed{p_{0} = 7.46}$$
 Après calcul on a ainsi : 
 $$\boxed{\begin{cases}
-r_{0}=7.16 \\
-r_{1}=2.06 \\
-\omega_{c}=9.85 \,\text{rad.s}^{-1} \\
-M_{M} = 1.0 \\
-M_{\varphi}=59.1° \\
+r_{0}=12.1 \\
+r_{1}=2.81\\
+\omega_{c}=13.4 \,\text{rad.s}^{-1} \\
+M_{M} = 1.01 \\
+M_{\varphi}=80.7° \\
 M_{\text{retard}} = 105 \, \text{ms}
 \end{cases}}$$
 
 
 ##### d. Correcteur Final ^a321d
 Ainsi : 
-$$\boxed{C(p) = \frac{2.06p+7.16}{p}}$$
+$$\boxed{C(p) = \frac{2.81p+12.1}{p}}$$
 
 ##### e. Filtre Final ^a321e
-On a : $F(p) = \frac{T(p)}{R(p)}$ et on souhaite que $F(0) = 1$ donc $T(0) = R(0) = r_{0}=7.16$ de plus on considère aussi que $T(p)$ est constant on a ainsi : 
-$$\boxed{F(p) = \frac{7.16}{2.06p+7.16}}$$
+On a : $F(p) = \frac{T(p)}{R(p)}$ et on souhaite que $F(0) = 1$ donc $T(0) = R(0) = r_{0}=12.1$ de plus on considère aussi que $T(p)$ est constant on a ainsi : 
+$$\boxed{F(p) = \frac{12.1}{2.81p+12.1}}$$
 
 
 #### 1.3.2.2 - Commande obtenue ^a322
@@ -562,7 +561,7 @@ $$\begin{array}{ll}
 \end{array}$$
 Ainsi : 
 $$\boxed{Y(t) = \frac{T}{2\tau} (1-e^{ -p_{0}t }-p_{0}te^{ -p_{0}t })}$$
-![[Pasted image 20260501194114.png]]
+![[Pasted image 20260502100124.png]]
 
 
 
@@ -584,15 +583,15 @@ $$\boxed{T_{e} = 10 \, \text{ms}}$$
 Voir [[#^a314|1.3.1.4 - Filtre anti-repliement de spectre]].
 
 #### 1.3.2.5 - Fonctions de transfert à temps discret ^a325
-$$C(p) = \frac{2.06p+7.16}{p} \text{ et }F(p) = \frac{7.16}{2.06p+7.16}$$
+$$C(p) = \frac{2.81p+12.1}{p} \text{ et }F(p) = \frac{12.1}{2.81p+12.1}$$
 Ainsi, en utilisant l'approximation d'Euler implicite
-$$\boxed{C(z) = \frac{2.06(1-z^{-1}) + 7.16T_{e}}{1-z^{-1}} = \frac{2.1316-2.06z^{-1}}{1-z^{-1}}}$$
-$$\boxed{F(z) = \frac{7.16}{\frac{2.06}{T_{e}}(1-z^{-1})+7.16} = \frac{7.16}{213.16-206z^{-1}}}$$
+$$\boxed{C(z) = \frac{2.81(1-z^{-1}) + 12.1T_{e}}{1-z^{-1}} = \frac{2.931-2.81z^{-1}}{1-z^{-1}}}$$
+$$\boxed{F(z) = \frac{12.1}{\frac{2.81}{T_{e}}(1-z^{-1})+12.1} = \frac{12.1}{293.1-281z^{-1}}}$$
 
 
 #### 1.3.2.6 - Fonctions de transfert implémentées ^a326
-$$\boxed{C(z) = \frac{(r_{1} + r_{0}T_{e})-r_{1}z^{-1}}{1-z^{-1}}= \frac{2.1316-2.06z^{-1}}{1-z^{-1}}}$$
-$$\boxed{F(z)= \frac{r_{0}T_{e}}{(r_{1}+r_{0}T_{e})-r_{1}z^{-1}}= \frac{0.0716}{2.1316-2.06z^{-1}}}$$
+$$\boxed{C(z) = \frac{(r_{1} + r_{0}T_{e})-r_{1}z^{-1}}{1-z^{-1}}= \frac{2.931-2.81z^{-1}}{1-z^{-1}}}$$
+$$\boxed{F(z)= \frac{r_{0}T_{e}}{(r_{1}+r_{0}T_{e})-r_{1}z^{-1}}= \frac{0.121}{2.931-2.81z^{-1}}}$$
 
 #### 1.3.2.7 - Fonctions de transfert implémentées ^a327
 On convertit l'expressions de la fonction de transfert en $z$ de $C$ en $n$ avec les entrées-sorties associés : 
@@ -605,8 +604,8 @@ Entrées : U(n-1), ε(n), ε(n-1)
 	max=5;
 	min=0;
 	
-	r0=7.16;
-	r1=2.06;
+	r0=12.1;
+	r1=2.81;
 	Te=0.01;
 	
 	U(n) = U(n-1) + ((r1+r0*Te)*ε(n)-r1*ε(n-1));
@@ -635,8 +634,8 @@ float tau=0.5;
 float fe=100;
 float Te=1/fe;
 
-float r0=7.16;
-float r1=2.06;
+float r0=12.1;
+float r1=2.81;
 
 uint8_t Correcteur(uint8_t Yc, uint8_t Yc_nm1, uint8_t Y, uint8_t Y_nm1, uint8_t U_nm1){
 	// ε(n-1)=Yc(n-1)-Y(n-1) :
@@ -697,7 +696,7 @@ $$\boxed{H_{sys}(z) = G\frac{\left( 1-e^{ -\frac{T_{e}}{\tau} } \right)z^{-2}}{ 
 
 
 ### 1.4.1 - Synthèse par compensation du pôle dominant à temps discret ^a41
-#### 1.4.1.1 - Méthode de compensation du pôle dominant discret A FAIRE ^a411
+#### 1.4.1.1 - Méthode de compensation du pôle dominant discret ^a411
 ##### a. Synthèse du correcteur ^a411a
 On pose : 
 $$H_{sys}(z) = \frac{B(p)}{A(p)} \text{ et } C(z) = \frac{R(z)}{S(z)} $$
@@ -718,7 +717,7 @@ $$\boxed{H_{BO}(z) = H(z)C(z) = 5.05 \frac{0.046z^{-2}}{1-z^{-1}}= \frac{0.23z^{
 Par définition :
 $$M_{M} = \min_{\omega}\left| 1+H_{BO}(e^{ j\omega T_{e} })\right|$$
 Alors d'après un algorithme d'approximation réalisé en langage $C$ on obtient une marge de module de : 
-$$\boxed{M_{M} = 0.73 \geq 0.5}$$
+$$\boxed{M_{M} = 1.12 \geq 0.5}$$
 
 ###### $\beta.$ Calcul de $\omega_{c}$ ^a411bb
 
@@ -730,31 +729,28 @@ $$\boxed{\omega_{c} =\frac{1}{T_{e}}\cos ^{-1}\left( \frac{2-(0.046K)^{2}}{2} \r
 
 ###### $\gamma.$ Calcul de la marge de phase ^a411bc
 Par définition :
-$$M_{\varphi}=  \pi + \arg(1+H_{BO}(z))$$
+$$M_{\varphi}=  \pi + \arg(H_{BO}(z))$$
 Calculé pour $\omega = \omega_{c}$ : $z=e^{ j\omega_{c}T_{e} }$
-Alors d'après un algorithme d'approximation réalisé en langage $C$ on obtient : 
-$$\boxed{M_{\varphi} = \pi +\arg\left( \frac{1-z^{-1}+0.23z^{-2}}{1-z^{-1}} \right) = 130°}$$
+$$\begin{array}{ll}
+M_{\varphi} &= \pi +\arg\left( \frac{0.23z^{-2}}{1-z^{-1}} \right)  \\
+&= \pi+ (-\omega_{c}T_{e}-\arg(1-z^{-1})) \\
+&= \pi - (\omega_{c}T_{e}+\arg(1-\cos(\omega_{c}T_{e})+j\sin(\omega_{c}T_{e})))
+\end{array}$$
+Ainsi : 
+$$\boxed{M_{\varphi}= \pi-\left( \omega_{c}T_{e} + \arctan\left( \frac{\sin(\omega_{c}T_{e})}{1-\cos(\omega_{c}T_{e})} \right)\right) = 70.0°}$$
 
 
 
 ###### $\delta.$ Calcul de la marge de retard ^a411bd
 Par définition et après calcul on a :
-$$M_{\text{retard}} = \frac{M_{\varphi}}{\omega_{c}} = 98 \, \text{ms}$$
+$$M_{\text{retard}} = \frac{M_{\varphi}}{\omega_{c}} = 52 \, \text{ms}$$
 Seulement on souhaite que $M_{\text{retard}} \geq 105 \, \text{ms}$, alors, 
-$$ H_{BO}(p) = K \frac{0.046z^{-2}}{1-z^{-1}}$$
-avec $K = 5.05$
-On calcule une nouvelle fois $\omega_{C}$ : 
-$$\boxed{\omega_{c} = \frac{M_{\varphi}}{0.105} = 21.6 \text{ rad.s}^{-1}}$$
-Alors, comme : 
-$$\left| H_{BO}(e^{ j\omega_{c}T_{e} })\right| = K\frac{0.046}{\sqrt{2-2\cos(\omega_{c}T_{e})}}=1$$
-On a ainsi :
-$$\boxed{K=\frac{\sqrt{2-2\cos(\omega_{c}T_{e})}}{0.046} = 4.69}$$
-
+Alors d'après un algorithme d'approximation réalisé en langage $C$ on obtient : $\boxed{K = 2.84}$ on a alors pour avoir un retard de $105 \, ms$ :
 Ainsi après calcul on a les donnés suivantes :
 $$\boxed{\begin{cases}
-\omega_{c} = 21.6 \text{ rad.s}^{-1}\\
-M_{M} = 0.74 \\
-M_{\varphi}=130° \\
+\omega_{c} = 13.1 \text{ rad.s}^{-1}\\
+M_{M} = 1.07\\
+M_{\varphi}=78.8° \\
 M_{\text{retard}} =105 \, \text{ms}
 \end{cases}}$$
 Le cahier des charges est bien respecté.
@@ -762,19 +758,18 @@ Le cahier des charges est bien respecté.
 
 ##### c. Correcteur Final ^a411c
 Ainsi, le correcteur final est : 
-$$\boxed{ C(z) = 4.69 \frac{1-0.980z^{-1}}{1-z^{-1}}}$$
-
+$$\boxed{ C(z) = 2.84 \frac{1-0.980z^{-1}}{1-z^{-1}}}$$
 
 
 #### 1.4.1.2 - Fonctions de transferts implémentés ^a412
-$$\boxed{C(z) = 4.69 \frac{1-0.980z^{-1}}{1-z^{-1}}}$$
+$$\boxed{C(z) = 2.84 \frac{1-0.980z^{-1}}{1-z^{-1}}}$$
 
 #### 1.4.1.3 - Equations de récurrence ^a413
 ##### Calculateur
 $$C(z) = \frac{U(z)}{\varepsilon(z)}$$
 Alors, 
 $$\varepsilon(z)(1-z^{-1}) = KU(z)(1-0.98z^{-1})$$
-(avec $K=4.69$)
+(avec $K=3.1$)
 Ainsi, 
 $$\boxed{U(n) = \frac{1}{K}(\varepsilon(n)-\varepsilon(n-1)) + 0.980U(n-1)}$$
 
@@ -783,7 +778,7 @@ Entrées : U(n-1), ε(n), ε(n-1)
 	max=5;
 	min=0;
 	
-	K=4.69;
+	K=2.84;
 	
 	U(n) = 0.98*U(n-1) + (ε(n)-ε(n-1))/K;
 	if(U(n) > max){
@@ -803,7 +798,7 @@ Entrées : U(n-1), ε(n), ε(n-1)
 float fe=100;
 float Te=1/fe;
 
-K=4.69
+K=2.84;
 
 uint8_t Correcteur(uint8_t Yc, uint8_t Yc_nm1, uint8_t Y, uint8_t Y_nm1, uint8_t U_nm1){
 	// ε(n-1)=Yc(n-1)-Y(n-1) :
@@ -864,9 +859,9 @@ $$\boxed{C(z) = \frac{1.28-1.21z^{-1}}{(1-z^{-1})(1-0.569z^{-1})}}$$
 
 
 ##### c. Calcul des marges ^a421c
-$$\boxed{H_{BO}(z) = \frac{0.046z^{-2}}{(1-0.980z^{-1})} \frac{r_{0}-r_{1}z^{-1}}{(1-z^{-1})(1-s_{0}z^{-1})}}$$
+$$\boxed{H_{BO}(z) = \frac{0.046z^{-2}}{(1-0.980z^{-1})} \frac{r_{0}+r_{1}z^{-1}}{(1-z^{-1})(1-s_{0}z^{-1})}}$$
 
-Dans cette partie toutes les marges et valeurs calculées l'ont été avec des algorithmes d'approximation (voir annexe)
+Dans cette partie toutes les marges et valeurs calculées l'ont été avec des algorithmes d'approximation (voir Annexe $1$)
 
 ###### $\alpha.$ Calcul de la marge de module ^a421ca
 $$\boxed{M_{M} = \min_{\omega}\left| 1+H_{BO}(e^{ j\omega T_{e} })\right| = 1}$$
@@ -875,24 +870,24 @@ $$\boxed{M_{M} = \min_{\omega}\left| 1+H_{BO}(e^{ j\omega T_{e} })\right| = 1}$$
 $$\boxed{\omega_{c} = 42.3 \text{ rad.s}^{-1}}$$
 
 ###### $\alpha.$ Calcul de la marge de phase
-$$\boxed{M_{\varphi} = \pi + \arg(1+H_{BO}(e^{ j\omega_{c}T_{e} }))=232.6° \geq 45 °}$$
+$$\boxed{M_{\varphi} = \pi + \arg(H_{BO}(e^{ j\omega_{c}T_{e} }))=232.6° \geq 45 °}$$
 
 
 ###### $\alpha.$ Calcul de la marge de retard
-$$\boxed{M_{\text{retard}} = \frac{M_{\varphi}}{\omega_{c}}= 96 \, \text{ms}}$$
+$$\boxed{M_{\text{retard}} = \frac{M_{\varphi}}{\omega_{c}}= 118 \, \text{ms}}$$
 
-Or $M_{\text{retard}} \geq 105 \, \text{ms}$, on augmente alors le temps de réponse à $95\%$ pour pouvoir atteindre une marge de retard égale à $105\, \text{ms}$, 
+Ainsi $M_{\text{retard}} \geq 105 \, \text{ms}$, le cahier des charges est respecté
 On obtiens ainsi : 
 $$\boxed{\begin{cases}
-t_{rep, 95\% } &= 0.437& \,\text{s} \\
-z_{BF} &=0.866 \\
-s_{0}&= 0.617 \\
-r_{0}&=1.01 \\
-r_{1}&=-0.956 \\
-\omega_{c}&=38.6& \text{rad.s}^{-1} \\
+t_{rep, 95\% } &= 0.387& \,\text{s} \\
+z_{BF} &=0.850 \\
+s_{0}&= 0.569 \\
+r_{0}&=1.28 \\
+r_{1}&=-1.21 \\
+\omega_{c}&=42.29& \text{rad.s}^{-1} \\
 M_{M}&=1.00 \\
-M_{\varphi}&=232° \\
-M_{\text{retard}} &=105 &\, \text{ms}
+M_{\varphi}&=285° \\
+M_{\text{retard}} &=118 &\, \text{ms}
 \end{cases}}$$
 
 
@@ -906,22 +901,20 @@ Car d'après la structure RST :
 $$H_{BF}(z) = T(z) \times \frac{B(z)}{S(z)A(z)+B(z)R(z)} = \frac{T(z)B(z)}{D(z)}$$
 Alors, comme : $S(z=1) = 0$.
 $$T(z=1) = \frac{D(z=1)}{B(z=1)} = R(z=1) = r_{0}+r_{1}$$
-(A FAIRE : peut être moyen de trouver un autre coef. de $T(z)$ avec $S(z=s_{0})=0$)
-
 Ainsi, 
-$$\boxed{F(z) = \frac{r_{0}+r_{1}}{r_{0}+r_{1}z^{-1}} = \frac{0.054}{1.01-0.956z^{-1}}}$$
+$$\boxed{F(z) = \frac{r_{0}+r_{1}}{r_{0}+r_{1}z^{-1}} = \frac{0.07}{1.28-1.21z^{-1}}}$$
 
 
 
 #### 1.4.2.2 - Fonctions de transferts implémentés ^a422
-$$\boxed{C(z) = \frac{1.01-0.956z^{-1}}{1-1.617+z^{-1}+0.617z^{-2}}}\text{ et }\boxed{F(z) = \frac{0.054}{1.01-0.956z^{-1}}}$$
+$$\boxed{C(z) = \frac{1.28-1.21z^{-1}}{1-1.569+z^{-1}+0.569z^{-2}}}\text{ et }\boxed{F(z) = \frac{0.07}{1.28-1.21z^{-1}}}$$
 
 #### 1.4.2.3 - Equations de récurrence ^a423
 ##### Correcteur discret
 Par définition : 
 $$\frac{U(z)}{\varepsilon(z)} = C(z)$$
 Alors : 
-$$(1-1.57z^{-1}+0.57z^{-2})U(z) = (1.28-1.21z^{-1})\varepsilon(z)$$
+$$(1-1.569z^{-1}+0.569z^{-2})U(z) = (1.28-1.21z^{-1})\varepsilon(z)$$
 Donc en appliquant la transformée en $z$ inverse on a : 
 $$\boxed{U(n) = r_{0}\varepsilon(n)-r_{1}\varepsilon(n-1)+(1+s_{0})U(n-1) - s_{0}U(n-2)}$$
 
@@ -938,9 +931,9 @@ Entrées : U(n-1), U(n-2), ε(n), ε(n-1)
 	max=5;
 	min=0;
 	
-	r0=1.01;
-	r1=0.956;
-	s0=0.617;
+	r0=1.28;
+	r1=-1.21;
+	s0=0.569;
 	
 	U(n) = r0*ε(n)-r1*ε(n-1) + (1+s0)*U(n-1)-s0*U(n-2);
 	
@@ -957,9 +950,9 @@ Entrées : U(n-1), U(n-2), ε(n), ε(n-1)
 
 #### 1.4.2.4 - Algorithme de Commande ^a424
 ```C
-float r0=1.01;
-float r1=0.956;
-float s0=0.617;
+float r0=1.28;
+float r1=-1.21;
+float s0=0.569;
 
 uint8_t Correcteur(uint8_t Yc, uint8_t Yc_nm1, uint8_t Y, uint8_t Y_nm1, uint8_t U_nm1, uint8_t U_nm2){
 	// ε(n-1)=Yc(n-1)-Y(n-1) :
@@ -976,3 +969,4 @@ uint8_t Filtre(uint8_t Ref, uint8_t Yc_nm1){
 	return (r0+r1)/r0 *Ref + r1/r0 *Yc_nm1;
 }
 ```
+

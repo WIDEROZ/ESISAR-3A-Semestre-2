@@ -67,10 +67,10 @@ void loop() {                // boucle sans fin
       erreur = ConsF - f_mes; 
       switch (mode) {
       case 1 : // compensation des pôles
-        Commande = commNminus1 + erreur - 0.98*erreurNminus1;
+        Commande = 0.98*commNminus1 + (erreur - erreurNminus1)/2.84;
         break;
       case 2 : // placement des pôles
-        Commande = 1.28*erreur - 1.21*erreurNminus1 + 1.57*commNminus1 - 0.57*commNminus2;
+        Commande = 1.28*erreur + 1.21*erreurNminus1 + 1.569*commNminus1 - 0.569*commNminus2;
         break;
       }
 

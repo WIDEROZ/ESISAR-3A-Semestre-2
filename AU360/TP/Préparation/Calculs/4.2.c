@@ -73,14 +73,12 @@ void Hbo(double omega, double r0, double r1, double s0, double *real, double *im
 
 
     multiplier(r1, 0, z_R, z_I, &num_R, &num_I);
-    num_R=r0-num_R;
+    num_R=r0+num_R;
     num_I=-num_I;
 
-    multiplier(1-z_R, -z_I, 1-s0*z_R, -s0*z2_I, &den_R, &den_I);
+    multiplier(1-z_R, -z_I, 1-s0*z_R, -s0*z_I, &den_R, &den_I);
     diviser(num_R, num_I, den_R, den_I, &num_R, &num_I);
     multiplier(*real, *immaginary, num_R, num_I, real, immaginary);
-
-
 
 
 }
@@ -148,13 +146,13 @@ double marge_phase(double omega_c, double r0, double r1, double s0){
     double real;
     double immaginary;
     Hbo(omega_c, r0, r1, s0, &real, &immaginary);
-    return M_PI+arg(1+real, immaginary);
+    return M_PI+arg(real, immaginary);
 }
 
 
 
 void calcul_coefs(){
-    double t_rep=0.437;
+    double t_rep=0.387;
     double zBF = exp(-6.3*Te/t_rep);
     double s0 = 3*zBF - 1.98;
     double r0 = (3*zBF*zBF-1.98*(3*zBF - 1.98)-0.98)/(0.046);

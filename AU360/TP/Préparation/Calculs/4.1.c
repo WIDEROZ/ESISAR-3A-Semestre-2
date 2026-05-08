@@ -3,7 +3,7 @@
 #include <math.h>
 #define _USE_MATH_DEFINES
 
-#define K 4.69
+#define K 2.83
 
 double C = K*0.046;
 
@@ -75,18 +75,7 @@ double marge_module(double omega_max, double step, double Te){
 }
 
 double marge_phase(double omega_C, double Te){
-    double z_REAL = cos(omega_C*Te);
-    double z_IMAG = sin(-omega_C*Te);
-
-    double z2_REAL = z_REAL*z_REAL-z_IMAG*z_IMAG;
-    double z2_IMAG = 2*z_IMAG*z_REAL;
-
-    double num_REAL = 1-z_REAL+C*z2_REAL;
-    double num_IMAG = -z_IMAG+C*z2_IMAG;
-    
-    double den_REAL = 1-z_REAL;
-    double den_IMAG = -z_IMAG;
-    return M_PI+arg(num_REAL, num_IMAG)-arg(den_REAL, num_IMAG);
+    return M_PI-(omega_C*Te+atan(sin(omega_C*Te)/(1-cos(omega_C*Te))));
 }
 
 
