@@ -135,3 +135,4 @@ $$\forall (x, x^{*}) \in \mathcal{D}(f) \times \mathcal{D}(f^{*}), x^{*} \in V(x
 $$\boxed{\rho(f(p, q)) = \frac{p \frac{\partial f}{\partial p}(p, q)}{f(p, q)} \rho(p) + \frac{q \frac{\partial f}{\partial q}(p, q)}{f(p, q)} \rho(q) }$$
 
 
+$$\rho(f(p, q)) = p \frac{\partial f}{\partial p} ()$$

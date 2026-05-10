@@ -1,10 +1,27 @@
+#### Contexte
+Soit un problème de Cauchy :
+Soit $t \in D_{\mathbb{E}}$ (le domaine de définition de l'équation),
+On note $t_{0}$ et $x_{0}$ tels que :
+$$\begin{cases}
+\dot{x}(t) = f(t, y(t)) \\
+x(t_{0}) = x_{0}
+\end{cases}$$
+
+
+#### Euler explicite
+$$y_{n+1} = y_{n} + h f(x, y) $$
+
+#### Point milieu
+On pose : 
+$$y_{M+1} = y_{M} + h f\left(x_{M} +\frac{h}{2}, y_{M} + \frac{h}{2}f(x_{M},y_{M})\right) $$
+
 # III. Méthodes de Runge-Kutta
 ## 1. Principe Général
 Soit un problème de Cauchy :
 Soit $t \in D_{\mathbb{E}}$ (le domaine de définition de l'équation),
 On note $t_{0}$ et $x_{0}$ tels que :
 $$\begin{cases}
-\dot{x}(t) = f(t, y(t)) \\
+\dot{x}(t) = f(t, x(t)) \\
 x(t_{0}) = x_{0}
 \end{cases}$$
 Soit $h$ le pas sur lequel on intègre et $(t_{i})_{i \in \mathbb{N}}\in D_{\mathbb{E}}^{\mathbb{N}}$ tel que : 

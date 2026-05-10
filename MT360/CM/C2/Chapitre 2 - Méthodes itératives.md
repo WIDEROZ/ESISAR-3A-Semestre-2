@@ -49,7 +49,6 @@ f(S) \subset S
 
 
 # III - Vitesse ordre et acceleration de convergence
-#### Définitions
 Soient 
 $$\begin{cases}
 x_{n} \underset{n \to +\infty}{\longrightarrow}s \\
@@ -58,23 +57,41 @@ e_{k} = x_{k} - s \\
 c_{k} = 1-\log_{\beta}(\rho_{k})
 \end{cases}$$
 
-#### Vitesse de convergence
+#### a. Ordre de convergence (Schoeder)
+Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow} s$ avec $\forall n \in \mathbb{N}, x_{n+1} = f(x_{n})$, 
+$(x_{n})_{n \in \mathbb{N}}$ est convergente d'ordre $p$ ssi : 
+$$\boxed{\forall k \in [\![1, p-1]\!], f^{(k)}(s) = 0 \text{ et }f^{(p)}(s)\neq 0}$$
+
+
+#### b. Vitesse de convergence
+$$\boxed{\frac{\left| e_{n+1}\right|}{\left| e_{n}\right|^{p}} \underset{n \to + \infty}{\sim} \lambda = \frac{f^{(p)}(s)}{p!}}$$
+
+Démonstration : 
+On a : 
+$$e_{n+1} = f(e_{n}+s)-s=f(e_{n}+s) -f(s) \underset{{e_{n} \to 0}}{=} \sum_{k = 1}^{+ \infty} \frac{f^{(k)}(s)}{k!} e_{n}^{k}$$
+Alors, si l'ordre de convergence de $(x_{n})_{n \in \mathbb{N}}$ est $p$ : 
+$$ e_{n+1}= \frac{f^{(p)}(s)}{p!} e_{n}^{p} + o(e_{n}^{p}) \Leftrightarrow \boxed{\frac{\left| e_{n+1}\right|}{\left| e_{n}\right|} = \frac{f^{(p)}(s)}{p!}e_{n}^{p}}$$
+
+
+#### c. Nombres significatifs corrects entre deux itérations
 $$\boxed{v_{k} = \frac{\Delta c_{k}}{\Delta k} = c_{k+1}-c_{k}}$$
 Par le théorème de Banach (dans le cas général) on a : 
 $$\boxed{v_{k} \underset{k \to + \infty}{\sim} v = -\log_{\beta} \left| f'(s)\right|}$$
 
-#### Ordre de convergence (Schoeder)
-Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow} s$ avec $\forall n \in \mathbb{N}, x_{n+1} = f(x_{n})$, 
-et :
-$${\forall n \in \mathbb{N}, e_{n+1} = \sum_{k \in \mathbb{N}^{*}} \frac{f^{(k)}(s)}{k!} e_{n}^{k}}$$
+Demonstration : 
+On a : 
+$$\begin{array}{ll}
+v_{k} &= -\log_{\beta}\left| \frac{x_{k+1}-s}{x_{k}-s}\right| \\
+& = - \log_{\beta}\left| \frac{f(x_{k})-f(s)}{x_{k}-s}\right|
+\end{array}$$
+Et comme par le théorème de Banach : $x_{k} \underset{k \to +\infty}{\longrightarrow} s$ on a : $x_{k}-s \underset{k \to +\infty}{\longrightarrow}0$ ainsi :
+$$\boxed{ v_{k}\underset{k \to +\infty}{\sim} -\log_{\beta} \left| f'(s)\right|}$$
 
-$(x_{n})_{n \in \mathbb{N}}$ est convergente d'ordre $p$ ssi : 
-$$\boxed{\forall k \in [\![1, p]\!], f^{(k)}(s) = 0 \text{ et }f^{(p)}\neq 0}$$
 
-On pose alors, 
-$$\boxed{\frac{\left| e_{n+1}\right|}{\left| e_{n}\right|} \underset{n \to + \infty}{\sim} \lambda = \frac{f^{(p)}(s)}{p!}}$$
 
-#### Traub
+
+
+#### d. Traub
 Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow}s$, 
 $$\boxed{(x_{n})_{n \in \mathbb{N}}\text{ est convergente d'ordre } p \Leftrightarrow \exists \lambda > 0 , \frac{\left| e_{n+1}\right|}{\left| e_{n} \right|} \underset{n \to + \infty}{\sim} \lambda}$$
 
@@ -82,20 +99,34 @@ $$\boxed{(x_{n})_{n \in \mathbb{N}}\text{ est convergente d'ordre } p \Leftright
 #### Acceleration d'Aitken / $\Delta^{2}$-process
 Soit $(x_{n})_{n \in \mathbb{N}}$ tel que : $x_{n} \underset{n \to +\infty}{\longrightarrow} s$ converge à l'ordre $1$ ie : 
 $$e_{n+1} \underset{n \to + \infty}{\sim} \lambda e_{n}$$
+$$e_{n+2} \underset{n \to + \infty}{\sim} \lambda e_{n+1}  $$
 Alors, 
 $$\begin{cases}
 x_{n+1}-s = \lambda(x_n-s) + \varepsilon_{n} \\
-x_{n+2} -s = \lambda(x_n-s) + \lambda(x_{n+1}-s) \varepsilon_{n+1}
+x_{n+2}-s = \lambda(x_{n+1}-s) + \varepsilon_{n+1} 
 \end{cases}$$
-Donc, 
+Comme on souhaite approximer $s$ : 
 $$\begin{cases}
-x_{n+1}-x_{n}' = \lambda_{n}(x_n-x'_{n}) \\
-x_{n+2} -x_{n}' = \lambda_{n}(x_{n+1}-x'_{n+1})
+x_{n+1}-x'_{n} = \lambda(x_n-x'_{n}) + \varepsilon_{n} \\
+x_{n+2}-x'_{n+1} = \lambda(x_{n+1}-x'_{n+1}) + \varepsilon_{n+1} 
 \end{cases}$$
-ie : 
-$$\lambda_{n} = \frac{x_{n+2} - x_{n+1}}{x_{n+1}-x_{n}}$$
+Donc, en soustrayant ces deux équations : 
+$$x_{n+2}-x_{n+1} = \lambda(x_{n+1} - x_{n}) + (\varepsilon_{n+1} - \varepsilon_{n})$$
+Donc, 
+$$\lambda \approx \frac{x_{n+2} - x_{n+1}}{x_{n+1}-x_{n}}$$
+Puis, 
+$$\Delta x_{n+2} = \lambda \Delta x_{n+1} = \lambda^{n+2}C \Rightarrow \Delta x_{n} = \lambda^{n}C$$
+Alors, 
+$$x_{n} = s + \lambda^{n}C$$
+Donc, 
+$$\Delta x_{n+1} = C\lambda^{n}(\lambda-1) \text{ et } x_{n+2} - 2x_{n+1}+x_{n} = C\lambda^{n}(\lambda-1)^{2}$$
+
+Donc, 
+$$\frac{(x{_{n+1}-x_{n}})^{2}}{x_{n+2} - 2x_{n+1} + x_{n}} = C\lambda^{n} = x_{n}-x_{n}'$$
+
 Ainsi, 
 $$\boxed{x_{n}' = x_{n} - \frac{(x{_{n+1}-x_{n}})^{2}}{x_{n+2} - 2x_{n+1} + x_{n}}}$$
+
 
 #### Méthode d'Aitken-Steffensen
 Soit $x_{n} \underset{n \to +\infty}{\longrightarrow} s$ avec $x_{n+1} =f(x_{n})$,
@@ -147,6 +178,11 @@ ie $(x_{n})$ CV d'ordre $\frac{1+\sqrt{5}}{2}$
 ## 3. Méthode de Newton Raphson
 $$x_{n+1} = x_{n} - \frac{F(x_{n})}{F'(x_{n})} = f(x_{n}) \text{ avec }\mu=F'(x_{n})$$
 $$f'(x) = \frac{F(x)F''(x)}{F'(x)^{2}}$$
+alors, 
+$$f'(s) = 0 \text{(car )F(s) = s-f(s) = 0}$$
+$$f''(x) = \frac{(F'(x)F''(x)+F(x)F^{(3)}(x))F'(x)-2F(x)^{2}F''(x)}{F'(x)^3}$$
+Alors comme $F(s)=0$ :
+$$f''(s) = \frac{F''(s)}{F'(s)}$$
 De plus si $s$ est racine de multiplicité $p$ de $F$ i.e. : 
 $$F(s) = (x-s)^{p}G(s) \text{ avec } G'(s) \neq 0$$
 Donc dans ce cas on considère : 
