@@ -41,7 +41,8 @@ $$A * B = \sum_{i \in [\![1, 4]\!]}(a_{i} - b_{i})a_{i} = \begin{cases}
 
 
 ## 2. Méthode d'allocation dynamique
-Diapo 19-27
+#### Aloha
+
 
 ### b. CSMA - Carrier Sense Multiple Access
 #### CSMA $p$-persistant

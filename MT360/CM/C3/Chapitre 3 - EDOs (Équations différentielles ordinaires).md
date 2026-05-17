@@ -3,17 +3,23 @@ Soit un problème de Cauchy :
 Soit $t \in D_{\mathbb{E}}$ (le domaine de définition de l'équation),
 On note $t_{0}$ et $x_{0}$ tels que :
 $$\begin{cases}
-\dot{x}(t) = f(t, y(t)) \\
+\dot{x}(t) = f(t, x(t)) \\
 x(t_{0}) = x_{0}
 \end{cases}$$
 
 
 #### Euler explicite
-$$y_{n+1} = y_{n} + h f(x, y) $$
+$$x_{n+1} = x_{n} + h f(t_{n}, x_{n}) $$
+
+#### Euler implicite
+$$x_{n+1} = x_{n} + h f(t_{n+1}, x_{n+1}) $$
 
 #### Point milieu
 On pose : 
-$$y_{M+1} = y_{M} + h f\left(x_{M} +\frac{h}{2}, y_{M} + \frac{h}{2}f(x_{M},y_{M})\right) $$
+$$x_{M+1} = x_{M} + h f\left(t_{M} +\frac{h}{2}, x_{M} + \frac{h}{2}f(t_{M},x_{M})\right) $$
+
+#### Trapèzes
+$$x_{n+1} = x_{n} + \frac{h}{2}(f\left( t_{n}, x_{n}  \right) + f(t_{n+1}, x_{n+1}))$$
 
 # III. Méthodes de Runge-Kutta
 ## 1. Principe Général
@@ -57,7 +63,7 @@ $$ = f(t, x) + \frac{h}{2}\left( \frac{\partial f}{\partial t} (t, x(t)) + f(t, 
 ___
 
 ## 3. $s$-stages Runge-Kutta method
-Soient $i,j \in [\![1, n]\!]$, $a_{i, j} \in [0, 1]$ 
+Soient $i,j \in [\![1, n]\!]$, $a_{i, j} \in [0, 1]$,
 Soient : 
 $$c_{i} = \sum_{j = 1}^{s} a_{i, j}$$
 $$k_{i} = f\left( t+c_{i}k_{i}, x + h \sum_{l = 1}^{s} a_{i, l}k_{l} \right)$$

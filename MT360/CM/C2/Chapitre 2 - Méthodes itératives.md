@@ -1,4 +1,4 @@
-# I - Introduction
+	# I - Introduction
 # II - Convergence
 Soit : 
 $$f : \begin{cases}
@@ -53,7 +53,7 @@ Soient
 $$\begin{cases}
 x_{n} \underset{n \to +\infty}{\longrightarrow}s \\
 e_{k} = x_{k} - s \\
-\rho_{k} = \frac{e_{k}}{s}&\text{avec } \rho_{k} = \beta^{1-c_{k}} \\
+\rho_{k} = \frac{e_{k}}{s}\\
 c_{k} = 1-\log_{\beta}(\rho_{k})
 \end{cases}$$
 
@@ -76,7 +76,7 @@ $$ e_{n+1}= \frac{f^{(p)}(s)}{p!} e_{n}^{p} + o(e_{n}^{p}) \Leftrightarrow \boxe
 #### c. Nombres significatifs corrects entre deux itérations
 $$\boxed{v_{k} = \frac{\Delta c_{k}}{\Delta k} = c_{k+1}-c_{k}}$$
 Par le théorème de Banach (dans le cas général) on a : 
-$$\boxed{v_{k} \underset{k \to + \infty}{\sim} v = -\log_{\beta} \left| f'(s)\right|}$$
+$$\boxed{v_{k} \underset{k \to + \infty}{\sim} -\log_{\beta} \left| f'(s)\right|}$$
 
 Demonstration : 
 On a : 
@@ -93,7 +93,7 @@ $$\boxed{ v_{k}\underset{k \to +\infty}{\sim} -\log_{\beta} \left| f'(s)\right|}
 
 #### d. Traub
 Soit $(x_{n})_{n \in \mathbb{N}} \underset{n \to +\infty}{\longrightarrow}s$, 
-$$\boxed{(x_{n})_{n \in \mathbb{N}}\text{ est convergente d'ordre } p \Leftrightarrow \exists \lambda > 0 , \frac{\left| e_{n+1}\right|}{\left| e_{n} \right|} \underset{n \to + \infty}{\sim} \lambda}$$
+$$\boxed{(x_{n})_{n \in \mathbb{N}}\text{ est convergente d'ordre } p \Leftrightarrow \exists \lambda > 0 , \frac{\left| e_{n+1}\right|}{\left| e_{n} \right|^{p}} \underset{n \to + \infty}{\sim} \lambda}$$
 
 
 #### Acceleration d'Aitken / $\Delta^{2}$-process
@@ -125,7 +125,7 @@ Donc,
 $$\frac{(x{_{n+1}-x_{n}})^{2}}{x_{n+2} - 2x_{n+1} + x_{n}} = C\lambda^{n} = x_{n}-x_{n}'$$
 
 Ainsi, 
-$$\boxed{x_{n}' = x_{n} - \frac{(x{_{n+1}-x_{n}})^{2}}{x_{n+2} - 2x_{n+1} + x_{n}}}$$
+$$\boxed{x_{n}^{*} = x_{n} - \frac{(x{_{n+1}-x_{n}})^{2}}{x_{n+2} - 2x_{n+1} + x_{n}}}$$
 
 
 #### Méthode d'Aitken-Steffensen
@@ -138,7 +138,7 @@ On pose :
 $$y_{0} = x_{0} \text{ et } y_{n+1} = g(y_{n}) $$
 Avec, 
 $$g(\xi) = \begin{cases}
-\xi - \frac{(f(\xi) - \xi)^{2}}{f(f(\xi)) - 2f(\xi) + \xi} & \text{ si }\xi \neq s \\
+\xi - \frac{(f(\xi) - \xi)^{2}}{f(f(\xi)) - 2f(\xi) + \xi} & \text{si }\xi \neq s \\
 s&\text{si }\xi  = s
 \end{cases}$$
 On a alors, 

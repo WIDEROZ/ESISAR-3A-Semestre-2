@@ -15,7 +15,7 @@ import java.util.Scanner;
 	* Exemple : L'index 68 correspond à la case F8
 	* 
 	* Attribut : 
-	* - public Piece[][] plateau;
+	* - private Piece[][] plateau;
 	* 
 	* Méthodes :
 	* - public static boolean index_inTab(int index);
@@ -25,14 +25,14 @@ import java.util.Scanner;
 	* - public boolean isTherePiece(int index);
 	* - private void add(Piece piece, String position);
 	* - private void bougerPieceSurPlateau(int index_D, int index_A);
-	* - public void initTableau();
-	* - public void afficherPlateau();
+	* - private void initTableau();
+	* - private void afficherPlateau();
 	* - private int getIndex_D(Scanner scanner, boolean tour_des_blancs);
 	* - private int getIndex_A(Scanner scanner, boolean tour_des_blancs, int index_D);
-	* - public void GM();
+	* - private void GM();
 */
 public class Plateau {
-	public Piece[][] plateau = new Piece[8][8];
+	private Piece[][] plateau = new Piece[8][8];
 	
 	public Plateau() {
 		
@@ -174,7 +174,7 @@ public class Plateau {
 	 * Les pièces blanches en bas
 	 * Les pièces noires en haut
 	 * */
-	public void initTableau(){
+	private void initTableau(){
 		add(new Pion("WHITE"), "A2");
 		add(new Pion("WHITE"), "B2");
 		add(new Pion("WHITE"), "C2");
@@ -218,7 +218,7 @@ public class Plateau {
 	/*
 	 * Affiche dans le terminal le plateau d'Echecs actuel
 	 */
-	public void afficherPlateau(){
+	private void afficherPlateau(){
 		int c=1;
 		int l=8;
 		while (l >= 1) {
@@ -357,7 +357,7 @@ public class Plateau {
 	 * puis si le déplacement est valide pour la pièce qu'il souhaite déplacer alors il la déplace.
 	 * 
 	 */
-	public void GM(){
+	private void GM(){
 		boolean is_finished = false;
 		boolean tour_des_blancs = true;
 		int index_D = 0;

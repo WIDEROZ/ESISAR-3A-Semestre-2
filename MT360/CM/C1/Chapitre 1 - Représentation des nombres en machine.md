@@ -18,10 +18,15 @@ L'encodage de $x$ est donc sous cette forme :
 | $s$          | $e_{k-1} \, \dots \,e_{1} \, e_{0}$ | $\,t_{1}\, t_{2} \,\dots \,t_{n}$ |
 |              |                                     |                                   |
 
+
+
 Maintenant on a plusieurs cas : 
 $$\begin{array}{|c|c|}\hline
 e = 0 &M=0&\Rightarrow& x=0  \\\hline
-e = 0 & M \neq 0 & \Rightarrow & x = 0.M \times \beta^{e-b} \\\hline
+e = 0 & M \neq 0 & \Rightarrow & \begin{array}{c}
+x = 0.M \times \beta^{e-b}  \\
+\text{dénormalisé}
+\end{array}\\\hline
 e \neq 0 & \dots & \Rightarrow & x = 1.M \times \beta^{e-b} \\\hline
 \begin{array}{rlc}
 e &=& (2^{k}-1)_{10} \\
@@ -54,11 +59,14 @@ e=11111111 &\Rightarrow x = NAN, \infty , \text{gestion des exeptions}
 
 
 # II. Approximations
-Soit $x$ un nombre en base $\beta$ avec $t$ digit et $e$ comme exposant, alors : 
+Soit $x$ un nombre en base $\beta$ avec $t$ digits et $e$ comme exposant, alors : 
 ![[Pasted image 20260208212609.png]]
 #### Précision
 La plus petite précision que l'on puisse obtenir est de : 
 $$\beta^{e-t}$$
+Démonstration : 
+$$x = 0.d_{1} \dots d_{t} \beta^{e}$$
+$$0.0\dots01 \beta^{e} = \beta^{e-t}$$
 
 #### Chopping
 $$x_{c} = sgn(x) trunc(\left| x\right| \beta^{t-e} ) \beta^{e-t}$$
@@ -133,6 +141,3 @@ $$\forall (x, x^{*}) \in \mathcal{D}(f) \times \mathcal{D}(f^{*}), x^{*} \in V(x
 
 #### Erreur inévitable
 $$\boxed{\rho(f(p, q)) = \frac{p \frac{\partial f}{\partial p}(p, q)}{f(p, q)} \rho(p) + \frac{q \frac{\partial f}{\partial q}(p, q)}{f(p, q)} \rho(q) }$$
-
-
-$$\rho(f(p, q)) = p \frac{\partial f}{\partial p} ()$$

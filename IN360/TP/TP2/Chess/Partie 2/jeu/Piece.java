@@ -30,6 +30,9 @@ public abstract class Piece {
 		}
 
 	}
+	
+
+	/* ----- Getters ----- */
 
 	public String getCouleur(){
 		return couleur;
@@ -39,8 +42,10 @@ public abstract class Piece {
 		return UNICODE;
 	}
 
+
+
 	/*
-	 * Indique si la pièce est bougeable
+	 * Indique si la pièce est bougeable (si le mouvement sans compter l'état actuel du plateau est possible)
 	 * @param int positionD : position de départ
 	 * @param int positionF : position d'arrivée
 	 * @return false si ce n'est pas possible et true si la pièce peut être bougée

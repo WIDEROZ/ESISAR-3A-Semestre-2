@@ -66,7 +66,7 @@ end process;
 ```
 
 Reset asynchrone : 
-```Verilog
+```VHDL
 process(resset, clk)
 begin
 if reset='1' then

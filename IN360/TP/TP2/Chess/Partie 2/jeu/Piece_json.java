@@ -11,8 +11,10 @@ package jeu;
     * private int[] mouvements;
     * 
     * Getters :
-    * public int getUNICODE();
+    * public String getNom();
     * public String getCase_depart();
+    * public int[] getMouvements();
+    * 
     * 
     * 
 */
@@ -36,13 +38,16 @@ public class Piece_json extends Piece{
 
     }
 
-
-    public int getUNICODE() {
-        return UNICODE;
+    public String getNom(){
+        return nom;
     }
 
     public String getCase_depart() {
         return case_depart;
+    }
+
+    public int[] getMouvements() {
+        return mouvements;
     }
 
     @Override
@@ -65,5 +70,7 @@ public class Piece_json extends Piece{
     public boolean pieces_entre(Plateau plateau, int positionD, int positionF){
         return !bouger(positionD, positionF);
     }
+
+    
 
 }

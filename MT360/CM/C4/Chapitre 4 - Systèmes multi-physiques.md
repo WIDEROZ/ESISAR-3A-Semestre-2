@@ -130,7 +130,6 @@ $$\mathcal{P}(t) = \sum_{k=1}^{n} e_{k}f_{k} = 0$$
 
 
 
-
 # III - The Bond Graph causality and state space equation algorithms
 ![[Pasted image 20260421141634.png]]
 When the power is negligible, signal connections are used.  
