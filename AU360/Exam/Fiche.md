@@ -17,3 +17,6 @@ Fonction de sensibilité liant p et z : $\left| \frac{\partial p_{i}}{p_{i}}\rig
 
 BOZ : $H_{BOZ}(p) = \frac{1-e^{ -T_{e}p }}{p}$
 
+Fréquence max : $z_{\max}=-1$
+
+$$H(p) = \frac{K}{\prod_{i}(p-p_{i})}$$
