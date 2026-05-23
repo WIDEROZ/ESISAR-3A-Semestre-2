@@ -1,4 +1,4 @@
-#### Is technology helping creativity or destroying it?
+#### Is technology helping creativity or destroying it
 
 Generative AI is taking an important place in the creative jobs, for instance the Suno AI create music from a text, from this it emerges a lot of question like : could technology could help or destroy creativity? First of all, the context must be introduced. According to the jobs, the answer will be slightly different.
 A national survey in the USA show that $26$% of employees using generative AI improved their creativity, but a professor explains that people who are using AI should use metacognitive processes. He defines it as : Thinking about your thinking, to do organisational works. 
