@@ -16,3 +16,6 @@
 [submodule ".obsidian"]
 	path = .obsidian
 	url = git@github.com:WIDEROZ/.obsidian.git
+[submodule "PR/PSN10"]
+	path = PR/PSN10
+	url = git@github.com:WIDEROZ/PSN10.git
