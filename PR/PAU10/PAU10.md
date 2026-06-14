@@ -112,6 +112,8 @@ r_{1} = \frac{T}{K}d_{1} \\
 r_{2} = \frac{T}{K}\left( d_{2}-\frac{s_{0}}{T} \right)
 \end{cases}}$$
 
+$$C(p) = \frac{R(p)}{S(p)} \text{ et } H(p) = \frac{B(p)}{A(p)} \text{ et }F(p) = \frac{t_{0}}{R(p) }$$
+
 
 #### Arduino
 Préfiltre : 
@@ -130,4 +132,3 @@ On a calculé les marges avec le filtre pour assurer la stabilité du système :
 $$\boxed{C_\text{stabilisé}(p) = C(p)F_{stab}(p) = C(p) \frac{\omega_{n}}{p+\omega_{n}}}$$
 
 
-$$$$

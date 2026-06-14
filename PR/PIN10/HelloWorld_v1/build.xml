@@ -1,0 +1,45 @@
+<project name="HelloWorld_v1" basedir="." default="default">
+    <target name="default" depends="compile, run, package">
+
+    </target>
+    
+    <target name="compile">
+        <mkdir dir="classes"/>
+        <javac srcdir="src" destdir="classes" includeantruntime="false"/>
+    </target>
+
+
+    <target name="run" depends="package">
+        <java jar="helloworld-1.2.jar" fork="true">
+        </java>
+    </target>
+
+    <target name="package" depends="compile">
+        <jar destfile="helloworld-1.2.jar">
+            <manifest>
+                <attribute name="Main-Class" value="fr.esisar.helloworld.HelloWorld"/>
+            </manifest>
+
+            <fileset dir="classes/"/>
+        </jar>
+    </target>
+
+    <target name="clean">
+        <delete dir="classes"/>
+        <delete file="helloworld-1.2.jar"/>
+    </target>
+
+    <target name="doc">
+        <mkdir dir="doc"/>
+        <javadoc sourcepath="src" destdir="doc"></javadoc>
+    </target>
+    
+
+    <target name="clean-javadoc">
+        <delete dir="doc"/>
+    </target>
+
+    <target name="clean-all" depends="clean, clean-javadoc">
+    </target>
+    
+</project>

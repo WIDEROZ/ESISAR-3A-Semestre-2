@@ -1,0 +1,11 @@
+<svg viewBox="0 0 474 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Anneau Bleu (haut gauche) - segment supérieur visible -->
+  <path d="M 4.5,52 A 48,48 0 0,1 100,52" 
+        fill="none" stroke="#0081C8" stroke-width="8"/>
+  
+  <!-- Anneau Jaune (bas gauche) - passe sous bleu -->
+  <path d="M 56,110 A 48,48 0 0,1 152,110" 
+        fill="none" stroke="#FCB131" stroke-width="8"/>
+  
+  <!-- Continuer avec tous les segments... -->
+</svg>

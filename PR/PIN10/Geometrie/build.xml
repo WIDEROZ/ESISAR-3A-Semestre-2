@@ -1,0 +1,141 @@
+<project name="Geometrie" basedir="." default="default">
+    <target name="default" depends="run">
+    </target>
+    
+    <!-- Compilation -->
+    <target name="compile">
+        <mkdir dir="classes"/>
+        <javac srcdir="src" destdir="classes" includeantruntime="false">
+            <!-- Ajout de la lib javafx-->
+            <compilerarg line="--module-path lib/javafx/lib/ --add-modules javafx.base,javafx.fxml,javafx.controls,javafx.graphics,javafx.media,javafx.swing,javafx.web"/>
+        </javac>
+        
+    </target>
+
+
+    <!-- Run project -->
+    <target name="run" depends="package">
+        <java jar="Geometrie.jar" fork="true">
+        </java>
+    </target>
+
+    <!-- Package création -->
+    <target name="package" depends="compile">
+        <jar destfile="Geometrie.jar">
+            <manifest>
+                <attribute name="Main-Class" value="fr.esisar.geometrie."/>
+            </manifest>
+
+            <fileset dir="classes/"/>
+        </jar>
+    </target>
+
+
+    <!-- __________Test commands__________ -->
+    <!-- GeometrieTest -->
+    <target name="test_geometrie" depends="test_geometrie_package">
+        <java jar="GeometrieTest.jar" fork="true">
+        </java>
+    </target>
+
+    <target name="test_geometrie_package" depends="compile">
+        <jar destfile="GeometrieTest.jar">
+            <manifest>
+                <attribute name="Main-Class" value="fr.esisar.geometrie.GeometrieTest"/>
+            </manifest>
+
+            <fileset dir="classes/"/>
+        </jar>
+    </target>
+
+
+    <!-- TestCercleAvecException -->
+    <target name="test_cercle_exeption" depends="test_cercle_exeption_package">
+        <java jar="TestCercleAvecException.jar" fork="true">
+        </java>
+    </target>
+
+    <target name="test_cercle_exeption_package" depends="compile">
+        <jar destfile="TestCercleAvecException.jar">
+            <manifest>
+                <attribute name="Main-Class" value="fr.esisar.geometrie.TestCercleAvecException"/>
+            </manifest>
+
+            <fileset dir="classes/"/>
+        </jar>
+    </target>
+
+
+    <!-- __________javafx__________ -->
+    
+    <path id="javafx.classpath">
+        <pathelement location="lib/javafx/classes"/>
+        <fileset dir="lib/javafx/lib" includes="*.jar"/>
+    </path>
+
+    <!-- test javafx -->
+    <target name="test_javafx" depends="test_javafx_package">
+        <java jar="AfficheCercle.jar" fork="true">
+            <jvmarg line="--module-path lib/javafx/lib/ --add-modules javafx.controls"/>
+        </java>
+    </target>
+
+
+    <target name="test_javafx_package" depends="compile">
+        <jar destfile="AfficheCercle.jar">
+            <manifest>
+                <attribute name="Main-Class" value="fr.esisar.geometrie.AfficheCercle"/>
+            </manifest>
+
+            <fileset dir="classes/"/>
+        </jar>
+    </target>
+
+
+    <!-- javafx HelloWorld -->
+    <target name="javafxHelloWorld">
+        <mkdir dir="lib/javafx/classes"/>
+
+        <javac srcdir="lib/javafx/src" destdir="lib/javafx/classes" includeantruntime="false">
+            <compilerarg line="--module-path lib/javafx/lib/ --add-modules javafx.*"/>
+        </javac>
+    
+        <java classname="HelloFX" fork="true">
+            <classpath refid="javafx.classpath"/>
+            <jvmarg line="--module-path lib/javafx/lib/ --add-modules javafx.controls"/>
+        </java>
+    </target>
+
+
+    
+
+    
+
+
+
+    <!-- Generate Doc -->
+    <target name="doc">
+        <mkdir dir="doc"/>
+        <javadoc sourcepath="src" destdir="doc"></javadoc>
+    </target>
+
+
+    <!-- Clean -->
+    <target name="clean">
+        <delete dir="classes"/>
+        <delete file="helloworld-1.2.jar"/>
+    </target>
+    
+
+    <target name="clean-javadoc">
+        <delete dir="doc"/>
+    </target>
+
+    <target name="clean-javafx">
+        <delete dir="lib/javafx/classes"/>
+    </target>
+
+    <target name="clean-all" depends="clean, clean-javadoc">
+    </target>
+    
+</project>

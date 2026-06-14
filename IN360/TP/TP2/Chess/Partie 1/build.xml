@@ -9,14 +9,14 @@
 
 
     <target name="Run">
-        <java classname="jeu.Plateau" fork="true">
+        <java classname="fr.Plateau" fork="true">
             <classpath>
                 <pathelement location="class/"/>
             </classpath>
         </java>
     </target>
 
-    <target name="jar" depends="Compile">
+    <target name="package" depends="Compile">
         <jar destfile="Chess.jar">
             <manifest>
                 <attribute name="Main-Class" value="jeu.Plateau"/>
